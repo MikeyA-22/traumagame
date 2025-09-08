@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://fo8q111iikwq"]
+
+[ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="1_pq8q7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vho56"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_pq8q7"]
+sky_material = SubResource("ProceduralSkyMaterial_vho56")
+
+[sub_resource type="Environment" id="Environment_pyidc"]
+background_mode = 2
+sky = SubResource("Sky_pq8q7")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pq8q7"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pyidc"]
+albedo_color = Color(1, 1, 0, 1)
+
+[node name="Root" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pyidc")
+
+[node name="Player" parent="." instance=ExtResource("1_pq8q7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.933399, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+radius = 0.2
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+operation = 2
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D"]
+radius = 19.66
+height = 0.001
+material = SubResource("StandardMaterial3D_pq8q7")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-0.171417, 0.908734, -0.38055, 0.37322, 0.417375, 0.828556, 0.911769, 0, -0.410703, -3, 0, 0)
+size = Vector3(6.75, 3.055, 4.75)
+material = SubResource("StandardMaterial3D_pyidc")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-0.980802, 0.0519914, 0.187946, 0.181749, -0.105549, 0.977664, 0.0706677, 0.993054, 0.094073, 4.81294, 0, 12.7362)
+size = Vector3(6.75, 3.055, 4.75)
+material = SubResource("StandardMaterial3D_pyidc")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.566996, 0, -0.823721, 0, 1, 0, 0.823721, 0, 0.566996, 11.4162, -0.661325, 0)
+size = Vector3(6.705, 3.275, 10.915)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-0.18913, 0, -0.981952, 0, 1, 0, 0.981952, 0, -0.18913, -14.3883, -0.661325, 0)
+size = Vector3(6.705, 3.275, 10.915)

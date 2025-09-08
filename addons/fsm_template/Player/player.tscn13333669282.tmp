@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://go0nwkxm05ck"]
+
+[ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://Player/Scripts/Player.gd" id="1_hqtel"]
+[ext_resource type="PackedScene" uid="uid://dqxj6gwe53g7a" path="res://Camera/local_camera.tscn" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://cht70wt24resd" path="res://Player/Scripts/InputGatherer.gd" id="3_i3pqv"]
+[ext_resource type="Script" uid="uid://cruoxgtgcsr51" path="res://Player/Scripts/States/Idle.gd" id="5_1jxqw"]
+[ext_resource type="Script" uid="uid://cu6d8y2wq0bwv" path="res://Player/Scripts/Model.gd" id="5_sweqy"]
+[ext_resource type="Script" uid="uid://47qng0jxpj38" path="res://Player/Scripts/States/Run.gd" id="6_dw050"]
+[ext_resource type="Script" uid="uid://cxrnh1oy4r2uf" path="res://Player/Scripts/States/Jump.gd" id="7_b26j0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_hqtel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_sh265")
+
+[node name="Local Camera" parent="." node_paths=PackedStringArray("lookAt") instance=ExtResource("2_onrkg")]
+lookAt = NodePath("..")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7.21859, 0)
+visible = false
+
+[node name="Visual" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_onrkg")
+
+[node name="InputGatherer" type="Node" parent="."]
+script = ExtResource("3_i3pqv")
+
+[node name="Model" type="Node" parent="."]
+script = ExtResource("5_sweqy")
+isGravity = true
+
+[node name="Idle" type="Node" parent="Model"]
+script = ExtResource("5_1jxqw")
+
+[node name="Run" type="Node" parent="Model"]
+script = ExtResource("6_dw050")
+
+[node name="Jump" type="Node" parent="Model"]
+script = ExtResource("7_b26j0")

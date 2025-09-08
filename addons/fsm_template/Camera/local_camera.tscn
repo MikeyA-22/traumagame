@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqxj6gwe53g7a"]
+
+[sub_resource type="GDScript" id="GDScript_5iu3q"]
+script/source = "extends Node3D
+
+class_name SoulsLikeCamera
+
+@export var lookAt: Node3D
+
+
+@onready var camera = $PlayerCamera
+@onready var focus_point = $FocusPoint
+@onready var camera_nest = $CameraNest
+@onready var input = $\"../InputGatherer\"
+
+@onready var is_target_locked : bool = false
+@onready var target : Node3D = camera_nest
+var mouse_is_captured = true
+
+var offset: Vector3
+
+var isMouseCaptured : bool = true
+
+@onready var current_state: CameraState = $FreeCamera
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+
+func _input(event):
+	if event.is_action_released(\"mouse_mode_switch\"):
+		switch_mouse()
+	
+	if event is InputEventMouseMotion and mouse_is_captured:
+		var d_hor = event.relative.x
+		rotate_y(- d_hor / 1000)
+
+func _process(delta: float) -> void:
+	if target:
+		camera.look_at(focus_point.global_transform.origin, Vector3.UP)
+
+func switch_mouse():
+	if mouse_is_captured:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	mouse_is_captured = not mouse_is_captured
+"
+
+[sub_resource type="GDScript" id="GDScript_a4peq"]
+script/source = "extends CameraState
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+func update():
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_ci3p1"]
+script/source = "extends CameraState
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gdut"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6h7m6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_47crt"]
+albedo_color = Color(0, 0, 1, 1)
+
+[node name="Local Camera" type="Node3D"]
+script = SubResource("GDScript_5iu3q")
+
+[node name="FreeCamera" type="Node" parent="."]
+script = SubResource("GDScript_a4peq")
+
+[node name="LockedCamera" type="Node" parent="."]
+script = SubResource("GDScript_ci3p1")
+
+[node name="CameraMount" type="Node3D" parent="."]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CameraMount"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material = SubResource("StandardMaterial3D_1gdut")
+
+[node name="CameraNest" type="Node3D" parent="."]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CameraNest"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material = SubResource("StandardMaterial3D_6h7m6")
+
+[node name="FocusPoint" type="Node3D" parent="."]
+transform = Transform3D(-0.365, 3.12166e-08, -4.54205e-08, 0, 0.300806, 0.206738, 5.51135e-08, 0.206738, -0.300806, 0, 0, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="FocusPoint"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+material = SubResource("StandardMaterial3D_47crt")
+
+[node name="PlayerCamera" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.5525e-08, -1.2444e-07, 0, 0.824126, 0.566406, 1.50996e-07, 0.566406, -0.824126, 0, 2.84233, -3.63757)
+current = true

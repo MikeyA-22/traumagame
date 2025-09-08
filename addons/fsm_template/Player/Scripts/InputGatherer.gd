@@ -1,0 +1,32 @@
+extends Node
+class_name InputInternal
+
+var mouse = false
+
+func gather_input() -> InputPackage:
+	var new_input = InputPackage.new() 
+	
+	if Input.is_key_pressed(KEY_ESCAPE):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	new_input.input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	if new_input.input_direction != Vector2.ZERO:
+		new_input.actions.append("run")
+	
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		if new_input.actions.has("run"):
+			new_input.actions.append("jump_start")
+	
+	if Input.is_action_just_pressed("onegbosa"):
+		new_input.combat_actions.append("light_attack_pressed")
+		#print("ONE GBOSA! GIDEM!!!")
+	
+	
+	if new_input.actions.is_empty():
+		new_input.actions.append("idle")
+	
+	return new_input
