@@ -1,11 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://ch3s4mobpmhby"]
+[gd_scene load_steps=10 format=3 uid="uid://ch3s4mobpmhby"]
 
-[ext_resource type="Shader" uid="uid://dlsradwoos5o5" path="res://test_level.tres" id="1_gojnm"]
 [ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="2_1c2mv"]
+[ext_resource type="Material" uid="uid://5b8jtaqc8qbb" path="res://testmat.material" id="2_f7g2b"]
+[ext_resource type="PackedScene" uid="uid://coynvr6waaniq" path="res://flashlight.tscn" id="3_f7g2b"]
+[ext_resource type="PackedScene" uid="uid://ceast7xxpnnit" path="res://key.tscn" id="4_4ptq8"]
+[ext_resource type="PackedScene" uid="uid://do7a3sk5ap5qk" path="res://addons/fsm_template/door.tscn" id="5_sb12i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1c2mv"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+sky_top_color = Color(0.0284819, 0.0425262, 0.0634626, 1)
+sky_horizon_color = Color(0.210156, 0.216195, 0.225729, 1)
+sky_curve = 0.080383
 ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_curve = 0.00277392
+ground_energy_multiplier = 0.74
+sun_angle_max = 0.0
+sun_curve = 0.0832177
 
 [sub_resource type="Sky" id="Sky_f7g2b"]
 sky_material = SubResource("ProceduralSkyMaterial_1c2mv")
@@ -13,15 +22,22 @@ sky_material = SubResource("ProceduralSkyMaterial_1c2mv")
 [sub_resource type="Environment" id="Environment_4ptq8"]
 background_mode = 2
 sky = SubResource("Sky_f7g2b")
-tonemap_mode = 2
+ambient_light_source = 3
+tonemap_mode = 3
+sdfgi_enabled = true
 glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.525894, 0.525894, 0.525894, 1)
+volumetric_fog_emission = Color(0.176471, 0.0901961, 0.0627451, 1)
+volumetric_fog_emission_energy = 0.1
+volumetric_fog_length = 128.0
+adjustment_enabled = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1c2mv"]
-render_priority = 0
-shader = ExtResource("1_gojnm")
-shader_parameter/Vector3Parameter = Vector3(10, 10, 0)
-shader_parameter/FloatParameter = 0.5
-shader_parameter/FloatParameter2 = 0.51
+[sub_resource type="FogMaterial" id="FogMaterial_sb12i"]
+density = 0.05
+emission = Color(0.332561, 0.332561, 0.332561, 1)
+height_falloff = 9.78356
+edge_fade = 0.459479
 
 [node name="Test Level" type="Node3D"]
 
@@ -30,16 +46,67 @@ environment = SubResource("Environment_4ptq8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+visible = false
 shadow_enabled = true
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-use_collision = true
-size = Vector3(100, 0.3, 100)
-material = SubResource("ShaderMaterial_1c2mv")
+sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_1c2mv")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.152639, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.80682, 15.8436)
 fov = 33.2
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+collision_layer = 5
+collision_mask = 5
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+use_collision = true
+size = Vector3(100, 0.3, 100)
+material = ExtResource("2_f7g2b")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+material = ExtResource("2_f7g2b")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(50, 10, 50)
+material = ExtResource("2_f7g2b")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730307, 0)
+operation = 2
+size = Vector3(40, 10, 40)
+material = ExtResource("2_f7g2b")
+
+[node name="flashlight" parent="." instance=ExtResource("3_f7g2b")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 3.84152, -4.18403, 0.927648)
+
+[node name="key" parent="." instance=ExtResource("4_4ptq8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.10406, -4.09854, 1.1443)
+
+[node name="Door" parent="." instance=ExtResource("5_sb12i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45488, -4.26969, -4.7182)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.65563, 0)
+light_color = Color(0.351576, 0.1876, 0.0902795, 1)
+light_energy = 14.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 0.6
+omni_range = 17.791
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81586, 0)
+visible = false
+shape = 4
+material = SubResource("FogMaterial_sb12i")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6018, 0, 2.88922)
+size = Vector3(20, 20, 25.7784)
+
+[node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3982, 0, -4.11078)
+size = Vector3(20, 20, 25.7784)

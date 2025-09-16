@@ -13,8 +13,16 @@ var dampener = 0.1
 @onready var player = $".."
 @onready var skeleton = %Skeleton3D
 @onready var animator = $Skeleton3D/AnimationPlayer as AnimationPlayer
-@onready var combat = $Combat as HumanoidCombat
-@onready var active_weapon: Weapon = $RightHand/RightHand as Hand
+#@onready var combat = $Combat as HumanoidCombat
+@onready var interact = $InteractManager as Interact
+@export var objects : Array[Pickable]
+@onready var active_object: Pickable
+@onready var right_hand = $RightHand
+@onready var inventory = $Inventory as Node
+#@onready var light = $"LocalCamera/Camera3D/Flashlight Receiver"
+
+static var flash = false
+
 #	@onready var anim_tree = $Skeleton3D/AnimationTree as AnimationTree
 
 var current_state: State
@@ -23,19 +31,20 @@ var current_state: State
 	"idle" : $Idle,
 	"run" : $Run,
 	"landing" : $Landing,
-	"jump_start": $JumpStart,
 	"midair": $Midair,
-	"Hit1": $Hit1,
-	"Hit2": $Hit2
+	"Flashlight": $Flashlight,
+	"Interacting": $Interacting,
+	"open_door": $OpenDoor
 }
 
 func _ready() -> void:
 	current_state = moves["idle"]
 	for move in moves.values():
 		move.player = player
+		
 
 func update(input: InputPackage, delta: float):
-	input = combat.translate_combat_actions(input)
+	input = interact.translate_pickable_actions(input)
 	var requested = current_state.check_request(input)
 	if requested != "okay":
 		switch_to(requested)
@@ -49,3 +58,28 @@ func switch_to(state: String):
 	current_state.on_enter_state()
 	current_state.mark_enter_state()
 	animator.play_section_with_markers(current_state.animation,current_state.start_marker,current_state.end_marker)
+
+
+
+
+	
+
+
+	
+	
+	
+
+func remove_pickable(object: Pickable):
+	objects.erase(object)
+
+func set_active_object(object: Pickable):
+		Game_Global.active_object = object
+		active_object = object
+		#object.basis = right_hand.basis
+		object.reparent(right_hand)
+		object.transform = right_hand.transform
+		object.position = Vector3.ZERO
+		
+		
+		
+		

@@ -1,36 +1,50 @@
-[gd_scene load_steps=7 format=3 uid="uid://go0nwkxm05ck"]
+[gd_scene load_steps=10 format=3 uid="uid://go0nwkxm05ck"]
 
 [ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://addons/fsm_template/Player/Scripts/Player.gd" id="1_hqtel"]
+[ext_resource type="PackedScene" uid="uid://j5il4etq1a5a" path="res://Player_ui.tscn" id="2_78wmc"]
 [ext_resource type="Script" uid="uid://b4vv20clk4yrg" path="res://addons/fsm_template/Player/Camera.gd" id="2_k53q1"]
 [ext_resource type="Script" uid="uid://cht70wt24resd" path="res://addons/fsm_template/Player/Scripts/InputGatherer.gd" id="3_i3pqv"]
+[ext_resource type="Script" uid="uid://ksyx12j2sj82" path="res://addons/fsm_template/Player/flashlight_receiver.gd" id="4_3dtqd"]
+[ext_resource type="Script" uid="uid://q50py11ulaxd" path="res://addons/fsm_template/Player/Interaction_catcher.gd" id="4_71weq"]
 [ext_resource type="PackedScene" uid="uid://bvyu35md1spyq" path="res://addons/fsm_template/model.tscn" id="4_k53q1"]
 [ext_resource type="PackedScene" uid="uid://dmbx332sa1c3h" path="res://addons/fsm_template/visuals.tscn" id="8_od3ui"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
-radius = 0.641028
-height = 3.51631
+radius = 0.290004
+height = 1.84675
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_hqtel")
 
+[node name="UI" parent="." instance=ExtResource("2_78wmc")]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38292, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.861784, 0.0167608)
 shape = SubResource("CapsuleShape3D_sh265")
 
 [node name="visuals" parent="." instance=ExtResource("8_od3ui")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66605, 0)
 
-[node name="LocalCamera" type="BoneAttachment3D" parent="visuals/Cube_022" index="0"]
+[node name="LocalCamera" type="Node3D" parent="visuals/Cube_022" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0828484, 0.380694, 0.0799696)
-bone_name = "mixamorig_Head"
-bone_idx = 5
-override_pose = true
-use_external_skeleton = true
-external_skeleton = NodePath("../../../Model/Skeleton3D")
 script = ExtResource("2_k53q1")
 
 [node name="Camera3D" type="Camera3D" parent="visuals/Cube_022/LocalCamera"]
-transform = Transform3D(-1, 1.15621e-08, 8.66549e-08, 4.37114e-08, 0.924546, 0.381071, -7.57104e-08, 0.381071, -0.924546, 0, 4.59129, 0.0572066)
+transform = Transform3D(-1, 1.15622e-08, 8.66549e-08, -3.55271e-15, 0.991216, -0.132256, -8.74228e-08, -0.132256, -0.991216, 0, 1.81744, 0.0572066)
+
+[node name="InteractionCatcher" type="RayCast3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
+target_position = Vector3(0, 0, -2)
+collision_mask = 2
+collide_with_areas = true
+debug_shape_custom_color = Color(0.55, 0, 0, 1)
+script = ExtResource("4_71weq")
+
+[node name="Flashlight Receiver" type="SpotLight3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
+light_color = Color(0.949333, 0.803302, 0.72842, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 0.1
+spot_range = 100.0
+spot_angle_attenuation = 3.85348
+script = ExtResource("4_3dtqd")
 
 [node name="Model" parent="." instance=ExtResource("4_k53q1")]
 

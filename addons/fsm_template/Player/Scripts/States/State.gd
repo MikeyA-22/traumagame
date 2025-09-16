@@ -14,7 +14,7 @@ var queued_move : String = "none, drop error please"
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@export var tracking_angular_speed : float = 10
+var tracking_angular_speed : float = 10
 
 static var state_priority : Dictionary = {
 	"idle" : 1,
@@ -23,8 +23,11 @@ static var state_priority : Dictionary = {
 	"midair" : 10,
 	"landing" : 10,
 	"Hit1" : 15,
-	"Hit2": 15
-}
+	"Hit2": 15,
+	"Flashlight" : 15,
+	"Interacting": 15,
+	"open_door": 15
+	}
 
 static func priority_sort(a: String, b: String):
 	if(state_priority[a] > state_priority[b]):

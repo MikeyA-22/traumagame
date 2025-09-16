@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cei2leye1yops"]
+
+[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Item_data.gd" id="1_qij17"]
+[ext_resource type="PackedScene" uid="uid://coynvr6waaniq" path="res://flashlight.tscn" id="1_ypl2x"]
+
+[resource]
+script = ExtResource("1_qij17")
+item_name = "Flashlight"
+item_model = ExtResource("1_ypl2x")
+metadata/_custom_type_script = "uid://dk6bs118bwbsv"

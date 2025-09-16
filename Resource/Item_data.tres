@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c1ia0pua7jgi"]
+
+[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Item_data.gd" id="1_bai84"]
+[ext_resource type="PackedScene" uid="uid://ceast7xxpnnit" path="res://key.tscn" id="1_yrysx"]
+
+[resource]
+script = ExtResource("1_bai84")
+item_name = "Key"
+item_model = ExtResource("1_yrysx")

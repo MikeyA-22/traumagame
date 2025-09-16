@@ -26,7 +26,7 @@ func check_request(input: InputPackage):
 
 # Step 4: implement an update function
 func update(input: InputPackage, delta: float):
-	debugprintcurrentanimation()
+	#debugprintcurrentanimation()
 	player.velocity.y -= gravity * delta * dampener
 	player.move_and_slide()
 

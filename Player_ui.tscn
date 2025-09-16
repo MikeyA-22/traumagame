@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://j5il4etq1a5a"]
+
+[ext_resource type="Shader" uid="uid://ddykr3l5catfu" path="res://Player_ui.tres" id="1_ir6mu"]
+[ext_resource type="Texture2D" uid="uid://clwemiuaeydvt" path="res://reticle_inactive.png" id="2_gq5kw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mb3g"]
+shader = ExtResource("1_ir6mu")
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+material = SubResource("ShaderMaterial_7mb3g")
+texture = ExtResource("2_gq5kw")

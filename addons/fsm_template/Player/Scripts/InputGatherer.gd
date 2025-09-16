@@ -3,6 +3,8 @@ class_name InputInternal
 
 var mouse = false
 
+#@onready var InteractionCatcher = $"../visuals/Cube_022/LocalCamera/Camera3D/InteractionCatcher"
+
 func gather_input() -> InputPackage:
 	var new_input = InputPackage.new() 
 	
@@ -19,12 +21,14 @@ func gather_input() -> InputPackage:
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		if new_input.actions.has("run"):
-			new_input.actions.append("jump_start")
+			pass#new_input.actions.append("jump_start")
 	
 	if Input.is_action_just_pressed("onegbosa"):
-		new_input.combat_actions.append("light_attack_pressed")
+		new_input.interactions.append("light_attack_pressed")
 		#print("ONE GBOSA! GIDEM!!!")
 	
+	if Input.is_action_just_pressed("interact"):
+		new_input.actions.append("Interacting")
 	
 	if new_input.actions.is_empty():
 		new_input.actions.append("idle")

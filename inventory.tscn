@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgrarkhmjufiu"]
+
+[ext_resource type="Script" uid="uid://c2uu8jfllr2pg" path="res://addons/fsm_template/inventory.gd" id="1_pohso"]
+
+[node name="Inventory" type="Node"]
+script = ExtResource("1_pohso")
+metadata/_custom_type_script = "uid://c2uu8jfllr2pg"
