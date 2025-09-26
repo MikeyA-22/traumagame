@@ -7,12 +7,23 @@ var flash_flag: bool
 func _ready() -> void:
 	light_energy = 0
 	SigBus.connect("FLASH", on_flashlight)
+	SigBus.connect("OFF_FLASH", off_flashlight)
 
 func on_flashlight() -> void:
+	
 	flash_flag = !flash_flag
 	if flash_flag == true:
-		light_energy = 4
+		Game_Global.flashlight_value = 4
+		light_energy = Game_Global.flashlight_value
+		flash_flag = true
 		#print(light_energy)
 	else:
-		light_energy = 0
+		off_flashlight()
+	
+
+func off_flashlight():
+	
+	Game_Global.flashlight_value = 0
+	light_energy = Game_Global.flashlight_value
+	flash_flag = false
 		#print(light_energy)

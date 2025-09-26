@@ -3,6 +3,7 @@ class_name Sig_bus
 
 signal FLASH
 signal DOOR
+signal OFF_FLASH
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

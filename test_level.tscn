@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch3s4mobpmhby"]
+[gd_scene load_steps=12 format=3 uid="uid://ch3s4mobpmhby"]
 
 [ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="2_1c2mv"]
 [ext_resource type="Material" uid="uid://5b8jtaqc8qbb" path="res://testmat.material" id="2_f7g2b"]
 [ext_resource type="PackedScene" uid="uid://coynvr6waaniq" path="res://flashlight.tscn" id="3_f7g2b"]
 [ext_resource type="PackedScene" uid="uid://ceast7xxpnnit" path="res://key.tscn" id="4_4ptq8"]
 [ext_resource type="PackedScene" uid="uid://do7a3sk5ap5qk" path="res://addons/fsm_template/door.tscn" id="5_sb12i"]
+[ext_resource type="PackedScene" uid="uid://d1y5wyjmkk0x" path="res://base_enemy.tscn" id="6_gbhdq"]
+[ext_resource type="PackedScene" uid="uid://1px6vn38d7am" path="res://canvas_layer.tscn" id="7_y646j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1c2mv"]
 sky_top_color = Color(0.0284819, 0.0425262, 0.0634626, 1)
@@ -51,7 +53,7 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_1c2mv")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.59236, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.80682, 15.8436)
@@ -81,10 +83,10 @@ size = Vector3(40, 10, 40)
 material = ExtResource("2_f7g2b")
 
 [node name="flashlight" parent="." instance=ExtResource("3_f7g2b")]
-transform = Transform3D(2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 3.84152, -4.18403, 0.927648)
+transform = Transform3D(2, 0, 0, 0, -2, -1.74846e-07, 0, 1.74846e-07, -2, 3.84152, -4.18403, 0.927648)
 
 [node name="key" parent="." instance=ExtResource("4_4ptq8")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 3.10406, -4.09854, 1.1443)
+transform = Transform3D(1, 0, 0, 0, 1, -1.06581e-14, 0, 1.06581e-14, 1, 3.10406, -4.2091, 1.1443)
 
 [node name="Door" parent="." instance=ExtResource("5_sb12i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45488, -4.26969, -4.7182)
@@ -104,9 +106,15 @@ shape = 4
 material = SubResource("FogMaterial_sb12i")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6018, 0, 2.88922)
-size = Vector3(20, 20, 25.7784)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6018, 0, 2.04185)
+size = Vector3(20, 20, 24.0837)
 
 [node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3982, 0, -4.11078)
-size = Vector3(20, 20, 25.7784)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3982, 0, -4.43941)
+size = Vector3(20, 20, 25.1211)
+
+[node name="Base Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_gbhdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4, 0)
+player = NodePath("../Player")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("7_y646j")]

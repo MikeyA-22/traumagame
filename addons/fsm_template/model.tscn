@@ -97,9 +97,9 @@ external_skeleton = NodePath("../Skeleton3D")
 radius = 0.1
 
 [node name="RightHand" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.319208, 0.217569, 0.922372, 0.942776, -0.0260302, 0.332409, 0.0963316, 0.975698, -0.19681, -0.0908636, 1.04404, 0.410618)
-bone_name = "mixamorig_RightHand"
-bone_idx = 49
+transform = Transform3D(-0.186447, 0.393604, -0.900174, 0.979424, 0.146495, -0.138807, 0.0772358, -0.907533, -0.412819, -0.0429421, 1.05857, 0.500811)
+bone_name = "Ctrl_Middle2_Right"
+bone_idx = 77
 use_external_skeleton = true
 external_skeleton = NodePath("../Skeleton3D")
 

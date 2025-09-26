@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dq2wrq5qk5vnc" path="res://Key.gd" id="1_up4cr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_up4cr"]
-size = Vector3(0.302002, 1.47375, 0.171265)
+size = Vector3(0.302002, 1.51373, 0.266747)
 
 [node name="key" type="CharacterBody3D"]
 collision_layer = 2
@@ -26,5 +26,5 @@ transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, 0.0159192, 0.5668
 size = Vector3(0.898926, 1, 0.544922)
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3.53477e-16, -8.08661e-09, 0.185, -0.185, -8.08661e-09, 0, 8.08661e-09, -0.185, -8.08661e-09, 0.000914612, -0.00255188, -0.00280029)
+transform = Transform3D(3.53477e-16, -8.08661e-09, 0.185, -0.185, -8.08661e-09, 0, 8.08661e-09, -0.185, -8.08661e-09, 0.00068524, -0.00255188, 0.000897909)
 shape = SubResource("BoxShape3D_up4cr")

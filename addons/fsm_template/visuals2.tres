@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://l78cg2fgviuj"]
+
+[ext_resource type="Shader" uid="uid://diqkawvpkqsck" path="res://addons/fsm_template/visuals.gdshader" id="1_bbebf"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_bbebf")
+shader_parameter/affine_mapping = false
+shader_parameter/color = Color(0, 1, 0, 1)
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)

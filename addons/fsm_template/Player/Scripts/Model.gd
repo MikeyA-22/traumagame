@@ -15,7 +15,7 @@ var dampener = 0.1
 @onready var animator = $Skeleton3D/AnimationPlayer as AnimationPlayer
 #@onready var combat = $Combat as HumanoidCombat
 @onready var interact = $InteractManager as Interact
-@export var objects : Array[Pickable]
+#@export var objects : Array[Pickable]
 @onready var active_object: Pickable
 @onready var right_hand = $RightHand
 @onready var inventory = $Inventory as Node
@@ -70,16 +70,17 @@ func switch_to(state: String):
 	
 
 func remove_pickable(object: Pickable):
-	objects.erase(object)
+	pass#objects.erase(object)
 
 func set_active_object(object: Pickable):
-		Game_Global.active_object = object
-		active_object = object
-		#object.basis = right_hand.basis
-		object.reparent(right_hand)
-		object.transform = right_hand.transform
-		object.position = Vector3.ZERO
-		
-		
-		
-		
+		pass
+		#Game_Global.active_object = object
+		#active_object = object
+		##object.basis = right_hand.basis
+		#object.reparent(right_hand)
+		#object.transform = right_hand.transform
+		#object.position = Vector3.ZERO
+		#
+		#
+		#
+		#

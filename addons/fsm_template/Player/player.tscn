@@ -32,7 +32,7 @@ script = ExtResource("2_k53q1")
 transform = Transform3D(-1, 1.15622e-08, 8.66549e-08, -3.55271e-15, 0.991216, -0.132256, -8.74228e-08, -0.132256, -0.991216, 0, 1.81744, 0.0572066)
 
 [node name="InteractionCatcher" type="RayCast3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
-target_position = Vector3(0, 0, -2)
+target_position = Vector3(0, 0, -3)
 collision_mask = 2
 collide_with_areas = true
 debug_shape_custom_color = Color(0.55, 0, 0, 1)
@@ -42,6 +42,7 @@ script = ExtResource("4_71weq")
 light_color = Color(0.949333, 0.803302, 0.72842, 1)
 light_energy = 4.0
 light_volumetric_fog_energy = 0.1
+shadow_enabled = true
 spot_range = 100.0
 spot_angle_attenuation = 3.85348
 script = ExtResource("4_3dtqd")

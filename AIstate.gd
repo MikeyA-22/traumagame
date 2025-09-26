@@ -1,7 +1,7 @@
 extends Node
 class_name AIstate
 
-@export var move_name: String
+@export var state_name: String
 @export var animation: String
 
 var player : CharacterBody3D
@@ -11,15 +11,48 @@ var spawn_point : Vector3
 var right_weapon : Weapon
 var resources : EnemyResources
 
-func _ready() -> void:
-	pass#animation = "ANIMATION GOES HERE"
+var enter_state_time : float
 
-# Step 3: implement a check_relevance function
-func check_request(input: InputPackage):
+func check_transition(delta) -> Array:
+	return [true, "implement transition logic for " + state_name]
+
+
+func update(delta):
+	pass
+ 
+
+func on_enter():
 	pass
 
-# Step 4: implement an update function
-func update(input: InputPackage, delta: float):
+
+func on_exit():
 	pass
 
-## Step 5: DELETE THE COMMENTS!! DUMMY...
+
+func react_on_hit():#hit : HitData):
+	pass#resources.lose_health(hit.damage)
+
+
+# our little timestamps framework to work with timings inside our logic
+func mark_enter_state():
+	enter_state_time = Time.get_unix_time_from_system()
+
+func get_progress() -> float:
+	var now = Time.get_unix_time_from_system()
+	return now - enter_state_time
+
+func works_longer_than(time : float) -> bool:
+	if get_progress() >= time:
+		return true
+	return false
+
+func works_less_than(time : float) -> bool:
+	if get_progress() < time: 
+		return true
+	return false
+
+func works_between(start : float, finish : float) -> bool:
+	var progress = get_progress()
+	if progress >= start and progress <= finish:
+		return true
+	return false
