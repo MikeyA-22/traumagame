@@ -38,7 +38,6 @@ adjustment_enabled = true
 
 [sub_resource type="FogMaterial" id="FogMaterial_sb12i"]
 density = 0.7634
-emission = Color(0.332561, 0.332561, 0.332561, 1)
 height_falloff = 0.158259
 edge_fade = 0.107177
 
@@ -95,12 +94,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45488, -4.26969, -4.7182)
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.65563, 0)
 light_color = Color(0.351576, 0.1876, 0.0902795, 1)
-light_energy = 14.0
+light_energy = 12.169
 light_indirect_energy = 5.0
-light_volumetric_fog_energy = 0.6
 shadow_enabled = true
 omni_range = 22.686
-omni_attenuation = 0.0
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59847, -3.48366, -7.4001)
@@ -110,13 +107,19 @@ material = SubResource("FogMaterial_sb12i")
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6018, 0, 2.04185)
 size = Vector3(20, 20, 24.0837)
+box_projection = true
+interior = true
+enable_shadows = true
 
 [node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3982, 0, -4.43941)
 size = Vector3(20, 20, 25.1211)
+box_projection = true
+interior = true
+enable_shadows = true
 
 [node name="Base Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_gbhdq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4.25346, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4.25346, 5.33684)
 player = NodePath("../Player")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_y646j")]
