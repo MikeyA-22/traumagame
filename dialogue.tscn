@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0c0hsx3fyk3j"]
+
+[ext_resource type="Script" uid="uid://crgthj8go4bpn" path="res://dialogue.gd" id="1_kp46k"]
+
+[sub_resource type="Curve" id="Curve_kp46k"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_oi3j2"]
+_data = [Vector2(0, 0.882168), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_758ep"]
+_data = [Vector2(1, 0.682761), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_hoxo3"]
+curve_x = SubResource("Curve_kp46k")
+curve_y = SubResource("Curve_oi3j2")
+curve_z = SubResource("Curve_758ep")
+
+[sub_resource type="SystemFont" id="SystemFont_kp46k"]
+
+[node name="Dialogue" type="Control" node_paths=PackedStringArray("background", "content", "type_timer", "pause_timer", "audio_player")]
+custom_minimum_size = Vector2(798, 149)
+layout_mode = 3
+anchor_left = 0.158
+anchor_top = 0.401
+anchor_right = 0.829
+anchor_bottom = 0.595
+offset_left = -0.516006
+offset_top = 2.65198
+offset_right = -0.508057
+offset_bottom = -0.0600281
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_kp46k")
+background = NodePath("background")
+content = NodePath("content")
+type_timer = NodePath("typetimer")
+pause_timer = NodePath("pausetimer")
+audio_player = NodePath("AudioStreamPlayer")
+
+[node name="background" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(798, 149)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.0
+offset_top = -74.5
+offset_right = 399.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CurveXYZTexture_hoxo3")
+region_rect = Rect2(0, -3.2521, 246.76, 83.2521)
+
+[node name="content" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(773, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -386.5
+offset_top = -64.0
+offset_right = 386.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_kp46k")
+bbcode_enabled = true
+fit_content = true
+
+[node name="typetimer" type="Timer" parent="."]
+wait_time = 0.04
+
+[node name="pausetimer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="timeout" from="typetimer" to="." method="_on_typetimer_timeout"]

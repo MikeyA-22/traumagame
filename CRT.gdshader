@@ -34,7 +34,9 @@ uniform float distort_intensity : hint_range(0.0, 0.2) = 0.05; // The distortion
 uniform float noise_opacity : hint_range(0.0, 1.0) = 0.4;
 uniform float noise_speed = 5.0; // There is a movement in the noise pattern that can be hard to see first. This sets the speed of that movement.
 
-uniform float static_noise_intensity : hint_range(0.0, 1.0) = 0.06;
+global uniform float static_noise_intensity : hint_range(0.0, 1.0) = 0.06;
+
+
 
 uniform float aberration : hint_range(-1.0, 1.0) = 0.03; // Chromatic aberration, a distortion on each color channel.
 uniform float brightness = 1.4; // When adding scanline gaps and grille the image can get very dark. Brightness tries to compensate for that.

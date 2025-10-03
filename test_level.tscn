@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ch3s4mobpmhby"]
+[gd_scene load_steps=13 format=3 uid="uid://ch3s4mobpmhby"]
 
 [ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="2_1c2mv"]
 [ext_resource type="Material" uid="uid://5b8jtaqc8qbb" path="res://testmat.material" id="2_f7g2b"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://do7a3sk5ap5qk" path="res://addons/fsm_template/door.tscn" id="5_sb12i"]
 [ext_resource type="PackedScene" uid="uid://d1y5wyjmkk0x" path="res://base_enemy.tscn" id="6_gbhdq"]
 [ext_resource type="PackedScene" uid="uid://1px6vn38d7am" path="res://canvas_layer.tscn" id="7_y646j"]
+[ext_resource type="Script" uid="uid://b0rd2angxp5pf" path="res://dialogue_manager.gd" id="8_lnbra"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1c2mv"]
 sky_top_color = Color(0.0284819, 0.0425262, 0.0634626, 1)
@@ -123,3 +124,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4.25346, 5.33684)
 player = NodePath("../Player")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_y646j")]
+
+[node name="DialogueManager" type="Node" parent="."]
+script = ExtResource("8_lnbra")

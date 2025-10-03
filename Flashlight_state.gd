@@ -30,4 +30,5 @@ func update(input: InputPackage, delta: float):
 
 func on_enter_state():
 	SigBus.FLASH.emit()
+	
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

@@ -10,15 +10,18 @@ var animator : AnimationPlayer
 var spawn_point : Vector3
 var right_weapon : Weapon
 var resources : EnemyResources
-
+var static_noise: float = 0.06
 var enter_state_time : float
+var stat_adjuster: float = 10
 
 func check_transition(delta) -> Array:
 	return [true, "implement transition logic for " + state_name]
 
 
 func update(delta):
-	pass
+	RenderingServer.global_shader_parameter_set("static_noise_intensity",static_noise)
+	static_noise = (player.global_position.y - character.global_position.y) * stat_adjuster
+	print(static_noise)
  
 
 func on_enter():
@@ -56,3 +59,4 @@ func works_between(start : float, finish : float) -> bool:
 	if progress >= start and progress <= finish:
 		return true
 	return false
+	

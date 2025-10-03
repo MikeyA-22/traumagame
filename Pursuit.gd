@@ -15,6 +15,8 @@ func update(delta):
 	var grounded_player_pos = player.global_position
 	grounded_player_pos.y = character.global_position.y
 	
+	static_noise = (player.global_position.y - character.global_position.y) * stat_adjuster * 10
+	print(static_noise)
 	character.velocity = character.global_position.direction_to(grounded_player_pos) * character.speed
 	character.look_at(grounded_player_pos)
 	character.move_and_slide()

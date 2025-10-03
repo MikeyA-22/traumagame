@@ -176,10 +176,11 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-348.695, 336.414)
 modes/diffuse = 1
 nodes/fragment/0/position = Vector2(2320, 2060)
 nodes/fragment/11/node = SubResource("VisualShaderNodeUVFunc_1kfdn")
-nodes/fragment/11/position = Vector2(-1180, 2320)
+nodes/fragment/11/position = Vector2(-1140, 2380)
 nodes/fragment/12/node = SubResource("VisualShaderNodeFloatOp_t1s0g")
 nodes/fragment/12/position = Vector2(500, 960)
 nodes/fragment/14/node = SubResource("VisualShaderNodeFloatParameter_1kfdn")
@@ -187,9 +188,9 @@ nodes/fragment/14/position = Vector2(-640, 1100)
 nodes/fragment/18/node = SubResource("VisualShaderNodeVectorOp_1kfdn")
 nodes/fragment/18/position = Vector2(-600, 1980)
 nodes/fragment/19/node = SubResource("VisualShaderNodeVectorFunc_t1s0g")
-nodes/fragment/19/position = Vector2(280, 2440)
+nodes/fragment/19/position = Vector2(320, 2500)
 nodes/fragment/20/node = SubResource("VisualShaderNodeVec3Parameter_1kfdn")
-nodes/fragment/20/position = Vector2(-1500, 2100)
+nodes/fragment/20/position = Vector2(-1400, 2000)
 nodes/fragment/21/node = SubResource("VisualShaderNodeFloatOp_xb0ig")
 nodes/fragment/21/position = Vector2(-1260, 1800)
 nodes/fragment/22/node = SubResource("VisualShaderNodeVectorOp_553u5")

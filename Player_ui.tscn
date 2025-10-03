@@ -30,6 +30,8 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+[node name="Reticle" type="Sprite2D" parent="CenterContainer"]
 material = SubResource("ShaderMaterial_7mb3g")
 texture = ExtResource("2_gq5kw")
+
+[node name="RedOverlay" type="Sprite2D" parent="."]

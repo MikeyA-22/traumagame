@@ -5,6 +5,11 @@ signal FLASH
 signal DOOR
 signal OFF_FLASH
 
+signal message_request
+signal message_completed
+
+signal finished
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

@@ -3,6 +3,7 @@ extends Node3D
 @onready var player = $"../../.."
 @onready var player_camera = $Camera3D
 var mouse_is_captured = true
+@onready var anim_player : AnimationPlayer = $Camera3D/AnimationPlayer
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -16,6 +17,9 @@ func _process(delta):
 func _input(event):
 	if event.is_action_released("ui_cancel"):
 		switch_mouse()
+	
+	if Input.get_vector("ui_up","ui_down","ui_right","ui_left"):
+		anim_player.play("head_bob")
 	
 	if event is InputEventMouseMotion and mouse_is_captured:
 		var d_hor = event.relative.x
