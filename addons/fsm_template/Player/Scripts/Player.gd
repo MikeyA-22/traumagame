@@ -1,12 +1,14 @@
 
 extends CharacterBody3D
 
+class_name Player
 
 @onready var inputgatherer = $InputGatherer
 @onready var Model = $Model
 @onready var camera_mount =$visuals/Cube_022/LocalCamera
 @onready var visuals = $visuals as PlayerVisuals
 @onready var light = $"visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
+@export var monster: Enemy
 
 func _ready() -> void:
 	

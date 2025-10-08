@@ -3,6 +3,8 @@ extends Pickable
 ###class_name Class_name_here
 ##change template
 
+
+
 func _ready() -> void:
 	##change state mapping
 	pickable_action = {

@@ -4,7 +4,12 @@ class_name Flashlight
 #@onready var light: SpotLight3D = $SpotLight3D
 # Called when the node enters the scene tree for the first time.
 
+
 func _ready() -> void:
+	messages = ["[color=black]A [color=red]FLASHLIGHT!!![/color]",
+									"[color=red][wave]TYYPSHII...[/wave][/color]",
+	"[color=red]But wait{p=0.2}[color=red] what's that in the distance?...[/color]",
+	"[color=red][shake rate=20 level=10]ah{p=0.26}AAAHHHH[/shake][/color]"]
 	
 	pickable_action = {
 		"light_attack_pressed" : "Flashlight"

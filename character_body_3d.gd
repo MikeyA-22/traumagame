@@ -1,10 +1,10 @@
 extends CharacterBody3D
 
-class_name Enemy
+##CROW SCRIPT
+#declaring our variables
 
-@export var player : CharacterBody3D
+var monster : Enemy
 
-@export var speed : float = 3
 @export var return_speed : float = 9
 
 @export var aggro_radius : float = 8
@@ -14,5 +14,11 @@ class_name Enemy
 var spawn_point : Vector3
 
 
+
+
 func _ready():
 	spawn_point = global_position
+	
+
+func _process(delta):
+	pass#circular_motion()

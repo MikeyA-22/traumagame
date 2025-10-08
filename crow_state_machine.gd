@@ -1,16 +1,21 @@
-extends Node
-class_name StateMachine
+extends StateMachine
 
-@export var animation_player : AnimationPlayer
-@export var character : CharacterBody3D
-var current_state: AIstate
 
-var states : Dictionary #{ String: AIMove }
+## @export var animation_player : AnimationPlayer
+## @export var character : CharacterBody3D
+## var current_state: AIstate
+@onready var root = $".."
+@onready var player: Player = root.player
+@onready var monster : Enemy = player.monster
+@onready var effect_area = $"../Area3D"
+
+## var states : Dictionary #{ String: AIMove }
 
 func _ready() -> void:
 	accept_states()
 	current_state = states["idle"]
 	switch_to("idle")
+	
 
 
 
@@ -36,8 +41,10 @@ func accept_states():
 		if child is AIstate:
 			states[child.state_name] = child
 			child.animator = animation_player
+			child.monster = monster
+			
 			child.character = character
-			child.player = character.player
+			#child.player = character.player
 			child.spawn_point = character.spawn_point
 			#child.right_weapon = right_weapon
 			#child.resources = resources

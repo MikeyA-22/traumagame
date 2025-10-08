@@ -4,11 +4,8 @@ class_name Sig_bus
 signal FLASH
 signal DOOR
 signal OFF_FLASH
+signal PICKING_UP
 
-signal message_request
-signal message_completed
-
-signal finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

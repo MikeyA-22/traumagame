@@ -5,7 +5,11 @@ const DIALOGUE_SCENE = preload("res://dialogue.tscn")
 
 @onready var opacity_tween : Tween 
 
+signal send_message
+signal message_request
+signal message_completed
 
+signal finished
 
 var messages = []
 var active_dialogue_offset = 0
@@ -22,11 +26,11 @@ func show_messages(message_list: Array, position: Vector2) -> void:
 	messages = message_list
 	active_dialogue_offset = 0
 	
-	var _dialogue = DIALOGUE_SCENE.instance()
+	var _dialogue = DIALOGUE_SCENE.instantiate()
 	_dialogue.connect(
 		"message_completed", 
-		self, 
-		"_on_message_completed"
+		Callable(self, "on_message_completed") 
+		
 	)
 	get_tree().get_root().add_child(_dialogue)
 	
@@ -34,15 +38,20 @@ func show_messages(message_list: Array, position: Vector2) -> void:
 	
 	show_current()
 	
+
+
 func show_current() -> void:
-	SigBus.message_request.emit()
+	emit_signal("message_request")
 	var msg = messages[active_dialogue_offset] as String
 	cur_dialogue_instance.update_message(msg)
 	
 	
 func _input(event: InputEvent) -> void:
 	if (
-		event.is_action_pressed("enter") and
+		event.is_pressed() and         
+		!event.is_echo() and
+		event is InputEventKey and (
+		event as InputEventKey).keycode == KEY_ENTER and
 		is_active and
 		cur_dialogue_instance.message_is_fully_visible()
 	):
@@ -53,11 +62,12 @@ func _input(event: InputEvent) -> void:
 			hide()
 			
 func hide() -> void:
-	#cur_dialogue_instance.disconnect(Callable(self, "message_completed"))
+	cur_dialogue_instance.disconnect("message_completed",Callable(self,"on_message_completed"))
 	cur_dialogue_instance.queue_free()
 	cur_dialogue_instance = null
 	is_active = false
 	emit_signal("finished")
 	
 func on_message_completed():
-	SigBus.message_completed.emit()
+	emit_signal("message_completed")
+	

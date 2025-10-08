@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0c0hsx3fyk3j"]
+[gd_scene load_steps=9 format=3 uid="uid://b0c0hsx3fyk3j"]
 
 [ext_resource type="Script" uid="uid://crgthj8go4bpn" path="res://dialogue.gd" id="1_kp46k"]
+[ext_resource type="FontFile" uid="uid://bj4jlii35olyc" path="res://Roboto-Regular.ttf" id="2_hoxo3"]
+[ext_resource type="Script" uid="uid://dgasyuqsa6tbx" path="res://dialogue_player.gd" id="2_oi3j2"]
+[ext_resource type="PackedScene" uid="uid://dvvpy51xk4086" path="res://pause_calculator.tscn" id="3_758ep"]
 
 [sub_resource type="Curve" id="Curve_kp46k"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -20,28 +23,21 @@ curve_x = SubResource("Curve_kp46k")
 curve_y = SubResource("Curve_oi3j2")
 curve_z = SubResource("Curve_758ep")
 
-[sub_resource type="SystemFont" id="SystemFont_kp46k"]
-
-[node name="Dialogue" type="Control" node_paths=PackedStringArray("background", "content", "type_timer", "pause_timer", "audio_player")]
+[node name="Dialogue" type="Control"]
 custom_minimum_size = Vector2(798, 149)
 layout_mode = 3
-anchor_left = 0.158
-anchor_top = 0.401
-anchor_right = 0.829
-anchor_bottom = 0.595
-offset_left = -0.516006
-offset_top = 2.65198
-offset_right = -0.508057
-offset_bottom = -0.0600281
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -399.0
+offset_top = -149.0
+offset_right = 399.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 script = ExtResource("1_kp46k")
-background = NodePath("background")
-content = NodePath("content")
-type_timer = NodePath("typetimer")
-pause_timer = NodePath("pausetimer")
-audio_player = NodePath("AudioStreamPlayer")
 
 [node name="background" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(798, 149)
@@ -74,7 +70,7 @@ offset_right = 386.5
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/normal_font = SubResource("SystemFont_kp46k")
+theme_override_fonts/normal_font = ExtResource("2_hoxo3")
 bbcode_enabled = true
 fit_content = true
 
@@ -83,6 +79,11 @@ wait_time = 0.04
 
 [node name="pausetimer" type="Timer" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="DialoguePlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("2_oi3j2")
+
+[node name="PauseCalculator" parent="." instance=ExtResource("3_758ep")]
 
 [connection signal="timeout" from="typetimer" to="." method="_on_typetimer_timeout"]
+[connection signal="timeout" from="pausetimer" to="." method="_on_pausetimer_timeout"]
+[connection signal="pause_requested" from="PauseCalculator" to="." method="on_PauseCalculator_pause_requested"]

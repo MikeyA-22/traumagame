@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://ch3s4mobpmhby"]
+[gd_scene load_steps=15 format=3 uid="uid://ch3s4mobpmhby"]
 
+[ext_resource type="Script" uid="uid://3wai6u2l5eqq" path="res://Test_level.gd" id="1_6emce"]
 [ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="2_1c2mv"]
 [ext_resource type="Material" uid="uid://5b8jtaqc8qbb" path="res://testmat.material" id="2_f7g2b"]
 [ext_resource type="PackedScene" uid="uid://coynvr6waaniq" path="res://flashlight.tscn" id="3_f7g2b"]
 [ext_resource type="PackedScene" uid="uid://ceast7xxpnnit" path="res://key.tscn" id="4_4ptq8"]
 [ext_resource type="PackedScene" uid="uid://do7a3sk5ap5qk" path="res://addons/fsm_template/door.tscn" id="5_sb12i"]
 [ext_resource type="PackedScene" uid="uid://d1y5wyjmkk0x" path="res://base_enemy.tscn" id="6_gbhdq"]
-[ext_resource type="PackedScene" uid="uid://1px6vn38d7am" path="res://canvas_layer.tscn" id="7_y646j"]
-[ext_resource type="Script" uid="uid://b0rd2angxp5pf" path="res://dialogue_manager.gd" id="8_lnbra"]
+[ext_resource type="PackedScene" uid="uid://b4va8ehcltmpj" path="res://dialogue_manager.tscn" id="8_lnbra"]
+[ext_resource type="Shader" uid="uid://c628t2p1addle" path="res://CRT.gdshader" id="9_6emce"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1c2mv"]
 sky_top_color = Color(0.0284819, 0.0425262, 0.0634626, 1)
@@ -42,7 +43,48 @@ density = 0.7634
 height_falloff = 0.158259
 edge_fade = 0.107177
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lnbra"]
+shader = ExtResource("9_6emce")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 2.754
+shader_parameter/distort_intensity = 0.07
+shader_parameter/noise_opacity = 0.529
+shader_parameter/noise_speed = 5.29
+shader_parameter/aberration = 0.00500005
+shader_parameter/brightness = 1.615
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.239
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [node name="Test Level" type="Node3D"]
+script = ExtResource("1_6emce")
+
+[node name="DialogueManager" parent="." instance=ExtResource("8_lnbra")]
+
+[node name="DialoguePosition" type="Marker2D" parent="."]
+position = Vector2(556, 508)
+
+[node name="NextLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.378
+anchor_top = 0.784
+anchor_right = 0.622
+anchor_bottom = 1.0
+offset_left = -0.456024
+offset_top = -0.0320129
+offset_right = 0.455933
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_4ptq8")
@@ -53,8 +95,9 @@ visible = false
 shadow_enabled = true
 sky_mode = 1
 
-[node name="Player" parent="." instance=ExtResource("2_1c2mv")]
+[node name="Player" parent="." node_paths=PackedStringArray("monster") instance=ExtResource("2_1c2mv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.59236, 0)
+monster = NodePath("../Base Enemy")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.80682, 15.8436)
@@ -123,7 +166,14 @@ enable_shadows = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4.25346, 5.33684)
 player = NodePath("../Player")
 
-[node name="CanvasLayer" parent="." instance=ExtResource("7_y646j")]
+[node name="CRT_Shader" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_lnbra")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="DialogueManager" type="Node" parent="."]
-script = ExtResource("8_lnbra")
+[connection signal="finished" from="DialogueManager" to="." method="on_DialogueManager_finished"]
+[connection signal="message_completed" from="DialogueManager" to="." method="on_DialogueManager_message_completed"]
+[connection signal="message_request" from="DialogueManager" to="." method="on_DialogueManager_message_requested"]

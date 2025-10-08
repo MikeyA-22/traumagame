@@ -12,16 +12,22 @@ var right_weapon : Weapon
 var resources : EnemyResources
 var static_noise: float = 0.06
 var enter_state_time : float
-var stat_adjuster: float = 10
+var stat_adjuster: float = 1000
+var monster: Enemy
 
 func check_transition(delta) -> Array:
 	return [true, "implement transition logic for " + state_name]
 
 
+func _process(delta: float) -> void:
+	pass
+
+
 func update(delta):
-	RenderingServer.global_shader_parameter_set("static_noise_intensity",static_noise)
-	static_noise = (player.global_position.y - character.global_position.y) * stat_adjuster
-	print(static_noise)
+	pass
+	#RenderingServer.global_shader_parameter_set("static_noise_intensity",static_noise)
+	#static_noise = (character.global_position.y - player.global_position.y) * -1 * stat_adjuster
+	#print(static_noise)
  
 
 func on_enter():

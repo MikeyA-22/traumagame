@@ -21,7 +21,7 @@ func check_request(input: InputPackage) -> String:
 
 func update(input: InputPackage, delta: float):
 	player.velocity = velocity_by_input(input, delta)
-	player.look_at(player.global_position - player.velocity)
+	#player.look_at(player.camera_mount.global_position - player.velocity)
 	player.move_and_slide()
 	
 	
