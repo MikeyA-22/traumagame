@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://lqvn2lpyms4d"]
+
+[ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="1_2ds8k"]
+[ext_resource type="Resource" uid="uid://c3mn4fb232fbi" path="res://Resource/PhotoResource/Photo1data.tres" id="2_1ma2y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ds8k"]
+size = Vector3(0.25, 0.25, 0.002)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ma2y"]
+albedo_color = Color(0.427451, 0, 1, 1)
+roughness = 0.25
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ds8k"]
+size = Vector3(0.25, 0.25, 0.002)
+
+[node name="Photo" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_2ds8k")
+photodata = ExtResource("2_1ma2y")
+item_name = "photo1"
+metadata/_custom_type_script = "uid://cqeks8wkac7or"
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("BoxMesh_2ds8k")
+material = SubResource("StandardMaterial3D_1ma2y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2ds8k")

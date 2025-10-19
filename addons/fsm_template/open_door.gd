@@ -20,9 +20,9 @@ func update(input: InputPackage, delta: float):
 	pass
 
 func on_enter_state():
-	print("entered")
+	#print("entered")
 	if Game_Global.current_interactor != null and Game_Global.current_interactor.is_in_group("Doors"):
-		print("happens")
+		#print("happens")
 		SigBus.DOOR.emit()
 	
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

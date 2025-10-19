@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7aoi0qc2ixig"]
+
+[ext_resource type="Script" uid="uid://y60rc5oacow8" path="res://Photobook/photobook.gd" id="1_tsfnp"]
+[ext_resource type="PackedScene" uid="uid://be8unw3hss5xh" path="res://Photobook/photoslot.tscn" id="2_wvel8"]
+
+[node name="Photobook" type="Control" node_paths=PackedStringArray("photoslots")]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+script = ExtResource("1_tsfnp")
+photoslots = [NodePath("GridContainer/Photoslot"), NodePath("GridContainer/Photoslot2"), NodePath("GridContainer/Photoslot3"), NodePath("GridContainer/Photoslot4"), NodePath("GridContainer/Photoslot5"), NodePath("GridContainer/Photoslot6")]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 50.0
+offset_right = 120.0
+offset_bottom = 170.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 120
+theme_override_constants/v_separation = 120
+columns = 3
+
+[node name="Photoslot" parent="GridContainer" instance=ExtResource("2_wvel8")]
+layout_mode = 2
+
+[node name="Photoslot2" parent="GridContainer" instance=ExtResource("2_wvel8")]
+layout_mode = 2
+slot_no = 1
+
+[node name="Photoslot3" parent="GridContainer" instance=ExtResource("2_wvel8")]
+layout_mode = 2
+slot_no = 2
+
+[node name="Photoslot4" parent="GridContainer" instance=ExtResource("2_wvel8")]
+layout_mode = 2
+slot_no = 3
+
+[node name="Photoslot5" parent="GridContainer" instance=ExtResource("2_wvel8")]
+layout_mode = 2
+slot_no = 4
+
+[node name="Photoslot6" parent="GridContainer" instance=ExtResource("2_wvel8")]
+layout_mode = 2
+slot_no = 5

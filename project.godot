@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="traumagame"
-run/main_scene="uid://ch3s4mobpmhby"
+run/main_scene="uid://c1iegtkr03cwh"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://global.gd"
-SigBus="*res://Sig_bus.gd"
+Global="*res://Singleton/global.gd"
+SigBus="*res://Singleton/Sig_bus.gd"
 
 [editor]
 
@@ -88,6 +88,11 @@ enter={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+twogbosa={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -95,6 +100,7 @@ enter={
 3d_physics/layer_2="interactable"
 3d_physics/layer_3="ground"
 3d_physics/layer_4="rope"
+3d_physics/layer_5="crow"
 
 [rendering]
 
@@ -121,6 +127,10 @@ overlaycolor={
 "value": Color(1, 0, 0, 1)
 }
 static_noise_intensity={
+"type": "float",
+"value": 0.0
+}
+vignette_intensity={
 "type": "float",
 "value": 0.0
 }

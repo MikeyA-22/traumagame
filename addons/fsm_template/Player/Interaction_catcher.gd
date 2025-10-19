@@ -13,12 +13,21 @@ func _process(delta: float) -> void:
 		#print(collider.get_class())
 		if collider.is_in_group("Doors") and Game_Global.active_object is Key:
 			reticlenumber = 1
-			print(collider)
+			
 			Game_Global.current_interactor = collider
 		elif collider is Pickable:
 			reticlenumber = 1
+			#print(collider)
 			Game_Global.is_pickable = true
 			Game_Global.current_pickable = collider
+		else:
+			#print(Game_Global.current_interactor)
+			if collider is candle:
+				Game_Global.current_interactor = collider
+				reticlenumber = 1
+				if Input.is_action_just_pressed("interact"):
+					SigBus.BLOWN.emit(true)
+			
 	else :
 		Game_Global.is_pickable = false
 		reticlenumber = 0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceast7xxpnnit"]
+
+[ext_resource type="Script" uid="uid://dq2wrq5qk5vnc" path="res://Ables/Key/Key.gd" id="1_up4cr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_up4cr"]
+size = Vector3(0.302002, 1.51373, 0.266747)
+
+[node name="key" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 6
+script = ExtResource("1_up4cr")
+item_name = "Key"
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(3.53477e-16, -8.08661e-09, 0.185, -0.185, -8.08661e-09, 0, 8.08661e-09, -0.185, -8.08661e-09, 0.00280029, 0, 0.000914612)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D"]
+radius = 0.0620117
+height = 0.976563
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.16, 0, 0, 0, -6.99382e-09, -0.16, 0, 0.16, -6.99382e-09, 0, -0.566763, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, 0.0159192, 0.566843, -0.0101514)
+size = Vector3(0.898926, 1, 0.544922)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.53477e-16, -8.08661e-09, 0.185, -0.185, -8.08661e-09, 0, 8.08661e-09, -0.185, -8.08661e-09, 0.00068524, -0.00255188, 0.000897909)
+shape = SubResource("BoxShape3D_up4cr")

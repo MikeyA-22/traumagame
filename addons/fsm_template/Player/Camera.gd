@@ -19,14 +19,16 @@ func _input(event):
 		switch_mouse()
 	
 	if Input.get_vector("ui_up","ui_down","ui_right","ui_left"):
-		pass#anim_player.play("head_bob")
+		anim_player.play("head_bob")
 	
 	if event is InputEventMouseMotion and mouse_is_captured:
 		var d_hor = event.relative.x
 		rotate_y(- d_hor / 1000)
-		player.rotation.y = player_camera.rotation.y
+		player.rotate_y(- d_hor/1000)
 		var d_ver = event.relative.y
+		clamp(d_ver,0,10)
 		player_camera.rotate_x(d_ver/1000)
+		
 		
 
 

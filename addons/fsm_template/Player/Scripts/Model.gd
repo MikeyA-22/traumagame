@@ -2,7 +2,7 @@
 extends Node
 class_name PlayerModel
 
-const SPEED = 5.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 5
 
 
@@ -19,6 +19,7 @@ var dampener = 0.1
 @onready var active_object: Pickable
 @onready var right_hand = $RightHand
 @onready var inventory = $Inventory as Node
+@onready var Photobook = $Photobook
 #@onready var light = $"LocalCamera/Camera3D/Flashlight Receiver"
 
 static var flash = false
@@ -34,7 +35,9 @@ var current_state: State
 	"midair": $Midair,
 	"Flashlight": $Flashlight,
 	"Interacting": $Interacting,
-	"open_door": $OpenDoor
+	"open_door": $OpenDoor,
+	"take_pills": $Pills,
+	"blow_candles": $BlowCandles
 }
 
 func _ready() -> void:

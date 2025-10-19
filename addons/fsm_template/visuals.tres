@@ -13,5 +13,6 @@ shader_parameter/resolution = Vector2i(320, 240)
 
 [resource]
 resource_name = "Material.003"
+render_priority = 1
 next_pass = SubResource("ShaderMaterial_iu1em")
 cull_mode = 2

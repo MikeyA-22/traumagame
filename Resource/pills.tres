@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cqoda8bvqx5au"]
+
+[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="1_o6jke"]
+[ext_resource type="PackedScene" uid="uid://c2ckyb5vl1bwt" path="res://Ables/Pills/pills.tscn" id="1_qyhmy"]
+
+[resource]
+script = ExtResource("1_o6jke")
+item_name = "pills"
+item_model = ExtResource("1_qyhmy")
+metadata/_custom_type_script = "uid://dk6bs118bwbsv"

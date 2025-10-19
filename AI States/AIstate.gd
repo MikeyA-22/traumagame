@@ -1,0 +1,75 @@
+extends Node
+class_name AIstate
+
+@export var state_name: String
+@export var animation: String
+
+var player : CharacterBody3D
+var character: CharacterBody3D
+var animator : AnimationPlayer
+var spawn_point : Vector3
+var right_weapon : Weapon
+var resources : EnemyResources
+var static_noise: float = 0.06
+var enter_state_time : float
+var stat_adjuster: float = 1000
+var monster: Enemy
+var stunned = false
+var noise_intensity
+
+func _ready() -> void:
+	SigBus.connect("STUNNED", is_stunned)
+
+func check_transition(delta) -> Array:
+	return [true, "implement transition logic for " + state_name]
+
+func is_stunned():
+	stunned = true
+
+func _process(delta: float) -> void:
+	pass
+
+
+func update(delta):
+	pass
+	#RenderingServer.global_shader_parameter_set("static_noise_intensity",static_noise)
+	#static_noise = (character.global_position.y - player.global_position.y) * -1 * stat_adjuster
+	#print(static_noise)
+ 
+
+func on_enter():
+	pass
+
+
+func on_exit():
+	pass
+
+
+func react_on_hit():#hit : HitData):
+	pass#resources.lose_health(hit.damage)
+
+
+# our little timestamps framework to work with timings inside our logic
+func mark_enter_state():
+	enter_state_time = Time.get_unix_time_from_system()
+
+func get_progress() -> float:
+	var now = Time.get_unix_time_from_system()
+	return now - enter_state_time
+
+func works_longer_than(time : float) -> bool:
+	if get_progress() >= time:
+		return true
+	return false
+
+func works_less_than(time : float) -> bool:
+	if get_progress() < time: 
+		return true
+	return false
+
+func works_between(start : float, finish : float) -> bool:
+	var progress = get_progress()
+	if progress >= start and progress <= finish:
+		return true
+	return false
+	

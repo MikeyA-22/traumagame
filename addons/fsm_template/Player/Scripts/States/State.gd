@@ -26,7 +26,9 @@ static var state_priority : Dictionary = {
 	"Hit2": 15,
 	"Flashlight" : 15,
 	"Interacting": 15,
-	"open_door": 15
+	"open_door": 15,
+	"take_pills": 15,
+	"blow_candles": 15
 	}
 
 static func priority_sort(a: String, b: String):

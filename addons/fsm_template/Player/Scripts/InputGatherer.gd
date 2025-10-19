@@ -28,6 +28,7 @@ func gather_input() -> InputPackage:
 		#print("ONE GBOSA! GIDEM!!!")
 	
 	if Input.is_action_just_pressed("interact"):
+		#print_debug("interaction")
 		new_input.actions.append("Interacting")
 	
 	if new_input.actions.is_empty():

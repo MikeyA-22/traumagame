@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PhotoData" load_steps=3 format=3 uid="uid://c3mn4fb232fbi"]
+
+[ext_resource type="Texture2D" uid="uid://cd316qk46y63v" path="res://icon.svg" id="1_eto4r"]
+[ext_resource type="Script" uid="uid://clljws8qmx4hp" path="res://PhotoData.gd" id="1_mpb7s"]
+
+[resource]
+script = ExtResource("1_mpb7s")
+photo_name = "Photo1data"
+photo_pic = ExtResource("1_eto4r")
+photo_no = 5
+metadata/_custom_type_script = "uid://clljws8qmx4hp"

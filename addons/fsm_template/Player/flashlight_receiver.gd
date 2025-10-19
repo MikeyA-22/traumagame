@@ -3,6 +3,7 @@ extends SpotLight3D
 class_name FlashlightReceptor
 
 var flash_flag: bool
+@export var energy: float = 4
 
 func _ready() -> void:
 	light_energy = 0
@@ -13,7 +14,7 @@ func on_flashlight() -> void:
 	
 	flash_flag = !flash_flag
 	if flash_flag == true:
-		Game_Global.flashlight_value = 4
+		Game_Global.flashlight_value = energy
 		light_energy = Game_Global.flashlight_value
 		flash_flag = true
 		#print(light_energy)

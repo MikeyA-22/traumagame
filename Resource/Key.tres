@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b452o3ldbd6tn"]
 
-[ext_resource type="PackedScene" uid="uid://ceast7xxpnnit" path="res://key.tscn" id="1_1ffnh"]
-[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Item_data.gd" id="1_vdjkb"]
+[ext_resource type="PackedScene" uid="uid://ceast7xxpnnit" path="res://Ables/Key/key.tscn" id="1_1ffnh"]
+[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="1_vdjkb"]
 
 [resource]
 script = ExtResource("1_vdjkb")

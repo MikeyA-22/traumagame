@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://coynvr6waaniq"]
+
+[ext_resource type="Script" uid="uid://divhqxlgw7cpo" path="res://Ables/Flashlight/flashlight.gd" id="1_nnxok"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kh7f"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nnxok"]
+radius = 0.031576
+height = 0.291246
+
+[node name="flashlight" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 6
+script = ExtResource("1_nnxok")
+item_name = "Flashlight"
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -3, 0, 3, -1.31134e-07, 0, 0.0088327, -0.0088327)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D"]
+radius = 0.00732422
+height = 0.075
+material = SubResource("StandardMaterial3D_0kh7f")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0.0342767, 2.09326e-09)
+radius = 0.0146484
+height = 0.0271118
+cone = true
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0497099, 0)
+operation = 2
+radius = 0.00927734
+height = 0.0110107
+material = SubResource("StandardMaterial3D_0kh7f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0088327, 0.0088327)
+shape = SubResource("CapsuleShape3D_nnxok")

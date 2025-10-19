@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://j5il4etq1a5a"]
+
+[ext_resource type="Shader" uid="uid://ddykr3l5catfu" path="res://Player/Player_ui.tres" id="1_ir6mu"]
+[ext_resource type="Texture2D" uid="uid://dgqtogyi8lw6r" path="res://Screen/crosshair.png" id="2_gq5kw"]
+[ext_resource type="Shader" uid="uid://6nu4828q4uq5" path="res://VFX/RedOverlay.tres" id="3_gq5kw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mb3g"]
+shader = ExtResource("1_ir6mu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tc48j"]
+shader = ExtResource("3_gq5kw")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_je5tc"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Reticle" type="Sprite2D" parent="CenterContainer"]
+material = SubResource("ShaderMaterial_7mb3g")
+position = Vector2(25, 25)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_gq5kw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RedOverlay" type="Sprite2D" parent="Control"]
+material = SubResource("ShaderMaterial_tc48j")
+scale = Vector2(1157, 648)
+texture = SubResource("CompressedTexture2D_je5tc")

@@ -1,22 +1,25 @@
-[gd_scene load_steps=21 format=3 uid="uid://bvyu35md1spyq"]
+[gd_scene load_steps=24 format=3 uid="uid://bvyu35md1spyq"]
 
 [ext_resource type="Script" uid="uid://cu6d8y2wq0bwv" path="res://addons/fsm_template/Player/Scripts/Model.gd" id="1_8c8pa"]
 [ext_resource type="Script" uid="uid://dybfxryljd88n" path="res://addons/fsm_template/Player/Scripts/States/Landing.gd" id="2_isc21"]
 [ext_resource type="Script" uid="uid://lav06o80f3pf" path="res://addons/fsm_template/Player/Scripts/States/Midair.gd" id="3_isc21"]
-[ext_resource type="Script" uid="uid://cy8y8xuvlv7u0" path="res://Interact.gd" id="7_y5m0o"]
+[ext_resource type="Script" uid="uid://cy8y8xuvlv7u0" path="res://Player/Interact.gd" id="7_y5m0o"]
 [ext_resource type="Script" uid="uid://dxo2c4mhboi4u" path="res://addons/fsm_template/interacting.gd" id="8_6j6ha"]
 [ext_resource type="Animation" uid="uid://bnbaluyo5y41o" path="res://Player/Anims/Idle.tres" id="8_mpwvt"]
 [ext_resource type="Animation" uid="uid://pt2ixafiggls" path="res://Player/Anims/Pick_object.tres" id="9_jqxnw"]
+[ext_resource type="Script" uid="uid://boasegccwblq5" path="res://addons/fsm_template/pills_state.gd" id="10_4wqor"]
 [ext_resource type="Animation" uid="uid://cenbr7m5cnrju" path="res://Player/Anims/Run.tres" id="10_e2mwv"]
-[ext_resource type="Script" uid="uid://dngop7387bxuv" path="res://Flashlight_state.gd" id="10_q2lvs"]
+[ext_resource type="Script" uid="uid://dngop7387bxuv" path="res://Ables/Flashlight/Flashlight_state.gd" id="10_q2lvs"]
 [ext_resource type="Animation" uid="uid://cph8joermtlef" path="res://Player/Anims/Walking.tres" id="11_egjqv"]
 [ext_resource type="Script" uid="uid://bahb0xu7iruyg" path="res://addons/fsm_template/Downcast.gd" id="11_ossvb"]
+[ext_resource type="Script" uid="uid://2kxa3t55e673" path="res://addons/fsm_template/Player/Scripts/States/State.gd" id="11_vircm"]
 [ext_resource type="Animation" uid="uid://pkjudnjwfovo" path="res://Player/Anims/in_air.tres" id="13_egjqv"]
 [ext_resource type="Animation" uid="uid://d3c53x4kqve6u" path="res://Player/Anims/landing.tres" id="14_6j6ha"]
 [ext_resource type="Script" uid="uid://cruoxgtgcsr51" path="res://addons/fsm_template/Player/Scripts/States/Idle.gd" id="14_rmgmm"]
 [ext_resource type="Script" uid="uid://47qng0jxpj38" path="res://addons/fsm_template/Player/Scripts/States/Run.gd" id="15_61er6"]
 [ext_resource type="Script" uid="uid://bshmfha7dgv6b" path="res://addons/fsm_template/open_door.gd" id="16_y5m0o"]
-[ext_resource type="PackedScene" uid="uid://bgrarkhmjufiu" path="res://inventory.tscn" id="17_63g1w"]
+[ext_resource type="PackedScene" uid="uid://bgrarkhmjufiu" path="res://Inventory/inventory.tscn" id="17_63g1w"]
+[ext_resource type="PackedScene" uid="uid://b7aoi0qc2ixig" path="res://Photobook/photobook.tscn" id="20_3katm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1e5vb"]
 albedo_color = Color(0, 1, 0, 1)
@@ -55,6 +58,10 @@ script = ExtResource("15_61er6")
 [node name="Flashlight" type="Node" parent="."]
 script = ExtResource("10_q2lvs")
 
+[node name="Pills" type="Node" parent="."]
+script = ExtResource("10_4wqor")
+metadata/_custom_type_script = "uid://2kxa3t55e673"
+
 [node name="InteractManager" type="Node" parent="."]
 script = ExtResource("7_y5m0o")
 
@@ -63,6 +70,10 @@ script = ExtResource("8_6j6ha")
 
 [node name="OpenDoor" type="Node" parent="."]
 script = ExtResource("16_y5m0o")
+
+[node name="BlowCandles" type="Node" parent="."]
+script = ExtResource("11_vircm")
+metadata/_custom_type_script = "uid://2kxa3t55e673"
 
 [node name="Downcast" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98245, 0)
@@ -145,7 +156,7 @@ bones/5/parent = 4
 bones/5/rest = Transform3D(1, 0, 0, 0, 1, -1.33874e-08, 0, 1.33874e-08, 1, 0, 0.0493213, 0.00130798)
 bones/5/enabled = true
 bones/5/position = Vector3(-0.111265, -0.921675, 0.36833)
-bones/5/rotation = Quaternion(-0.227379, 0.017073, -0.0262849, 0.973302)
+bones/5/rotation = Quaternion(-0.146746, 0.0227896, -0.0105324, 0.988856)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "mixamorig_HeadTop_End"
 bones/6/parent = 5
@@ -1289,3 +1300,5 @@ libraries = {
 }
 
 [node name="Inventory" parent="." instance=ExtResource("17_63g1w")]
+
+[node name="Photobook" parent="." instance=ExtResource("20_3katm")]
