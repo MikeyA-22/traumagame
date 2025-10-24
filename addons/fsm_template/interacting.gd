@@ -30,7 +30,6 @@ func on_enter_state():
 			photobook.add(Game_Global.current_pickable)
 			#model.set_active_object(Game_Global.current_pickable)
 		else:
-			print_debug("I shouldn't be getting here...")
 			inventory.add(Game_Global.current_pickable)
 			#debugprintcurrentanimation()
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

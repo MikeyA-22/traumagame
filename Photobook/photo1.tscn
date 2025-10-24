@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://lqvn2lpyms4d"]
+[gd_scene load_steps=7 format=3 uid="uid://lqvn2lpyms4d"]
 
 [ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="1_2ds8k"]
 [ext_resource type="Resource" uid="uid://c3mn4fb232fbi" path="res://Resource/PhotoResource/Photo1data.tres" id="2_1ma2y"]
+[ext_resource type="Material" uid="uid://ddvs8jn1bh6pn" path="res://Photobook/phot_mat.tres" id="3_5rgku"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2ds8k"]
 size = Vector3(0.25, 0.25, 0.002)
@@ -18,6 +19,7 @@ collision_layer = 2
 script = ExtResource("1_2ds8k")
 photodata = ExtResource("2_1ma2y")
 item_name = "photo1"
+mat_array = Array[StandardMaterial3D]([ExtResource("3_5rgku")])
 metadata/_custom_type_script = "uid://cqeks8wkac7or"
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]

@@ -55,3 +55,4 @@ func set_active_item(item: Pickable):
 	item.reparent(right_hand)
 	item.transform = right_hand.transform
 	item.position = Vector3.ZERO
+	item.remove_outline()

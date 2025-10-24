@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://go0nwkxm05ck"]
+[gd_scene load_steps=18 format=3 uid="uid://go0nwkxm05ck"]
 
 [ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://addons/fsm_template/Player/Scripts/Player.gd" id="1_hqtel"]
 [ext_resource type="PackedScene" uid="uid://j5il4etq1a5a" path="res://Player/Player_ui.tscn" id="2_78wmc"]
@@ -53,6 +53,7 @@ _data = {
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tqrbo"]
+resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_qrbxm")
 shader_parameter/enable_fog = true
@@ -65,26 +66,11 @@ shader_parameter/noise_time_fac = 4.0
 shader_parameter/enable_color_limitation = true
 shader_parameter/color_levels = 32
 shader_parameter/enable_dithering = true
-shader_parameter/dither_strength = 0.3
+shader_parameter/dither_strength = 0.778
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5uwn6"]
 material = SubResource("ShaderMaterial_tqrbo")
 flip_faces = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qrbxm"]
-render_priority = 1
-shader = ExtResource("7_qrbxm")
-shader_parameter/enable_fog = true
-shader_parameter/fog_color = Color(0.64802, 0.64802, 0.64802, 1)
-shader_parameter/noise_color = Color(0, 0, 0, 1)
-shader_parameter/fog_distance = 100.0
-shader_parameter/fog_fade_range = 50.0
-shader_parameter/enable_noise = true
-shader_parameter/noise_time_fac = 4.0
-shader_parameter/enable_color_limitation = true
-shader_parameter/color_levels = 32
-shader_parameter/enable_dithering = true
-shader_parameter/dither_strength = 0.3
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("resources")]
 script = ExtResource("1_hqtel")
@@ -130,7 +116,6 @@ libraries = {
 [node name="MeshInstance3D" type="MeshInstance3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 transform = Transform3D(1, 7.50927e-08, -9.8217e-08, -9.8217e-08, -4.47035e-08, -1, -7.50927e-08, 1, -4.47035e-08, -7.1845e-08, -0.108689, -0.814592)
 mesh = SubResource("PlaneMesh_5uwn6")
-surface_material_override/0 = SubResource("ShaderMaterial_qrbxm")
 
 [node name="Model" parent="." instance=ExtResource("4_k53q1")]
 

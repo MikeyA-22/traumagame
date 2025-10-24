@@ -1,6 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2ckyb5vl1bwt"]
 
 [ext_resource type="Script" uid="uid://chuywrxw6piqw" path="res://Ables/Pills/pills.gd" id="1_auqnx"]
+[ext_resource type="Material" uid="uid://dk1yosbu8tblp" path="res://Ables/Pills/pills_bottom.tres" id="2_byjay"]
+[ext_resource type="Material" uid="uid://y4uwl4if8jvx" path="res://Ables/Pills/pills_top.tres" id="3_m1gai"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ynma5"]
 height = 2.21533
@@ -8,21 +10,17 @@ radius = 0.620117
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_auqnx"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ekwi"]
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_nbhj1"]
 top_radius = 0.6
 bottom_radius = 0.6
 height = 0.6
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4wu0"]
-albedo_color = Color(0, 0, 0, 1)
 
 [node name="Pills" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 6
 script = ExtResource("1_auqnx")
 item_name = "pills"
+mat_array = Array[StandardMaterial3D]([ExtResource("2_byjay"), ExtResource("3_m1gai")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0.00514136, 0)
@@ -33,9 +31,9 @@ transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D"]
 mesh = SubResource("CylinderMesh_auqnx")
-material = SubResource("StandardMaterial3D_1ekwi")
+material = ExtResource("2_byjay")
 
 [node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.787992, 0)
 mesh = SubResource("CylinderMesh_nbhj1")
-material = SubResource("StandardMaterial3D_y4wu0")
+material = ExtResource("3_m1gai")
