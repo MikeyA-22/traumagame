@@ -35,7 +35,7 @@ func on_DialogueManager_finished()->void:
 
 
 func _on_state_changer_body_entered(body: Node3D) -> void:
-	#print("reached")
+	print("reached")
 	if body == player:
 		#print("working")
 		Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK

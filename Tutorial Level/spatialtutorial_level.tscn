@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://bt0j1a855jrl8"]
+[gd_scene load_steps=80 format=4 uid="uid://bt0j1a855jrl8"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_ej6qw"]
 [ext_resource type="PackedScene" uid="uid://bbrfhhgqpyxov" path="res://Ables/candles.tscn" id="2_8tps4"]
@@ -697,13 +697,9 @@ shadow_mesh = SubResource("ArrayMesh_b3ncu")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ccse8"]
 points = PackedVector3Array(0.729899, 0.0430372, 1, -0.72932, 0.0430372, 1, 0.729899, -0.00048067, 1, 0.706616, 0.0430372, -0.804723, 0.704331, 0.667692, -0.898614, -0.706751, 0.0430372, -0.804723, -0.72932, -0.00048067, 1, -0.704323, 0.667692, -0.898614, 0.679049, -0.057416, 0.911668, 0.65748, -0.057416, -0.767455, 0.706616, -0.00048067, -0.804723, 0.704331, 0.601741, -0.898614, 0.670907, 0.667692, -1.10349, -0.706751, -0.00048067, -0.804723, -0.678755, -0.057416, 0.911668, -0.670899, 0.667692, -1.10349, -0.704323, 0.601741, -0.898614, 0.572207, -0.0575579, -0.883789, 0.627913, -0.0575579, -0.949266, 0.674764, -0.000551663, -1.00012, 0.670907, 0.601741, -1.10349, -0.657616, -0.057416, -0.767455, -0.674899, -0.000551663, -1.00012, -0.628048, -0.0575579, -0.949266, -0.572342, -0.0575579, -0.883789, -0.670899, 0.601741, -1.10349)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8tps4"]
-viewport_path = NodePath("SubViewport")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ohhhg"]
 resource_local_to_scene = true
 shader = ExtResource("8_ej6qw")
-shader_parameter/_MainTex = SubResource("ViewportTexture_8tps4")
 shader_parameter/_KernelSize = 4
 shader_parameter/_Hardness = 8.0
 shader_parameter/_Sharpness = 8.0
@@ -719,12 +715,12 @@ ground_energy_multiplier = 0.74
 sun_angle_max = 0.0
 sun_curve = 0.0832177
 
-[sub_resource type="Sky" id="Sky_f7g2b"]
+[sub_resource type="Sky" id="Sky_8tps4"]
 sky_material = SubResource("ProceduralSkyMaterial_a5404")
 
 [sub_resource type="Environment" id="Environment_ohhhg"]
 background_mode = 2
-sky = SubResource("Sky_f7g2b")
+sky = SubResource("Sky_8tps4")
 ambient_light_source = 3
 tonemap_mode = 3
 ssil_enabled = true
@@ -745,10 +741,13 @@ height_falloff = 0.158259
 edge_fade = 0.772747
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_drjao"]
-size = Vector3(4.69922, 2.98883, 0.127258)
+size = Vector3(5.094, 2.989, 0.127)
 
 [node name="TutorialLevel" type="Node3D"]
 script = ExtResource("1_ej6qw")
+
+[node name="Photo" parent="." instance=ExtResource("3_rukes")]
+transform = Transform3D(-0.782575, 0, 0.622556, 0, 1, 0, -0.622556, 0, -0.782575, -0.78188, 0.253791, 26.515)
 
 [node name="tut" type="Node3D" parent="."]
 
@@ -800,9 +799,6 @@ shape = SubResource("ConvexPolygonShape3D_a5404")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="tut/Plane_001/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ohhhg")
-
-[node name="Photo" parent="tut/Plane_001/StaticBody3D" instance=ExtResource("3_rukes")]
-transform = Transform3D(0.782575, 0, -0.622556, 0, 1, 0, 0.622556, 0, 0.782575, 1.84913, 0.253791, -3.53817)
 
 [node name="MIRROR" type="MeshInstance3D" parent="tut"]
 transform = Transform3D(-0.368099, 0, -3.21802e-08, 0, 0.368099, 0, 3.21802e-08, 0, -0.368099, 2.40358, 2.14716, 24.5113)
@@ -987,10 +983,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76406, 0.62136, 5.20748)
 
 [node name="state_changer" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.4044)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="state_changer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0361328, 0.994415, 0.281952)
 shape = SubResource("BoxShape3D_drjao")
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]

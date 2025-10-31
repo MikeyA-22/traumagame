@@ -7,7 +7,7 @@ class_name CrowIdle
 
 @export var speed:float = 2
 @export var y_pos:float = 0
-@onready var noose_pin:StaticBody3D = $"../../StaticBody3D"
+@onready var root:Node3D = $"../.."
 var angle:float = 0.0
 @export var x_min:float = -1
 @export var x_max:float = 1
@@ -20,7 +20,7 @@ func on_enter():
 	monster_inrange = false
 
 func check_transition(delta) -> Array:
-	if monster_inrange == true and Input.is_action_just_pressed("twogbosa"):
+	if monster_inrange == true:
 		return[true,"canstun"]
 	return[false,""]
 	
@@ -38,9 +38,9 @@ func circular_motion():
 	
 	#var y_pos = tan(angle)
 	
-	character.position.x = (radius * x_pos) + noose_pin.position.x
+	character.position.x = (radius * x_pos) + root.position.x
 	character.position.y = 0
-	character.position.z = (radius * z_pos) + noose_pin.position.z
+	character.position.z = (radius * z_pos) + root.position.z
 	#print(position.z)
 	
 

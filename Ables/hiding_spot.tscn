@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdil5fjbuab5r"]
+
+[ext_resource type="Script" uid="uid://duxr6s3rauwib" path="res://hiding_spot.gd" id="1_udaqr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_udaqr"]
+size = Vector3(1, 1.5, 1)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_udaqr"]
+albedo_color = Color(0.230123, 0.107381, 6.01634e-08, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ixmfk"]
+size = Vector3(0.8, 0.25, 1)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ixmfk"]
+albedo_color = Color(0.00784314, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_udaqr"]
+size = Vector3(1, 1.53601, 1)
+
+[node name="HidingSpot" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_udaqr")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+mesh = SubResource("BoxMesh_udaqr")
+material = SubResource("ORMMaterial3D_udaqr")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.189, -0.105867)
+operation = 2
+mesh = SubResource("BoxMesh_ixmfk")
+material = SubResource("ORMMaterial3D_ixmfk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12052, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.751245, 0)
+shape = SubResource("BoxShape3D_udaqr")

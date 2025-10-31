@@ -20,6 +20,7 @@ var dampener = 0.1
 @onready var right_hand = $RightHand
 @onready var inventory = $Inventory as Node
 @onready var Photobook = $Photobook
+@onready var hidden
 #@onready var light = $"LocalCamera/Camera3D/Flashlight Receiver"
 
 static var flash = false
@@ -37,10 +38,15 @@ var current_state: State
 	"Interacting": $Interacting,
 	"open_door": $OpenDoor,
 	"take_pills": $Pills,
-	"blow_candles": $BlowCandles
+	"blow_candles": $BlowCandles,
+	"hidden": $Hidden
 }
 
+func _init() -> void:
+	pass
+
 func _ready() -> void:
+	hidden = player.hidden
 	current_state = moves["idle"]
 	for move in moves.values():
 		move.player = player
@@ -52,8 +58,8 @@ func update(input: InputPackage, delta: float):
 	if requested != "okay":
 		switch_to(requested)
 	current_state.update(input, delta)
-	
-	
+
+
 
 func switch_to(state: String):
 	current_state.on_exit_state()
@@ -65,7 +71,6 @@ func switch_to(state: String):
 
 
 
-	
 
 
 	

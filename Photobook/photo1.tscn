@@ -1,18 +1,43 @@
-[gd_scene load_steps=7 format=3 uid="uid://lqvn2lpyms4d"]
+[gd_scene load_steps=7 format=4 uid="uid://lqvn2lpyms4d"]
 
 [ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="1_2ds8k"]
 [ext_resource type="Resource" uid="uid://c3mn4fb232fbi" path="res://Resource/PhotoResource/Photo1data.tres" id="2_1ma2y"]
-[ext_resource type="Material" uid="uid://ddvs8jn1bh6pn" path="res://Photobook/phot_mat.tres" id="3_5rgku"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_2ds8k"]
-size = Vector3(0.25, 0.25, 0.002)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ma2y"]
-albedo_color = Color(0.427451, 0, 1, 1)
-roughness = 0.25
+[ext_resource type="Material" uid="uid://87yojw2ai7v4" path="res://Photobook/photo1.tres" id="3_5rgku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ds8k"]
-size = Vector3(0.25, 0.25, 0.002)
+size = Vector3(0.546875, 0.893677, 0.473083)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2jakx"]
+_surfaces = [{
+"aabb": AABB(-0.594185, -1, -1, 1.18837, 1, 2),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgAAAAQABgAHAAAABwADAAAABwAIAAMA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 9,
+"vertex_data": PackedByteArray("/3////9/AAD//wAAAAAAAP//AAD/fwAA/3///wAAAAD/f/////8AAP//AAD//wAAAAAAAP//AAAAAAAA/38AAAAAAAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8kmif"]
+resource_name = "birthdaycard_Plane"
+_surfaces = [{
+"aabb": AABB(-0.594185, -1, -1, 1.18837, 1, 2),
+"attribute_data": PackedByteArray("vb8bx3x///98fxvHvb///72/OI58fziO/v8bx72///+9vxvH/v//////OI69vziO"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgAHAAgABgAJAAcACgAGAAgACgAIAAsA"),
+"material": ExtResource("3_5rgku"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(2.008, 1.8, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/3////9/4uL//wAAAADi4v//AAD/f+Li/3///wAA4uL/f//////i4v//AAD//+LiAAAAAP9/4uL/f///AADi4v9/////f+LiAAAAAAAA4uIAAAAA///i4v9//////+Li0jFZHNIxWRzSMVkc0jFZHNIxWRzSMVkcpWPSsaVj0rGlY9KxpWPSsaVj0rGlY9Kx")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2jakx")
 
 [node name="Photo" type="CharacterBody3D"]
 collision_layer = 2
@@ -22,9 +47,14 @@ item_name = "photo1"
 mat_array = Array[StandardMaterial3D]([ExtResource("3_5rgku")])
 metadata/_custom_type_script = "uid://cqeks8wkac7or"
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-mesh = SubResource("BoxMesh_2ds8k")
-material = SubResource("StandardMaterial3D_1ma2y")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00292969, 0.446808, 0.226227)
 shape = SubResource("BoxShape3D_2ds8k")
+
+[node name="birthdaycard" type="Node3D" parent="."]
+transform = Transform3D(0.445, 0, 0, 0, 0.445, 0, 0, 0, 0.445, 0, 0, 0)
+
+[node name="Plane" type="MeshInstance3D" parent="birthdaycard"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 1, 0)
+mesh = SubResource("ArrayMesh_8kmif")
+skeleton = NodePath("")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bvyu35md1spyq"]
+[gd_scene load_steps=25 format=3 uid="uid://bvyu35md1spyq"]
 
 [ext_resource type="Script" uid="uid://cu6d8y2wq0bwv" path="res://addons/fsm_template/Player/Scripts/Model.gd" id="1_8c8pa"]
 [ext_resource type="Script" uid="uid://dybfxryljd88n" path="res://addons/fsm_template/Player/Scripts/States/Landing.gd" id="2_isc21"]
@@ -13,6 +13,7 @@
 [ext_resource type="Animation" uid="uid://cph8joermtlef" path="res://Player/Anims/Walking.tres" id="11_egjqv"]
 [ext_resource type="Script" uid="uid://bahb0xu7iruyg" path="res://addons/fsm_template/Downcast.gd" id="11_ossvb"]
 [ext_resource type="Script" uid="uid://2kxa3t55e673" path="res://addons/fsm_template/Player/Scripts/States/State.gd" id="11_vircm"]
+[ext_resource type="Script" uid="uid://b6hi6mxa3cvpy" path="res://addons/fsm_template/hidden.gd" id="12_1bops"]
 [ext_resource type="Animation" uid="uid://pkjudnjwfovo" path="res://Player/Anims/in_air.tres" id="13_egjqv"]
 [ext_resource type="Animation" uid="uid://d3c53x4kqve6u" path="res://Player/Anims/landing.tres" id="14_6j6ha"]
 [ext_resource type="Script" uid="uid://cruoxgtgcsr51" path="res://addons/fsm_template/Player/Scripts/States/Idle.gd" id="14_rmgmm"]
@@ -75,6 +76,10 @@ script = ExtResource("16_y5m0o")
 script = ExtResource("11_vircm")
 metadata/_custom_type_script = "uid://2kxa3t55e673"
 
+[node name="Hidden" type="Node" parent="."]
+script = ExtResource("12_1bops")
+metadata/_custom_type_script = "uid://2kxa3t55e673"
+
 [node name="Downcast" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98245, 0)
 target_position = Vector3(0, -1.63, 0)
@@ -98,7 +103,7 @@ use_external_skeleton = true
 external_skeleton = NodePath("../Skeleton3D")
 
 [node name="LeftHand" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.346612, 0.00904431, -0.937965, 0.514675, -0.837821, 0.182113, -0.7842, -0.54587, -0.295054, 0.233947, 0.98657, -0.103048)
+transform = Transform3D(0.346612, 0.00904429, -0.937965, 0.514675, -0.837821, 0.182113, -0.7842, -0.54587, -0.295054, 0.233947, 0.98657, -0.103048)
 bone_name = "mixamorig_LeftHand"
 bone_idx = 10
 use_external_skeleton = true
@@ -108,7 +113,7 @@ external_skeleton = NodePath("../Skeleton3D")
 radius = 0.1
 
 [node name="RightHand" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.186448, 0.393604, -0.900174, 0.979424, 0.146495, -0.138807, 0.0772357, -0.907533, -0.412819, -0.0429422, 1.05857, 0.500811)
+transform = Transform3D(-0.186447, 0.393604, -0.900174, 0.979424, 0.146495, -0.138807, 0.0772358, -0.907533, -0.412819, -0.0429421, 1.05857, 0.500811)
 bone_name = "Ctrl_Middle2_Right"
 bone_idx = 77
 use_external_skeleton = true

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://chmoty74yd0"]
+
+[ext_resource type="PackedScene" uid="uid://byj7c8lllvtv2" path="res://Crow/rope.tscn" id="1_t8axt"]
+
+[node name="RopeScene" type="Node3D"]
+
+[node name="rope" parent="." instance=ExtResource("1_t8axt")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, -2.03357e-08, 0.972569, 0.232614, 8.50247e-08, 0.232614, -0.972569, 0, 0.27843, -0.59259)

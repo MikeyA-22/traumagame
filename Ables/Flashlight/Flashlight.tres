@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://box5lnxtoo1l3"]
+
+[ext_resource type="Texture2D" uid="uid://cgswsdqdwgmjn" path="res://Ables/flashlight_flashlight_DefaultMaterial_BaseMap.png" id="1_jwors"]
+[ext_resource type="Texture2D" uid="uid://s0b10plt0dxx" path="res://Ables/flashlight_flashlight_DefaultMaterial_Normal.png" id="2_k7bxf"]
+
+[resource]
+resource_name = "flashLight"
+cull_mode = 2
+albedo_texture = ExtResource("1_jwors")
+metallic = 1.0
+roughness = 0.481818
+normal_enabled = true
+normal_texture = ExtResource("2_k7bxf")

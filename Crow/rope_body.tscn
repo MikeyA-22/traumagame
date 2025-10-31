@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjj8w267tisep"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_47eor"]
+radius = 0.005
+height = 0.02
+
+[node name="RigidBody3D" type="RigidBody3D"]
+axis_lock_angular_y = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_47eor")

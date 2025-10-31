@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b4hv0sheh0d2w"]
+
+[ext_resource type="Texture2D" uid="uid://dy13rycgi1ect" path="res://Ables/Pills/pill bottle_pill bottle_DefaultMaterial_BaseMap.png" id="1_mrft1"]
+[ext_resource type="Texture2D" uid="uid://b6chfoa1nvdvy" path="res://Ables/Pills/pill bottle_pill bottle_DefaultMaterial_Normal.png" id="2_00byr"]
+
+[resource]
+resource_name = "pill"
+cull_mode = 2
+albedo_texture = ExtResource("1_mrft1")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_00byr")

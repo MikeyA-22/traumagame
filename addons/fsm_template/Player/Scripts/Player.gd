@@ -10,6 +10,7 @@ class_name Player
 @onready var light = $"visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
 @export var monster: Enemy
 @export var resources: PlayerResources
+var hidden = false
 
 func _ready() -> void:
 	

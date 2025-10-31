@@ -134,3 +134,11 @@ vignette_intensity={
 "type": "float",
 "value": 0.0
 }
+warp_strength={
+"type": "float",
+"value": 0.0
+}
+heat_strength={
+"type": "float",
+"value": 0.0
+}

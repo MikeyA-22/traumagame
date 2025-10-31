@@ -100,7 +100,7 @@ script = ExtResource("4_71weq")
 
 [node name="Flashlight Receiver" type="SpotLight3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 light_color = Color(0.949333, 0.803302, 0.72842, 1)
-light_energy = 4.0
+light_energy = 0.0
 light_volumetric_fog_energy = 0.1
 shadow_enabled = true
 spot_range = 100.0

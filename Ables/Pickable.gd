@@ -1,3 +1,4 @@
+@icon("res://Player/pointing.png")
 extends CharacterBody3D
 class_name Pickable
 

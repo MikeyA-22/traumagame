@@ -1,5 +1,4 @@
 extends Interactable
-
 class_name candle
 
 @export var isoff:bool

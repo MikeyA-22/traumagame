@@ -16,12 +16,12 @@ enum game_state{
 }
 
 static var current_gState: game_state = game_state.STATE_1
-static var noise_int: float
+static var madness_increment: float
 
 func _ready() -> void:
 	pass
 	
 func _process(delta: float) -> void:
-	RenderingServer.global_shader_parameter_set("static_noise_intensity", noise_int)
+	RenderingServer.global_shader_parameter_set("warp_strength", madness_increment)
 	
 	#print(current_gState)

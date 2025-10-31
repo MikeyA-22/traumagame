@@ -9,3 +9,4 @@ signal PICKING_UP
 signal PILLS
 signal STUNNED
 signal BLOWN
+signal HIDE

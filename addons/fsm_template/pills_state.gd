@@ -24,5 +24,10 @@ func update(input: InputPackage, delta: float):
 func on_enter_state():
 	if pills_amount > 0:
 		SigBus.PILLS.emit()
-		RenderingServer.global_shader_parameter_set("static_noise_intensity", Game_Global.noise_int)
-		Game_Global.noise_int -= .15
+		print(Game_Global.madness_increment)
+		
+		if Game_Global.madness_increment > 0:
+			Game_Global.madness_increment = 0
+			RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
+		pills_amount -= 1
+		print(pills_amount)

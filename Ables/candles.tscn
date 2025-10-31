@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbrfhhgqpyxov"]
+[gd_scene load_steps=9 format=3 uid="uid://bbrfhhgqpyxov"]
 
 [ext_resource type="Script" uid="uid://ttjkg5e82ct1" path="res://Ables/candle.gd" id="1_t6d5b"]
 [ext_resource type="Script" uid="uid://dpdklyoo0tgt7" path="res://VFX/fire.gd" id="2_t6d5b"]
+[ext_resource type="PackedScene" uid="uid://bhog8djyegr0w" path="res://Ables/candle.glb" id="3_7j2ks"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_87vx0"]
 height = 1.5
@@ -30,6 +31,7 @@ script = ExtResource("1_t6d5b")
 shape = SubResource("CylinderShape3D_87vx0")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="CollisionShape3D"]
+visible = false
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="CollisionShape3D/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.675114, 0, 0)
@@ -79,3 +81,27 @@ omni_range = 3.127
 omni_attenuation = 3.594
 script = ExtResource("2_t6d5b")
 noise = SubResource("NoiseTexture3D_t6d5b")
+
+[node name="candle" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.0754753, -0.100261, 0.857644)
+
+[node name="candle4" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.0754753, -0.100261, -0.91039)
+
+[node name="candle2" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0.506011, -0.100261, 0.598332)
+
+[node name="candle7" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.727683, -0.100261, 0.598332)
+
+[node name="candle5" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0.506011, -0.100261, -0.682509)
+
+[node name="candle8" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.609814, -0.100261, -0.682509)
+
+[node name="candle3" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0.867476, -0.100261, 0.00112975)
+
+[node name="candle6" parent="." instance=ExtResource("3_7j2ks")]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.861268, -0.100261, 0.00112975)
