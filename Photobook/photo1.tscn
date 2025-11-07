@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=4 uid="uid://lqvn2lpyms4d"]
 
-[ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="1_2ds8k"]
+[ext_resource type="Script" uid="uid://cqeks8wkac7or" path="res://Photobook/photo.gd" id="1_1ma2y"]
 [ext_resource type="Resource" uid="uid://c3mn4fb232fbi" path="res://Resource/PhotoResource/Photo1data.tres" id="2_1ma2y"]
 [ext_resource type="Material" uid="uid://87yojw2ai7v4" path="res://Photobook/photo1.tres" id="3_5rgku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ds8k"]
-size = Vector3(0.546875, 0.893677, 0.473083)
+size = Vector3(1.24365, 2.04205, 1.07479)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2jakx"]
 _surfaces = [{
@@ -41,18 +41,18 @@ shadow_mesh = SubResource("ArrayMesh_2jakx")
 
 [node name="Photo" type="CharacterBody3D"]
 collision_layer = 2
-script = ExtResource("1_2ds8k")
+script = ExtResource("1_1ma2y")
 photodata = ExtResource("2_1ma2y")
-item_name = "photo1"
+item_name = "Photo"
 mat_array = Array[StandardMaterial3D]([ExtResource("3_5rgku")])
-metadata/_custom_type_script = "uid://cqeks8wkac7or"
+metadata/_custom_type_script = "uid://bswph8vy8tmba"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00292969, 0.446808, 0.226227)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0019043, 0.205451, 0.101025)
 shape = SubResource("BoxShape3D_2ds8k")
 
 [node name="birthdaycard" type="Node3D" parent="."]
-transform = Transform3D(0.445, 0, 0, 0, 0.445, 0, 0, 0, 0.445, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 
 [node name="Plane" type="MeshInstance3D" parent="birthdaycard"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 1, 0)

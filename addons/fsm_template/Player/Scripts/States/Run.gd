@@ -6,6 +6,7 @@ class_name Run
 const SPEED = 5.0
 const JUMP_VELOCITY = 5
 @export var TURN_SPEED = 1
+@export var fstep_player:AudioStreamPlayer3D
 
 func _ready() -> void:
 	animation = "walk"
@@ -25,7 +26,8 @@ func update(input: InputPackage, delta: float):
 	player.move_and_slide()
 	
 	
-
+func on_enter_state():
+	pass
 
 func on_exit_state():
 	pass

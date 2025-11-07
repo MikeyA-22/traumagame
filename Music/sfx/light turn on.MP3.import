@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ovb70mjmtv12"
+path="res://.godot/imported/light turn on.MP3-92686934758a0cf7f2851250f0af0e82.mp3str"
+
+[deps]
+
+source_file="res://Music/sfx/light turn on.MP3"
+dest_files=["res://.godot/imported/light turn on.MP3-92686934758a0cf7f2851250f0af0e82.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

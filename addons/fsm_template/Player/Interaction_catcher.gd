@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 				Game_Global.current_interactor = collider
 				reticlenumber = 1
 				if Input.is_action_just_pressed("interact"):
-					SigBus.HIDE.emit(true, root_player)
+					SigBus.HIDE.emit(true, root_player, self)
 			
 	else :
 		Game_Global.is_pickable = false

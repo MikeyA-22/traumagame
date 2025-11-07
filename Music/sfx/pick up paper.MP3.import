@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bimdrp5sckycq"
+path="res://.godot/imported/pick up paper.MP3-8fa89283330368c5ab5ddc88da06657e.mp3str"
+
+[deps]
+
+source_file="res://Music/sfx/pick up paper.MP3"
+dest_files=["res://.godot/imported/pick up paper.MP3-8fa89283330368c5ab5ddc88da06657e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

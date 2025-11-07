@@ -15,23 +15,28 @@ func gather_input() -> InputPackage:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	new_input.input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	if new_input.input_direction != Vector2.ZERO:
-		new_input.actions.append("run")
+	if Game_Global.hidden == false:
+		if new_input.input_direction != Vector2.ZERO:
+			new_input.actions.append("run")
+
 	
 	
-	if Input.is_action_just_pressed("ui_accept"):
-		if new_input.actions.has("run"):
-			pass#new_input.actions.append("jump_start")
+		if Input.is_action_just_pressed("ui_accept"):
+			if new_input.actions.has("run"):
+				pass#new_input.actions.append("jump_start")
 	
-	if Input.is_action_just_pressed("onegbosa"):
-		new_input.interactions.append("light_attack_pressed")
+		if Input.is_action_just_pressed("onegbosa"):
+			new_input.interactions.append("light_attack_pressed")
 		#print("ONE GBOSA! GIDEM!!!")
 	
-	if Input.is_action_just_pressed("interact"):
+		if Input.is_action_just_pressed("interact"):
 		#print_debug("interaction")
-		new_input.actions.append("Interacting")
+			new_input.actions.append("Interacting")
 	
-	if new_input.actions.is_empty():
-		new_input.actions.append("idle")
+		if new_input.actions.is_empty():
+			new_input.actions.append("idle")
+	else:
+		new_input.actions.append("hidden")
 	
+		
 	return new_input

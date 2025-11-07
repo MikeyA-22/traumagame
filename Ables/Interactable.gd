@@ -10,6 +10,7 @@ var interactable_actions: Dictionary
 var interactable_area = Area3D.new()
 var interactable_shape = SphereShape3D.new()
 var interactable_range = CollisionShape3D.new()
+var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 
 func _ready() -> void:
 	add_indication_area()
@@ -39,3 +40,12 @@ func get_body_entered(body: Node3D):
 	
 func get_body_exited(body: Node3D):
 	return body
+
+func assign_sfx():
+	add_child(pick_sfx)
+	pick_sfx.stream = preload("res://Music/sfx/pick up.MP3")
+	#pick_sfx.autoplay = true
+	pick_sfx.volume_db = 10
+	pick_sfx.max_db = 10
+	pick_sfx.unit_size = 30
+	print("Audio stream loaded:", pick_sfx.stream)

@@ -4,6 +4,9 @@ class_name Photobook
 
 @export var photoslots:Array[Photoslot]
 
+##This is photobook.
+##it adds photos to itself, and displays itself at the photoslot. which also
+##has its own slot.
 func _ready() -> void:
 	pass
 	
@@ -11,7 +14,7 @@ func _ready() -> void:
 
 func add(photo: Photo):
 	SigBus.PICKING_UP.emit(photo.messages)
-	var photodata: PhotoData = get_photodata(photo)
+	var photodata = get_photodata(photo)
 	photo.free()
 	display(photodata)
 
@@ -28,3 +31,6 @@ func close():
 func get_photodata(photo: Photo)-> PhotoData:
 	var photodata = photo.photodata
 	return photodata
+
+func set_photo(photodata: PhotoData):
+	pass

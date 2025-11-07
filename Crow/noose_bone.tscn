@@ -336,18 +336,21 @@ script = ExtResource("4_byl21")
 speed = 1.5
 y_pos = 1.0
 x_min = 0.5
+z_max = 1.5
 state_name = "idle"
 animation = "idle"
 
 [node name="Canstun" type="Node" parent="StateMachine"]
 script = ExtResource("5_de1t2")
+speed = 1.5
+y_pos = 1.0
 state_name = "canstun"
 animation = "canstun"
 metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
 
 [node name="Stun" type="Node" parent="StateMachine"]
 script = ExtResource("6_de1t2")
-y_pos = -1.0
+speed = 1.5
 state_name = "stun"
 animation = "stun"
 metadata/_custom_type_script = "uid://cg8hvaar0rx7c"

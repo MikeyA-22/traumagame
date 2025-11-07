@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cojfh5x2h3dau"
+path="res://.godot/imported/flashlight turn on.MP3-34fe14250ad943172d4dcefc1d73b513.mp3str"
+
+[deps]
+
+source_file="res://Music/sfx/flashlight turn on.MP3"
+dest_files=["res://.godot/imported/flashlight turn on.MP3-34fe14250ad943172d4dcefc1d73b513.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

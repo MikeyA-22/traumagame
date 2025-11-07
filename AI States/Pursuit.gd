@@ -4,9 +4,9 @@ extends AIstate
 
 
 func check_transition(delta) -> Array:
-	#if player.global_position.distance_to(character.global_position) < character.attack_radius:
-		#return [true, "idle"]
-	if player.global_position.distance_to(character.global_position) < character.deaggro_radius:
+	if Game_Global.hidden:
+		return [true, "idle"]
+	elif player.global_position.distance_to(character.global_position) < character.deaggro_radius:
 		return [true, "creep"]
 	return [false, ""]
 

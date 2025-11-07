@@ -1,7 +1,167 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgrarkhmjufiu"]
+[gd_scene load_steps=6 format=3 uid="uid://d0tlivjqck1nf"]
 
 [ext_resource type="Script" uid="uid://c2uu8jfllr2pg" path="res://addons/fsm_template/inventory.gd" id="1_pohso"]
+[ext_resource type="Script" uid="uid://bq46vvspr05jm" path="res://Inventory/inv_display.gd" id="2_xqyry"]
+
+[sub_resource type="Animation" id="Animation_88mhb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/text:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/text:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/text:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/text:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/image:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xqyry"]
+resource_name = "display"
+length = 1.36
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/text:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.425516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.433333, 1.33333)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/text:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.425516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.433333, 1.33333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/text:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.425516, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.433333, 1.33333)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/text:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.433333, 1.33333)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/image:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05, 1.36),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.635294)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2aw4r"]
+_data = {
+&"RESET": SubResource("Animation_88mhb"),
+&"display": SubResource("Animation_xqyry")
+}
 
 [node name="Inventory" type="Node"]
 script = ExtResource("1_pohso")
-metadata/_custom_type_script = "uid://c2uu8jfllr2pg"
+
+[node name="InventoryDisplay" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.924
+anchor_right = 1.0
+anchor_bottom = 0.116
+offset_left = -0.447998
+offset_bottom = -0.167999
+grow_horizontal = 0
+script = ExtResource("2_xqyry")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryDisplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="image" type="TextureRect" parent="InventoryDisplay/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="text" type="RichTextLabel" parent="InventoryDisplay/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Displayanim" type="AnimationPlayer" parent="InventoryDisplay"]
+libraries = {
+&"": SubResource("AnimationLibrary_2aw4r")
+}

@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://ddykr3l5catfu"]
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://6gfiye8dcr2h"]
 
 [ext_resource type="Texture2D" uid="uid://cecimty6jc8me" path="res://Player/pointing.png" id="1_8sd18"]
 [ext_resource type="Texture2D" uid="uid://dgqtogyi8lw6r" path="res://Screen/crosshair.png" id="2_44vj3"]

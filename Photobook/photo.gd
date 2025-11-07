@@ -1,6 +1,8 @@
 extends Pickable
 
 class_name Photo
+
 @export var photodata: PhotoData
+
 func _ready() -> void:
-	pass
+	sfx = preload("res://Music/sfx/pick up paper.MP3")

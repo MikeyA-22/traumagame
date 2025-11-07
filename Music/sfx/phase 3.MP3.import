@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8eiceuuh6b72"
+path="res://.godot/imported/phase 3.MP3-7298d1e78d12153df5be540e3d6c40a4.mp3str"
+
+[deps]
+
+source_file="res://Music/sfx/phase 3.MP3"
+dest_files=["res://.godot/imported/phase 3.MP3-7298d1e78d12153df5be540e3d6c40a4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

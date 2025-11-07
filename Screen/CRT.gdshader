@@ -95,9 +95,8 @@ float vignette(vec2 uv){
 	return pow(vignette, vignette_intensity * vignette_opacity);
 }
 
-void fragment()
-{
-	vec2 uv = overlay ? warp(SCREEN_UV) : warp(UV); // Warp the uv. uv will be used in most cases instead of UV to keep the warping
+vec4 returntext(vec2 screen_uv,vec2 main_uv){
+	vec2 uv = overlay ? warp(screen_uv) : warp(main_uv); // Warp the uv. uv will be used in most cases instead of UV to keep the warping
 	vec2 text_uv = uv;
 	vec2 roll_uv = vec2(0.0);
 	float time = roll ? TIME : 0.0;
@@ -119,7 +118,7 @@ void fragment()
 		// Create more lines of a different size and apply to the first set of lines. This creates a bit of variation.
 		roll_line *= roll_line * smoothstep(0.3, 0.9, sin(uv.y * roll_size * roll_variation - (time * roll_speed * roll_variation) ) );
 		// Distort the UV where where the lines are
-		roll_uv = vec2(( roll_line * distort_intensity * (1.-UV.x)), 0.0);
+		roll_uv = vec2(( roll_line * distort_intensity * (1.-main_uv.x)), 0.0);
 	}
 
 	vec4 text;
@@ -147,7 +146,7 @@ void fragment()
 	float g = text.g;
 	float b = text.b;
 
-	uv = warp(UV);
+	uv = warp(main_uv);
 
 	// CRT monitors don't have pixels but groups of red, green and blue dots or lines, called grille. We isolate the texture's color channels
 	// and divide it up in 3 offsetted lines to show the red, green and blue colors next to each other, with a small black gap between.
@@ -226,6 +225,11 @@ void fragment()
 		float midpoint = pow(0.5, 2.2);
 		text.rgb = (text.rgb - vec3(midpoint)) * contrast + midpoint;
 	}
-
-	COLOR = text;
+	return text;
+}
+void fragment()
+{
+	
+	
+	COLOR = returntext(SCREEN_UV, UV);
 }

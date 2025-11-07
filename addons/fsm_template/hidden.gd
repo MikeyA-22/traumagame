@@ -11,13 +11,14 @@ func _ready() -> void:
 
 # Step 3: implement a check_relevance function
 func check_request(input: InputPackage):
-	if !hidden:
+	if !Game_Global.hidden:
 		return "idle"
+	input.actions.sort_custom(priority_sort)
+	return input.actions[0]
 	
 
 
 # Step 4: implement an update function
 func update(input: InputPackage, delta: float):
 	pass
-
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

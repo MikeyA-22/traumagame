@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=216 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
 [ext_resource type="PackedScene" uid="uid://bbrfhhgqpyxov" path="res://Ables/candles.tscn" id="1_sp2du"]
@@ -20,7 +20,6 @@
 [ext_resource type="AudioStream" uid="uid://chg6v2rergem3" path="res://Music/Alter.MP3" id="11_mxqxa"]
 [ext_resource type="Texture2D" uid="uid://cirxhmkr8ynmo" path="res://Tutorial Level/tutv2/tutv2_ac_Material_BaseMap.png" id="12_jisp4"]
 [ext_resource type="Texture2D" uid="uid://b51jpqg2dg2en" path="res://Tutorial Level/tutv2/tutv2_ac_Material_Normal.png" id="13_xg7y2"]
-[ext_resource type="Shader" uid="uid://ch5w3hshl8ahi" path="res://Shaders/kuwahara.gdshader" id="14_41w35"]
 [ext_resource type="Texture2D" uid="uid://c1bsqk1aselj6" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_BaseMap.png" id="14_ndxse"]
 [ext_resource type="Texture2D" uid="uid://cdlq44rg6fjrw" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_Normal.png" id="15_ehwpm"]
 [ext_resource type="Texture2D" uid="uid://rethhjwxxvob" path="res://Tutorial Level/tutv2/tutv2_upcount_DefaultMaterial_BaseMap.png" id="16_kvd7i"]
@@ -41,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://br2ysjio7ppjt" path="res://Tutorial Level/tutv2/tutv2_tv_Stand_DefaultMaterial_Normal.png" id="31_sep3q"]
 [ext_resource type="Texture2D" uid="uid://cxvlwqbmavvpb" path="res://Tutorial Level/tutv2/tutv2_tv_DefaultMaterial_BaseMap.png" id="32_xdk6f"]
 [ext_resource type="Texture2D" uid="uid://dshk81pqs43fj" path="res://Tutorial Level/tutv2/tutv2_tv_DefaultMaterial_Normal.png" id="33_t5epy"]
+[ext_resource type="PackedScene" uid="uid://8ankrs06jy67" path="res://Ables/hide_table.tscn" id="34_kcaaw"]
 [ext_resource type="Texture2D" uid="uid://diryms260tfi4" path="res://Tutorial Level/tutv2/tutv2_living_room_chair_DefaultMaterial_BaseMap.png" id="34_qnwvc"]
 [ext_resource type="Texture2D" uid="uid://bwtqyan18gysh" path="res://Tutorial Level/tutv2/tutv2_living_room_chair_DefaultMaterial_Normal.png" id="35_gsepi"]
 [ext_resource type="Texture2D" uid="uid://c52d4xjh7d05m" path="res://Tutorial Level/tutv2/tutv2_floor_basecolor.png" id="36_j1n11"]
@@ -60,9 +60,11 @@
 [ext_resource type="Texture2D" uid="uid://gk7ap4y7srh" path="res://Tutorial Level/tutv2/tutv2_door_DefaultMaterial_Normal.png" id="50_4uuhk"]
 [ext_resource type="Texture2D" uid="uid://bam6nbd4t8lx4" path="res://Ables/cake_cake_DefaultMaterial_BaseMap.png" id="50_5sn6b"]
 [ext_resource type="Texture2D" uid="uid://ds8a7hqm4kg7e" path="res://Ables/cake_cake_DefaultMaterial_Normal.png" id="51_gkahi"]
+[ext_resource type="PackedScene" uid="uid://lqvn2lpyms4d" path="res://Photobook/photo1.tscn" id="52_gkahi"]
 [ext_resource type="Environment" uid="uid://dskusy3hg0wbc" path="res://Tutorial Level/tutv2/main_env.tres" id="54_wqe1d"]
 [ext_resource type="Material" uid="uid://hgodhplhtbky" path="res://Shaders/heat_distort.tres" id="60_f5jwp"]
 [ext_resource type="PackedScene" uid="uid://cdil5fjbuab5r" path="res://Ables/hiding_spot.tscn" id="61_lm0gn"]
+[ext_resource type="Material" uid="uid://b1mqxxbci7hsr" path="res://Shaders/CRT.tres" id="64_gkahi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj54v"]
 resource_name = "crow"
@@ -1821,13 +1823,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n7ejp")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8w85i"]
-resource_local_to_scene = true
-shader = ExtResource("14_41w35")
-shader_parameter/_KernelSize = 4
-shader_parameter/_Hardness = 8.0
-shader_parameter/_Sharpness = 8.0
-shader_parameter/_Zeta = 0.1
+[sub_resource type="Compositor" id="Compositor_gkahi"]
+compositor_effects = Array[CompositorEffect]([null])
 
 [sub_resource type="FogMaterial" id="FogMaterial_vcvag"]
 density = 1.8845
@@ -1839,6 +1836,8 @@ edge_fade = 0.772747
 size = Vector3(5, 2.989, 0.127)
 
 [node name="SubViewportContainer" type="SubViewportContainer"]
+light_mask = 8
+visibility_layer = 8
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1848,6 +1847,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
+audio_listener_enable_3d = true
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
@@ -1858,6 +1858,7 @@ script = ExtResource("1_2dagw")
 
 [node name="crow" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
 transform = Transform3D(0.160879, 0, 0, 0, 0.0643432, 0, 0, 0, 0.160879, 0.64799, 0.0528235, 12.6762)
+visible = false
 mesh = SubResource("ArrayMesh_ch3aw")
 skeleton = NodePath("")
 
@@ -2079,6 +2080,7 @@ shape = SubResource("ConvexPolygonShape3D_i0v8k")
 
 [node name="Cube_011" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
 transform = Transform3D(-1.46031e-07, 0, 0.405, 0, 0.574378, 0, -1.225, 0, -4.82798e-08, -6.51388, 0.639201, -0.987139)
+visible = false
 mesh = SubResource("ArrayMesh_wpag8")
 skeleton = NodePath("")
 
@@ -2203,8 +2205,11 @@ skeleton = NodePath("")
 [node name="candles" parent="SubViewport/TutV2/tutv2/cake2" instance=ExtResource("1_sp2du")]
 transform = Transform3D(0.156, 0, 0, 0, 0.156, 0, 0, 0, 0.156, -0.00166166, 0.0941355, 0.00258029)
 
+[node name="Photo" parent="SubViewport/TutV2/tutv2" instance=ExtResource("52_gkahi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3286, 0.0201674, 24.4914)
+
 [node name="Player" parent="SubViewport/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.957676)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
 monster = NodePath("../Base Enemy")
 
 [node name="Base Enemy" parent="SubViewport/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("3_3hotv")]
@@ -2231,16 +2236,9 @@ offset_right = 0.455933
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="CRT_Shader" type="ColorRect" parent="SubViewport/TutV2"]
-material = SubResource("ShaderMaterial_8w85i")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport/TutV2"]
 environment = ExtResource("54_wqe1d")
+compositor = SubResource("Compositor_gkahi")
 
 [node name="Pills" parent="SubViewport/TutV2" instance=ExtResource("7_ohhhg")]
 transform = Transform3D(1, 0, 0, 0, 0.504814, -0.863228, 0, 0.863228, 0.504814, 1.56731, 1.13455, 24.1364)
@@ -2287,11 +2285,25 @@ shape = SubResource("BoxShape3D_itqge")
 [node name="BGMusic" type="AudioStreamPlayer" parent="SubViewport/TutV2"]
 stream = ExtResource("9_ccse8")
 volume_db = 1.0
-autoplay = true
 parameters/looping = true
 script = ExtResource("9_d1gwl")
 alter = ExtResource("11_mxqxa")
 main = ExtResource("9_ccse8")
+
+[node name="HidingSpot" parent="SubViewport/TutV2" instance=ExtResource("61_lm0gn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.69586, 0, 4.91865)
+
+[node name="Hiding Table" parent="SubViewport/TutV2" instance=ExtResource("34_kcaaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61785, 0, 0)
+hide_offset = Vector3(-1, 0, 0)
+
+[node name="CRT_Shader" type="ColorRect" parent="SubViewport"]
+material = ExtResource("64_gkahi")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="SubViewport"]
 material = ExtResource("60_f5jwp")
@@ -2300,8 +2312,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HidingSpot" parent="SubViewport" instance=ExtResource("61_lm0gn")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.69586, 0, 4.91865)
 
 [connection signal="body_entered" from="SubViewport/TutV2/state_changer" to="SubViewport/TutV2" method="_on_state_changer_body_entered"]

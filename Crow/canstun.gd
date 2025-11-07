@@ -14,14 +14,19 @@ func on_enter():
 	monster_inrange = true
 
 func check_transition(delta)->Array:
-	if hittable == true and Input.is_action_just_pressed("twogbosa"):
+	if Game_Global.hidden:
+		return[true,"idle"]
+	elif monster_inrange == false:
+		return[true, "idle"]
+	elif hittable == true and Input.is_action_just_pressed("twogbosa"):
 		return[true,"stun"]
 	return[false,""]
 	
 func update(delta):
 	circular_motion()
 	RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
-	Game_Global.madness_increment += .0005 * delta 
+	Game_Global.madness_increment += .0005 * delta
+
 	print(Game_Global.madness_increment)
 	
 func circular_motion():

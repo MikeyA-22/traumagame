@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://j5il4etq1a5a"]
 
-[ext_resource type="Shader" uid="uid://ddykr3l5catfu" path="res://Player/Player_ui.tres" id="1_ir6mu"]
+[ext_resource type="Shader" uid="uid://6gfiye8dcr2h" path="res://Player/Player_ui.tres" id="1_ir6mu"]
 [ext_resource type="Texture2D" uid="uid://dgqtogyi8lw6r" path="res://Screen/crosshair.png" id="2_gq5kw"]
-[ext_resource type="Shader" uid="uid://6nu4828q4uq5" path="res://VFX/RedOverlay.tres" id="3_gq5kw"]
+[ext_resource type="Shader" uid="uid://d3ptsx26yuixs" path="res://VFX/RedOverlay.tres" id="3_gq5kw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mb3g"]
 shader = ExtResource("1_ir6mu")

@@ -1,12 +1,14 @@
 shader_type canvas_item;
 
+#include "res://Screen/CRT.gdshaderinc"
+
 uniform sampler2D noise_texture : source_color, repeat_enable;
 uniform vec2 screen_resolution = vec2(1280.0, 720.0);
 global uniform float warp_strength : hint_range(0.0, 1.0);
 uniform float warp_speed : hint_range(0.0, 2.0) = 0.333;
 global uniform float heat_strength : hint_range(0.0, 0.05, 0.001);
 uniform vec2 heat_speed = vec2(0.1, 0.05);
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+uniform sampler2D SCREEN_TEXT : hint_screen_texture, filter_linear_mipmap;
 
 void fragment() {
     float t = TIME * warp_speed;

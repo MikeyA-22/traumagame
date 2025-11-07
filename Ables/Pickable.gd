@@ -14,13 +14,17 @@ var pickable_area = Area3D.new()
 var pickable_shape = SphereShape3D.new()
 var pickable_range = CollisionShape3D.new()
 var outline: ShaderMaterial = load("res://Shaders/Pickable.tres")
+var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+var sfx = preload("res://Music/sfx/pick up.MP3")
 @export var mat_array : Array[StandardMaterial3D]
+
 #@export var main_mat: StandardMaterial3D
 
 
 
 func _init() -> void:
 	add_indication_area()
+	assign_sfx()
 
 func show_outline(body: Node3D)->void:
 	if body is Player:
@@ -35,6 +39,16 @@ func hide_outline(body: Node3D)->void:
 		print("outline is hidden")
 		for mats in mat_array:
 			mats.next_pass = null
+
+func assign_sfx():
+	add_child(pick_sfx)
+	pick_sfx.stream = preload("res://Music/sfx/pick up.MP3")
+	#pick_sfx.autoplay = true
+	pick_sfx.volume_db = 10
+	pick_sfx.max_db = 10
+	pick_sfx.unit_size = 30
+	print("Audio stream loaded:", pick_sfx.stream)
+
 
 func add_indication_area():
 	collision_layer = LAYER_INTERACTABLE
@@ -57,3 +71,17 @@ func remove_outline():
 	for mats in mat_array:
 		mats.next_pass = null
 	pickable_area.queue_free()
+	
+
+func on_picked():
+	play_sfx()
+
+func play_sfx():
+	print("playing pickup?")
+	print("Inside tree:", pick_sfx.is_inside_tree())
+	print("Stream valid:", pick_sfx.stream)
+	pick_sfx.play()
+	print("Is playing:", pick_sfx.is_playing())
+
+func free() -> void:
+	play_sfx()

@@ -16,6 +16,7 @@ func initial_message():
 [color=green]WASD[/color][color=red] TO MOVE[/color]
 [color=green]RIGHT CLICK[/color][color=red] TO INTERACT[/color]
 [color=green]LEFT CLICK[/color][color=red] TO USE ITEM IN HAND[/color]
+[color=green]Q[/color][color=red] TO STUN WITH THE CROW![/color]
 [color=green]ENTER[/color][color=red] TO PROGRESS DIALOGUE[/color]
 [color=red]SWITCH ITEMS WITH[/color] [color=green]TAB[/color]
 [color=red]GO TOWARDS THE[/color] [shake][color=green]CAKE![/color][/shake]"], dialogue_position.position)
