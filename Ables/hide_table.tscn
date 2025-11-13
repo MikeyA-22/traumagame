@@ -92,13 +92,14 @@ shadow_mesh = SubResource("ArrayMesh_il7wq")
 [sub_resource type="BoxShape3D" id="BoxShape3D_jxgr6"]
 size = Vector3(1.68945, 0.919067, 2.74219)
 
-[node name="Hiding Table" type="StaticBody3D" node_paths=PackedStringArray("hidden_cam", "hide_point")]
+[node name="Hiding Table" type="StaticBody3D" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label")]
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("1_jxgr6")
 hidden_cam = NodePath("hide_point/Camera3D")
 hide_point = NodePath("hide_point")
 hide_offset = Vector3(0, 0, -1)
+hide_label = NodePath("HidingLabel")
 
 [node name="Table+cloth" type="Node3D" parent="."]
 
@@ -120,3 +121,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.438734, -0.568795)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117188, 0.447815, -0.00390625)
 shape = SubResource("BoxShape3D_jxgr6")
+
+[node name="HidingLabel" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.556
+anchor_top = 0.474
+anchor_right = 0.748
+anchor_bottom = 0.543
+offset_left = -0.512085
+offset_top = -0.152039
+offset_right = 0.303955
+offset_bottom = 0.135986
+grow_horizontal = 2
+grow_vertical = 2
+text = "[E] to hide"

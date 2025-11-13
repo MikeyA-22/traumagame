@@ -12,8 +12,11 @@ var interactable_shape = SphereShape3D.new()
 var interactable_range = CollisionShape3D.new()
 var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 
-func _ready() -> void:
+func _init() -> void:
 	add_indication_area()
+
+func _ready() -> void:
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,7 +31,7 @@ func add_indication_area():
 	#B. SET SHAPE TO COLLISION SHAPE
 	interactable_range.shape = interactable_shape
 	#C. ADD COLLISION AS CHILD OF AREA
-	interactable_area.add_child(interactable_area)
+	interactable_area.add_child(interactable_range)
 	#D. SET UP THE COLLISION
 	interactable_area.connect("body_entered",Callable(self,"get_body_entered"))
 	interactable_area.connect("body_exited",Callable(self,"get_body_exited"))

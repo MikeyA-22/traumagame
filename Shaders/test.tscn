@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://b66dxfqjyejwk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_be5hy"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_wk0a5"]
+sky_material = SubResource("ProceduralSkyMaterial_be5hy")
+
+[sub_resource type="Environment" id="Environment_a4vjx"]
+background_mode = 2
+sky = SubResource("Sky_wk0a5")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3pii"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
+grow = true
+grow_amount = 0.025
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rpfyj"]
+next_pass = SubResource("StandardMaterial3D_t3pii")
+stencil_mode = 1
+stencil_flags = 2
+stencil_color = Color(1, 0, 0, 1)
+stencil_outline_thickness = 0.025
+
+[sub_resource type="BoxMesh" id="BoxMesh_fnpet"]
+material = SubResource("StandardMaterial3D_rpfyj")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a4vjx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_fnpet")

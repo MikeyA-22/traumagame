@@ -12,7 +12,7 @@ config_version=5
 
 config/name="traumagame"
 run/main_scene="uid://c1iegtkr03cwh"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -26,7 +26,7 @@ script/templates_search_path="res://addons/fsm_template/Templates"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/fsm_template/plugin.cfg")
+enabled=PackedStringArray("res://addons/addons/kanban_tasks/plugin.cfg", "res://addons/fsm_template/plugin.cfg")
 
 [global_group]
 

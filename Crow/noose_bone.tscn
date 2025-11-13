@@ -371,6 +371,7 @@ collision_mask = 48
 
 [node name="rope" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.3, 0)
+visible = false
 
 [node name="Armature" type="Node3D" parent="rope"]
 

@@ -16,13 +16,14 @@ size = Vector3(0.8, 0.25, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_udaqr"]
 size = Vector3(1, 2, 1)
 
-[node name="HidingSpot" type="StaticBody3D" node_paths=PackedStringArray("hidden_cam", "hide_point")]
+[node name="HidingSpot" type="StaticBody3D" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_udaqr")
 hidden_cam = NodePath("hide_point/Camera3D")
 hide_point = NodePath("hide_point")
 hide_offset = Vector3(-1, 0, 0)
+hide_label = NodePath("HidingLabel")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -47,3 +48,18 @@ fov = 47.5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_udaqr")
+
+[node name="HidingLabel" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.556
+anchor_top = 0.474
+anchor_right = 0.748
+anchor_bottom = 0.543
+offset_left = -0.512085
+offset_top = -0.152039
+offset_right = 0.303955
+offset_bottom = 0.135986
+grow_horizontal = 2
+grow_vertical = 2
+text = "[E] to hide"

@@ -1,0 +1,107 @@
+{
+	"categories": [
+		{
+			"uuid": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"title": "Task",
+			"color": "ae9be9"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
+			"title": "Todo",
+			"tasks": [
+				"25b56742-bdf6-47f5-b553-fe213102ecc0",
+				"a6e3787b-ad54-4c08-a202-111bd43b1933",
+				"1821634b-105b-433a-acbd-add5f3b2a559"
+			]
+		},
+		{
+			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
+			"title": "Doing",
+			"tasks": [
+				"6a17618e-9aee-4964-a242-511e4be5fdc7"
+			]
+		},
+		{
+			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
+			"title": "Done",
+			"tasks": [
+				"8f64249d-3262-45f3-a066-b959142e0e20"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "6a17618e-9aee-4964-a242-511e4be5fdc7",
+			"title": "UI integration",
+			"description": "Edit and add new UI for the start screen",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": [
+				{
+					"details": "start screen UI",
+					"done": false
+				},
+				{
+					"details": "loading screen",
+					"done": false
+				},
+				{
+					"details": "animations for all",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "25b56742-bdf6-47f5-b553-fe213102ecc0",
+			"title": "Animation transistions",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": [
+				{
+					"details": "hiding place animation",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "8f64249d-3262-45f3-a066-b959142e0e20",
+			"title": "Fix Hiding place!!",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "a6e3787b-ad54-4c08-a202-111bd43b1933",
+			"title": "ADD WIN CONDITION",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "1821634b-105b-433a-acbd-add5f3b2a559",
+			"title": "Code optimization",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": [
+				{
+					"details": "rewire interaction-Christmas",
+					"done": false
+				}
+			]
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"fd417562-0c7f-4976-af9f-786b2edaca23"
+			],
+			[
+				"12b14a66-dea7-4278-9664-ef8fc48fe018"
+			],
+			[
+				"a5ba87e7-a7c5-4254-b44c-af2ccd5af26a"
+			]
+		]
+	}
+}

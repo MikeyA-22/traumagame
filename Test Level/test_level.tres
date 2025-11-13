@@ -81,7 +81,7 @@ operator = 1
 
 [resource]
 code = "shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert_wrap, specular_schlick_ggx;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_back, diffuse_lambert_wrap, specular_schlick_ggx;
 
 uniform vec3 Vector3Parameter = vec3(4.000000, 4.000000, 0.000000);
 uniform float FloatParameter = 0.40000000596046;

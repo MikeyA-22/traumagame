@@ -13,9 +13,10 @@ const MASK_ENVIRONMENT = 1<<2
 var pickable_area = Area3D.new()
 var pickable_shape = SphereShape3D.new()
 var pickable_range = CollisionShape3D.new()
-var outline: ShaderMaterial = load("res://Shaders/Pickable.tres")
+#var outline: ShaderMaterial = load("res://Shaders/Pickable.tres")
 var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var sfx = preload("res://Music/sfx/pick up.MP3")
+var interaction_label: Label = Label.new()
 @export var mat_array : Array[StandardMaterial3D]
 
 #@export var main_mat: StandardMaterial3D
@@ -29,16 +30,19 @@ func _init() -> void:
 func show_outline(body: Node3D)->void:
 	if body is Player:
 		print("In the scene")
-		outline.set_shader_parameter("shader_parameter/outline_color", Vector3(1,1,1))
-		outline.set_shader_parameter("shader_parameter/outline_width", 4.0)
 		for mats in mat_array:
-			mats.next_pass = outline
+			mats.stencil_mode = BaseMaterial3D.STENCIL_MODE_OUTLINE
+			mats.stencil_color = Color.YELLOW
+			mats.stencil_outline_thickness = 0.025
 
 func hide_outline(body: Node3D)->void:
 	if body is Player:
 		print("outline is hidden")
 		for mats in mat_array:
-			mats.next_pass = null
+			mats.stencil_color = BaseMaterial3D.STENCIL_MODE_DISABLED
+
+func label_setup():
+	pass
 
 func assign_sfx():
 	add_child(pick_sfx)

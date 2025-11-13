@@ -4,7 +4,7 @@ extends RayCast3D
 var reticlenumber: float = 0
 @onready var root_player = $"../../../../.."
 
-func _process(delta: float) -> void:
+func _process(delta:float) -> void:
 	RenderingServer.global_shader_parameter_set("ReticleLerper",reticlenumber)
 	if is_colliding():# == true and collision_mask == 2:
 		var collider = get_collider()
@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 				Game_Global.current_interactor = collider
 				reticlenumber = 1
 				if Input.is_action_just_pressed("interact"):
-					SigBus.HIDE.emit(true, root_player, self)
+					SigBus.HIDE.emit(root_player)
 			
 	else :
 		Game_Global.is_pickable = false
