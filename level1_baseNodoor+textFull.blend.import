@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bf4w72rq2ok1x"
-path="res://.godot/imported/level1_baseNodoor+textFull.blend-9df06a41127ed86cb2326fec6271f728.scn"
+valid=false
 
 [deps]
 
 source_file="res://level1_baseNodoor+textFull.blend"
-dest_files=["res://.godot/imported/level1_baseNodoor+textFull.blend-9df06a41127ed86cb2326fec6271f728.scn"]
 
 [params]
 

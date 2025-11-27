@@ -3,12 +3,12 @@
 importer="glsl"
 type="RDShaderFile"
 uid="uid://tj5l2h0eqv1u"
-path="res://.godot/imported/outline.glsl-9f686902a41de2b574baff19522cdaf5.res"
+path="res://.godot/imported/Outline.glsl-cf775b4262e0cac926619b757f6834e4.res"
 
 [deps]
 
-source_file="res://Shaders/outline.glsl"
-dest_files=["res://.godot/imported/outline.glsl-9f686902a41de2b574baff19522cdaf5.res"]
+source_file="res://Shaders/Outline.glsl"
+dest_files=["res://.godot/imported/Outline.glsl-cf775b4262e0cac926619b757f6834e4.res"]
 
 [params]
 
