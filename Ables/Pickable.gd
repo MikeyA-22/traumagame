@@ -6,6 +6,7 @@ class_name Pickable
 @export var item_name: String
 var pickable_action : Dictionary
 @export var messages : Array[String]
+@export var time: float
 const LAYER_INTERACTABLE = 1<<1
 const MASK_PLAYER = 1<<0
 const MASK_ENVIRONMENT = 1<<2
@@ -29,7 +30,7 @@ func _init() -> void:
 
 func show_outline(body: Node3D)->void:
 	if body is Player:
-		print("In the scene")
+		#print("In the scene")
 		for mats in mat_array:
 			mats.stencil_mode = BaseMaterial3D.STENCIL_MODE_OUTLINE
 			mats.stencil_color = Color.YELLOW
@@ -37,7 +38,7 @@ func show_outline(body: Node3D)->void:
 
 func hide_outline(body: Node3D)->void:
 	if body is Player:
-		print("outline is hidden")
+		#print("outline is hidden")
 		for mats in mat_array:
 			mats.stencil_color = BaseMaterial3D.STENCIL_MODE_DISABLED
 
@@ -48,8 +49,8 @@ func assign_sfx():
 	add_child(pick_sfx)
 	pick_sfx.stream = preload("res://Music/sfx/pick up.MP3")
 	#pick_sfx.autoplay = true
-	pick_sfx.volume_db = 10
-	pick_sfx.max_db = 10
+	pick_sfx.volume_db = 20
+	pick_sfx.max_db = 20
 	pick_sfx.unit_size = 30
 	print("Audio stream loaded:", pick_sfx.stream)
 
@@ -81,11 +82,11 @@ func on_picked():
 	play_sfx()
 
 func play_sfx():
-	print("playing pickup?")
-	print("Inside tree:", pick_sfx.is_inside_tree())
-	print("Stream valid:", pick_sfx.stream)
+	#print("playing pickup?")
+	#print("Inside tree:", pick_sfx.is_inside_tree())
+	#print("Stream valid:", pick_sfx.stream)
 	pick_sfx.play()
-	print("Is playing:", pick_sfx.is_playing())
+	#print("Is playing:", pick_sfx.is_playing())
 
 func free() -> void:
 	play_sfx()

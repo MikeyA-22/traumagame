@@ -85,6 +85,10 @@ script = ExtResource("2_oi3j2")
 
 [node name="PauseCalculator" parent="." instance=ExtResource("3_758ep")]
 
+[node name="Donetimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="timeout" from="typetimer" to="." method="_on_typetimer_timeout"]
 [connection signal="timeout" from="pausetimer" to="." method="_on_pausetimer_timeout"]
 [connection signal="pause_requested" from="PauseCalculator" to="." method="on_PauseCalculator_pause_requested"]
+[connection signal="timeout" from="Donetimer" to="." method="_on_donetimer_timeout"]

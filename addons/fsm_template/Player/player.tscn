@@ -74,9 +74,9 @@ _data = {
 render_priority = 0
 shader = ExtResource("8_tqrbo")
 shader_parameter/enable_fog = true
-shader_parameter/fog_color = Color(0.729412, 0.729412, 0.729412, 1)
+shader_parameter/fog_color = Color(0, 0, 0, 1)
 shader_parameter/noise_color = Color(0, 0, 0, 1)
-shader_parameter/fog_distance = 100.0
+shader_parameter/fog_distance = 6000.0
 shader_parameter/fog_fade_range = 50.0
 shader_parameter/enable_noise = true
 shader_parameter/noise_time_fac = 4.0
@@ -128,7 +128,7 @@ spot_range = 10.0
 spot_attenuation = -0.77
 spot_angle_attenuation = 87.1941
 script = ExtResource("4_3dtqd")
-energy = 40.0
+energy = 80.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 libraries = {
@@ -138,7 +138,10 @@ libraries = {
 [node name="Fstep Player" type="AudioStreamPlayer3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, 7.10543e-15, -1.82554, 0.243578)
 stream = ExtResource("11_qrbxm")
-volume_db = 1.0
+volume_db = 40.0
+unit_size = 30.0
+max_db = 6.0
+parameters/looping = true
 
 [node name="PSXMesh" type="MeshInstance3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0763102, 0, -0.55748)
@@ -157,6 +160,7 @@ player = NodePath("..")
 script = ExtResource("10_5uwn6")
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
+doppler_tracking = 1
 current = true
 
 [editable path="visuals"]

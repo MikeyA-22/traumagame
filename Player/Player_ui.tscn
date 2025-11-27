@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://j5il4etq1a5a"]
 
 [ext_resource type="Shader" uid="uid://6gfiye8dcr2h" path="res://Player/Player_ui.tres" id="1_ir6mu"]
-[ext_resource type="Texture2D" uid="uid://dgqtogyi8lw6r" path="res://Screen/crosshair.png" id="2_gq5kw"]
+[ext_resource type="Texture2D" uid="uid://4axe8ksm65ye" path="res://UI/ZX.png" id="2_mbwrr"]
 [ext_resource type="Shader" uid="uid://d3ptsx26yuixs" path="res://VFX/RedOverlay.tres" id="3_gq5kw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7mb3g"]
@@ -38,9 +38,9 @@ grow_vertical = 2
 
 [node name="Reticle" type="Sprite2D" parent="CenterContainer"]
 material = SubResource("ShaderMaterial_7mb3g")
-position = Vector2(25, 25)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_gq5kw")
+position = Vector2(0, 32.5)
+scale = Vector2(0.07912972, 0.06864655)
+texture = ExtResource("2_mbwrr")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1

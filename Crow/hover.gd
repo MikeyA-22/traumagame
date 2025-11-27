@@ -25,8 +25,7 @@ func check_transition(delta) -> Array:
 	return[false,""]
 	
 func _process(delta: float) -> void:
-	circular_motion()
-	
+	pass
 	
 func circular_motion():
 	#quite literally calculus

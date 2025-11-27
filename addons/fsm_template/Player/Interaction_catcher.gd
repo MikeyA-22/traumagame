@@ -2,10 +2,12 @@ extends RayCast3D
 
 
 var reticlenumber: float = 0
+var reticlenumber2: float  = 0
 @onready var root_player = $"../../../../.."
 
 func _process(delta:float) -> void:
 	RenderingServer.global_shader_parameter_set("ReticleLerper",reticlenumber)
+	RenderingServer.global_shader_parameter_set("ReticleLerper2",reticlenumber2)
 	if is_colliding():# == true and collision_mask == 2:
 		var collider = get_collider()
 		#print(collider.get_class())
@@ -28,9 +30,11 @@ func _process(delta:float) -> void:
 			elif collider is HidingSpot:
 				Game_Global.current_interactor = collider
 				reticlenumber = 1
+				reticlenumber2 = 1
 				if Input.is_action_just_pressed("interact"):
 					SigBus.HIDE.emit(root_player)
 			
 	else :
 		Game_Global.is_pickable = false
 		reticlenumber = 0
+		reticlenumber2 = 0

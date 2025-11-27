@@ -10,3 +10,4 @@ signal PILLS
 signal STUNNED
 signal BLOWN
 signal HIDE
+signal REVEALKEY

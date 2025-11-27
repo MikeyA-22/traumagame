@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 
 func add(item: Pickable):
-	SigBus.PICKING_UP.emit(item.messages)
+	SigBus.PICKING_UP.emit(item.messages, item.time)
 	if right_hand.get_children().is_empty():
 		set_active_item(item)
 	else:

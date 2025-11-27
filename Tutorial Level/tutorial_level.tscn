@@ -1,7 +1,8 @@
-[gd_scene load_steps=209 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=220 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
 [ext_resource type="PackedScene" uid="uid://bbrfhhgqpyxov" path="res://Ables/candles.tscn" id="1_sp2du"]
+[ext_resource type="Resource" uid="uid://b452o3ldbd6tn" path="res://Resource/Key.tres" id="2_kcaaw"]
 [ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="2_tfbhh"]
 [ext_resource type="PackedScene" uid="uid://d1y5wyjmkk0x" path="res://Enemy/base_enemy.tscn" id="3_3hotv"]
 [ext_resource type="Texture2D" uid="uid://b5qh5y7lfrxtc" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_basecolor.png" id="4_2slkf"]
@@ -18,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://cgfl2rjmrcw8h" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_normal_3.png" id="9_gkahi"]
 [ext_resource type="Texture2D" uid="uid://v3lgb24oi1o0" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_basecolor_7.png" id="10_kcaaw"]
 [ext_resource type="Texture2D" uid="uid://dgbdirj0ug5fj" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_normal_6.png" id="11_l01go"]
-[ext_resource type="AudioStream" uid="uid://chg6v2rergem3" path="res://Music/Alter.MP3" id="11_mxqxa"]
 [ext_resource type="Texture2D" uid="uid://cirxhmkr8ynmo" path="res://Tutorial Level/tutv2/tutv2_ac_Material_BaseMap.png" id="12_jisp4"]
 [ext_resource type="Texture2D" uid="uid://b51jpqg2dg2en" path="res://Tutorial Level/tutv2/tutv2_ac_Material_Normal.png" id="13_xg7y2"]
 [ext_resource type="Texture2D" uid="uid://c1bsqk1aselj6" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_BaseMap.png" id="14_ndxse"]
@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://8ankrs06jy67" path="res://Ables/hide_table.tscn" id="34_kcaaw"]
 [ext_resource type="Texture2D" uid="uid://c52d4xjh7d05m" path="res://Tutorial Level/tutv2/tutv2_floor_basecolor.png" id="36_j1n11"]
 [ext_resource type="Texture2D" uid="uid://2h2sglxy1byw" path="res://Tutorial Level/tutv2/tutv2_floor_metallic.png" id="37_sgbny"]
+[ext_resource type="Script" uid="uid://cgy81woen4wd2" path="res://Tutorial Level/instruction_area.gd" id="37_xg7y2"]
 [ext_resource type="Texture2D" uid="uid://bs1o4ny60vtkx" path="res://Tutorial Level/tutv2/tutv2_floor_normal.png" id="38_871h3"]
 [ext_resource type="Texture2D" uid="uid://752m12p12it7" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_BaseMap.png" id="39_gijqh"]
 [ext_resource type="Texture2D" uid="uid://p0tgyr6dkd0x" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_Normal.png" id="40_nq8ga"]
@@ -55,14 +56,21 @@
 [ext_resource type="Texture2D" uid="uid://yaeyxpmw1364" path="res://Tutorial Level/tutv2/tutv2_can_DefaultMaterial_Normal.png" id="46_22rba"]
 [ext_resource type="Texture2D" uid="uid://dcfx2k73q0o2q" path="res://Tutorial Level/tutv2/tutv2_handle_DefaultMaterial_BaseMap.png" id="47_ov47d"]
 [ext_resource type="Texture2D" uid="uid://dyghof4esfotc" path="res://Tutorial Level/tutv2/tutv2_handle_DefaultMaterial_Normal.png" id="48_fqdsr"]
+[ext_resource type="PackedScene" uid="uid://do7a3sk5ap5qk" path="res://addons/fsm_template/door.tscn" id="48_kcaaw"]
 [ext_resource type="Texture2D" uid="uid://b5q5vcfsf76vy" path="res://Tutorial Level/tutv2/tutv2_door_DefaultMaterial_BaseMap.png" id="49_bmkte"]
 [ext_resource type="Texture2D" uid="uid://gk7ap4y7srh" path="res://Tutorial Level/tutv2/tutv2_door_DefaultMaterial_Normal.png" id="50_4uuhk"]
 [ext_resource type="Texture2D" uid="uid://bam6nbd4t8lx4" path="res://Ables/cake_cake_DefaultMaterial_BaseMap.png" id="50_5sn6b"]
 [ext_resource type="Texture2D" uid="uid://ds8a7hqm4kg7e" path="res://Ables/cake_cake_DefaultMaterial_Normal.png" id="51_gkahi"]
 [ext_resource type="PackedScene" uid="uid://lqvn2lpyms4d" path="res://Photobook/photo1.tscn" id="52_gkahi"]
+[ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="54_l01go"]
 [ext_resource type="Environment" uid="uid://dskusy3hg0wbc" path="res://Tutorial Level/tutv2/main_env.tres" id="54_wqe1d"]
 [ext_resource type="Material" uid="uid://hgodhplhtbky" path="res://Shaders/heat_distort.tres" id="60_f5jwp"]
-[ext_resource type="Material" uid="uid://b1mqxxbci7hsr" path="res://Shaders/CRT.tres" id="64_gkahi"]
+[ext_resource type="Script" uid="uid://dvxeamowg7jtb" path="res://Tutorial Level/state_changer.gd" id="61_jisp4"]
+[ext_resource type="Shader" uid="uid://bm38vek87nfgh" path="res://chromatic_aberration.gdshader" id="65_l01go"]
+[ext_resource type="AudioStream" uid="uid://bs51sebxvp2w2" path="res://Music/sfx/phase 2.MP3" id="65_ndxse"]
+[ext_resource type="AudioStream" uid="uid://1cjtaa0o3d1x" path="res://phase 1.MP3" id="66_ehwpm"]
+[ext_resource type="AudioStream" uid="uid://c8eiceuuh6b72" path="res://Music/sfx/phase 3.MP3" id="67_kvd7i"]
+[ext_resource type="AudioStream" uid="uid://c2uk4g62w05pg" path="res://Music/sfx/phase4.MP3" id="68_f5srq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj54v"]
 resource_name = "crow"
@@ -1252,6 +1260,9 @@ shadow_mesh = SubResource("ArrayMesh_vumli")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uq4pb"]
 data = PackedVector3Array(-5.3637, 0, 11.0879, 1, 0, -1.0001, 1, 0, 11.0879, -5.3637, 0, 11.0879, -5.3637, 0, -1.0001, 1, 0, -1.0001, -5.3637, 0, 11.0879, -5.3637, 0, 26.3083, -8.0203, 0, 26.3083, -5.3637, 0, 11.0879, -8.0203, 0, 26.3083, -8.0203, 0, 11.0879, -8.0203, 0, 11.0879, -5.3637, 0, -1.0001, -5.3637, 0, 11.0879, -8.0203, 0, 11.0879, -8.0203, 0, -1.0001, -5.3637, 0, -1.0001, -8.0203, 0, 11.0879, -18.0883, 0, -1.0001, -8.0203, 0, -1.0001, -8.0203, 0, 11.0879, -18.0883, 0, 11.0879, -18.0883, 0, -1.0001, -18.0883, 0, -1.0001, -8.0203, 0, -5.13, -8.0203, 0, -1.0001, -18.0883, 0, -1.0001, -18.0883, 0, -5.13, -8.0203, 0, -5.13)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ndxse"]
+size = Vector3(3.6190186, 2.9924316, 1.8393555)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ueqk"]
 resource_name = "Material.013"
 cull_mode = 2
@@ -1776,18 +1787,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n7ejp")
 
+[sub_resource type="Compositor" id="Compositor_xg7y2"]
+
 [sub_resource type="FogMaterial" id="FogMaterial_vcvag"]
-density = 1.8845
-albedo = Color(0.27356, 0.27356, 0.27356, 1)
+density = 1.3
+albedo = Color(0.041331246, 0.0413312, 0.0413312, 1)
 height_falloff = 0.158259
 edge_fade = 0.772747
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_itqge"]
 size = Vector3(5, 2.989, 0.127)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jisp4"]
+shader = ExtResource("65_l01go")
+
 [node name="SubViewportContainer" type="SubViewportContainer"]
-light_mask = 8
-visibility_layer = 8
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1801,8 +1815,14 @@ audio_listener_enable_3d = true
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="TutV2" type="Node3D" parent="SubViewport"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0798893, 0.95195854, 1.2055603)
+visible = false
+
+[node name="TutV2" type="Node3D" parent="SubViewport" node_paths=PackedStringArray("photo")]
 script = ExtResource("1_2dagw")
+photo = NodePath("tutv2/Photo")
+key_data = ExtResource("2_kcaaw")
 
 [node name="tutv2" type="Node3D" parent="SubViewport/TutV2"]
 
@@ -2050,6 +2070,14 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Plane_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_uq4pb")
 
+[node name="InstructionArea" type="Area3D" parent="SubViewport/TutV2/tutv2/Plane_002"]
+transform = Transform3D(1.0000008, 0, 0, 0, 1.0000008, 0, 0, 0, 1.0000008, -6.3281074, 0.82993317, 26.270203)
+script = ExtResource("37_xg7y2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Plane_002/InstructionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24481198, -0.15979016, -0.41967773)
+shape = SubResource("BoxShape3D_ndxse")
+
 [node name="Cube_012" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
 transform = Transform3D(-4.22597e-08, 0, -0.3545, 0, 0.3545, 0, 0.3545, 0, -4.22597e-08, 1.63762, 0.374931, 26.089)
 mesh = SubResource("ArrayMesh_75oxn")
@@ -2145,6 +2173,9 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_036/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_mm8lq")
 
+[node name="Door" parent="SubViewport/TutV2/tutv2/Cube_036" instance=ExtResource("48_kcaaw")]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
 [node name="cake2" type="Node3D" parent="SubViewport/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02759, 0.857823, 1.20298)
 
@@ -2158,6 +2189,8 @@ transform = Transform3D(0.156, 0, 0, 0, 0.156, 0, 0, 0, 0.156, -0.00166166, 0.09
 
 [node name="Photo" parent="SubViewport/TutV2/tutv2" instance=ExtResource("52_gkahi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3286, 0.0201674, 24.4914)
+script = ExtResource("54_l01go")
+time = 1.8
 
 [node name="Player" parent="SubViewport/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
@@ -2189,12 +2222,15 @@ grow_vertical = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport/TutV2"]
 environment = ExtResource("54_wqe1d")
+compositor = SubResource("Compositor_xg7y2")
 
 [node name="Pills" parent="SubViewport/TutV2" instance=ExtResource("7_ohhhg")]
 transform = Transform3D(1, 0, 0, 0, 0.504814, -0.863228, 0, 0.863228, 0.504814, 1.56731, 1.13455, 24.1364)
+time = 10.0
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="SubViewport/TutV2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13241, 1.26857, -0.334273)
+visible = false
 layers = 1023
 blend_distance = 0.33
 max_distance = 157.5
@@ -2214,19 +2250,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307578, 1.56495, 16.5566)
 size = Vector3(4, 2, 20)
 material = SubResource("FogMaterial_vcvag")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="SubViewport/TutV2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.65563, 0)
-light_color = Color(0.351576, 0.1876, 0.0902795, 1)
-light_energy = 12.169
-light_indirect_energy = 5.0
-shadow_enabled = true
-omni_range = 10.1846
-
 [node name="flashlight" parent="SubViewport/TutV2" instance=ExtResource("8_drjao")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.081117, 0.865625, 1.29747)
+time = 2.0
 
 [node name="state_changer" type="Area3D" parent="SubViewport/TutV2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.6113)
+script = ExtResource("61_jisp4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/state_changer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.28797)
@@ -2234,27 +2264,22 @@ shape = SubResource("BoxShape3D_itqge")
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="SubViewport/TutV2"]
 stream = ExtResource("9_ccse8")
-volume_db = 1.0
 parameters/looping = true
 script = ExtResource("9_d1gwl")
-alter = ExtResource("11_mxqxa")
-main = ExtResource("9_ccse8")
+alter = ExtResource("65_ndxse")
+main = ExtResource("66_ehwpm")
+third_phase = ExtResource("67_kvd7i")
+final_phase = ExtResource("68_f5srq")
 
 [node name="Hiding Table" parent="SubViewport/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("34_kcaaw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61785, 0, 0)
 hide_offset = Vector3(-1, 0, 0)
 player = NodePath("../Player")
 
-[node name="CRT_Shader" type="ColorRect" parent="SubViewport"]
-visible = false
-material = ExtResource("64_gkahi")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
+follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="SubViewport"]
+[node name="ColorRect" type="ColorRect" parent="SubViewport/CanvasLayer"]
 material = ExtResource("60_f5jwp")
 anchors_preset = 15
 anchor_right = 1.0
@@ -2262,4 +2287,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="chroma" type="ColorRect" parent="SubViewport"]
+z_index = 1
+material = SubResource("ShaderMaterial_jisp4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="body_entered" from="SubViewport/TutV2/tutv2/Plane_002/InstructionArea" to="SubViewport/TutV2" method="_on_instruction_area_body_entered"]
+[connection signal="body_entered" from="SubViewport/TutV2/tutv2/Plane_002/InstructionArea" to="SubViewport/TutV2/tutv2/Plane_002/InstructionArea" method="_on_body_entered"]
 [connection signal="body_entered" from="SubViewport/TutV2/state_changer" to="SubViewport/TutV2" method="_on_state_changer_body_entered"]
+[connection signal="body_entered" from="SubViewport/TutV2/state_changer" to="SubViewport/TutV2/state_changer" method="_on_body_entered"]

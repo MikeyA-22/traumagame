@@ -20,3 +20,9 @@ func update(delta):
 	character.velocity = character.global_position.direction_to(grounded_player_pos) * character.speed
 	character.look_at(grounded_player_pos)
 	character.move_and_slide()
+
+func on_enter():
+	fstep1.play()
+	
+func on_exit():
+	fstep1.stop()

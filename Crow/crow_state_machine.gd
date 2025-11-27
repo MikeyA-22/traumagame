@@ -8,6 +8,7 @@ extends StateMachine
 @onready var player: Player = root.player
 @onready var monster : Enemy = player.monster
 var noise_intensity = 0.06
+@export var animation_player_2: AnimationPlayer
 #@onready var effect_area = $"../Area3D"
 
 ## var states : Dictionary #{ String: AIMove }
@@ -36,6 +37,7 @@ func switch_to(next_state_name: String):
 	current_state.mark_enter_state()
 	current_state.on_enter()
 	animation_player.play(current_state.animation)
+	animation_player_2.play(current_state.animation)
 
 
 	

@@ -949,17 +949,3 @@ tracks/134/path = NodePath("Skeleton3D:Ctrl_LegPole_IK_Right")
 tracks/134/interp = 1
 tracks/134/loop_wrap = true
 tracks/134/keys = PackedFloat32Array(0, 1, -0.707107, 1.04387e-06, 2.59549e-07, 0.707107)
-tracks/135/type = "method"
-tracks/135/imported = false
-tracks/135/enabled = true
-tracks/135/path = NodePath("FStep Player")
-tracks/135/interp = 1
-tracks/135/loop_wrap = true
-tracks/135/keys = {
-"times": PackedFloat32Array(0.4),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [0.0],
-"method": &"play"
-}]
-}

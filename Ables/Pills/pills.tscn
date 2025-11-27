@@ -6,8 +6,8 @@
 [ext_resource type="Material" uid="uid://y4uwl4if8jvx" path="res://Ables/Pills/pill.tres" id="3_m1gai"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ynma5"]
-height = 1.7019
-radius = 0.620117
+height = 3.8607023
+radius = 2.7739258
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_auqnx"]
 
@@ -77,7 +77,7 @@ item_name = "pills"
 mat_array = Array[StandardMaterial3D]([ExtResource("2_m1gai")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, -0.00512717, 0)
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0.014745604, 0)
 shape = SubResource("CylinderShape3D_ynma5")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]

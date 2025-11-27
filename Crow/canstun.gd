@@ -23,11 +23,11 @@ func check_transition(delta)->Array:
 	return[false,""]
 	
 func update(delta):
-	circular_motion()
+	#circular_motion()
 	RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
-	Game_Global.madness_increment += .0005 * delta
+	Game_Global.madness_increment += .00005 * delta
 
-	print(Game_Global.madness_increment)
+	#print(Game_Global.madness_increment)
 	
 func circular_motion():
 	angle += monster.rotation.y - character.rotation.y

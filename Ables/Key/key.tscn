@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://265qqsgeuu14" path="res://Ables/Key/key_mat.tres" id="2_0yc1v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_up4cr"]
-size = Vector3(0.302002, 1.51373, 0.266747)
+size = Vector3(0.302002, 1.8783104, 1.5473633)
 
 [node name="key" type="CharacterBody3D"]
 collision_layer = 2
@@ -31,5 +31,5 @@ size = Vector3(0.898926, 1, 0.544922)
 material = ExtResource("2_0yc1v")
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3.53477e-16, -8.08661e-09, 0.185, -0.185, -8.08661e-09, 0, 8.08661e-09, -0.185, -8.08661e-09, 0.00068524, -0.00255188, 0.000897909)
+transform = Transform3D(3.53477e-16, -8.08661e-09, 0.185, -0.185, -8.08661e-09, 0, 8.08661e-09, -0.185, -8.08661e-09, 0, 0, 0)
 shape = SubResource("BoxShape3D_up4cr")

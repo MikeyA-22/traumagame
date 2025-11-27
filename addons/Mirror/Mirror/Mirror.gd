@@ -1,15 +1,15 @@
-tool
+@tool
 extends Spatial
 
 const whitegreen : Color = Color(0.9, 0.97, 0.94)
 
-export var size : Vector2 = Vector2(2, 2)
-export var ResolutionPerUnit = 100
-export(NodePath) var MainCamPath = ""
-export(Array, int) var cullMask = []
-export(Color, RGB) var MirrorColor = whitegreen
-export(float, 0, 30, 0.01) var MirrorDistortion = 0
-export(Texture) var DistortionTexture
+@export var size : Vector2 = Vector2(2, 2)
+@export var ResolutionPerUnit = 100
+@export var MainCamPath : NodePath = ""
+@export var cullMask : Array = [int]
+@export var MirrorColor : Color = whitegreen
+@export var MirrorDistortion = 0
+@export var DistortionTexture : Texture
 
 var MainCam : Camera = null
 var cam : Camera

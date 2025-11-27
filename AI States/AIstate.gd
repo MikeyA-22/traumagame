@@ -16,6 +16,9 @@ var stat_adjuster: float = 1000
 var monster: Enemy
 var stunned = false
 var noise_intensity
+var fstep1: AudioStreamPlayer3D
+var fstep2: AudioStreamPlayer3D
+
 
 func _ready() -> void:
 	SigBus.connect("STUNNED", is_stunned)

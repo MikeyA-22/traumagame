@@ -14,7 +14,7 @@ var monster_inrange : bool = true
 func on_enter():
 	if player.resources.sanity > 0:
 		RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
-		Game_Global.madness_increment += .015
+		Game_Global.madness_increment += .0075
 		print(Game_Global.madness_increment)
 		player.resources.sanity -= 10
 		print(player.resources.sanity)
@@ -27,8 +27,7 @@ func check_transition(delta)->Array:
 	return[false,""]
 	
 func update(delta):
-	
-	circular_motion()
+	pass#circular_motion()
 	
 func circular_motion():
 	angle += monster.rotation.y - character.rotation.y

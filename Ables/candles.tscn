@@ -77,8 +77,8 @@ material = SubResource("StandardMaterial3D_w7ys2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05831, 0)
 light_color = Color(0.574111, 0.304378, 1.92523e-07, 1)
 light_energy = 0.468
-omni_range = 3.127
-omni_attenuation = 3.594
+omni_range = 6.062
+omni_attenuation = 3.357
 script = ExtResource("2_t6d5b")
 noise = SubResource("NoiseTexture3D_t6d5b")
 

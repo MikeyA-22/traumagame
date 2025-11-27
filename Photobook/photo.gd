@@ -4,5 +4,12 @@ class_name Photo
 
 @export var photodata: PhotoData
 
+signal picked_up(pos)
+
 func _ready() -> void:
-	sfx = preload("res://Music/sfx/pick up paper.MP3")
+	pass
+
+
+func on_photo_picked():
+	emit_signal("picked_up", global_position)
+	

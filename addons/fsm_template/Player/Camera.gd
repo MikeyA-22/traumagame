@@ -4,10 +4,12 @@ extends Node3D
 @onready var player_camera = $Camera3D
 var mouse_is_captured = true
 @onready var anim_player : AnimationPlayer = $Camera3D/AnimationPlayer
+@onready var fstep_player : AudioStreamPlayer3D = $"Camera3D/Fstep Player"
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	top_level = true
+	fstep_player.max_db = 20
 
 
 func _process(delta):
@@ -24,11 +26,11 @@ func _input(event):
 		
 		if event is InputEventMouseMotion and mouse_is_captured:
 			var d_hor = event.relative.x
-			rotate_y(- d_hor / 1000)
-			player.rotate_y(- d_hor / 1000)
+			rotate_y(- d_hor / 100)
+			player.rotate_y(- d_hor / 100)
 			var d_ver = event.relative.y
 			clamp(d_ver,0,10)
-			player_camera.rotate_x(d_ver/1000)
+			player_camera.rotate_x(d_ver/100)
 			
 			
 

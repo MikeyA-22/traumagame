@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bvyu35md1spyq"]
+[gd_scene load_steps=26 format=3 uid="uid://bvyu35md1spyq"]
 
 [ext_resource type="Script" uid="uid://cu6d8y2wq0bwv" path="res://addons/fsm_template/Player/Scripts/Model.gd" id="1_8c8pa"]
 [ext_resource type="Script" uid="uid://dybfxryljd88n" path="res://addons/fsm_template/Player/Scripts/States/Landing.gd" id="2_isc21"]
@@ -37,6 +37,8 @@ _data = {
 &"pick": ExtResource("9_jqxnw"),
 &"walk": ExtResource("11_egjqv")
 }
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1bops"]
 
 [node name="Model" type="Node3D"]
 script = ExtResource("1_8c8pa")
@@ -96,14 +98,14 @@ radius = 0.155
 material = SubResource("StandardMaterial3D_ossvb")
 
 [node name="Root" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.971286, -0.0541807, -0.231664, -0.0217373, 0.949442, -0.313189, 0.236921, 0.309231, 0.921002, 2.84207e-05, 0.950801, 0.000441372)
+transform = Transform3D(0.9712858, -0.054180723, -0.23166431, -0.021737326, 0.94944215, -0.3131886, 0.23692064, 0.3092314, 0.9210019, 2.84207e-05, 0.950801, 0.000441372)
 bone_name = "mixamorig_Hips"
 bone_idx = 0
 use_external_skeleton = true
 external_skeleton = NodePath("../Skeleton3D")
 
 [node name="LeftHand" type="BoneAttachment3D" parent="."]
-transform = Transform3D(0.346612, 0.00904429, -0.937965, 0.514675, -0.837821, 0.182113, -0.7842, -0.54587, -0.295054, 0.233947, 0.98657, -0.103048)
+transform = Transform3D(0.34661216, 0.009044293, -0.93796504, 0.51467526, -0.83782136, 0.18211257, -0.78419983, -0.54586995, -0.29505396, 0.23394676, 0.98657036, -0.10304847)
 bone_name = "mixamorig_LeftHand"
 bone_idx = 10
 use_external_skeleton = true
@@ -113,7 +115,7 @@ external_skeleton = NodePath("../Skeleton3D")
 radius = 0.1
 
 [node name="RightHand" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.186447, 0.393604, -0.900174, 0.979424, 0.146495, -0.138807, 0.0772358, -0.907533, -0.412819, -0.0429421, 1.05857, 0.500811)
+transform = Transform3D(-0.18644747, 0.39360392, -0.90017414, 0.97942424, 0.14649469, -0.13880695, 0.07723582, -0.90753263, -0.4128188, -0.042942144, 1.058571, 0.5008109)
 bone_name = "Ctrl_Middle2_Right"
 bone_idx = 77
 use_external_skeleton = true
@@ -1307,3 +1309,6 @@ libraries = {
 [node name="Inventory" parent="." instance=ExtResource("17_63g1w")]
 
 [node name="Photobook" parent="." instance=ExtResource("20_3katm")]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_1bops")

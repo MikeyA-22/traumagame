@@ -5,7 +5,7 @@
 [ext_resource type="Material" uid="uid://87yojw2ai7v4" path="res://Photobook/photo1.tres" id="3_5rgku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ds8k"]
-size = Vector3(1.24365, 2.04205, 1.07479)
+size = Vector3(4.7189026, 3.6137838, 3.5374963)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2jakx"]
 _surfaces = [{
@@ -48,7 +48,7 @@ mat_array = Array[StandardMaterial3D]([ExtResource("3_5rgku")])
 metadata/_custom_type_script = "uid://bswph8vy8tmba"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0019043, 0.205451, 0.101025)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.0022186786, 0.21213901, 0.078818336)
 shape = SubResource("BoxShape3D_2ds8k")
 
 [node name="birthdaycard" type="Node3D" parent="."]
@@ -58,3 +58,5 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 1, 0)
 mesh = SubResource("ArrayMesh_8kmif")
 skeleton = NodePath("")
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

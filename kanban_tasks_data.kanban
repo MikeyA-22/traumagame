@@ -4,6 +4,16 @@
 			"uuid": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
 			"title": "Task",
 			"color": "ae9be9"
+		},
+		{
+			"uuid": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"title": "Priority",
+			"color": "d32424"
+		},
+		{
+			"uuid": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"title": "Christmas",
+			"color": "10e907"
 		}
 	],
 	"stages": [
@@ -11,23 +21,41 @@
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
 			"title": "Todo",
 			"tasks": [
+				"8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
 				"25b56742-bdf6-47f5-b553-fe213102ecc0",
-				"a6e3787b-ad54-4c08-a202-111bd43b1933",
-				"1821634b-105b-433a-acbd-add5f3b2a559"
+				"911c0794-6b92-44f3-8dc3-0869a5cbfd13",
+				"91d630ec-07db-4ca3-9258-6711bfb628c8",
+				"1821634b-105b-433a-acbd-add5f3b2a559",
+				"00162ebc-db8b-45cb-bd10-4b27261ae87e",
+				"3e34a01b-2556-4b11-b206-1be73d734aa3",
+				"290861f9-4677-409a-80df-5c52ba459a3b"
 			]
 		},
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing",
 			"tasks": [
-				"6a17618e-9aee-4964-a242-511e4be5fdc7"
+				"a95d6f4a-8922-4077-b933-e1fa9830d0b4",
+				"4ec3b739-5df2-4559-810e-001523f107a1",
+				"696f2ecb-4e93-4842-98d5-49c71366bde8",
+				"a0fd112b-4da7-4851-820a-2dd863d524b9"
 			]
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
-				"8f64249d-3262-45f3-a066-b959142e0e20"
+				"9d86628b-42a2-4d21-a3b9-cfd9b33bc049",
+				"ea363c26-2189-4c89-bbdd-9402f7508c45",
+				"67f15e0a-a5d4-4484-b7f0-472bc2e5dad5",
+				"8f64249d-3262-45f3-a066-b959142e0e20",
+				"6bb52715-60c6-4399-afd6-349b96405f21",
+				"ee9bf934-9a4a-45d2-ab14-fc4aae3040a6",
+				"a6e3787b-ad54-4c08-a202-111bd43b1933",
+				"5839e2fa-1120-4e73-b443-bf0bd4d8186c",
+				"ae2cf166-719e-4141-a24d-83078401a8ea",
+				"509f0756-58a2-46c2-af9e-e7f00603150f",
+				"6a17618e-9aee-4964-a242-511e4be5fdc7"
 			]
 		}
 	],
@@ -40,15 +68,11 @@
 			"steps": [
 				{
 					"details": "start screen UI",
-					"done": false
-				},
-				{
-					"details": "loading screen",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "animations for all",
-					"done": false
+					"done": true
 				}
 			]
 		},
@@ -75,20 +99,155 @@
 			"uuid": "a6e3787b-ad54-4c08-a202-111bd43b1933",
 			"title": "ADD WIN CONDITION",
 			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
 			"steps": []
 		},
 		{
 			"uuid": "1821634b-105b-433a-acbd-add5f3b2a559",
 			"title": "Code optimization",
 			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
 			"steps": [
 				{
 					"details": "rewire interaction-Christmas",
 					"done": false
 				}
 			]
+		},
+		{
+			"uuid": "8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
+			"title": "Implement door functionality",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "ee9bf934-9a4a-45d2-ab14-fc4aae3040a6",
+			"title": "Add animation for sanity loss effect",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "6bb52715-60c6-4399-afd6-349b96405f21",
+			"title": "crow model",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "67f15e0a-a5d4-4484-b7f0-472bc2e5dad5",
+			"title": "crow animation",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "4ec3b739-5df2-4559-810e-001523f107a1",
+			"title": "fix animation for the character's interact",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "a95d6f4a-8922-4077-b933-e1fa9830d0b4",
+			"title": "Asset Implementation",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": [
+				{
+					"details": "Phase sounds",
+					"done": false
+				},
+				{
+					"details": "hiding UI",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "911c0794-6b92-44f3-8dc3-0869a5cbfd13",
+			"title": "loading screen",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "ae2cf166-719e-4141-a24d-83078401a8ea",
+			"title": "fix dialog system",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "91d630ec-07db-4ca3-9258-6711bfb628c8",
+			"title": "Fire for the candles",
+			"description": "",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"steps": []
+		},
+		{
+			"uuid": "5839e2fa-1120-4e73-b443-bf0bd4d8186c",
+			"title": "Implement crow",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "509f0756-58a2-46c2-af9e-e7f00603150f",
+			"title": "fix game over screen",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "a0fd112b-4da7-4851-820a-2dd863d524b9",
+			"title": "Implement Level 1",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "00162ebc-db8b-45cb-bd10-4b27261ae87e",
+			"title": "Rewire player state machine",
+			"description": "",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"steps": []
+		},
+		{
+			"uuid": "3e34a01b-2556-4b11-b206-1be73d734aa3",
+			"title": "Model and Animate player",
+			"description": "",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"steps": []
+		},
+		{
+			"uuid": "9d86628b-42a2-4d21-a3b9-cfd9b33bc049",
+			"title": "Crow Particle effect",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "290861f9-4677-409a-80df-5c52ba459a3b",
+			"title": "Begin Navmesh implementation",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "ea363c26-2189-4c89-bbdd-9402f7508c45",
+			"title": "Tutorial Dialog integration",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "696f2ecb-4e93-4842-98d5-49c71366bde8",
+			"title": "Instructions need to be clearer as to what to look for, specifically for the photo and the pills",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
 		}
 	],
 	"layout": {

@@ -7,19 +7,22 @@ class_name Dialogue
 @onready var pause_timer : Timer = $pausetimer
 @onready var audio_player : AudioStreamPlayer
 @onready var pause_calc : PauseCalculator = $PauseCalculator
+@onready var done_timer : Timer = $Donetimer
 
 var playing_voice:bool
 
 signal message_completed
-
+signal finished
 func _init() -> void:
 	modulate.a = 0
 	var tween = create_tween()
 	tween.tween_property(self,"modulate:a",1.0,1.0)
+	
 
 func _ready() -> void:
 	
 	await get_tree().create_timer(1.0).timeout
+	
 	
   
 # Update the message and starts typing
@@ -67,3 +70,9 @@ func _on_pausetimer_timeout() -> void:
 	
 	
 	
+	
+
+
+func _on_donetimer_timeout() -> void:
+	print("timedout")
+	emit_signal("finished")

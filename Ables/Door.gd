@@ -14,4 +14,4 @@ func _process(delta: float) -> void:
 	pass
 	
 func _open_door():
-	print("DOORisOpen")
+	get_tree().change_scene_to_file("res://next_level_placeholder.tscn")
