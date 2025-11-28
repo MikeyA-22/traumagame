@@ -27,9 +27,9 @@ func update(input: InputPackage, delta: float):
 func on_enter_state():
 	if Game_Global.is_pickable == true:
 		if Game_Global.current_pickable is Photo:
-			photobook.add(Game_Global.current_pickable)
+			photobook.add(Game_Global.current_pickable, true)
 			#model.set_active_object(Game_Global.current_pickable)
 		else:
-			inventory.add(Game_Global.current_pickable, false)
+			inventory.add(Game_Global.current_pickable, true)
 			#debugprintcurrentanimation()
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

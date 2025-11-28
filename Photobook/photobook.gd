@@ -13,11 +13,11 @@ func _ready() -> void:
 	
 
 
-func add(photo: Photo):
+func add(photo: Photo, use_message:bool):
 	
-
 	
-	SigBus.PICKING_UP.emit(photo.messages, photo.time)
+	if use_message:
+		SigBus.PICKING_UP.emit(photo.messages, photo.time)
 	
 	var photodata = get_photodata(photo)
 	photo.on_picked()
