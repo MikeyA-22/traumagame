@@ -28,7 +28,8 @@
 				"1821634b-105b-433a-acbd-add5f3b2a559",
 				"00162ebc-db8b-45cb-bd10-4b27261ae87e",
 				"3e34a01b-2556-4b11-b206-1be73d734aa3",
-				"290861f9-4677-409a-80df-5c52ba459a3b"
+				"290861f9-4677-409a-80df-5c52ba459a3b",
+				"d7eed53f-00ba-4520-af11-5bb2d62a8e7d"
 			]
 		},
 		{
@@ -247,6 +248,13 @@
 			"title": "Instructions need to be clearer as to what to look for, specifically for the photo and the pills",
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "d7eed53f-00ba-4520-af11-5bb2d62a8e7d",
+			"title": "Improve visuals!!",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
 			"steps": []
 		}
 	],

@@ -1,7 +1,7 @@
 extends State
 class_name Interacting
 
-const transition_timing = 1.2
+const transition_timing = 0.5
 
 
 
@@ -30,6 +30,6 @@ func on_enter_state():
 			photobook.add(Game_Global.current_pickable)
 			#model.set_active_object(Game_Global.current_pickable)
 		else:
-			inventory.add(Game_Global.current_pickable)
+			inventory.add(Game_Global.current_pickable, false)
 			#debugprintcurrentanimation()
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

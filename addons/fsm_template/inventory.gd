@@ -9,6 +9,7 @@ class_name Inventory
 @onready var inventory_display = $InventoryDisplay
 
 
+
 func _ready() -> void:
 	pass
 func _process(delta: float) -> void:
@@ -16,8 +17,9 @@ func _process(delta: float) -> void:
 		switch_item()
 
 
-func add(item: Pickable):
-	SigBus.PICKING_UP.emit(item.messages, item.time)
+func add(item: Pickable, use_message: bool):
+	if use_message:
+		SigBus.PICKING_UP.emit(item.messages, item.time)
 	if right_hand.get_children().is_empty():
 		set_active_item(item)
 	else:

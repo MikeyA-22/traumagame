@@ -13,17 +13,15 @@ func _ready():
 
 
 func _process(delta):
-	global_position = player.global_position
+	global_transform.origin = player.global_position  
 
 
 func _input(event):
 	if !Game_Global.hidden:
 		if event.is_action_released("ui_cancel"):
 			switch_mouse()
-		
 		if Input.get_vector("ui_up","ui_down","ui_right","ui_left"):
 			anim_player.play("head_bob")
-		
 		if event is InputEventMouseMotion and mouse_is_captured:
 			var d_hor = event.relative.x
 			rotate_y(- d_hor / 100)

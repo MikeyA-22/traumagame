@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ilmbcbrada"]
+
+[ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="1_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://d1y5wyjmkk0x" path="res://Enemy/base_enemy.tscn" id="2_6uqi0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." node_paths=PackedStringArray("monster") instance=ExtResource("1_8uh7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.953, 0, -16.038)
+monster = NodePath("../Base Enemy")
+
+[node name="Base Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_6uqi0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.271121, 0.139649, -25.983988)
+player = NodePath("../Player")
+aggro_radius = 2.0
+attack_radius = 1.0
+deaggro_radius = 4.0

@@ -16,7 +16,6 @@ enum game_state{
 	STATE_ENEMY_ATTACK,
 	STATE_END_GAME
 }
-@onready var game_over_scene = $"."
 static var current_gState: game_state = game_state.STATE_1
 static var madness_increment: float
 

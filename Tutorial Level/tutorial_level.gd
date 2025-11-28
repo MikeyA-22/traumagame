@@ -23,12 +23,11 @@ func initial_message():
 "[color=red] Use the [color=green] mouse to look around[/color]",
 "[color=green]RIGHT CLICK OR E[/color][color=red]  TO INTERACT[/color]",
 "[color=green]LEFT CLICK OR Z[/color][color=red] TO USE ITEM IN HAND[/color]",
-"[color=green]Q[/color][color=red] TO STUN WITH THE CROW![/color]",
 "[color=green]ENTER[/color][color=red] TO PROGRESS DIALOGUE[/color]",
 "[color=red]SWITCH INVENTORY ITEMS WITH[/color] [color=green]TAB[/color]",
 "[color=red]GO TOWARDS THE[/color] [shake][color=green]CAKE![/color][/shake]",
 "[color=red]THERE SHOULD BE A [/color][color=green]FLASHLIGHT[/color][color=red]IN FRONT OF YOU.[/color]",
-"[color=green] LOOK FOR THE PHOTO AND THE KEY![/color]"], dialogue_position.position, 4.0)
+"[color=green] LOOK FOR THE PHOTO AND THE KEY![/color]"], dialogue_position.position, 4.25)
 	
 func on_object_picked(messages: Array, time: float)->void:
 	dialogue_manager.show_messages(messages

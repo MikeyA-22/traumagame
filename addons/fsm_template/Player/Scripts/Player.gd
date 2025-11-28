@@ -5,17 +5,24 @@ class_name Player
 
 @onready var inputgatherer = $InputGatherer
 @onready var Model = $Model
+@onready var inventory = $Model/Inventory
 @onready var camera_mount =$visuals/Cube_022/LocalCamera
 @onready var visuals = $visuals as PlayerVisuals
 @onready var light = $"visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
 @export var monster: Enemy
 @export var resources: PlayerResources
 @onready var interaction_catcher = $visuals/Cube_022/LocalCamera/Camera3D/InteractionCatcher
+@export var inventory_list : Array[ItemData]
+@export var active_item : ItemData
 var hidden = false
 
 func _ready() -> void:
-	
 	visuals.accept_skeleton(Model.skeleton)
+	inventory.items = inventory_list
+	if active_item != null:
+		inventory.active_item = active_item.item_model.instantiate()
+	inventory.switch_item()
+	
 	#Model.anim_tree.set("parameters/conditions/idle", true)
 	#Model.animator.play("idle")
 

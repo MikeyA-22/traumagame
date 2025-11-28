@@ -9,5 +9,5 @@ class_name ItemData
 
 
 func _load_item() -> Pickable:
-	var item: Pickable = item_model.instantiate(PackedScene.GEN_EDIT_STATE_MAIN_INHERITED)
+	var item: Pickable = item_model.instantiate()
 	return item

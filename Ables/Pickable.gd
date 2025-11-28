@@ -19,6 +19,7 @@ var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var sfx = preload("res://Music/sfx/pick up.MP3")
 var interaction_label: Label = Label.new()
 @export var mat_array : Array[StandardMaterial3D]
+@export var item_data: ItemData
 
 #@export var main_mat: StandardMaterial3D
 
@@ -33,8 +34,8 @@ func show_outline(body: Node3D)->void:
 		#print("In the scene")
 		for mats in mat_array:
 			mats.stencil_mode = BaseMaterial3D.STENCIL_MODE_OUTLINE
-			mats.stencil_color = Color.YELLOW
-			mats.stencil_outline_thickness = 0.025
+			mats.stencil_color = Color.FIREBRICK
+			mats.stencil_outline_thickness = 0.035
 
 func hide_outline(body: Node3D)->void:
 	if body is Player:

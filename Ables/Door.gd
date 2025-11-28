@@ -15,3 +15,4 @@ func _process(delta: float) -> void:
 	
 func _open_door():
 	get_tree().change_scene_to_file("res://next_level_placeholder.tscn")
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

@@ -23,4 +23,3 @@ func update(input: InputPackage, delta: float):
 	#print("INSTATEHIDDEN")
 	if Input.is_action_just_pressed("interact"):
 		print("unhide")
-## Step 5: DELETE THE COMMENTS!! DUMMY...
