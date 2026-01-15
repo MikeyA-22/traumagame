@@ -4,6 +4,7 @@ class_name PillsState
 
 const transition_timing = 0.3
 var pills_amount = 5
+@onready var inventory_display = $"../Inventory/InventoryDisplay"
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
 	animation = "pick"
@@ -24,10 +25,13 @@ func update(input: InputPackage, delta: float):
 func on_enter_state():
 	if pills_amount > 0:
 		SigBus.PILLS.emit()
-		print(Game_Global.madness_increment)
+		#print(Game_Global.madness_increment)
 		
 		if Game_Global.madness_increment > 0:
 			Game_Global.madness_increment = 0
 			RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
 		pills_amount -= 1
-		print(pills_amount)
+		#print(pills_amount)
+		Game_Global.pills_amount = pills_amount
+		inventory_display.display_info(str(pills_amount))
+		

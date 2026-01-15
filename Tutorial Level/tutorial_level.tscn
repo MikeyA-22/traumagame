@@ -1,6 +1,7 @@
-[gd_scene load_steps=220 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=229 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
+[ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_effxy"]
 [ext_resource type="PackedScene" uid="uid://bbrfhhgqpyxov" path="res://Ables/candles.tscn" id="1_sp2du"]
 [ext_resource type="Resource" uid="uid://b452o3ldbd6tn" path="res://Resource/Key.tres" id="2_kcaaw"]
 [ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="2_tfbhh"]
@@ -20,7 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://v3lgb24oi1o0" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_basecolor_7.png" id="10_kcaaw"]
 [ext_resource type="Texture2D" uid="uid://dgbdirj0ug5fj" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_normal_6.png" id="11_l01go"]
 [ext_resource type="Texture2D" uid="uid://cirxhmkr8ynmo" path="res://Tutorial Level/tutv2/tutv2_ac_Material_BaseMap.png" id="12_jisp4"]
+[ext_resource type="PackedScene" uid="uid://b2p5okycf6puv" path="res://Ables/light_switch.tscn" id="13_unsro"]
 [ext_resource type="Texture2D" uid="uid://b51jpqg2dg2en" path="res://Tutorial Level/tutv2/tutv2_ac_Material_Normal.png" id="13_xg7y2"]
+[ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="14_f8me0"]
 [ext_resource type="Texture2D" uid="uid://c1bsqk1aselj6" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_BaseMap.png" id="14_ndxse"]
 [ext_resource type="Texture2D" uid="uid://cdlq44rg6fjrw" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_Normal.png" id="15_ehwpm"]
 [ext_resource type="Texture2D" uid="uid://rethhjwxxvob" path="res://Tutorial Level/tutv2/tutv2_upcount_DefaultMaterial_BaseMap.png" id="16_kvd7i"]
@@ -63,14 +66,62 @@
 [ext_resource type="Texture2D" uid="uid://ds8a7hqm4kg7e" path="res://Ables/cake_cake_DefaultMaterial_Normal.png" id="51_gkahi"]
 [ext_resource type="PackedScene" uid="uid://lqvn2lpyms4d" path="res://Photobook/photo1.tscn" id="52_gkahi"]
 [ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="54_l01go"]
-[ext_resource type="Environment" uid="uid://dskusy3hg0wbc" path="res://Tutorial Level/tutv2/main_env.tres" id="54_wqe1d"]
 [ext_resource type="Material" uid="uid://hgodhplhtbky" path="res://Shaders/heat_distort.tres" id="60_f5jwp"]
+[ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="61_4sfx6"]
+[ext_resource type="Resource" uid="uid://cqoda8bvqx5au" path="res://Resource/pills.tres" id="61_f5srq"]
 [ext_resource type="Script" uid="uid://dvxeamowg7jtb" path="res://Tutorial Level/state_changer.gd" id="61_jisp4"]
+[ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="62_f8me0"]
+[ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="63_7spyc"]
 [ext_resource type="Shader" uid="uid://bm38vek87nfgh" path="res://chromatic_aberration.gdshader" id="65_l01go"]
 [ext_resource type="AudioStream" uid="uid://bs51sebxvp2w2" path="res://Music/sfx/phase 2.MP3" id="65_ndxse"]
 [ext_resource type="AudioStream" uid="uid://1cjtaa0o3d1x" path="res://phase 1.MP3" id="66_ehwpm"]
 [ext_resource type="AudioStream" uid="uid://c8eiceuuh6b72" path="res://Music/sfx/phase 3.MP3" id="67_kvd7i"]
 [ext_resource type="AudioStream" uid="uid://c2uk4g62w05pg" path="res://Music/sfx/phase4.MP3" id="68_f5srq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_unsro"]
+shader = ExtResource("1_effxy")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 8
+shader_parameter/dither_size = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcaaw"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c3nsa"]
+_surfaces = [{
+"aabb": AABB(0.917185, -2.22557, -1.3767, 0.0828153, 3.22557, 2.3767),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6hybo"]
+resource_local_to_scene = true
+resource_name = "tutv2_Cube_006"
+_surfaces = [{
+"aabb": AABB(0.917185, -2.22557, -1.3767, 0.0828153, 3.22557, 2.3767),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_kcaaw"),
+"name": "glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c3nsa")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj54v"]
 resource_name = "crow"
@@ -121,6 +172,7 @@ roughness_texture = ExtResource("5_f5jwp")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("6_lm0gn")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_765rf"]
 resource_name = "Material.023"
@@ -134,6 +186,7 @@ normal_enabled = true
 normal_texture = ExtResource("9_gkahi")
 uv1_scale = Vector3(3.1, 3.1, 1)
 uv1_offset = Vector3(0, -2.1, 0)
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a2vet"]
 _surfaces = [{
@@ -192,42 +245,6 @@ shadow_mesh = SubResource("ArrayMesh_a2vet")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_63yul"]
 data = PackedVector3Array(-1, 0, -5, 3, 3.1525, -5, 3, 0, -5, -1, 0, -5, -1, 3.1525, -5, 3, 3.1525, -5, 3, 0, -5, 3, 3.1534, 1, 3, 0, 1, 3, 0, -5, 3, 3.1534, -5, 3, 3.1534, 1, -1, 0, 1, -1, 3.1534, -5, -1, 0, -5, -1, 0, 1, -1, 3.1534, 1, -1, 3.1534, -5, 3, 3.1534, 1, 2.3589, 0, 1, 3, 0, 1, 3, 3.1534, 1, 2.3589, 3.1466, 1, 2.3589, 0, 1, -1, 0, 1, -0.2308, 3.1466, 1, -1, 3.1534, 1, -1, 0, 1, -0.2308, 0, 1, -0.2308, 3.1466, 1, 3, 3.1534, -5, -1, 3.1534, 1, 3, 3.1534, 1, 3, 3.1534, -5, -1, 3.1534, -5, -1, 3.1534, 1, -1, 0, 1, 3, 0, -5, 3, 0, 1, -1, 0, 1, -1, 0, -5, 3, 0, -5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcaaw"]
-resource_local_to_scene = true
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_c3nsa"]
-_surfaces = [{
-"aabb": AABB(0.917185, -2.22557, -1.3767, 0.0828153, 3.22557, 2.3767),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
-"name": "glass",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_6hybo"]
-resource_local_to_scene = true
-resource_name = "tutv2_Cube_006"
-_surfaces = [{
-"aabb": AABB(0.917185, -2.22557, -1.3767, 0.0828153, 3.22557, 2.3767),
-"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_kcaaw"),
-"name": "glass",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_c3nsa")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sofmg"]
 resource_name = "Material.015"
 cull_mode = 2
@@ -239,6 +256,7 @@ roughness_texture = ExtResource("5_f5jwp")
 roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("11_l01go")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3intu"]
 _surfaces = [{
@@ -350,6 +368,7 @@ resource_name = "Material.001"
 cull_mode = 2
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_phwex"]
 _surfaces = [{
@@ -384,6 +403,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_phwex")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el4hw"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_grbf7"]
 _surfaces = [{
@@ -409,6 +429,7 @@ _surfaces = [{
 "index_data": PackedByteArray("GABNAE4AGABPAE0AUAAYAE4ATwAYAC0AUAAPABgATwAtAFEADwBQAFIADwAtABgALQBTAFEADwBSAFQALQAuAFMAVQAPAFQAVgAuAC0ADwBWAC0AVQBWAA8AVgAMAC4AVgBVAFcAVgBXAAwACgAaAFgACgApABoACgBYAFkAKwApAAoAKwAqACkACgBZACwAKwAKACwAKwAdACoALABZACAAKwBaAB0ALAAgADMALAAzADQAKwAsADUALAA0ADUANQBaACsANQA0ACEANQBbAFoANQAhAFsAHgBcABkAHgAwAFwAHgAZAF0AMAAeABAAMAAQADEAEABeADEAEAAmAF4AXwAmABAAHgBfABAAXwAyACYAXwBgADIAHgBdAGEAHgBhAF8AYQBdAAMAYQADAC8AYQAvAAEAYQABAF8AXwABAGAAYgBgAAEAYgBjAGAASwBiAAEAZABjAGIAZAAnAGMAZABJACcAZAACAEkAAgBkAEoAYgBKAGQAAgBKAGUASgAEAGUASgBMAAQAYgBmAEoAZgBMAEoASwBmAGIAZgBnAEwAZgBLAAUAZgAFAGcARwAHAGgARwBpAAcARwBoAGoASABpAEcASABrAGkASABsAGsASAATAGwAPwATAEgAPwBIAEcAPwAVABMAPwBtABUAPwBuAG0APwBHACgAKABuAD8ARwBqACgAKABGAG4AKABqABYAKAAWAEYARAAIAEUARABvAAgAcABEAEUAbwBEACUAcABxAEQAbwAlAHIAcQBwAAkAcQAlAEQAJQBzAHIAcQAJAEMAJQB0AHMADgBxAEMAdAAlAEIAcQBCACUADgBCAHEAdABCAHUAQgAOAHYAQgB2AHUAEQB3ADYAEQAbAHcANwARADYAeAAbABEANwAfABEAHwB4ABEAHwA3AHkAHwB5AAsAOAAfAAsAeAB6ABsAeAAcAHoAeAB7ABwAHwB8AHgAfAB7AHgAOAB8AB8AfAA4AH0AfAAAAHsAfAB9AAAAfgAAAH0AfgB9AH8AIgB+AH8AAAB+AIAAIgA9AH4AAACAAIEAPQAiAD4AgAB+AD0APQA+AAYAgAAjAIEAQAA9AAYAgACCACMAQACDAD0AgAA9AIMAgwCCAIAAgwBAABcAgwBBAIIAgwAXAEEAEgCEAIUAEgCGAIQAhwASAIUAhgASACQAhgAkAIgAJACJAIgAJACKAIkAOQCKACQAEgA5ACQAOQCLAIoAOQCMAIsAhwA7ABIAEgA7ADkAOwCHAI0AOQCOAIwAOwCOADkAOgCMAI4AOwCPAI4AOwCNAI8AjwA6AI4APACPAI0AjwA8ADoAPACNAJAAOgCRAIwAkgA8AJAAkgANADwAOgA8AA0ADQCSAJMADQCTAJQAlQANAJQAOgANABQAlQAUAA0AFACRADoAFACVAJYAFACXAJEAFACWAJcA"),
 "lods": [0.0477848, PackedByteArray("GAAaACkAKgAYACkAKwAqACkAKgAPABgAKwApAAoACgApABoAKwAdACoADwAqAB0AKwAKACwADwAtABgAGAAZABoAGQAYAC0ADwAMAC0ADAAuAC0ALQAuAAMALQADABkALwAZAAMAGwAMAA8ADwAdABsADAAbABwAEQAcABsAEQAbAB0AHgAZAC8AHgAaABkAHgAvABAAHgAwABoAMAAeABAACgAaADAACgAwADEAMAAQADEACgAxACwALwABABAAEAAgADEALAAxACAAEAAmACAAEAABADIAEAAyACYAEgAgACYAMgASACYALAAgADMAEgAzACAALAAzADQAMwASACQAMwAkADQALAA0ADUAKwAsADUAJAAhADQANQA0ACEANQA2ACsAKwA2AB0AEQAdADYANQA3ADYANwARADYANQAhADcANwAfABEAHwA3ACEAHwAAABEAAAAcABEAHwAhAAsAJAALACEAOAAAAB8AOAAfAAsAOQALACQAOQA4AAsAEgA5ACQAOQA6ADgAEgA7ADkAOwA6ADkAMgA7ABIAOwAyADwAOwA8ADoAPAAyACcAAQAnADIAOgA8AA0AJwANADwAOgAiADgAAAA4ACIAFAAiADoAOgANABQAIgA9AAAAIwAAAD0AFAA+ACIAPQAiAD4AFQAUAA0AFAAVAD4AFQANABMAPwA+ABUAPwAVABMAPQA+AAYAPwAGAD4AQAA9AAYAQABBAD0AIwA9AEEAQQBAABcAQQBCACMAQgAOACMADgBCAEMAQQAlAEIAJQBBABcAQwBCACUACAAlABcAQwAlAEQACABEACUACQBDAEQARAAIAEUACQBEAEUAKAAGAD8AKABGAAYAKAAWAEYARwAWACgAPwBHACgARwAHABYAPwBIAEcASAAHAEcAPwATAEgASAACAAcASAATAEkASABJAAIADQBJABMADQAnAEkAJwACAEkAAgAnAEoAAQBKACcAAgBKAAQAAQBLAEoASgBMAAQASwBMAEoASwAFAEwA"), 0.0713664, PackedByteArray("GAAZABoAGQAYAAwADAADABkADwAMABgAGgAPABgAGwAMAA8ADAAbABwADwAaAB0ADwAdABsAHgAaABkAHgAZAAMACgAdABoACgAaAB4AEQAbAB0AEQAcABsACgARAB0AHwAcABEACgAfABEAHwAAABwAHgADABAACgAeABAAAwABABAACgAQACAACgAhAB8ACgAgACEAHwALAAAAHwAhAAsAAAALACIAIwAAACIAJAALACEAIwAiABcAFwAOACMAFAAiAAsAJAAUAAsABgAXACIAFAAGACIAFwAlAA4ACAAlABcADgAlAAgACQAOAAgAIQASACQAEgAUACQAEgAhACAAEgANABQAEgAgACYAEgAmAA0AEAAmACAAEAABACYAAQAnACYADQAmACcAAQAEACcAAQAFAAQAAgAnAAQADQAnAAIADQACABMAEwACAAcAFQANABMAFQAUAA0AFQATAAcAFAAVAAYAFQAHACgAKAAGABUABwAWACgAKAAWAAYA"), 0.181116, PackedByteArray("DwAQAAoADwAKABEAEQAMAA8AEAAPAAwACgALABEACgAQAAsADAARAAAACwAAABEADAADABAAAwABABAAEgALABAAAQAFAAQAAQAEAAIAAQACABAAEgAQAA0ADQAQAAIADQACABMAEwACAAcAEgANABQAEgAUAAsAFQANABMAFQATAAcAFQAUAA0AFQAHABYAFAAGAAsAFgAGABUAFAAVAAYAAAALAAYAAAAGABcAFwAOAAAACAAOABcACQAOAAgA"), 0.239572, PackedByteArray("CgABAAsACwAAAAoADAAKAAAADAADAAoACgADAAEAAQAFAAQAAQAEAAIACwABAA0ADQABAAIAAAALAAYACwANAAYABgANAAIABgACAAcABgAOAAAACAAOAAYACQAOAAgA"), 0.497838, PackedByteArray("AAABAAIAAAADAAEAAQAEAAIAAQAFAAQAAAACAAYABgACAAcACAAAAAYACQAAAAgA")],
 "material": SubResource("StandardMaterial3D_el4hw"),
+"name": "Mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 152,
@@ -418,6 +439,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_grbf7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlvrw"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0oswy"]
 _surfaces = [{
@@ -451,7 +473,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0oswy")
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_f8me0"]
+noise_type = 3
+frequency = 0.1076
+offset = Vector3(-2.85, 0, 0)
+domain_warp_enabled = true
+domain_warp_amplitude = 10.0
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_ry6d7"]
+noise = SubResource("FastNoiseLite_f8me0")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd78v"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_53ch1"]
 _surfaces = [{
@@ -486,6 +519,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_53ch1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tanwd"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4a01q"]
 _surfaces = [{
@@ -520,6 +554,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4a01q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5f5h"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rcj8o"]
 _surfaces = [{
@@ -554,6 +589,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rcj8o")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u72al"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_f0ne6"]
 _surfaces = [{
@@ -588,6 +624,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f0ne6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igodg"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lbrev"]
 _surfaces = [{
@@ -622,6 +659,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lbrev")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcdmr"]
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_u5ksh"]
 _surfaces = [{
@@ -694,6 +732,7 @@ albedo_texture = ExtResource("12_jisp4")
 metallic = 1.0
 normal_enabled = true
 normal_texture = ExtResource("13_xg7y2")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_o0a7q"]
 _surfaces = [{
@@ -739,6 +778,7 @@ albedo_texture = ExtResource("14_ndxse")
 metallic = 1.0
 normal_enabled = true
 normal_texture = ExtResource("15_ehwpm")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ms82n"]
 _surfaces = [{
@@ -783,6 +823,7 @@ cull_mode = 2
 albedo_texture = ExtResource("16_kvd7i")
 normal_enabled = true
 normal_texture = ExtResource("17_f5srq")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_s0twl"]
 _surfaces = [{
@@ -828,6 +869,7 @@ cull_mode = 2
 albedo_texture = ExtResource("18_7spyc")
 normal_enabled = true
 normal_texture = ExtResource("19_effxy")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pbuj7"]
 _surfaces = [{
@@ -876,6 +918,7 @@ albedo_texture = ExtResource("20_unsro")
 metallic = 1.0
 normal_enabled = true
 normal_texture = ExtResource("21_4sfx6")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_m3u6b"]
 _surfaces = [{
@@ -921,6 +964,7 @@ albedo_texture = ExtResource("22_f8me0")
 metallic = 1.0
 normal_enabled = true
 normal_texture = ExtResource("23_ry6d7")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8saqw"]
 _surfaces = [{
@@ -962,6 +1006,7 @@ cull_mode = 2
 albedo_texture = ExtResource("24_c4f25")
 normal_enabled = true
 normal_texture = ExtResource("25_1pdd7")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7b133"]
 _surfaces = [{
@@ -1006,6 +1051,7 @@ cull_mode = 2
 albedo_texture = ExtResource("26_rqa8w")
 normal_enabled = true
 normal_texture = ExtResource("27_un6er")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fwmut"]
 _surfaces = [{
@@ -1084,6 +1130,7 @@ albedo_texture = ExtResource("28_4yu04")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("29_paxf5")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8hc4h"]
 _surfaces = [{
@@ -1128,6 +1175,7 @@ cull_mode = 2
 albedo_texture = ExtResource("30_lxb60")
 normal_enabled = true
 normal_texture = ExtResource("31_sep3q")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8khvs"]
 _surfaces = [{
@@ -1172,6 +1220,7 @@ metallic = 0.513636
 roughness = 0.577273
 normal_enabled = true
 normal_texture = ExtResource("33_t5epy")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_g8nem"]
 _surfaces = [{
@@ -1224,6 +1273,7 @@ normal_scale = 0.0
 normal_texture = ExtResource("38_871h3")
 uv1_scale = Vector3(10.2, 9.4, 1)
 uv1_offset = Vector3(-9.4, 1, 0)
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vumli"]
 _surfaces = [{
@@ -1269,6 +1319,7 @@ cull_mode = 2
 albedo_texture = ExtResource("39_gijqh")
 normal_enabled = true
 normal_texture = ExtResource("40_nq8ga")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3s3lr"]
 _surfaces = [{
@@ -1314,6 +1365,7 @@ albedo_texture = ExtResource("22_f8me0")
 metallic = 1.0
 normal_enabled = true
 normal_texture = ExtResource("23_ry6d7")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lbolw"]
 _surfaces = [{
@@ -1356,6 +1408,7 @@ albedo_texture = ExtResource("41_vhkfr")
 roughness = 0.65
 normal_enabled = true
 normal_texture = ExtResource("42_63tng")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kiiiq"]
 _surfaces = [{
@@ -1435,6 +1488,7 @@ albedo_texture = ExtResource("43_sbyva")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("44_luq6j")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t2ur8"]
 _surfaces = [{
@@ -1479,6 +1533,7 @@ cull_mode = 2
 albedo_texture = ExtResource("45_0jq7l")
 normal_enabled = true
 normal_texture = ExtResource("46_22rba")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yyixk"]
 _surfaces = [{
@@ -1520,6 +1575,7 @@ cull_mode = 2
 albedo_texture = ExtResource("47_ov47d")
 normal_enabled = true
 normal_texture = ExtResource("48_fqdsr")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_aphib"]
 _surfaces = [{
@@ -1596,6 +1652,7 @@ albedo_texture = ExtResource("49_bmkte")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("50_4uuhk")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ytbke"]
 _surfaces = [{
@@ -1787,8 +1844,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n7ejp")
 
-[sub_resource type="Compositor" id="Compositor_xg7y2"]
-
 [sub_resource type="FogMaterial" id="FogMaterial_vcvag"]
 density = 1.3
 albedo = Color(0.041331246, 0.0413312, 0.0413312, 1)
@@ -1798,417 +1853,457 @@ edge_fade = 0.772747
 [sub_resource type="BoxShape3D" id="BoxShape3D_itqge"]
 size = Vector3(5, 2.989, 0.127)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_7spyc"]
+vertices = PackedVector3Array(-5.567502, 0.4884803, -2.8174925, -3.567502, 0.4884803, -3.0674925, -2.067502, 0.4884803, -4.8174925, -9.567502, 0.4884803, -1.0674925, -5.567502, 0.4884803, -1.0674925, -9.567502, 0.4884803, -2.8174925, -10.567502, 0.4884803, -3.0674925, -2.067502, 0.4884803, -8.3174925, -10.567502, 0.4884803, -8.3174925, 0.682498, 0.4884803, 23.682507, 1.432498, 0.4884803, 23.432507, 1.432498, 0.4884803, 22.682507, 0.682498, 0.4884803, 22.432507, -0.567502, 0.4884803, 22.432507, -1.067502, 0.4884803, 0.43250751, 1.432498, 0.4884803, -0.5674925, 1.432498, 0.4884803, -4.3174925, -1.817502, 0.4884803, -4.3174925, -3.067502, 0.4884803, -2.8174925, -3.067502, 0.4884803, 0.9325075, 2.182498, 0.4884803, 4.9325075, 1.682498, 0.4884803, 3.9325075, 0.682498, 0.4884803, 3.9325075, 0.682498, 0.4884803, 6.6825075, 1.932498, 0.4884803, 6.4325075, -1.317502, 0.4884803, 25.432507, -1.067502, 0.4884803, 26.182507, 0.43249798, 0.4884803, 26.182507, -1.317502, 0.4884803, 22.682507, 0.43249798, 0.4884803, 2.9325075, -1.067502, 0.4884803, 2.6825075, -0.567502, 0.4884803, 6.6825075, -3.817502, 0.4884803, 1.1825075, -4.067502, 0.4884803, 6.4325075, 2.682498, 0.4884803, 2.6825075, 5.682498, 0.4884803, 5.4325075, 5.682498, 0.4884803, 1.1825075, 2.682498, 0.4884803, 0.43250751, 6.932498, 0.4884803, 0.9325075, 6.932498, 0.4884803, -4.3174925, -4.567502, 1.2384803, -2.0674925, -4.567502, 1.2384803, 0.18250751, -4.067502, 1.2384803, 0.18250751, -4.067502, 1.2384803, -2.0674925, -9.567502, 0.4884803, 0.6825075, -5.567502, 0.4884803, 0.9325075, -10.567502, 0.4884803, 0.9325075, -10.567502, 0.4884803, 6.4325075, -0.06750202, 1.2384803, 1.1825075, -0.06750202, 1.2384803, 1.9325075, 1.682498, 1.2384803, 1.9325075, 1.682498, 1.2384803, 1.1825075, 3.932498, 3.4884803, 6.4325075, 7.182498, 3.4884803, 6.6825075, 7.182498, 3.4884803, 6.1825075)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(5, 6, 0), PackedInt32Array(0, 6, 8), PackedInt32Array(0, 8, 2), PackedInt32Array(2, 8, 7), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(12, 9, 13), PackedInt32Array(14, 19, 15), PackedInt32Array(15, 19, 18), PackedInt32Array(15, 18, 17), PackedInt32Array(15, 17, 16), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 24), PackedInt32Array(22, 24, 23), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 9), PackedInt32Array(9, 25, 13), PackedInt32Array(13, 25, 28), PackedInt32Array(30, 29, 22), PackedInt32Array(18, 1, 17), PackedInt32Array(17, 1, 2), PackedInt32Array(23, 31, 22), PackedInt32Array(22, 31, 30), PackedInt32Array(30, 31, 33), PackedInt32Array(30, 33, 32), PackedInt32Array(19, 14, 32), PackedInt32Array(32, 14, 30), PackedInt32Array(23, 12, 31), PackedInt32Array(31, 12, 13), PackedInt32Array(21, 34, 20), PackedInt32Array(20, 34, 35), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(36, 37, 38), PackedInt32Array(38, 37, 15), PackedInt32Array(38, 15, 16), PackedInt32Array(38, 16, 39), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 41), PackedInt32Array(3, 4, 44), PackedInt32Array(44, 4, 45), PackedInt32Array(44, 45, 46), PackedInt32Array(46, 45, 32), PackedInt32Array(46, 32, 33), PackedInt32Array(46, 33, 47), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(54, 53, 52)]
+geometry_source_geometry_mode = 1
+geometry_source_group_name = &"nav_mesh_group"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jisp4"]
 shader = ExtResource("65_l01go")
 
-[node name="SubViewportContainer" type="SubViewportContainer"]
+[node name="Subportcontainer" type="SubViewportContainer"]
+material = SubResource("ShaderMaterial_unsro")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
+stretch_shrink = 2
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="Node3D" type="SubViewport" parent="."]
 handle_input_locally = false
 audio_listener_enable_3d = true
-size = Vector2i(1152, 648)
+size = Vector2i(576, 324)
 render_target_update_mode = 4
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="SubViewport"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0798893, 0.95195854, 1.2055603)
 visible = false
 
-[node name="TutV2" type="Node3D" parent="SubViewport" node_paths=PackedStringArray("photo")]
+[node name="TutV2" type="Node3D" parent="Node3D" node_paths=PackedStringArray("photo")]
 script = ExtResource("1_2dagw")
 photo = NodePath("tutv2/Photo")
 key_data = ExtResource("2_kcaaw")
 
-[node name="tutv2" type="Node3D" parent="SubViewport/TutV2"]
+[node name="tutv2" type="Node3D" parent="Node3D/TutV2" groups=["nav_mesh_group"]]
 
-[node name="crow" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="MIRROR" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
+transform = Transform3D(0.368099, 0, 0, 0, 0.368099, 0, 0, 0, 0.368099, 1.68613, 2.14716, 24.5113)
+mesh = SubResource("ArrayMesh_6hybo")
+skeleton = NodePath("")
+
+[node name="Mirror3D" parent="Node3D/TutV2/tutv2/MIRROR" instance=ExtResource("8_l01go")]
+transform = Transform3D(-1.31134e-07, 0, 2, 0, 4, 0, -3, 0, -8.74228e-08, 0.85564, -0.580139, 0.127655)
+pixels_per_unit = 1000
+color = Color(1, 1, 1, 1)
+distortion_texture = null
+cull_near = 0.54
+
+[node name="Omni" type="OmniLight3D" parent="Node3D/TutV2/tutv2/MIRROR"]
+transform = Transform3D(0.99977, 4.761205e-10, -0.021447044, 0.021447044, -4.440116e-08, 0.99977, -4.761205e-10, -1, -4.440116e-08, -4.7754354, 1.9708505, -0.8366165)
+light_color = Color(0.7983437, 0.9999998, 0.9993976, 1)
+light_energy = 0.0
+omni_range = 4.162
+omni_attenuation = 0.551
+
+[node name="crow" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.160879, 0, 0, 0, 0.0643432, 0, 0, 0, 0.160879, 0.64799, 0.0528235, 12.6762)
 visible = false
 mesh = SubResource("ArrayMesh_ch3aw")
 skeleton = NodePath("")
 
-[node name="Plane_001" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Plane_001" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.06725, 0, 22.9768)
 mesh = SubResource("ArrayMesh_skxqp")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Plane_001"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Plane_001"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Plane_001/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Plane_001/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_63yul")
 
-[node name="MIRROR" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
-transform = Transform3D(0.368099, 0, 0, 0, 0.368099, 0, 0, 0, 0.368099, 1.68613, 2.14716, 24.5113)
-mesh = SubResource("ArrayMesh_6hybo")
-skeleton = NodePath("")
-
-[node name="Mirror3D" parent="SubViewport/TutV2/tutv2/MIRROR" instance=ExtResource("8_l01go")]
-transform = Transform3D(-1.31134e-07, 0, 2, 0, 4, 0, -3, 0, -8.74228e-08, 0.85564, -0.580139, 0.127655)
-color = Color(1, 1, 1, 1)
-distortion_texture = null
-cull_far = 49.51
-
-[node name="Omni" type="OmniLight3D" parent="SubViewport/TutV2/tutv2/MIRROR"]
-transform = Transform3D(2.71604, 2.54698e-09, -0.0582682, 0.0582682, -1.18722e-07, 2.71604, 0, -2.71666, -1.18749e-07, -1.80902, -0.0628676, -0.836617)
-light_energy = 2.0
-light_specular = 2.647
-omni_range = 0.718736
-
-[node name="Plane" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Plane" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(3.94683, 0, 0, 0, 1.992, 0, 0, 0, 1.992, 0, 0, 0)
 mesh = SubResource("ArrayMesh_v7200")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Plane"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Plane"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Plane/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Plane/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4hg5o")
 
-[node name="kitchen" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="kitchen" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, -0.388186, 0.0197998, -8.04652)
 mesh = SubResource("ArrayMesh_dopv1")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/kitchen"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/kitchen"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/kitchen/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/kitchen/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_bixqt")
 
-[node name="bsae" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="bsae" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-1.19209e-07, 0, -1, 0, 1, 0, 1, 0, -1.19209e-07, -10.3175, 0.00866878, -8.00628)
 mesh = SubResource("ArrayMesh_10ikj")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/bsae"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/bsae"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/bsae/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/bsae/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_d74bt")
 
-[node name="Cube_023" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
-transform = Transform3D(-0.0059919, 0, 0, 0, 0.0723694, 0, 0, 0, -0.0423454, 1.25647, 1.24127, 7.44501)
+[node name="LightSwitch2" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
+transform = Transform3D(-0.0059919, 0, 0, 0, 0.0723694, 0, 0, 0, -0.0423454, 2.068236, 1.24127, 22.82009)
 mesh = SubResource("ArrayMesh_sg88b")
 skeleton = NodePath("")
 
-[node name="Cube_024" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="light_switch" parent="Node3D/TutV2/tutv2/LightSwitch2" node_paths=PackedStringArray("connected_light") instance=ExtResource("13_unsro")]
+connected_light = [NodePath("../../MIRROR/Omni")]
+light_value = 1.0
+
+[node name="Cube_024" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 7.46301)
 mesh = SubResource("ArrayMesh_3gqru")
 skeleton = NodePath("")
 
-[node name="Cube_025" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Light" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, 0, 3.1855, 7.46301)
 mesh = SubResource("ArrayMesh_rfc18")
 skeleton = NodePath("")
 
-[node name="Cube_026" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.247086, 0)
+light_volumetric_fog_energy = 3.449
+omni_range = 27.477
+script = ExtResource("14_f8me0")
+noise = SubResource("NoiseTexture3D_ry6d7")
+light_multiplier = 3.0
+
+[node name="Cube_026" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 17.2327)
 mesh = SubResource("ArrayMesh_ch4mu")
 skeleton = NodePath("")
 
-[node name="Cube_027" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_027" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, 0, 3.1855, 17.2327)
 mesh = SubResource("ArrayMesh_q0bjk")
 skeleton = NodePath("")
 
-[node name="Cube_028" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_028" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, -4.8387, 3.13974, 1.84908)
 mesh = SubResource("ArrayMesh_nbwm8")
 skeleton = NodePath("")
 
-[node name="Cube_029" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_029" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, -4.8387, 3.22069, 1.84908)
 mesh = SubResource("ArrayMesh_f2h1x")
 skeleton = NodePath("")
 
-[node name="Cube_030" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Light2" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 4.78879, 3.11865, 4.58876)
 mesh = SubResource("ArrayMesh_ccpip")
 skeleton = NodePath("")
 
-[node name="Cube_031" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
+light_volumetric_fog_energy = 3.449
+omni_range = 27.477
+script = ExtResource("14_f8me0")
+noise = SubResource("NoiseTexture3D_ry6d7")
+light_multiplier = 3.0
+
+[node name="Cube_031" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, 4.78879, 3.1996, 4.58876)
 mesh = SubResource("ArrayMesh_ujkmy")
 skeleton = NodePath("")
 
-[node name="Cube_032" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="LightSwitch" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0, 0, 0.0423454, 0, 0.0723694, 0, -0.0059919, 0, 0, 2.00326, 1.24127, 6.95453)
 mesh = SubResource("ArrayMesh_md5a8")
 skeleton = NodePath("")
 
-[node name="Cube_033" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="light_switch2" parent="Node3D/TutV2/tutv2/LightSwitch" node_paths=PackedStringArray("connected_light") instance=ExtResource("13_unsro")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.2679443, 0, 0)
+connected_light = [NodePath("../../Light/OmniLight3D"), NodePath("../../Light2/OmniLight3D")]
+light_value = 1.0
+on = true
+starter_value = 1.0
+
+[node name="CollisionShape3D" parent="Node3D/TutV2/tutv2/LightSwitch/light_switch2" index="1"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, -0.50546265)
+
+[node name="Cube_033" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-1.38283e-07, 0, -0.695, 0, 0.36, 0, 1.16, 0, -8.28505e-08, 6.91636, 2.32079, 2.35402)
 mesh = SubResource("ArrayMesh_nvlet")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_033"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_033"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_033/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_033/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_jkvxg")
 
-[node name="Cube_009" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_009" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-8.40426e-08, 0, -0.705, 0, 0.54, 0, 0.705, 0, -8.40426e-08, 6.91159, 0.653333, 2.30015)
 mesh = SubResource("ArrayMesh_s70cl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_009"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_009"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_009/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_009/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_vp1r6")
 
-[node name="Cube_003" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_003" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-0.275669, 0, 0, 0, 0.371235, 0, 0, 0, -1.48862, 7.25716, 2.34645, 5.3333)
 mesh = SubResource("ArrayMesh_fvvbl")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_003"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_003/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_003/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5jgo0")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_003/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_003/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_kvakx")
 
-[node name="Cube_004" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_004" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-9.31816e-08, 0, -1, 0, 0.4595, 0, 0.781664, 0, -1.19209e-07, 4.65994, 0.46991, 6.89202)
 mesh = SubResource("ArrayMesh_503je")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_004"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_004"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_004/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_004/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_xy68m")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_004/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_004/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_r2tdm")
 
-[node name="Cube_005" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_005" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-0.486889, 0, -5.50403e-08, 0, 1.17271, 0, 4.25651e-08, 0, -0.629588, 3.04581, 1.25865, 6.2457)
 mesh = SubResource("ArrayMesh_2kwqc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_005"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_005"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_005/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_005/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_0f874")
 
-[node name="Cube_001" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_001" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.225, 0, 0, 0, 0.242, 0, 0, 0, 0.062, 4.8492, 0.985852, 6.89359)
 mesh = SubResource("ArrayMesh_ux2nc")
 skeleton = NodePath("")
 
-[node name="Cube" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-9.41754e-08, 0, 1.255, 0, 0.424, 0, -0.79, 0, -1.49608e-07, 0.847372, 0.809173, 1.57709)
 mesh = SubResource("ArrayMesh_phj5m")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_l03vo")
 
-[node name="Cube_002" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_002" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.13987, 0, -0.231653, 0, 0.570379, 0, 0.231653, 0, 0.13987, 1.36774, 0.385562, 0.31674)
 mesh = SubResource("ArrayMesh_5s0iv")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_002"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_002/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_002/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_c37ic")
 
-[node name="Cube_006" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_006" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-0.270103, 0, -0.016463, 0, 0.570379, 0, 0.016463, 0, -0.270103, 1.23127, 0.385562, 2.93868)
 mesh = SubResource("ArrayMesh_aem7x")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_006"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_006"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_006/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_006/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_r8xxc")
 
-[node name="Cube_007" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_007" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-1.79949e-07, 0, -0.584985, 0, 0.584985, 0, 1.50952, 0, -6.97356e-08, -4.25182, 0.594981, -0.930032)
 mesh = SubResource("ArrayMesh_17yy7")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_007"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_007"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_007/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_007/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_qpfbm")
 
-[node name="Cube_008" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_008" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-1.64509e-07, 0, 0.4835, 0, 0.485, 0, -1.38, 0, -5.76377e-08, -10.6339, 0.486324, -1.03549)
 mesh = SubResource("ArrayMesh_ewbqw")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_008"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_008"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_008/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_008/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_jen3f")
 
-[node name="Cube_010" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_010" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.0308599, 0, 0, 0, 0.476317, 0, 0, 0, 1, -10.5025, 1.22252, -0.991772)
 mesh = SubResource("ArrayMesh_seji1")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_010"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_010"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_010/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_010/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_i0v8k")
 
-[node name="Plane_002" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Plane_002" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.987983, 0, 0, 0, 0.987983, 0, 0, 0, 0.987983, 6.61787, 0, -3.99914)
 mesh = SubResource("ArrayMesh_hbcr7")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Plane_002"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Plane_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Plane_002/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Plane_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_uq4pb")
 
-[node name="InstructionArea" type="Area3D" parent="SubViewport/TutV2/tutv2/Plane_002"]
+[node name="InstructionArea" type="Area3D" parent="Node3D/TutV2/tutv2/Plane_002"]
 transform = Transform3D(1.0000008, 0, 0, 0, 1.0000008, 0, 0, 0, 1.0000008, -6.3281074, 0.82993317, 26.270203)
 script = ExtResource("37_xg7y2")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Plane_002/InstructionArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Plane_002/InstructionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24481198, -0.15979016, -0.41967773)
 shape = SubResource("BoxShape3D_ndxse")
 
-[node name="Cube_012" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_012" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-4.22597e-08, 0, -0.3545, 0, 0.3545, 0, 0.3545, 0, -4.22597e-08, 1.63762, 0.374931, 26.089)
 mesh = SubResource("ArrayMesh_75oxn")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_012"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_012"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_012/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_012/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_mvjt7")
 
-[node name="Cube_013" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_013" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-2.68221e-08, 0, 0.062, 0, 0.242, 0, -0.225, 0, -7.39098e-09, 1.97369, 1.11457, 24.5957)
 mesh = SubResource("ArrayMesh_jw7l2")
 skeleton = NodePath("")
 
-[node name="Cube_014" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_014" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-2, 0, -5.46392e-08, 0, 0.498067, 0, 1.74846e-07, 0, -0.625, 0.0619466, 0.503089, 27.3973)
 mesh = SubResource("ArrayMesh_h7ye1")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_014"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_014"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_014/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_014/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_7pgly")
 
-[node name="Cube_015" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_015" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-0.0733101, 0, -6.40897e-09, 0, 0.0733101, 0, 6.40897e-09, 0, -0.0733101, 1.96133, 1.09621, 27.3973)
 mesh = SubResource("ArrayMesh_cn44d")
 skeleton = NodePath("")
 
-[node name="Cube_016" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_016" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.352, 0, 0, 0, 0.55, 0, 0, 0, 0.51, 1.66391, 0.550805, 24.583)
 mesh = SubResource("ArrayMesh_xjfxy")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_016"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_016"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_016/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_016/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_0582l")
 
-[node name="Cube_017" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_017" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.093, 0, 0, 0, 0.153, 0, 0, 0, 0.151946, 1.75084, 0.1571, 25.3635)
 mesh = SubResource("ArrayMesh_g47mf")
 skeleton = NodePath("")
 
-[node name="Cube_018" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_018" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.0885, 0, 0, 0, 0.2035, 0, 0, 0, 0.898307, -1.84693, 1.63164, 24.9841)
 mesh = SubResource("ArrayMesh_p5lax")
 skeleton = NodePath("")
 
-[node name="Cube_034" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_034" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.0423106, 0, 0, 0, 0.0423106, 0, 0, 0, 0.0423106, -1.84693, 1.63164, 24.9841)
 mesh = SubResource("ArrayMesh_ce7un")
 skeleton = NodePath("")
 
-[node name="Cube_035" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_035" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-6.44681e-08, 0, 0.0276275, 0, 1, 0, -0.540797, 0, -3.29345e-09, -1.31011, 1.00871, 16.2503)
 mesh = SubResource("ArrayMesh_wpteg")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_035"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_035"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_035/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_035/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_qnroy")
 
-[node name="Cube_021" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_021" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-6.44681e-08, 0, 0.0276275, 0, 1, 0, -0.540797, 0, -3.29345e-09, -1.31011, 1.00871, 9.44831)
 mesh = SubResource("ArrayMesh_210vh")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_021"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_021"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_021/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_021/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_fnpol")
 
-[node name="Cube_022" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_022" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-6.44681e-08, 0, 0.0276275, 0, 1, 0, -0.540797, 0, -3.29345e-09, 1.32152, 1.00871, 18.2592)
 mesh = SubResource("ArrayMesh_eiyag")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_022"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_022"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_022/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_022/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ybo5e")
 
-[node name="Cube_036" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2"]
+[node name="Cube_036" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-6.44681e-08, 0, 0.0276275, 0, 1, 0, -0.540797, 0, -3.29345e-09, 1.32152, 1.00871, 11.4572)
 mesh = SubResource("ArrayMesh_bj2jt")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/TutV2/tutv2/Cube_036"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_036"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/tutv2/Cube_036/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_036/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_mm8lq")
 
-[node name="Door" parent="SubViewport/TutV2/tutv2/Cube_036" instance=ExtResource("48_kcaaw")]
+[node name="Door" parent="Node3D/TutV2/tutv2/Cube_036" instance=ExtResource("48_kcaaw")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
-[node name="cake2" type="Node3D" parent="SubViewport/TutV2/tutv2"]
+[node name="cake2" type="Node3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02759, 0.857823, 1.20298)
 
-[node name="Cylinder" type="MeshInstance3D" parent="SubViewport/TutV2/tutv2/cake2"]
+[node name="Cylinder" type="MeshInstance3D" parent="Node3D/TutV2/tutv2/cake2"]
 transform = Transform3D(0.17344, 0, 0, 0, 0.0339744, 0, 0, 0, 0.17344, 0, 0.0333992, 0)
 mesh = SubResource("ArrayMesh_l120q")
 skeleton = NodePath("")
 
-[node name="candles" parent="SubViewport/TutV2/tutv2/cake2" instance=ExtResource("1_sp2du")]
+[node name="candles" parent="Node3D/TutV2/tutv2/cake2" instance=ExtResource("1_sp2du")]
 transform = Transform3D(0.156, 0, 0, 0, 0.156, 0, 0, 0, 0.156, -0.00166166, 0.0941355, 0.00258029)
 
-[node name="Photo" parent="SubViewport/TutV2/tutv2" instance=ExtResource("52_gkahi")]
+[node name="Photo" parent="Node3D/TutV2/tutv2" instance=ExtResource("52_gkahi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3286, 0.0201674, 24.4914)
 script = ExtResource("54_l01go")
 time = 1.8
 
-[node name="Player" parent="SubViewport/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
+[node name="Player" parent="Node3D/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
 monster = NodePath("../Base Enemy")
 
-[node name="Base Enemy" parent="SubViewport/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("3_3hotv")]
+[node name="Base Enemy" parent="Node3D/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("3_3hotv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.188259, 0.139649, 24.7917)
 player = NodePath("../Player")
 aggro_radius = 2.0
 attack_radius = 1.0
 deaggro_radius = 4.0
 
-[node name="DialogueManager" parent="SubViewport/TutV2" instance=ExtResource("5_7w0ls")]
+[node name="DialogueManager" parent="Node3D/TutV2" instance=ExtResource("5_7w0ls")]
 
-[node name="DialoguePosition" type="Marker2D" parent="SubViewport/TutV2"]
+[node name="DialoguePosition" type="Marker2D" parent="Node3D/TutV2"]
 position = Vector2(556, 508)
 
-[node name="NextLabel" type="Label" parent="SubViewport/TutV2"]
+[node name="NextLabel" type="Label" parent="Node3D/TutV2"]
 anchors_preset = -1
 anchor_left = 0.378
 anchor_top = 0.784
@@ -2220,15 +2315,18 @@ offset_right = 0.455933
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport/TutV2"]
-environment = ExtResource("54_wqe1d")
-compositor = SubResource("Compositor_xg7y2")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Node3D/TutV2" node_paths=PackedStringArray("env", "sub_view")]
+environment = ExtResource("61_4sfx6")
+script = ExtResource("62_f8me0")
+env = NodePath(".")
+sub_view = NodePath("../..")
 
-[node name="Pills" parent="SubViewport/TutV2" instance=ExtResource("7_ohhhg")]
-transform = Transform3D(1, 0, 0, 0, 0.504814, -0.863228, 0, 0.863228, 0.504814, 1.56731, 1.13455, 24.1364)
+[node name="Pills" parent="Node3D/TutV2" instance=ExtResource("7_ohhhg")]
+transform = Transform3D(1, 0, 0, 0, 0.9999844, 0.005567819, 0, -0.005567819, 0.9999844, 1.56731, 1.13455, 24.1364)
 time = 10.0
+item_data = ExtResource("61_f5srq")
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="SubViewport/TutV2"]
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Node3D/TutV2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13241, 1.26857, -0.334273)
 visible = false
 layers = 1023
@@ -2239,30 +2337,31 @@ box_projection = true
 interior = true
 enable_shadows = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/TutV2"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D/TutV2"]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 visible = false
 shadow_enabled = true
 sky_mode = 1
 
-[node name="FogVolume" type="FogVolume" parent="SubViewport/TutV2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307578, 1.56495, 16.5566)
-size = Vector3(4, 2, 20)
+[node name="FogVolume" type="FogVolume" parent="Node3D/TutV2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307578, 1.56495, 13.658102)
+size = Vector3(4, 2, 14.203003)
 material = SubResource("FogMaterial_vcvag")
 
-[node name="flashlight" parent="SubViewport/TutV2" instance=ExtResource("8_drjao")]
+[node name="flashlight" parent="Node3D/TutV2" instance=ExtResource("8_drjao")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.081117, 0.865625, 1.29747)
 time = 2.0
+item_data = ExtResource("63_7spyc")
 
-[node name="state_changer" type="Area3D" parent="SubViewport/TutV2"]
+[node name="state_changer" type="Area3D" parent="Node3D/TutV2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.6113)
 script = ExtResource("61_jisp4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/TutV2/state_changer"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/state_changer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.28797)
 shape = SubResource("BoxShape3D_itqge")
 
-[node name="BGMusic" type="AudioStreamPlayer" parent="SubViewport/TutV2"]
+[node name="BGMusic" type="AudioStreamPlayer" parent="Node3D/TutV2"]
 stream = ExtResource("9_ccse8")
 parameters/looping = true
 script = ExtResource("9_d1gwl")
@@ -2271,15 +2370,18 @@ main = ExtResource("66_ehwpm")
 third_phase = ExtResource("67_kvd7i")
 final_phase = ExtResource("68_f5srq")
 
-[node name="Hiding Table" parent="SubViewport/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("34_kcaaw")]
+[node name="Hiding Table" parent="Node3D/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("34_kcaaw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61785, 0, 0)
-hide_offset = Vector3(-1, 0, 0)
+hide_offset = Vector3(0, 0, 0)
 player = NodePath("../Player")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Node3D/TutV2"]
+navigation_mesh = SubResource("NavigationMesh_7spyc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node3D"]
 follow_viewport_enabled = true
 
-[node name="ColorRect" type="ColorRect" parent="SubViewport/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="Node3D/CanvasLayer"]
 material = ExtResource("60_f5jwp")
 anchors_preset = 15
 anchor_right = 1.0
@@ -2287,7 +2389,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="chroma" type="ColorRect" parent="SubViewport"]
+[node name="chroma" type="ColorRect" parent="Node3D"]
 z_index = 1
 material = SubResource("ShaderMaterial_jisp4")
 anchors_preset = 15
@@ -2296,7 +2398,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="body_entered" from="SubViewport/TutV2/tutv2/Plane_002/InstructionArea" to="SubViewport/TutV2" method="_on_instruction_area_body_entered"]
-[connection signal="body_entered" from="SubViewport/TutV2/tutv2/Plane_002/InstructionArea" to="SubViewport/TutV2/tutv2/Plane_002/InstructionArea" method="_on_body_entered"]
-[connection signal="body_entered" from="SubViewport/TutV2/state_changer" to="SubViewport/TutV2" method="_on_state_changer_body_entered"]
-[connection signal="body_entered" from="SubViewport/TutV2/state_changer" to="SubViewport/TutV2/state_changer" method="_on_body_entered"]
+[connection signal="body_entered" from="Node3D/TutV2/tutv2/Plane_002/InstructionArea" to="Node3D/TutV2" method="_on_instruction_area_body_entered"]
+[connection signal="body_entered" from="Node3D/TutV2/tutv2/Plane_002/InstructionArea" to="Node3D/TutV2/tutv2/Plane_002/InstructionArea" method="_on_body_entered"]
+[connection signal="body_entered" from="Node3D/TutV2/state_changer" to="Node3D/TutV2" method="_on_state_changer_body_entered"]
+[connection signal="body_entered" from="Node3D/TutV2/state_changer" to="Node3D/TutV2/state_changer" method="_on_body_entered"]
+
+[editable path="Node3D/TutV2/tutv2/LightSwitch2/light_switch"]
+[editable path="Node3D/TutV2/tutv2/LightSwitch/light_switch2"]

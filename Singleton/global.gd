@@ -9,15 +9,16 @@ static var current_interactor: Interactable
 static var flashlight_value: float
 static var hidden: bool
 static var active_object
-
+static var current_gState: game_state = game_state.STATE_1
+static var madness_increment: float
+static var pills_amount: int = 5
 
 enum game_state{
 	STATE_1,
 	STATE_ENEMY_ATTACK,
 	STATE_END_GAME
 }
-static var current_gState: game_state = game_state.STATE_1
-static var madness_increment: float
+
 
 func _ready() -> void:
 	pass

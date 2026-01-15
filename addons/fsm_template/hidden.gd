@@ -18,8 +18,8 @@ func check_request(input: InputPackage):
 	
 
 
-# Step 4: implement an update function
-func update(input: InputPackage, delta: float):
-	#print("INSTATEHIDDEN")
-	if Input.is_action_just_pressed("interact"):
-		print("unhide")
+## Step 4: implement an update function
+#func update(input: InputPackage, delta: float):
+	##print("INSTATEHIDDEN")
+	#if Input.is_action_just_pressed("interact"):
+		#print("unhide")

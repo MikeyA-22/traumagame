@@ -1,7 +1,7 @@
 extends State
 class_name Interacting
 
-const transition_timing = 0.5
+const transition_timing = 0.1
 
 
 

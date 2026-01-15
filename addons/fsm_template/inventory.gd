@@ -27,16 +27,16 @@ func add(item: Pickable, use_message: bool):
 		items.append(itemdata)
 		item.free()
 		#object.free()
-		print("objects array has: ", items)
-		print("inventory node has: ",items)
-		print("active_weapon has: ",right_hand.get_children())
+		#print("objects array has: ", items)
+		#print("inventory node has: ",items)
+		#print("active_weapon has: ",right_hand.get_children())
 
 func remove():
 	pass
 
 func switch_item():
 	if !items.is_empty():
-		print(items)
+		#print(items)
 		var item_data: ItemData = load("res://Resource/%s.tres" % active_item.item_name)
 		items.append(item_data)
 		active_item.free()
@@ -46,8 +46,8 @@ func switch_item():
 		inventory_display.display(item_data)
 		set_active_item(active_item)
 	else:
-		print(items)
-		print("no items in item list")
+		pass#print(items)
+		#print("no items in item list")
 		
 
 func set_active_item(item: Pickable):
@@ -55,7 +55,7 @@ func set_active_item(item: Pickable):
 	Game_Global.active_object = item
 	model.active_object = item
 	active_item = item
-	inventory_display.active_item_data = load("res://Resource/%s.tres" % active_item.item_name)
+	inventory_display.active_item_data = item.item_data
 	var item_data = inventory_display.active_item_data
 	inventory_display.display(item_data)
 	print(item_data.item_name)

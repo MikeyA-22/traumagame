@@ -4,8 +4,8 @@ class_name Flashlight
 #@onready var light: SpotLight3D = $SpotLight3D
 # Called when the node enters the scene tree for the first time.
 
-
 func _ready() -> void:
+	item_data = load("res://Resource/Flashlight.tres")
 	messages = ["[color=black]A [color=red]FLASHLIGHT!!![/color]",
 									"[color=red] I can press [color=green] LEFT CLICK[/color] to use it. [/color]",
 									"[color=red] I should also[color=green] blow out those candles [/color]"]
@@ -13,6 +13,11 @@ func _ready() -> void:
 	pickable_action = {
 		"light_attack_pressed" : "Flashlight"
 	}
+	if item_data.item_info == "ON":
+		item_data.item_info = "ON"
+	else:
+		item_data.item_info = "OFF"
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

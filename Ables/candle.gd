@@ -7,6 +7,14 @@ func _ready() -> void:
 	SigBus.connect("BLOWN", turn_off_candles)
 	
 
+func get_interaction_data(player) -> Dictionary:
+	return {
+		"interactable": true,
+		"sig": SigBus.BLOWN,
+		"sig_value": true,
+		"reticle": 1
+	}
+
 func turn_off_candles(is_off: bool):
 	if is_off == true:
 		isoff = true

@@ -5,6 +5,8 @@ class_name StateMachine
 @export var character : CharacterBody3D
 @export var fstep1: AudioStreamPlayer3D
 @export var fstep2: AudioStreamPlayer3D
+@export var nav_agent: NavigationAgent3D
+
 var current_state: AIstate
 
 var states : Dictionary #{ String: AIMove }
@@ -43,5 +45,6 @@ func accept_states():
 			child.spawn_point = character.spawn_point
 			child.fstep1 = fstep1
 			child.fstep2 = fstep2
+			child.nav_agent = nav_agent
 			#child.right_weapon = right_weapon
 			#child.resources = resources

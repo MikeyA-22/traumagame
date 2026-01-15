@@ -18,6 +18,7 @@ var stunned = false
 var noise_intensity
 var fstep1: AudioStreamPlayer3D
 var fstep2: AudioStreamPlayer3D
+var nav_agent: NavigationAgent3D
 
 
 func _ready() -> void:

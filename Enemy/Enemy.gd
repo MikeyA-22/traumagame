@@ -12,8 +12,6 @@ class_name Enemy
 @export var deaggro_radius : float = 10
 
 @onready var statemachine: StateMachine = $StateMachine
-
-
 var spawn_point : Vector3
 
 

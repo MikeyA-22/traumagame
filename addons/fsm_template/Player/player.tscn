@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://go0nwkxm05ck"]
+[gd_scene load_steps=17 format=3 uid="uid://go0nwkxm05ck"]
 
 [ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://addons/fsm_template/Player/Scripts/Player.gd" id="1_hqtel"]
 [ext_resource type="PackedScene" uid="uid://j5il4etq1a5a" path="res://Player/Player_ui.tscn" id="2_78wmc"]
@@ -7,11 +7,11 @@
 [ext_resource type="Script" uid="uid://ksyx12j2sj82" path="res://addons/fsm_template/Player/flashlight_receiver.gd" id="4_3dtqd"]
 [ext_resource type="Script" uid="uid://q50py11ulaxd" path="res://addons/fsm_template/Player/Interaction_catcher.gd" id="4_71weq"]
 [ext_resource type="PackedScene" uid="uid://bvyu35md1spyq" path="res://addons/fsm_template/model.tscn" id="4_k53q1"]
+[ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="7_ctqa1"]
 [ext_resource type="PackedScene" uid="uid://dmbx332sa1c3h" path="res://addons/fsm_template/visuals.tscn" id="8_od3ui"]
-[ext_resource type="Shader" uid="uid://dgspx45ve23mh" path="res://Shaders/psx/psx_camera/psx_camera_shader.gdshader" id="8_tqrbo"]
-[ext_resource type="PackedScene" uid="uid://ca52yb5i5ot6e" path="res://Crow/noose_bone.tscn" id="9_q4017"]
 [ext_resource type="Script" uid="uid://dyfit4serk60d" path="res://addons/fsm_template/Player/resources.gd" id="10_5uwn6"]
 [ext_resource type="AudioStream" uid="uid://oxq8lwd8spx4" path="res://Music/sfx/fs 1.MP3" id="11_qrbxm"]
+[ext_resource type="PackedScene" uid="uid://ca52yb5i5ot6e" path="res://Crow/noose_bone.tscn" id="12_ctqa1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 radius = 0.290004
@@ -70,26 +70,6 @@ _data = {
 &"head_bob": SubResource("Animation_78wmc")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ctqa1"]
-render_priority = 0
-shader = ExtResource("8_tqrbo")
-shader_parameter/enable_fog = true
-shader_parameter/fog_color = Color(0, 0, 0, 1)
-shader_parameter/noise_color = Color(0, 0, 0, 1)
-shader_parameter/fog_distance = 6000.0
-shader_parameter/fog_fade_range = 50.0
-shader_parameter/enable_noise = true
-shader_parameter/noise_time_fac = 4.0
-shader_parameter/enable_color_limitation = true
-shader_parameter/color_levels = 32
-shader_parameter/enable_dithering = true
-shader_parameter/dither_strength = 0.874
-
-[sub_resource type="QuadMesh" id="QuadMesh_2h7ej"]
-material = SubResource("ShaderMaterial_ctqa1")
-flip_faces = true
-size = Vector2(2, 2)
-
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("resources")]
 script = ExtResource("1_hqtel")
 resources = NodePath("Resources")
@@ -118,7 +98,7 @@ collide_with_areas = true
 debug_shape_custom_color = Color(0.55, 0, 0, 1)
 script = ExtResource("4_71weq")
 
-[node name="Flashlight Receiver" type="SpotLight3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
+[node name="Flashlight Receiver" type="SpotLight3D" parent="visuals/Cube_022/LocalCamera/Camera3D" node_paths=PackedStringArray("bat_timer")]
 light_color = Color(0.949333, 0.803302, 0.72842, 1)
 light_energy = 0.0
 light_indirect_energy = 0.0
@@ -129,6 +109,11 @@ spot_attenuation = -0.77
 spot_angle_attenuation = 87.1941
 script = ExtResource("4_3dtqd")
 energy = 80.0
+flashlight = ExtResource("7_ctqa1")
+bat_timer = NodePath("BatteryTimer")
+
+[node name="BatteryTimer" type="Timer" parent="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver"]
+wait_time = 60.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 libraries = {
@@ -143,17 +128,13 @@ unit_size = 30.0
 max_db = 6.0
 parameters/looping = true
 
-[node name="PSXMesh" type="MeshInstance3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0763102, 0, -0.55748)
-mesh = SubResource("QuadMesh_2h7ej")
-
 [node name="Model" parent="." instance=ExtResource("4_k53q1")]
 
 [node name="InputGatherer" type="Node" parent="."]
 script = ExtResource("3_i3pqv")
 
-[node name="NooseBone" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_q4017")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47171, 0)
+[node name="Crow" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_ctqa1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13424128, 1.5587194, -0.20632952)
 player = NodePath("..")
 
 [node name="Resources" type="Node" parent="."]
@@ -162,5 +143,7 @@ script = ExtResource("10_5uwn6")
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 doppler_tracking = 1
 current = true
+
+[connection signal="timeout" from="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver/BatteryTimer" to="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver" method="_on_battery_timer_timeout"]
 
 [editable path="visuals"]

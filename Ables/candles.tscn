@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbrfhhgqpyxov"]
+[gd_scene load_steps=10 format=3 uid="uid://bbrfhhgqpyxov"]
 
 [ext_resource type="Script" uid="uid://ttjkg5e82ct1" path="res://Ables/candle.gd" id="1_t6d5b"]
 [ext_resource type="Script" uid="uid://dpdklyoo0tgt7" path="res://VFX/fire.gd" id="2_t6d5b"]
 [ext_resource type="PackedScene" uid="uid://bhog8djyegr0w" path="res://Ables/candle.glb" id="3_7j2ks"]
+[ext_resource type="PackedScene" uid="uid://bttop2hck3hjh" path="res://Ables/flame_postp.tscn" id="4_1pccn"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_87vx0"]
 height = 1.5
@@ -73,35 +74,56 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.495
 mesh = SubResource("CylinderMesh_mii7u")
 material = SubResource("StandardMaterial3D_w7ys2")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." node_paths=PackedStringArray("gpu_particles")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05831, 0)
-light_color = Color(0.574111, 0.304378, 1.92523e-07, 1)
-light_energy = 0.468
+light_color = Color(0.83362025, 0.4560157, 9.62615e-07, 1)
+light_energy = 1.741
 omni_range = 6.062
 omni_attenuation = 3.357
 script = ExtResource("2_t6d5b")
+gpu_particles = [NodePath("../candle/GPUParticles3D"), NodePath("../candle4/GPUParticles3D"), NodePath("../candle2/GPUParticles3D"), NodePath("../candle7/GPUParticles3D"), NodePath("../candle5/GPUParticles3D"), NodePath("../candle8/GPUParticles3D"), NodePath("../candle3/GPUParticles3D"), NodePath("../candle6/GPUParticles3D")]
 noise = SubResource("NoiseTexture3D_t6d5b")
 
 [node name="candle" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.0754753, -0.100261, 0.857644)
 
+[node name="GPUParticles3D" parent="candle" instance=ExtResource("4_1pccn")]
+transform = Transform3D(0.083333336, 0, 0, 0, 0.083333336, 0, 0, 0, 0.083333336, 0.0013294783, 0.04422694, 0.0034193695)
+
 [node name="candle4" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.0754753, -0.100261, -0.91039)
+
+[node name="GPUParticles3D" parent="candle4" instance=ExtResource("4_1pccn")]
+transform = Transform3D(0.083333336, 0, 0, 0, 0.083333336, 0, 0, 0, 0.083333336, 0.0021278462, 0.04725678, 0)
 
 [node name="candle2" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0.506011, -0.100261, 0.598332)
 
+[node name="GPUParticles3D" parent="candle2" instance=ExtResource("4_1pccn")]
+transform = Transform3D(0.083333336, 0, 0, 0, 0.083333336, 0, 0, 0, 0.083333336, 0, 0.046364818, 0)
+
 [node name="candle7" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.727683, -0.100261, 0.598332)
+
+[node name="GPUParticles3D" parent="candle7" instance=ExtResource("4_1pccn")]
+transform = Transform3D(0.083333336, 0, 0, 0, 0.083333336, 0, 0, 0, 0.083333336, 0, 0.044815015, 0)
 
 [node name="candle5" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0.506011, -0.100261, -0.682509)
 
+[node name="GPUParticles3D" parent="candle5" instance=ExtResource("4_1pccn")]
+
 [node name="candle8" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.609814, -0.100261, -0.682509)
+
+[node name="GPUParticles3D" parent="candle8" instance=ExtResource("4_1pccn")]
 
 [node name="candle3" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0.867476, -0.100261, 0.00112975)
 
+[node name="GPUParticles3D" parent="candle3" instance=ExtResource("4_1pccn")]
+
 [node name="candle6" parent="." instance=ExtResource("3_7j2ks")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -0.861268, -0.100261, 0.00112975)
+
+[node name="GPUParticles3D" parent="candle6" instance=ExtResource("4_1pccn")]

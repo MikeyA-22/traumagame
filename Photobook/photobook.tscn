@@ -102,6 +102,7 @@ anchor_bottom = -0.61700004
 offset_top = -0.18395996
 offset_bottom = -0.18395996
 grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
 size_flags_horizontal = 4
 size_flags_vertical = 8
 script = ExtResource("1_tsfnp")

@@ -15,11 +15,19 @@ var toggle_timer = 0.0
 
 func _ready() -> void:
 	interactable_actions = {"light_action_pressed":"hidden"}
-	SigBus.connect("HIDE", hide)
+	SigBus.connect("HIDE", hide_now)
 	hide_label.visible = false
 	if hidden:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+func get_interaction_data(player) -> Dictionary:
+	return {
+		"interactable": true,
+		"sig": SigBus.HIDE,
+		"sig_value": player, # or root_player
+		"reticle": 1,
+		"reticle2": 1
+	}
 func _process(delta: float) -> void:
 	if not can_toggle:
 		toggle_timer -= delta
@@ -28,7 +36,7 @@ func _process(delta: float) -> void:
 
 	
 	if hidden and can_toggle and Input.is_action_just_pressed("interact"):
-		hide(player)
+		hide_player(player)
 
 func _input(event: InputEvent) -> void:
 	if hidden:
@@ -79,7 +87,7 @@ func switch_mouse():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	mouse_is_captured = !mouse_is_captured
 
-func hide(player):
+func hide_player(player):
 	if not can_toggle:
 		return  # avoid spamming toggle instantly
 
@@ -99,3 +107,7 @@ func hide(player):
 
 	Game_Global.hidden = hidden
 	print("hidden: ", hidden)
+	
+
+func hide_now(player):
+	hide_player(player)

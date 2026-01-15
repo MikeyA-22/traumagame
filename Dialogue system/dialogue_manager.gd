@@ -88,7 +88,7 @@ func on_finished():
 	if active_dialogue_offset < messages.size() - 1:
 			active_dialogue_offset += 1
 			show_current()
-			print("going to next message")
+			#print("going to next message")
 	else:
 			hide()
-			print("done")
+			#print("done")

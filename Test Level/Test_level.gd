@@ -8,6 +8,7 @@ func _ready() -> void:
 	next_label.visible = false
 	#dialogue_manager.show_messages(["here we can put some important messages"], dialogue_position.position)
 	SigBus.connect("PICKING_UP", on_object_picked)
+	Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
 
 func on_object_picked(messages: Array)->void:
 	dialogue_manager.show_messages(messages

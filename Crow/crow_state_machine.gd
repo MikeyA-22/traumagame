@@ -1,4 +1,5 @@
-extends StateMachine
+extends StateMachine 
+class_name CrowStateMachine
 
 
 ## @export var animation_player : AnimationPlayer

@@ -1,4 +1,4 @@
-extends Node3D
+class_name Crow extends Node3D
 
 @export var player: Player
 @export var my_aberration_x:float

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2p5okycf6puv"]
+
+[ext_resource type="Script" uid="uid://dgdgp7llyman" path="res://light_switch.gd" id="1_ab3a2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhncm"]
+size = Vector3(6.7, 2, 2)
+
+[node name="light_switch" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_ab3a2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qhncm")

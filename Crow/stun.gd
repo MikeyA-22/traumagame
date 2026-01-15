@@ -15,9 +15,9 @@ func on_enter():
 	if player.resources.sanity > 0:
 		RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
 		Game_Global.madness_increment += .0075
-		print(Game_Global.madness_increment)
+		#print(Game_Global.madness_increment)
 		player.resources.sanity -= 10
-		print(player.resources.sanity)
+		#print(player.resources.sanity)
 		monster.statemachine.switch_to("stunned")
 	monster_inrange = false
 

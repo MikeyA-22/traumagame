@@ -52,11 +52,11 @@ func _input(event: InputEvent) -> void:
 func open_photobook():
 	anim_player.play("open_photobook")
 	is_open = !is_open
-	print("opening photobook")
+	#print("opening photobook")
 	
 func close_photobook():
 	anim_player.play("close_photobook")
-	print("closing photobook")
+	#print("closing photobook")
 	is_open = !is_open
 	
 	

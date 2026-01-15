@@ -14,6 +14,36 @@
 			"uuid": "16031ddf-713b-4ecf-a23c-24b0aef80397",
 			"title": "Christmas",
 			"color": "10e907"
+		},
+		{
+			"uuid": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"title": "Mechanics",
+			"color": "ffff00"
+		},
+		{
+			"uuid": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
+			"title": "Teammate",
+			"color": "08f1f9"
+		},
+		{
+			"uuid": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"title": "VFX",
+			"color": "ff8a00"
+		},
+		{
+			"uuid": "445b946d-5169-4e5c-b959-ac82680d2e43",
+			"title": "Implement",
+			"color": "ffffff"
+		},
+		{
+			"uuid": "dc327489-82ef-4e57-a043-9d268687a2be",
+			"title": "Animation",
+			"color": "200069"
+		},
+		{
+			"uuid": "a7118a95-9443-458b-b8bc-910727220608",
+			"title": "Programming",
+			"color": "ffb5c7"
 		}
 	],
 	"stages": [
@@ -21,32 +51,45 @@
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
 			"title": "Todo",
 			"tasks": [
-				"8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
+				"e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
+				"c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
+				"5d6cbf84-88fb-418b-8341-5d50142b670b",
+				"044a71d0-8635-4ca9-bca2-983a4bc2a860",
+				"5ab85688-a91f-4244-9197-23b621d59adb",
 				"25b56742-bdf6-47f5-b553-fe213102ecc0",
 				"911c0794-6b92-44f3-8dc3-0869a5cbfd13",
-				"91d630ec-07db-4ca3-9258-6711bfb628c8",
-				"1821634b-105b-433a-acbd-add5f3b2a559",
 				"00162ebc-db8b-45cb-bd10-4b27261ae87e",
-				"3e34a01b-2556-4b11-b206-1be73d734aa3",
-				"290861f9-4677-409a-80df-5c52ba459a3b",
-				"d7eed53f-00ba-4520-af11-5bb2d62a8e7d"
+				"5ed1d3ac-67a0-42e0-b0f7-9c1dc3a37d35",
+				"d3ce35d9-37fb-4505-9378-01046e1c6842",
+				"b97a2357-e7ab-449b-8f23-fd139feee3d8",
+				"28233433-f752-4e47-bf64-8b876af6bbb0"
 			]
 		},
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing",
 			"tasks": [
-				"a95d6f4a-8922-4077-b933-e1fa9830d0b4",
-				"4ec3b739-5df2-4559-810e-001523f107a1",
-				"696f2ecb-4e93-4842-98d5-49c71366bde8",
-				"a0fd112b-4da7-4851-820a-2dd863d524b9"
+				"ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
+				"8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
+				"1a3d4b94-acae-4989-8b00-a4d6ea6d0597",
+				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
+				"3e34a01b-2556-4b11-b206-1be73d734aa3",
+				"a21e4b9a-47ab-4127-b153-7c14cf32fb8d"
 			]
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"91d630ec-07db-4ca3-9258-6711bfb628c8",
+				"a0fd112b-4da7-4851-820a-2dd863d524b9",
+				"c174e393-1a7c-4a62-88b1-bf3ef6c17ec0",
+				"ef112f6c-b601-4d28-a932-2e025cabf297",
 				"9d86628b-42a2-4d21-a3b9-cfd9b33bc049",
+				"b5129749-1cf3-4201-b907-4c8487f9f8d3",
+				"8b5d0bf8-eded-4653-b12a-1e3b041fccd9",
+				"696f2ecb-4e93-4842-98d5-49c71366bde8",
+				"a95d6f4a-8922-4077-b933-e1fa9830d0b4",
 				"ea363c26-2189-4c89-bbdd-9402f7508c45",
 				"67f15e0a-a5d4-4484-b7f0-472bc2e5dad5",
 				"8f64249d-3262-45f3-a066-b959142e0e20",
@@ -81,7 +124,7 @@
 			"uuid": "25b56742-bdf6-47f5-b553-fe213102ecc0",
 			"title": "Animation transistions",
 			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"category": "dc327489-82ef-4e57-a043-9d268687a2be",
 			"steps": [
 				{
 					"details": "hiding place animation",
@@ -104,23 +147,20 @@
 			"steps": []
 		},
 		{
-			"uuid": "1821634b-105b-433a-acbd-add5f3b2a559",
-			"title": "Code optimization",
+			"uuid": "8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
+			"title": "Implement door functionality",
 			"description": "",
 			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
 			"steps": [
 				{
-					"details": "rewire interaction-Christmas",
+					"details": "Rewrite interaction_catcher",
+					"done": true
+				},
+				{
+					"details": "Create functionality for keyless doors",
 					"done": false
 				}
 			]
-		},
-		{
-			"uuid": "8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
-			"title": "Implement door functionality",
-			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
-			"steps": []
 		},
 		{
 			"uuid": "ee9bf934-9a4a-45d2-ab14-fc4aae3040a6",
@@ -158,7 +198,7 @@
 			"steps": [
 				{
 					"details": "Phase sounds",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "hiding UI",
@@ -170,7 +210,7 @@
 			"uuid": "911c0794-6b92-44f3-8dc3-0869a5cbfd13",
 			"title": "loading screen",
 			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"category": "dc327489-82ef-4e57-a043-9d268687a2be",
 			"steps": []
 		},
 		{
@@ -203,16 +243,16 @@
 		},
 		{
 			"uuid": "a0fd112b-4da7-4851-820a-2dd863d524b9",
-			"title": "Implement Level 1",
+			"title": "Implement Level 1 player and enemy",
 			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
 			"steps": []
 		},
 		{
 			"uuid": "00162ebc-db8b-45cb-bd10-4b27261ae87e",
 			"title": "Rewire player state machine",
 			"description": "",
-			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"category": "a7118a95-9443-458b-b8bc-910727220608",
 			"steps": []
 		},
 		{
@@ -224,16 +264,9 @@
 		},
 		{
 			"uuid": "9d86628b-42a2-4d21-a3b9-cfd9b33bc049",
-			"title": "Crow Particle effect",
+			"title": "REDO: Crow Particle effect",
 			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
-			"steps": []
-		},
-		{
-			"uuid": "290861f9-4677-409a-80df-5c52ba459a3b",
-			"title": "Begin Navmesh implementation",
-			"description": "",
-			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
 			"steps": []
 		},
 		{
@@ -251,10 +284,136 @@
 			"steps": []
 		},
 		{
-			"uuid": "d7eed53f-00ba-4520-af11-5bb2d62a8e7d",
-			"title": "Improve visuals!!",
+			"uuid": "c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
+			"title": "Save mirror",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "5ed1d3ac-67a0-42e0-b0f7-9c1dc3a37d35",
+			"title": "Gun?",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "b5129749-1cf3-4201-b907-4c8487f9f8d3",
+			"title": "Navmesh",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
+			"title": "AI!!!",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "8b5d0bf8-eded-4653-b12a-1e3b041fccd9",
+			"title": "Pill count/flashlight on/off",
 			"description": "",
 			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "d3ce35d9-37fb-4505-9378-01046e1c6842",
+			"title": "Spiders",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "5d6cbf84-88fb-418b-8341-5d50142b670b",
+			"title": "New Item Pictures",
+			"description": "For the pills, we're gonna need pictures with different amounts",
+			"category": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
+			"steps": []
+		},
+		{
+			"uuid": "a21e4b9a-47ab-4127-b153-7c14cf32fb8d",
+			"title": "Remove prints and comment code",
+			"description": "",
+			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
+			"steps": []
+		},
+		{
+			"uuid": "c174e393-1a7c-4a62-88b1-bf3ef6c17ec0",
+			"title": "Implement Light switches",
+			"description": "",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"steps": []
+		},
+		{
+			"uuid": "8a40bbae-95e2-4ec9-a07c-b833d15039dc",
+			"title": "implement hiding spots",
+			"description": "",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"steps": []
+		},
+		{
+			"uuid": "e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
+			"title": "implement Level 1 hiding",
+			"description": "",
+			"category": "445b946d-5169-4e5c-b959-ac82680d2e43",
+			"steps": []
+		},
+		{
+			"uuid": "ef112f6c-b601-4d28-a932-2e025cabf297",
+			"title": "Mirror Visibility",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "044a71d0-8635-4ca9-bca2-983a4bc2a860",
+			"title": "Laughing sfx",
+			"description": "",
+			"category": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
+			"steps": []
+		},
+		{
+			"uuid": "b97a2357-e7ab-449b-8f23-fd139feee3d8",
+			"title": "Room filling up with blood",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "a8b346a5-d70d-4a09-8bdc-311a5d9bbd40",
+			"title": "Implement paths to navmesh",
+			"description": "",
+			"category": "16031ddf-713b-4ecf-a23c-24b0aef80397",
+			"steps": []
+		},
+		{
+			"uuid": "28233433-f752-4e47-bf64-8b876af6bbb0",
+			"title": "Interactable and pickable tool",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "1a3d4b94-acae-4989-8b00-a4d6ea6d0597",
+			"title": "Crow caw vfx",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "5ab85688-a91f-4244-9197-23b621d59adb",
+			"title": "Windows Carpets Doors",
+			"description": "",
+			"category": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
+			"steps": []
+		},
+		{
+			"uuid": "ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
+			"title": "Batteries",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
 			"steps": []
 		}
 	],

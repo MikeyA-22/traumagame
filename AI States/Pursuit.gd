@@ -17,8 +17,35 @@ func update(delta):
 	
 	#static_noise = (character.global_position.y - player.global_position.y) * -1 * stat_adjuster
 	#print(static_noise)
-	character.velocity = character.global_position.direction_to(grounded_player_pos) * character.speed
-	character.look_at(grounded_player_pos)
+	#if(nav_agent.get_current_navigation_path()):
+		##print(nav_agent.get_current_navigation_path())
+		#character.velocity = character.global_position.direction_to(grounded_player_pos) * character.speed
+		#character.look_at(grounded_player_pos)
+		#character.move_and_slide()
+	#else:
+	#print("using nav mesh")
+	# Update target only when player moves enough
+	if nav_agent.target_position.distance_to(player.global_position) > 0.2:
+		nav_agent.set_target_position(player.global_position)
+
+	if nav_agent.is_navigation_finished():
+		character.velocity = Vector3.ZERO
+		return
+
+	var next_pos = nav_agent.get_next_path_position()
+	var delt = next_pos - character.global_position
+
+	
+	if delt.length() < 0.05:
+		character.velocity = Vector3.ZERO
+		return
+
+	var direction = delt.normalized()
+	character.velocity = direction * character.speed
+
+	
+	character.look_at(character.global_position + direction)
+
 	character.move_and_slide()
 
 func on_enter():

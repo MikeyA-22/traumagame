@@ -21,7 +21,8 @@ func initial_message():
 	dialogue_manager.show_messages(["
 [color=green]WASD or Arrow keys[/color][color=red] TO MOVE[/color]",
 "[color=red] Use the [color=green] mouse to look around[/color]",
-"[color=green]RIGHT CLICK OR E[/color][color=red]  TO INTERACT[/color]",
+"[color=green]RIGHT CLICK OR E[/color][color=red]  TO BLOW OUT THE CANDLES 
+THEN [/color][color=green]PICK UP THE FLASHLIGHT[/color]",
 "[color=green]LEFT CLICK OR Z[/color][color=red] TO USE ITEM IN HAND[/color]",
 "[color=green]ENTER[/color][color=red] TO PROGRESS DIALOGUE[/color]",
 "[color=red]SWITCH INVENTORY ITEMS WITH[/color] [color=green]TAB[/color]",

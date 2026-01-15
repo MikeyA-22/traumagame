@@ -11,3 +11,4 @@ signal STUNNED
 signal BLOWN
 signal HIDE
 signal REVEALKEY
+signal SWITCH

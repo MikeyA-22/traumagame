@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_o6jke")
-item_name = "pills"
+item_name = "Pills"
 item_model = ExtResource("1_qyhmy")
 item_photo = ExtResource("2_wjhsv")
 metadata/_custom_type_script = "uid://dk6bs118bwbsv"

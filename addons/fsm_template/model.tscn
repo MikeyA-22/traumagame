@@ -1312,3 +1312,5 @@ libraries = {
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_1bops")
+
+[editable path="Inventory"]

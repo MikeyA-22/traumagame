@@ -11,5 +11,5 @@ func _ready() -> void:
 	
 
 func _on_StartButton_pressed():
-	print("tomainmenu")
+	#print("tomainmenu")
 	get_tree().change_scene_to_file("res://Menu/menu.tscn")

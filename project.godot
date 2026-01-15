@@ -36,6 +36,7 @@ enabled=PackedStringArray("res://addons/fsm_template/plugin.cfg", "res://addons/
 [global_group]
 
 Doors="Doors. the group has doors"
+nav_mesh_group=""
 
 [gui]
 
@@ -111,10 +112,12 @@ photobook={
 [layer_names]
 
 3d_render/layer_2="interactable"
+3d_physics/layer_1="player"
 3d_physics/layer_2="interactable"
 3d_physics/layer_3="ground"
 3d_physics/layer_4="rope"
 3d_physics/layer_5="crow"
+3d_physics/layer_6="enemy"
 
 [rendering]
 

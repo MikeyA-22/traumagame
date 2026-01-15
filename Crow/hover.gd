@@ -18,6 +18,7 @@ var angle:float = 0.0
 
 func on_enter():
 	monster_inrange = false
+	print("CAWW  I'M HERE!")
 
 func check_transition(delta) -> Array:
 	if monster_inrange == true:
@@ -49,6 +50,6 @@ func circular_motion():
 
 func _on_effect_area_body_entered(body: Node3D) -> void:
 	if body == monster:
-		print(monster_inrange)
+		#print(monster_inrange)
 		monster_inrange = true
 		

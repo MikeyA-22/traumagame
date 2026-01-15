@@ -23,6 +23,6 @@ func on_enter_state():
 	#print("entered")
 	if Game_Global.current_interactor != null and Game_Global.current_interactor.is_in_group("Doors"):
 		#print("happens")
-		SigBus.DOOR.emit()
+		SigBus.DOOR.emit(true)
 	
 ## Step 5: DELETE THE COMMENTS!! DUMMY...

@@ -53,7 +53,7 @@ func assign_sfx():
 	pick_sfx.volume_db = 20
 	pick_sfx.max_db = 20
 	pick_sfx.unit_size = 30
-	print("Audio stream loaded:", pick_sfx.stream)
+	#print("Audio stream loaded:", pick_sfx.stream)
 
 
 func add_indication_area():

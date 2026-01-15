@@ -1,0 +1,14 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://kjdlf0orer34"]
+
+[ext_resource type="Texture2D" uid="uid://bu47sfco6xq71" path="res://Crow/feather.png" id="1_fnbrx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rj3m"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_fnbrx")
+texture_filter = 0
+
+[resource]
+material = SubResource("StandardMaterial3D_7rj3m")
+size = Vector2(0.075, 0.075)

@@ -1,5 +1,5 @@
 @icon("res://Player/pointing.png")
-extends Node
+extends Node3D
 
 class_name Interactable
 
@@ -12,12 +12,14 @@ var interactable_shape = SphereShape3D.new()
 var interactable_range = CollisionShape3D.new()
 var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 
+func get_interaction_data(player) -> Dictionary:
+	return {}
+
 func _init() -> void:
 	add_indication_area()
 
 func _ready() -> void:
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
