@@ -64,3 +64,6 @@ func set_active_item(item: Pickable):
 	item.transform = right_hand.transform
 	item.position = Vector3.ZERO
 	item.remove_outline()
+
+func remove_item_data(item_data: ItemData):
+	items.erase(item_data)

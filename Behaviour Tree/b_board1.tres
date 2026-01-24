@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Blackboard" load_steps=2 format=3 uid="uid://cuctqqjyukio5"]
+
+[ext_resource type="Script" uid="uid://eyfj7b1majcf" path="res://Behaviour Tree/BT_scripts/blackboard.gd" id="1_qqdge"]
+
+[resource]
+script = ExtResource("1_qqdge")
+blackboard = {
+"boredom": null,
+"player_in_range": null,
+"target": null
+}
+metadata/_custom_type_script = "uid://eyfj7b1majcf"

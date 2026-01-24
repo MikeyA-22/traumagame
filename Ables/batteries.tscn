@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddriaht17atfl"]
+
+[ext_resource type="Script" uid="uid://ckrje5ifko63b" path="res://Ables/batteries.gd" id="1_mii8o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjs8x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mii8o"]
+albedo_color = Color(0.7529412, 0.28627452, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gjs8x"]
+size = Vector3(1.6, 2, 2.4)
+
+[node name="Node3D" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 6
+script = ExtResource("1_mii8o")
+item_name = "Batteries"
+mat_array = Array[StandardMaterial3D]([SubResource("StandardMaterial3D_gjs8x"), SubResource("StandardMaterial3D_mii8o")])
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+size = Vector3(0.5, 1, 1)
+material = SubResource("StandardMaterial3D_mii8o")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.00048065186, 0.04809472, -6.6012144e-05)
+size = Vector3(0.57110596, 0.3920288, 1.0725403)
+material = SubResource("StandardMaterial3D_gjs8x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.006050706, 0)
+shape = SubResource("BoxShape3D_gjs8x")

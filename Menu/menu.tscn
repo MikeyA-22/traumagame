@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cxrju4br38t2p" path="res://Menu/start_button.gd" id="3_w6voe"]
 [ext_resource type="Texture2D" uid="uid://bh87u73koes55" path="res://Menu/E_X_I_T.png" id="4_ofseh"]
 [ext_resource type="Texture2D" uid="uid://b0p38563lhxc2" path="res://Menu/S_E_T_T_I_N_G_S.png" id="4_w6voe"]
-[ext_resource type="Script" uid="uid://xc30vhscf3t2" path="res://UI_button.gd" id="5_eafcm"]
+[ext_resource type="Script" uid="uid://xc30vhscf3t2" path="res://Behaviour Tree/BT_scripts/UI_button.gd" id="5_eafcm"]
 [ext_resource type="Texture2D" uid="uid://csnhgly3afqju" path="res://title UI/1.png" id="8_8v4wo"]
 [ext_resource type="Texture2D" uid="uid://bgek1d5dj0di1" path="res://title UI/2.png" id="9_gbw5f"]
 [ext_resource type="Texture2D" uid="uid://2i7t20xfc106" path="res://title UI/3.png" id="10_rqnrx"]

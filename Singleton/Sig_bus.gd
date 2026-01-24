@@ -12,3 +12,4 @@ signal BLOWN
 signal HIDE
 signal REVEALKEY
 signal SWITCH
+signal BATTERIES

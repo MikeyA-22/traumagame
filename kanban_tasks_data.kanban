@@ -51,9 +51,7 @@
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
 			"title": "Todo",
 			"tasks": [
-				"e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
 				"c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
-				"5d6cbf84-88fb-418b-8341-5d50142b670b",
 				"044a71d0-8635-4ca9-bca2-983a4bc2a860",
 				"5ab85688-a91f-4244-9197-23b621d59adb",
 				"25b56742-bdf6-47f5-b553-fe213102ecc0",
@@ -69,18 +67,23 @@
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing",
 			"tasks": [
-				"ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
-				"8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
-				"1a3d4b94-acae-4989-8b00-a4d6ea6d0597",
-				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
 				"3e34a01b-2556-4b11-b206-1be73d734aa3",
-				"a21e4b9a-47ab-4127-b153-7c14cf32fb8d"
+				"e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
+				"46a8d6c7-3a6f-4fb2-8583-314254a446d9",
+				"8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
+				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
+				"a21e4b9a-47ab-4127-b153-7c14cf32fb8d",
+				"a1917cc1-6279-484d-9b62-62b761bdaa67"
 			]
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"635a45b1-32a1-45bc-9778-c7d65a8725de",
+				"ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
+				"1a3d4b94-acae-4989-8b00-a4d6ea6d0597",
+				"5d6cbf84-88fb-418b-8341-5d50142b670b",
 				"91d630ec-07db-4ca3-9258-6711bfb628c8",
 				"a0fd112b-4da7-4851-820a-2dd863d524b9",
 				"c174e393-1a7c-4a62-88b1-bf3ef6c17ec0",
@@ -411,9 +414,30 @@
 		},
 		{
 			"uuid": "ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
-			"title": "Batteries",
+			"title": "Battery functionality",
 			"description": "",
 			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "46a8d6c7-3a6f-4fb2-8583-314254a446d9",
+			"title": "Battery",
+			"description": "",
+			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
+			"steps": []
+		},
+		{
+			"uuid": "635a45b1-32a1-45bc-9778-c7d65a8725de",
+			"title": "Blood and Screen Shake",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "a1917cc1-6279-484d-9b62-62b761bdaa67",
+			"title": "Consider flashing lights appearing later",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
 			"steps": []
 		}
 	],

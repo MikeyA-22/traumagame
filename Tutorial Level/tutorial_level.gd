@@ -19,16 +19,16 @@ func _ready() -> void:
 
 func initial_message():
 	dialogue_manager.show_messages(["
-[color=green]WASD or Arrow keys[/color][color=red] TO MOVE[/color]",
-"[color=red] Use the [color=green] mouse to look around[/color]",
-"[color=green]RIGHT CLICK OR E[/color][color=red]  TO BLOW OUT THE CANDLES 
-THEN [/color][color=green]PICK UP THE FLASHLIGHT[/color]",
-"[color=green]LEFT CLICK OR Z[/color][color=red] TO USE ITEM IN HAND[/color]",
-"[color=green]ENTER[/color][color=red] TO PROGRESS DIALOGUE[/color]",
-"[color=red]SWITCH INVENTORY ITEMS WITH[/color] [color=green]TAB[/color]",
-"[color=red]GO TOWARDS THE[/color] [shake][color=green]CAKE![/color][/shake]",
-"[color=red]THERE SHOULD BE A [/color][color=green]FLASHLIGHT[/color][color=red]IN FRONT OF YOU.[/color]",
-"[color=green] LOOK FOR THE PHOTO AND THE KEY![/color]"], dialogue_position.position, 4.25)
+[color=red]WASD or Arrow keys[/color][color=red] TO MOVE[/color]",
+"[color=red] Use the [color=red] mouse to look around[/color]",
+"[color=red]RIGHT CLICK OR E[/color][color=red]  TO BLOW OUT THE CANDLES 
+THEN [/color][color=red]PICK UP THE FLASHLIGHT[/color]",
+"[color=red]LEFT CLICK OR Z[/color][color=red] TO USE ITEM IN HAND[/color]",
+"[color=red]ENTER[/color][color=red] TO PROGRESS DIALOGUE[/color]",
+"[color=red]SWITCH INVENTORY ITEMS WITH[/color] [color=red]TAB[/color]",
+"[color=red]GO TOWARDS THE[/color] [shake][color=red]CAKE![/color][/shake]",
+"[color=red]THERE SHOULD BE A [/color][color=red]FLASHLIGHT[/color][color=red]IN FRONT OF YOU.[/color]",
+"[color=red] LOOK FOR THE PHOTO AND THE KEY![/color]"], dialogue_position.position, 4.25)
 	
 func on_object_picked(messages: Array, time: float)->void:
 	dialogue_manager.show_messages(messages
@@ -59,7 +59,7 @@ func _on_state_changer_body_entered(body: Node3D) -> void:
 		Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
 		dialogue_manager.show_messages(["[color=red] [shake rate=5 level=10] IT'S AFTER YOU NOW!![/shake][/color]",
 		"[color=red][shake rate=5 level=10] GO FIND THE PILLS TO GET UR SANITY BACK!![/shake][/color]",
-		"[color=red][shake rate=5 level=10]USE[color=green] Q [/color] TO STUN!!",
+		"[color=red][shake rate=5 level=10]USE[color=red] Q [/color] TO STUN!!",
 		 "[color=red][shake rate=5 level=10]OR GO HIDE AT THE TABLE NEXT TO THE TV!! [/shake][/color]",
 		"[color=red][shake rate=5 level=10] BUT BE CAREFUULLL!!!![/shake][/color]"]
 		,dialogue_position.position,4.25)
@@ -74,4 +74,4 @@ func reset_params():
 
 func _on_instruction_area_body_entered(body: Node3D) -> void:
 	if body == player:
-		dialogue_manager.show_messages(["[color=red]FIND THE [color=green]PILLS AND THE BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.25)
+		dialogue_manager.show_messages(["[color=red]FIND THE [color=red]PILLS AND THE BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.25)

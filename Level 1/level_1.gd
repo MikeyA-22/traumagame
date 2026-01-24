@@ -10,7 +10,7 @@ extends Node3D
 @onready var player = $Player
 
 ##This script it kinda doo doo, but essentially it sets things up. It sets up code for a bunch of stuff that is necessary for a level
-
+##TODO: turn it into game master? Think of it as a game master
 func _ready() -> void:
 	next_label.visible = false
 	#call_deferred("initial_messageS")

@@ -2,12 +2,13 @@ extends BehaviourTree
 class_name BehaviourNode
 
 enum STATUS {
-	SUCCESS,
 	FAIL,
-	RUNNING
+	RUNNING,
+	SUCCESS
 }
 
 var current_status: STATUS
+var blackboard: Dictionary
 
-func tick(delta):
+func tick(actor, delta, blackboard):
 	pass

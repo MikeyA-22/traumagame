@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d0qstrtnakpb1"]
+
+[node name="Hideset" type="Node3D"]
+
+[node name="hide_point" type="Node3D" parent="."]
+transform = Transform3D(-5.5330858e-08, 0, 1.2658228, 0, 2.3584907, 0, -0.79681265, 0, -3.482976e-08, 0.5093918, -1.7326379, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-5.5330858e-08, 0, 1.2658226, 0, 2.3584907, 0, -0.79681265, 0, -3.4829775e-08, 0.5093918, -1.7326379, 0)
+
+[node name="HidingLabel" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.556
+anchor_top = 0.474
+anchor_right = 0.748
+anchor_bottom = 0.543
+offset_left = -0.51208496
+offset_top = -0.33003235
+offset_right = 0.30395508
+offset_bottom = 0.3139801
+grow_horizontal = 2
+grow_vertical = 2
+text = "[E] to hide"

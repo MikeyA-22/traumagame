@@ -39,6 +39,7 @@ var current_state: State
 	"open_door": $OpenDoor,
 	"take_pills": $Pills,
 	"blow_candles": $BlowCandles,
+	"Batteries": $Batteries,
 	"hidden": $Hidden
 }
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dy8s8gewdv14x"]
+
+[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="1_p005y"]
+[ext_resource type="PackedScene" uid="uid://ddriaht17atfl" path="res://Ables/batteries.tscn" id="1_qf2sv"]
+
+[resource]
+script = ExtResource("1_p005y")
+item_name = "Batteries"
+item_model = ExtResource("1_qf2sv")
+metadata/_custom_type_script = "uid://dk6bs118bwbsv"

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3pdl2y0805p6"]
-
-[ext_resource type="Script" uid="uid://dwvxf1q0i0uf3" path="res://Behaviour Tree/BT_scripts/bt_root.gd" id="1_sydmd"]
-
-[node name="root" type="Node"]
-script = ExtResource("1_sydmd")
-UID = "ROOT"
-metadata/_custom_type_script = "uid://dwvxf1q0i0uf3"

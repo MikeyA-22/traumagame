@@ -1,4 +1,4 @@
-[gd_scene load_steps=229 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=237 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_effxy"]
@@ -66,6 +66,7 @@
 [ext_resource type="Texture2D" uid="uid://ds8a7hqm4kg7e" path="res://Ables/cake_cake_DefaultMaterial_Normal.png" id="51_gkahi"]
 [ext_resource type="PackedScene" uid="uid://lqvn2lpyms4d" path="res://Photobook/photo1.tscn" id="52_gkahi"]
 [ext_resource type="Script" uid="uid://dhtek22alrvru" path="res://Photobook/photo_1.gd" id="54_l01go"]
+[ext_resource type="PackedScene" uid="uid://ddriaht17atfl" path="res://Ables/batteries.tscn" id="59_ry6d7"]
 [ext_resource type="Material" uid="uid://hgodhplhtbky" path="res://Shaders/heat_distort.tres" id="60_f5jwp"]
 [ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="61_4sfx6"]
 [ext_resource type="Resource" uid="uid://cqoda8bvqx5au" path="res://Resource/pills.tres" id="61_f5srq"]
@@ -77,6 +78,12 @@
 [ext_resource type="AudioStream" uid="uid://1cjtaa0o3d1x" path="res://phase 1.MP3" id="66_ehwpm"]
 [ext_resource type="AudioStream" uid="uid://c8eiceuuh6b72" path="res://Music/sfx/phase 3.MP3" id="67_kvd7i"]
 [ext_resource type="AudioStream" uid="uid://c2uk4g62w05pg" path="res://Music/sfx/phase4.MP3" id="68_f5srq"]
+[ext_resource type="Texture2D" uid="uid://b0vl6g1y3jmg7" path="res://Decals/blood_6.png" id="77_c4f25"]
+[ext_resource type="Texture2D" uid="uid://cr6th2tev1j30" path="res://Decals/20fc20479b9fc41d.png" id="78_4yu04"]
+[ext_resource type="Texture2D" uid="uid://ckhpupl2dyro1" path="res://Decals/blood_5.png" id="79_lxb60"]
+[ext_resource type="Texture2D" uid="uid://cjj8h3nnd4nc0" path="res://Decals/blood_1.png" id="79_paxf5"]
+[ext_resource type="Texture2D" uid="uid://ci4jajqrnni8v" path="res://Decals/blood_4.png" id="80_lxb60"]
+[ext_resource type="Texture2D" uid="uid://0he0sumqw562" path="res://Decals/blood_2.png" id="81_sep3q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_unsro"]
 shader = ExtResource("1_effxy")
@@ -368,6 +375,8 @@ resource_name = "Material.001"
 cull_mode = 2
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 roughness = 0.5
+emission = Color(0, 0, 0, 0.003921569)
+emission_energy_multiplier = 5.0
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_phwex"]
@@ -403,6 +412,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_phwex")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el4hw"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_grbf7"]
@@ -439,6 +451,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_grbf7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlvrw"]
+emission_enabled = true
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0oswy"]
@@ -473,15 +486,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0oswy")
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_f8me0"]
-noise_type = 3
-frequency = 0.1076
-offset = Vector3(-2.85, 0, 0)
-domain_warp_enabled = true
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ry6d7"]
+noise_type = 5
+seed = 5
+frequency = 0.1627
+offset = Vector3(346.94, 0, 0)
+fractal_gain = 100.0
+domain_warp_type = 1
 domain_warp_amplitude = 10.0
+domain_warp_frequency = 0.003
 
-[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_ry6d7"]
-noise = SubResource("FastNoiseLite_f8me0")
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_c4f25"]
+noise = SubResource("FastNoiseLite_ry6d7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd78v"]
 texture_filter = 0
@@ -554,6 +570,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4a01q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5f5h"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rcj8o"]
@@ -624,6 +643,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_f0ne6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igodg"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 5.0
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lbrev"]
@@ -1859,6 +1881,13 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 0, 3), PackedInt32Arr
 geometry_source_geometry_mode = 1
 geometry_source_group_name = &"nav_mesh_group"
 
+[sub_resource type="FogMaterial" id="FogMaterial_c4f25"]
+density = 0.02
+albedo = Color(0, 0.8531166, 0.8584474, 1)
+emission = Color(0.7607843, 1, 1, 1)
+height_falloff = 0.86475176
+edge_fade = 0.4924577
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jisp4"]
 shader = ExtResource("65_l01go")
 
@@ -1903,8 +1932,7 @@ cull_near = 0.54
 
 [node name="Omni" type="OmniLight3D" parent="Node3D/TutV2/tutv2/MIRROR"]
 transform = Transform3D(0.99977, 4.761205e-10, -0.021447044, 0.021447044, -4.440116e-08, 0.99977, -4.761205e-10, -1, -4.440116e-08, -4.7754354, 1.9708505, -0.8366165)
-light_color = Color(0.7983437, 0.9999998, 0.9993976, 1)
-light_energy = 0.0
+light_color = Color(0.7764706, 1, 1, 1)
 omni_range = 4.162
 omni_attenuation = 0.551
 
@@ -1962,6 +1990,8 @@ skeleton = NodePath("")
 [node name="light_switch" parent="Node3D/TutV2/tutv2/LightSwitch2" node_paths=PackedStringArray("connected_light") instance=ExtResource("13_unsro")]
 connected_light = [NodePath("../../MIRROR/Omni")]
 light_value = 1.0
+on = true
+light_color = Color(0.7764706, 1, 1, 1)
 
 [node name="Cube_024" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 7.46301)
@@ -1974,11 +2004,12 @@ mesh = SubResource("ArrayMesh_rfc18")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.247086, 0)
-light_volumetric_fog_energy = 3.449
-omni_range = 27.477
+transform = Transform3D(3.563411, 0, 0, 0, 30.287706, 0, 0, 0, 3.563411, 0, -29.79332, 0)
+light_volumetric_fog_energy = 3.0
+omni_range = 1.7628316
+omni_attenuation = -2.122
 script = ExtResource("14_f8me0")
-noise = SubResource("NoiseTexture3D_ry6d7")
+noise = SubResource("NoiseTexture3D_c4f25")
 light_multiplier = 3.0
 
 [node name="Cube_026" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
@@ -1991,10 +2022,17 @@ transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, 0, 3.1855
 mesh = SubResource("ArrayMesh_q0bjk")
 skeleton = NodePath("")
 
-[node name="Cube_028" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
+[node name="Light3" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, -4.8387, 3.13974, 1.84908)
 mesh = SubResource("ArrayMesh_nbwm8")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
+light_volumetric_fog_energy = 3.449
+omni_range = 27.477
+script = ExtResource("14_f8me0")
+light_multiplier = 3.0
 
 [node name="Cube_029" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, -4.8387, 3.22069, 1.84908)
@@ -2011,7 +2049,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
 light_volumetric_fog_energy = 3.449
 omni_range = 27.477
 script = ExtResource("14_f8me0")
-noise = SubResource("NoiseTexture3D_ry6d7")
 light_multiplier = 3.0
 
 [node name="Cube_031" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
@@ -2024,12 +2061,14 @@ transform = Transform3D(0, 0, 0.0423454, 0, 0.0723694, 0, -0.0059919, 0, 0, 2.00
 mesh = SubResource("ArrayMesh_md5a8")
 skeleton = NodePath("")
 
-[node name="light_switch2" parent="Node3D/TutV2/tutv2/LightSwitch" node_paths=PackedStringArray("connected_light") instance=ExtResource("13_unsro")]
+[node name="light_switch2" parent="Node3D/TutV2/tutv2/LightSwitch" node_paths=PackedStringArray("connected_light", "emission_obj") instance=ExtResource("13_unsro")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.2679443, 0, 0)
-connected_light = [NodePath("../../Light/OmniLight3D"), NodePath("../../Light2/OmniLight3D")]
+connected_light = [NodePath("../../Light/OmniLight3D"), NodePath("../../Light2/OmniLight3D"), NodePath("../../Light3/OmniLight3D")]
+emission_obj = [NodePath("../../Light"), NodePath("../../Light2"), NodePath("../../Light3"), NodePath("../../Cube_024")]
 light_value = 1.0
 on = true
 starter_value = 1.0
+light_color = Color(1, 1, 1, 1)
 
 [node name="CollisionShape3D" parent="Node3D/TutV2/tutv2/LightSwitch/light_switch2" index="1"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, -0.50546265)
@@ -2287,6 +2326,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3286, 0.0201674, 24.4914)
 script = ExtResource("54_l01go")
 time = 1.8
 
+[node name="Node3D" parent="Node3D/TutV2/tutv2" instance=ExtResource("59_ry6d7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7976437, 0.90724784, 1.3463569)
+visible = false
+item_name = "Bstteries"
+
 [node name="Player" parent="Node3D/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
 monster = NodePath("../Base Enemy")
@@ -2377,6 +2421,143 @@ player = NodePath("../Player")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Node3D/TutV2"]
 navigation_mesh = SubResource("NavigationMesh_7spyc")
+
+[node name="FogVolume2" type="FogVolume" parent="Node3D/TutV2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7564073, 3.486326, 2.7930017)
+size = Vector3(19.1968, 2, 9.477173)
+material = SubResource("FogMaterial_c4f25")
+
+[node name="Decal" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -1.4015008, 1.9021025, 21.13535)
+texture_albedo = ExtResource("77_c4f25")
+texture_emission = ExtResource("77_c4f25")
+emission_energy = 2.0
+upper_fade = 3.166813
+lower_fade = 0.7647344
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal3" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, 1.1044255, 1.9021025, 21.13535)
+texture_albedo = ExtResource("78_4yu04")
+texture_emission = ExtResource("78_4yu04")
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal6" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(0.3275382, 0.6973119, 0.6375539, -0.503311, 0.6998363, -0.50686026, -0.79962313, -0.15487173, 0.5801878, 0.859758, 3.296188, 16.128632)
+texture_albedo = ExtResource("79_lxb60")
+texture_emission = ExtResource("79_lxb60")
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal7" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(0.3275382, 0.6973119, 0.6375539, -0.503311, 0.6998363, -0.50686026, -0.79962313, -0.15487173, 0.5801878, 0.859758, 1.2245212, 13.36141)
+texture_albedo = ExtResource("79_lxb60")
+texture_emission = ExtResource("79_lxb60")
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal4" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(0.7087587, 0.70535296, -0.01177015, 4.403031e-08, -0.016684618, -0.9998608, -0.70545125, 0.70865995, -0.011825398, 1.8679267, 2.1982534, 23.81611)
+size = Vector3(1.7910156, 0.48242188, 2)
+texture_albedo = ExtResource("79_paxf5")
+texture_emission = ExtResource("79_paxf5")
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal5" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.4964988, 0.80801797, -0.31716803, 0.5662154, 0.024520412, -0.82389224, -0.6579431, -0.58864725, -0.46968654, 1.8679267, 2.1927812, 25.338625)
+size = Vector3(1.7910156, 0.48242188, 2)
+texture_albedo = ExtResource("80_lxb60")
+texture_emission = ExtResource("80_lxb60")
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal2" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -1.5395045, 2.2489781, 12.371876)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("81_sep3q")
+texture_emission = ExtResource("81_sep3q")
+emission_energy = 3.53
+upper_fade = 2.3999944
+lower_fade = 0.20490603
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal13" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -1.5395045, 2.2489781, 7.60662)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("79_paxf5")
+texture_emission = ExtResource("79_paxf5")
+emission_energy = 0.0
+albedo_mix = 0.9
+normal_fade = 0.418
+upper_fade = 1.4270439
+lower_fade = 6.5569997
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal8" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.9309539, 0.3650859, -0.0060922108, -0.28389674, -0.7342161, -0.6167084, -0.22962452, -0.5723976, 0.7871681, -3.8711932, 2.2489781, 6.639435)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("81_sep3q")
+texture_emission = ExtResource("81_sep3q")
+emission_energy = 3.53
+upper_fade = 38.39991
+lower_fade = 1.4270486
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal9" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(0.10269468, 0.98999476, -0.096770115, 0.6108875, -0.13954613, -0.7793223, -0.7850288, 0.020916834, -0.61910594, -11.268501, 2.2489781, 3.6514015)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("77_c4f25")
+texture_emission = ExtResource("81_sep3q")
+emission_energy = 3.53
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal12" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.088687584, 0.9958599, 0.019951653, -0.20404013, 0.0014422681, -0.9789612, -0.9749369, -0.09089267, 0.20306753, -11.268501, 2.2489781, -6.2675095)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("79_paxf5")
+texture_emission = ExtResource("77_c4f25")
+emission_energy = 0.95
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal10" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(0.79145044, 0.08207759, 0.6056974, 0.6108875, -0.13954613, -0.7793223, 0.020557687, 0.9868082, -0.16058415, -9.669928, 1.9245801, -8.95966)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("77_c4f25")
+texture_emission = ExtResource("81_sep3q")
+emission_energy = 3.53
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal11" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(0.99239534, -0.08000412, 0.093543805, 0.09792092, 0.052651495, -0.9938004, 0.074582666, 0.9954032, 0.060084984, -3.720081, 1.9123082, -8.95966)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("80_lxb60")
+texture_emission = ExtResource("81_sep3q")
+emission_energy = 4.8
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Node3D"]
 follow_viewport_enabled = true

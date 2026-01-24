@@ -12,6 +12,8 @@ var off_sfx = preload("res://Music/sfx/flashlight turn off.MP3")
 var battery_percent: int = 100
 var battery_difference: int = 20
 var info_statement: String = "OFF"
+@export var wait_time: float
+var bat_min: int = 20
 @onready var inventory_display = $"../../../../../Model/Inventory"/InventoryDisplay
 
 
@@ -19,13 +21,15 @@ func _ready() -> void:
 	light_energy = 0
 	SigBus.connect("FLASH", on_flashlight)
 	SigBus.connect("OFF_FLASH", off_flashlight)
+	SigBus.connect("BATTERIES", recharge_flashlight)
+	bat_timer.wait_time = wait_time
 	#print("inventory display is: ", inventory_display)
 	
 
 func on_flashlight() -> void:
 	
 	flash_flag = !flash_flag
-	if flash_flag == true:
+	if flash_flag == true and battery_percent > 0:
 		Game_Global.flashlight_value = energy
 		light_energy = Game_Global.flashlight_value
 		flash_flag = true
@@ -33,6 +37,7 @@ func on_flashlight() -> void:
 		assign_sfx(on_sfx)
 		play_sfx()
 		resource_display("%s: %d" % [info_statement, battery_percent])
+		bat_timer.start()
 		
 		#print(light_energy)
 	else:
@@ -46,6 +51,7 @@ func off_flashlight():
 	assign_sfx(off_sfx)
 	play_sfx()
 	info_statement = "OFF"
+	bat_timer.stop()
 	resource_display("%s: %d" % [info_statement, battery_percent])
 	
 	
@@ -71,13 +77,25 @@ func play_sfx():
 func resource_display(info: String):
 	flashlight.item_info = info
 	inventory_display.display_info(flashlight.item_info)
+	
 
 
 func _on_battery_timer_timeout() -> void:
 	## EVERYTIME THE TIMER HITS 0, REDUCE PERCENTAGE BY 20
-	if battery_percent > 0:
+	## DROPS BELOW MINIMUM? KILL IT.
+	if battery_percent < bat_min:
 		battery_percent -= battery_difference
-		resource_display("%s: %d" % [info_statement, battery_percent])
-		bat_timer.wait_time = 60.0
+		bat_timer.wait_time = wait_time
+		bat_timer.start()
+		if inventory_display.active_item_data.item_name == "Flashlight":
+			resource_display("%s: %d" % [info_statement, battery_percent])
+		
 	else:
-		resource_display("%s: %d" % [info_statement, battery_percent])
+		off_flashlight()
+		
+
+func recharge_flashlight(bat_charge: int, inventory: Inventory, item_data: ItemData):
+	battery_percent += bat_charge
+	inventory.switch_item()
+	inventory.remove_item_data(item_data)
+	## THE BATTERY SHOULD INCREASE

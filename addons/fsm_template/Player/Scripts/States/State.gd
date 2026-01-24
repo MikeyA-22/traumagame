@@ -29,6 +29,7 @@ static var state_priority : Dictionary = {
 	"open_door": 15,
 	"take_pills": 15,
 	"blow_candles": 15,
+	"Batteries": 15,
 	"hidden": 15
 	}
 

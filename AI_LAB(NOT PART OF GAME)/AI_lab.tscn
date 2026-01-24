@@ -1,0 +1,137 @@
+[gd_scene load_steps=20 format=3 uid="uid://pemvv5628ach"]
+
+[ext_resource type="Script" uid="uid://xm0b12gg5cs8" path="res://AI_LAB(NOT PART OF GAME)/lab_enemy.gd" id="1_rbqb6"]
+[ext_resource type="Script" uid="uid://d0g66qs3oq1eu" path="res://bt_selector.gd" id="2_1mtmg"]
+[ext_resource type="Resource" uid="uid://cuctqqjyukio5" path="res://Behaviour Tree/b_board1.tres" id="3_gb864"]
+[ext_resource type="Script" uid="uid://dwvxf1q0i0uf3" path="res://Behaviour Tree/BT_scripts/bt_root.gd" id="3_rbqb6"]
+[ext_resource type="Script" uid="uid://d10xieqky3rm" path="res://Behaviour Tree/BT_scripts/sequencer.gd" id="4_463xj"]
+[ext_resource type="Script" uid="uid://cpk7bj05cpjk6" path="res://AI_LAB(NOT PART OF GAME)/is_there_a_target.gd" id="4_rbqb6"]
+[ext_resource type="Script" uid="uid://xc4qp318hdiu" path="res://AI_LAB(NOT PART OF GAME)/find_new_target.gd" id="6_3od8k"]
+[ext_resource type="Script" uid="uid://c2i6ef7q1wxqq" path="res://Behaviour Tree/BT_scripts/bt_condition.gd" id="6_a0m1v"]
+[ext_resource type="Script" uid="uid://bl3vcgx4x8bxx" path="res://AI_LAB(NOT PART OF GAME)/player_in_range.gd" id="6_uvgde"]
+[ext_resource type="Script" uid="uid://cu6qc1f6430n5" path="res://AI_LAB(NOT PART OF GAME)/go_to_target.gd" id="7_gb864"]
+[ext_resource type="Script" uid="uid://b2drj5dgyii2s" path="res://AI_LAB(NOT PART OF GAME)/lab_player.gd" id="7_rbqb6"]
+[ext_resource type="Script" uid="uid://cy80sv4rxyou4" path="res://AI_LAB(NOT PART OF GAME)/go_to_player.gd" id="7_t4i5w"]
+[ext_resource type="Script" uid="uid://ccrmm1hb70151" path="res://AI_LAB(NOT PART OF GAME)/at_player.gd" id="8_fulqs"]
+[ext_resource type="Script" uid="uid://xm25w3n0f3o1" path="res://AI_LAB(NOT PART OF GAME)/at_target.gd" id="8_uvgde"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uvgde"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_t4i5w"]
+sky_material = SubResource("ProceduralSkyMaterial_uvgde")
+
+[sub_resource type="Environment" id="Environment_fulqs"]
+background_mode = 2
+sky = SubResource("Sky_t4i5w")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kw2lc"]
+radius = 0.13454391
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mamkt"]
+radius = 4.152654
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fulqs")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 12.135557, 0)
+
+[node name="Enemy" type="CharacterBody3D" parent="."]
+script = ExtResource("1_rbqb6")
+speed_factorer = 0.8
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Enemy"]
+radius = 0.13091661
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Enemy"]
+shape = SubResource("SphereShape3D_kw2lc")
+
+[node name="Area3D" type="Area3D" parent="Enemy"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Area3D"]
+shape = SubResource("SphereShape3D_mamkt")
+
+[node name="root" type="Node" parent="Enemy" node_paths=PackedStringArray("actor")]
+script = ExtResource("3_rbqb6")
+actor = NodePath("..")
+blackboard_resource = ExtResource("3_gb864")
+metadata/_custom_type_script = "uid://dwvxf1q0i0uf3"
+
+[node name="Selector" type="Node" parent="Enemy/root"]
+script = ExtResource("2_1mtmg")
+metadata/_custom_type_script = "uid://d0g66qs3oq1eu"
+
+[node name="Sequencer" type="Node" parent="Enemy/root/Selector"]
+script = ExtResource("4_463xj")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="Bored?" type="Node" parent="Enemy/root/Selector/Sequencer"]
+script = ExtResource("6_a0m1v")
+UID = "Boered?"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Player" type="Node" parent="Enemy/root/Selector"]
+script = ExtResource("4_463xj")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="Player in Range?" type="Node" parent="Enemy/root/Selector/Player"]
+script = ExtResource("6_uvgde")
+UID = "player in range?"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Go to Target" type="Node" parent="Enemy/root/Selector/Player"]
+script = ExtResource("7_t4i5w")
+UID = "go to player"
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="At player?" type="Node" parent="Enemy/root/Selector/Player"]
+script = ExtResource("8_fulqs")
+UID = "at player?"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Wander" type="Node" parent="Enemy/root/Selector"]
+script = ExtResource("4_463xj")
+UID = "Target sequence"
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="is there a target?" type="Node" parent="Enemy/root/Selector/Wander"]
+script = ExtResource("4_rbqb6")
+UID = "is there a target"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Go to Target" type="Node" parent="Enemy/root/Selector/Wander"]
+script = ExtResource("7_gb864")
+UID = "Go to Target"
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="At target?" type="Node" parent="Enemy/root/Selector/Wander"]
+script = ExtResource("8_uvgde")
+target_id = "target"
+stop_dist = 1.0
+UID = "at target?"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Make new target" type="Node" parent="Enemy/root/Selector"]
+script = ExtResource("6_3od8k")
+wander_range = 15
+UID = "Make new target"
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="Lab_player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.552175, 0, 0)
+script = ExtResource("7_rbqb6")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Lab_player"]
+radius = 0.13091661
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Lab_player"]
+shape = SubResource("SphereShape3D_kw2lc")
+
+[connection signal="body_shape_entered" from="Enemy/Area3D" to="Enemy/root/Selector/Player/Player in Range?" method="_on_area_3d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Enemy/Area3D" to="Enemy/root/Selector/Player/Player in Range?" method="_on_area_3d_body_shape_exited"]

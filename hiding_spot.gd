@@ -3,6 +3,7 @@ class_name HidingSpot
 
 var hidden = false
 @export var hidden_cam: Camera3D
+
 @export var hide_point: Node3D
 @export var hide_offset: Vector3
 @export var hide_label: Label

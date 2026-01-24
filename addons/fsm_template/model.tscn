@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bvyu35md1spyq"]
+[gd_scene load_steps=27 format=3 uid="uid://bvyu35md1spyq"]
 
 [ext_resource type="Script" uid="uid://cu6d8y2wq0bwv" path="res://addons/fsm_template/Player/Scripts/Model.gd" id="1_8c8pa"]
 [ext_resource type="Script" uid="uid://dybfxryljd88n" path="res://addons/fsm_template/Player/Scripts/States/Landing.gd" id="2_isc21"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bahb0xu7iruyg" path="res://addons/fsm_template/Downcast.gd" id="11_ossvb"]
 [ext_resource type="Script" uid="uid://2kxa3t55e673" path="res://addons/fsm_template/Player/Scripts/States/State.gd" id="11_vircm"]
 [ext_resource type="Script" uid="uid://b6hi6mxa3cvpy" path="res://addons/fsm_template/hidden.gd" id="12_1bops"]
+[ext_resource type="Script" uid="uid://b60w5vomuh8ud" path="res://addons/fsm_template/batteries_state.gd" id="12_7i3cm"]
 [ext_resource type="Animation" uid="uid://pkjudnjwfovo" path="res://Player/Anims/in_air.tres" id="13_egjqv"]
 [ext_resource type="Animation" uid="uid://d3c53x4kqve6u" path="res://Player/Anims/landing.tres" id="14_6j6ha"]
 [ext_resource type="Script" uid="uid://cruoxgtgcsr51" path="res://addons/fsm_template/Player/Scripts/States/Idle.gd" id="14_rmgmm"]
@@ -76,6 +77,10 @@ script = ExtResource("16_y5m0o")
 
 [node name="BlowCandles" type="Node" parent="."]
 script = ExtResource("11_vircm")
+metadata/_custom_type_script = "uid://2kxa3t55e673"
+
+[node name="Batteries" type="Node" parent="."]
+script = ExtResource("12_7i3cm")
 metadata/_custom_type_script = "uid://2kxa3t55e673"
 
 [node name="Hidden" type="Node" parent="."]

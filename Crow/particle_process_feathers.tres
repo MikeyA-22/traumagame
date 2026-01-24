@@ -1,0 +1,56 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=11 format=3 uid="uid://ocwsa7v0mgud"]
+
+[sub_resource type="Curve" id="Curve_ku6k6"]
+_limits = [-360.0, 360.0, 0.0, 4.35]
+_data = [Vector2(0, -144.41705), 0.0, 0.0, 0, 0, Vector2(4.35, -85.48978), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yj6io"]
+curve = SubResource("Curve_ku6k6")
+
+[sub_resource type="Curve" id="Curve_s3d3b"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, -207.20508), 0.0, 572.8392, 0, 0, Vector2(1, 58.532715), -98.535446, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xhqd6"]
+curve = SubResource("Curve_s3d3b")
+
+[sub_resource type="Curve" id="Curve_hitqw"]
+_limits = [-200.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, -200), 0.0, 0.0, 0, 0, Vector2(0.9899243, 200), 784.901, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ku6k6"]
+curve = SubResource("Curve_hitqw")
+
+[sub_resource type="Curve" id="Curve_27mjv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7rj3m"]
+curve = SubResource("Curve_27mjv")
+
+[sub_resource type="Curve" id="Curve_abvlb"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0.020151138, 0.7705867), 0.0, 4.5228605, 0, 0, Vector2(0.115869015, 1.065223), -0.88924885, -0.88924885, 0, 0, Vector2(0.17128462, 0.7018385), -6.619264, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_hitqw"]
+curve = SubResource("Curve_abvlb")
+
+[resource]
+particle_flag_rotate_y = true
+emission_shape = 1
+emission_sphere_radius = 0.15
+angle_min = -445.19998
+angle_max = 441.1
+angle_curve = SubResource("CurveTexture_yj6io")
+angular_velocity_min = -450.30002
+angular_velocity_max = 442.22998
+angular_velocity_curve = SubResource("CurveTexture_xhqd6")
+gravity = Vector3(0, -1, 0)
+linear_accel_curve = SubResource("CurveTexture_ku6k6")
+attractor_interaction_enabled = false
+scale_curve = SubResource("CurveTexture_7rj3m")
+scale_over_velocity_curve = SubResource("CurveTexture_hitqw")

@@ -13,10 +13,10 @@ func _ready() -> void:
 	pickable_action = {
 		"light_attack_pressed" : "Flashlight"
 	}
-	if item_data.item_info == "ON":
-		item_data.item_info = "ON"
-	else:
-		item_data.item_info = "OFF"
+	#if "ON" in item_data.item_info:
+		#item_data.item_info = "ON"
+	#else:
+		#item_data.item_info = "OFF"
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://go0nwkxm05ck"]
+[gd_scene load_steps=18 format=3 uid="uid://go0nwkxm05ck"]
 
 [ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://addons/fsm_template/Player/Scripts/Player.gd" id="1_hqtel"]
 [ext_resource type="PackedScene" uid="uid://j5il4etq1a5a" path="res://Player/Player_ui.tscn" id="2_78wmc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ksyx12j2sj82" path="res://addons/fsm_template/Player/flashlight_receiver.gd" id="4_3dtqd"]
 [ext_resource type="Script" uid="uid://q50py11ulaxd" path="res://addons/fsm_template/Player/Interaction_catcher.gd" id="4_71weq"]
 [ext_resource type="PackedScene" uid="uid://bvyu35md1spyq" path="res://addons/fsm_template/model.tscn" id="4_k53q1"]
+[ext_resource type="Script" uid="uid://xyst0hde5uas" path="res://addons/fsm_template/Player/camera_3d.gd" id="5_ctqa1"]
 [ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="7_ctqa1"]
 [ext_resource type="PackedScene" uid="uid://dmbx332sa1c3h" path="res://addons/fsm_template/visuals.tscn" id="8_od3ui"]
 [ext_resource type="Script" uid="uid://dyfit4serk60d" path="res://addons/fsm_template/Player/resources.gd" id="10_5uwn6"]
@@ -89,6 +90,7 @@ script = ExtResource("2_k53q1")
 [node name="Camera3D" type="Camera3D" parent="visuals/Cube_022/LocalCamera"]
 transform = Transform3D(-1, 1.15622e-08, 8.66548e-08, -3.55271e-15, 0.991216, -0.132256, -8.74228e-08, -0.132256, -0.991216, 0, 1.5, 0.057)
 current = true
+script = ExtResource("5_ctqa1")
 
 [node name="InteractionCatcher" type="RayCast3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 target_position = Vector3(0, 0, -2)
@@ -111,9 +113,9 @@ script = ExtResource("4_3dtqd")
 energy = 80.0
 flashlight = ExtResource("7_ctqa1")
 bat_timer = NodePath("BatteryTimer")
+wait_time = 60.0
 
 [node name="BatteryTimer" type="Timer" parent="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver"]
-wait_time = 60.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="visuals/Cube_022/LocalCamera/Camera3D"]
 libraries = {
@@ -133,9 +135,10 @@ parameters/looping = true
 [node name="InputGatherer" type="Node" parent="."]
 script = ExtResource("3_i3pqv")
 
-[node name="Crow" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_ctqa1")]
+[node name="Crow" parent="." node_paths=PackedStringArray("player", "camera") instance=ExtResource("12_ctqa1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13424128, 1.5587194, -0.20632952)
 player = NodePath("..")
+camera = NodePath("../visuals/Cube_022/LocalCamera/Camera3D")
 
 [node name="Resources" type="Node" parent="."]
 script = ExtResource("10_5uwn6")
