@@ -89,8 +89,8 @@
 shader = ExtResource("1_effxy")
 shader_parameter/enabled = true
 shader_parameter/dithering = true
-shader_parameter/colors = 8
-shader_parameter/dither_size = 1
+shader_parameter/colors = 12
+shader_parameter/dither_size = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcaaw"]
 resource_local_to_scene = true
@@ -413,7 +413,7 @@ shadow_mesh = SubResource("ArrayMesh_phwex")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el4hw"]
 emission_enabled = true
-emission = Color(1, 1, 1, 1)
+emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -452,6 +452,7 @@ shadow_mesh = SubResource("ArrayMesh_grbf7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlvrw"]
 emission_enabled = true
+emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0oswy"]
@@ -571,7 +572,7 @@ shadow_mesh = SubResource("ArrayMesh_4a01q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5f5h"]
 emission_enabled = true
-emission = Color(1, 1, 1, 1)
+emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -644,7 +645,7 @@ shadow_mesh = SubResource("ArrayMesh_f0ne6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igodg"]
 emission_enabled = true
-emission = Color(1, 1, 1, 1)
+emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -1899,12 +1900,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
-stretch_shrink = 2
 
 [node name="Node3D" type="SubViewport" parent="."]
 handle_input_locally = false
 audio_listener_enable_3d = true
-size = Vector2i(576, 324)
+size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Node3D"]
@@ -2005,6 +2005,8 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light"]
 transform = Transform3D(3.563411, 0, 0, 0, 30.287706, 0, 0, 0, 3.563411, 0, -29.79332, 0)
+light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+light_energy = 0.7
 light_volumetric_fog_energy = 3.0
 omni_range = 1.7628316
 omni_attenuation = -2.122
@@ -2029,6 +2031,8 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
+light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+light_energy = 0.7
 light_volumetric_fog_energy = 3.449
 omni_range = 27.477
 script = ExtResource("14_f8me0")
@@ -2046,10 +2050,12 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
+light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+light_energy = 0.7
 light_volumetric_fog_energy = 3.449
 omni_range = 27.477
 script = ExtResource("14_f8me0")
-light_multiplier = 3.0
+light_multiplier = 0.1
 
 [node name="Cube_031" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, 4.78879, 3.1996, 4.58876)
@@ -2065,10 +2071,10 @@ skeleton = NodePath("")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.2679443, 0, 0)
 connected_light = [NodePath("../../Light/OmniLight3D"), NodePath("../../Light2/OmniLight3D"), NodePath("../../Light3/OmniLight3D")]
 emission_obj = [NodePath("../../Light"), NodePath("../../Light2"), NodePath("../../Light3"), NodePath("../../Cube_024")]
-light_value = 1.0
+light_value = 0.7
 on = true
-starter_value = 1.0
-light_color = Color(1, 1, 1, 1)
+starter_value = 0.7
+light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
 
 [node name="CollisionShape3D" parent="Node3D/TutV2/tutv2/LightSwitch/light_switch2" index="1"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, -0.50546265)
@@ -2331,6 +2337,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7976437, 0.90724784, 1.3463
 visible = false
 item_name = "Bstteries"
 
+[node name="Node3D2" parent="Node3D/TutV2/tutv2" instance=ExtResource("59_ry6d7")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.165865, 1.1419928, 6.283122)
+
 [node name="Player" parent="Node3D/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
 monster = NodePath("../Base Enemy")
@@ -2454,11 +2463,53 @@ distance_fade_enabled = true
 distance_fade_begin = 20.0
 
 [node name="Decal7" type="Decal" parent="Node3D/TutV2"]
-transform = Transform3D(0.3275382, 0.6973119, 0.6375539, -0.503311, 0.6998363, -0.50686026, -0.79962313, -0.15487173, 0.5801878, 0.859758, 1.2245212, 13.36141)
+transform = Transform3D(-0.16671449, 0.75519794, 0.63394195, -0.113874316, 0.6238906, -0.77317095, -0.97940767, -0.2010885, -0.018013924, 1.1627244, 1.2245212, 13.36141)
 texture_albedo = ExtResource("79_lxb60")
 texture_emission = ExtResource("79_lxb60")
 upper_fade = 1.7569027
 lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal14" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.16671449, 0.75519794, 0.63394195, -0.50487584, 0.48687753, -0.7127769, -0.8469398, -0.43889216, 0.30011168, 1.1915411, 1.9442943, 11.7104645)
+texture_albedo = ExtResource("78_4yu04")
+texture_emission = ExtResource("78_4yu04")
+emission_energy = 2.0
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal15" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.1232348, 0.7639031, 0.63345474, 0.990428, 0.13466698, 0.030282833, -0.062172256, 0.6311231, -0.77318704, 1.3598393, 1.4855988, 8.295446)
+size = Vector3(3.340332, 1.456543, 2)
+texture_albedo = ExtResource("80_lxb60")
+texture_emission = ExtResource("80_lxb60")
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal16" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.08516426, -0.079074174, 0.99322426, -0.09066228, 0.99332523, 0.071308434, -0.9922335, -0.083975166, -0.09176497, 4.198021, 0.23130894, 4.8871846)
+size = Vector3(3.340332, 1.456543, 2)
+texture_albedo = ExtResource("80_lxb60")
+texture_emission = ExtResource("80_lxb60")
+emission_energy = 4.0
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal17" type="Decal" parent="Node3D/TutV2"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, 3.0497844, 0.23357771, 2.3496451)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("79_lxb60")
+texture_emission = ExtResource("79_lxb60")
+emission_energy = 6.0
+upper_fade = 0.36934307
+lower_fade = 1.3314705
 distance_fade_enabled = true
 distance_fade_begin = 20.0
 
@@ -2496,7 +2547,7 @@ transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.0
 size = Vector3(3.553711, 2, 2.6938477)
 texture_albedo = ExtResource("79_paxf5")
 texture_emission = ExtResource("79_paxf5")
-emission_energy = 0.0
+emission_energy = 1.5
 albedo_mix = 0.9
 normal_fade = 0.418
 upper_fade = 1.4270439

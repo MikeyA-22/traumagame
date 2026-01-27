@@ -12,12 +12,16 @@ class_name  light_switch
 @export var starter_value: float
 @export var light_color: Color
 
+
 func _ready() -> void:
 	interactable_actions = {"light_action_pressed":"switch_pressed"}
 	SigBus.connect("SWITCH", switch_light)
 	for light in connected_light:
 		light.light_energy = starter_value
 		light.light_color = light_color
+	for obj in emission_obj:
+		var mat = obj.mesh.surface_get_material(0)
+		mat.emission = light_color
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		for light in connected_light:
@@ -31,6 +35,7 @@ func _process(delta: float) -> void:
 			var mat = obj.mesh.surface_get_material(0)
 			if on and obj:
 				mat.emission_enabled = true
+				mat.emission = light_color
 			else:
 				mat.emission_enabled = false
 				

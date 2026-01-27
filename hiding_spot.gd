@@ -25,7 +25,8 @@ func get_interaction_data(player) -> Dictionary:
 	return {
 		"interactable": true,
 		"sig": SigBus.HIDE,
-		"sig_value": player, # or root_player
+		"sig_value": {"player" : player,# or root_player
+		"spot": self },
 		"reticle": 1,
 		"reticle2": 1
 	}
@@ -103,12 +104,16 @@ func hide_player(player):
 		hide_label.visible = false
 	else:
 		player.camera_mount.player_camera.make_current()
-		player.set_position(hide_point.global_position - hide_offset)
+		player.set_position(hide_point.global_position)
 		player.visible = true
 
 	Game_Global.hidden = hidden
 	print("hidden: ", hidden)
 	
 
-func hide_now(player):
-	hide_player(player)
+func hide_now(sig_val):
+	var data  = sig_val
+	if data.spot != self:
+		print("Not ",self," my spot")
+		return # not my hiding spot
+	hide_player(data.player)

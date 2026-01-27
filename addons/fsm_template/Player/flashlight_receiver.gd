@@ -8,12 +8,15 @@ var fs_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var on_sfx = preload("res://Music/sfx/flashlight turn on.MP3")
 var off_sfx = preload("res://Music/sfx/flashlight turn off.MP3")
 @export var flashlight: ItemData
-@export var bat_timer: Timer
-var battery_percent: int = 100
+
+
 var battery_difference: int = 20
 var info_statement: String = "OFF"
+@export_group("Battery Variables")
+@export var bat_timer: Timer
 @export var wait_time: float
-var bat_min: int = 20
+@export var bat_min: int = 20
+var battery_percent: int = 100
 @onready var inventory_display = $"../../../../../Model/Inventory"/InventoryDisplay
 
 
@@ -29,7 +32,7 @@ func _ready() -> void:
 func on_flashlight() -> void:
 	
 	flash_flag = !flash_flag
-	if flash_flag == true and battery_percent > 0:
+	if flash_flag == true and battery_percent > bat_min:
 		Game_Global.flashlight_value = energy
 		light_energy = Game_Global.flashlight_value
 		flash_flag = true
@@ -75,15 +78,18 @@ func play_sfx():
 	fs_sfx.play()
 
 func resource_display(info: String):
-	flashlight.item_info = info
-	inventory_display.display_info(flashlight.item_info)
+	set_info(info)
+	inventory_display.display_info(info)
 	
 
+func set_info(info: String):
+	flashlight.item_info = info
 
 func _on_battery_timer_timeout() -> void:
+	print("Battery percent: ", battery_percent)
 	## EVERYTIME THE TIMER HITS 0, REDUCE PERCENTAGE BY 20
 	## DROPS BELOW MINIMUM? KILL IT.
-	if battery_percent < bat_min:
+	if battery_percent > bat_min:
 		battery_percent -= battery_difference
 		bat_timer.wait_time = wait_time
 		bat_timer.start()
@@ -98,4 +104,8 @@ func recharge_flashlight(bat_charge: int, inventory: Inventory, item_data: ItemD
 	battery_percent += bat_charge
 	inventory.switch_item()
 	inventory.remove_item_data(item_data)
+	set_info("%s: %d" % [info_statement, battery_percent])
+	
+	if inventory_display.active_item_data.item_name == "Flashlight":
+			resource_display("%s: %d" % [info_statement, battery_percent])
 	## THE BATTERY SHOULD INCREASE

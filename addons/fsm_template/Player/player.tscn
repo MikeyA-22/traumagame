@@ -113,7 +113,7 @@ script = ExtResource("4_3dtqd")
 energy = 80.0
 flashlight = ExtResource("7_ctqa1")
 bat_timer = NodePath("BatteryTimer")
-wait_time = 60.0
+wait_time = 50.0
 
 [node name="BatteryTimer" type="Timer" parent="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver"]
 
