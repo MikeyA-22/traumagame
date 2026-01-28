@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn5g7s8h0i17e"]
+
+[ext_resource type="Script" uid="uid://loiqn8geymex" path="res://Crow/crow_state_machine.gd" id="1_tv2ar"]
+[ext_resource type="Script" uid="uid://03dk5u32q6u6" path="res://Crow/hover.gd" id="2_40y6c"]
+[ext_resource type="Script" uid="uid://dsjrb13ig4gak" path="res://Crow/canstun.gd" id="3_bi5uy"]
+[ext_resource type="Script" uid="uid://dx6ocglsn3v3n" path="res://Crow/stun.gd" id="4_tok86"]
+
+[node name="StateMachine" type="Node"]
+script = ExtResource("1_tv2ar")
+
+[node name="Idle" type="Node" parent="."]
+script = ExtResource("2_40y6c")
+speed = 1.5
+y_pos = 1.0
+x_min = 0.5
+z_max = 1.5
+state_name = "idle"
+animation = "idle"
+
+[node name="Canstun" type="Node" parent="."]
+script = ExtResource("3_bi5uy")
+speed = 1.5
+y_pos = 1.0
+state_name = "canstun"
+animation = "canstun"
+metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
+
+[node name="Stun" type="Node" parent="."]
+script = ExtResource("4_tok86")
+speed = 1.5
+state_name = "stun"
+animation = "stun"
+metadata/_custom_type_script = "uid://cg8hvaar0rx7c"

@@ -4,12 +4,12 @@
 [ext_resource type="Script" uid="uid://dauw6ec6d3vuv" path="res://Crow/noose_bone.gd" id="1_ba1t2"]
 [ext_resource type="QuadMesh" uid="uid://kjdlf0orer34" path="res://Crow/pass_1feather_vfx.tres" id="3_7rj3m"]
 [ext_resource type="Material" uid="uid://ocwsa7v0mgud" path="res://Crow/particle_process_feathers.tres" id="3_abvlb"]
-[ext_resource type="Script" uid="uid://loiqn8geymex" path="res://Crow/crow_state_machine.gd" id="3_uddmk"]
-[ext_resource type="Script" uid="uid://03dk5u32q6u6" path="res://Crow/hover.gd" id="4_byl21"]
-[ext_resource type="Script" uid="uid://dsjrb13ig4gak" path="res://Crow/canstun.gd" id="5_de1t2"]
-[ext_resource type="Script" uid="uid://dx6ocglsn3v3n" path="res://Crow/stun.gd" id="6_de1t2"]
+[ext_resource type="Script" uid="uid://loiqn8geymex" path="res://Crow/crow_state_machine.gd" id="7_hitqw"]
 [ext_resource type="AudioStream" uid="uid://xc7lyeceiklo" path="res://Music/sfx/crow.MP3" id="8_7rj3m"]
+[ext_resource type="Script" uid="uid://03dk5u32q6u6" path="res://Crow/hover.gd" id="8_ku6k6"]
+[ext_resource type="Script" uid="uid://dsjrb13ig4gak" path="res://Crow/canstun.gd" id="9_yj6io"]
 [ext_resource type="Texture2D" uid="uid://2mlva161g07" path="res://Crow/sound_texture.png" id="10_hitqw"]
+[ext_resource type="Script" uid="uid://dx6ocglsn3v3n" path="res://Crow/stun.gd" id="10_s3d3b"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_de1t2"]
 height = 2.49316
@@ -5791,10 +5791,10 @@ tracks/4/path = NodePath(".:my_aberration_x")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 5.25, 5.42),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 5.25, 5.42, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 0.4]
+"values": [0.0, 1.0, 0.4, 1.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -5803,10 +5803,10 @@ tracks/5/path = NodePath(".:my_aberration_y")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 5.25, 5.42),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 5.25, 5.42, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 1.0, 0.4]
+"values": [0.0, 1.0, 0.4, 0.0]
 }
 tracks/6/type = "method"
 tracks/6/imported = false
@@ -6079,12 +6079,14 @@ script = ExtResource("1_ba1t2")
 shake_intensity = 1
 duration = 0.2
 
-[node name="Crow" type="CharacterBody3D" parent="."]
+[node name="Crow" type="CharacterBody3D" parent="." node_paths=PackedStringArray("anim_player1", "anim_player2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0060582757, -0.2024882, -0.13906392)
 collision_layer = 8
 collision_mask = 8
 motion_mode = 1
 script = ExtResource("1_5hwkx")
+anim_player1 = NodePath("crow/AnimationPlayer")
+anim_player2 = NodePath("../AnimationPlayer")
 
 [node name="hitbox" type="Area3D" parent="Crow"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
@@ -8634,36 +8636,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_byl21")
 }
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("animation_player_2", "animation_player", "character")]
-script = ExtResource("3_uddmk")
-animation_player_2 = NodePath("../Crow/crow/AnimationPlayer")
-animation_player = NodePath("../AnimationPlayer")
-character = NodePath("../Crow")
-
-[node name="Idle" type="Node" parent="StateMachine"]
-script = ExtResource("4_byl21")
-speed = 1.5
-y_pos = 1.0
-x_min = 0.5
-z_max = 1.5
-state_name = "idle"
-animation = "idle"
-
-[node name="Canstun" type="Node" parent="StateMachine"]
-script = ExtResource("5_de1t2")
-speed = 1.5
-y_pos = 1.0
-state_name = "canstun"
-animation = "canstun"
-metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
-
-[node name="Stun" type="Node" parent="StateMachine"]
-script = ExtResource("6_de1t2")
-speed = 1.5
-state_name = "stun"
-animation = "stun"
-metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
-
 [node name="effect_area" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collision_layer = 16
@@ -8693,6 +8665,37 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_ku6k6")
 draw_pass_1 = SubResource("QuadMesh_s3d3b")
 
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("animation_player_2", "animation_player", "character")]
+script = ExtResource("7_hitqw")
+animation_player_2 = NodePath("../AnimationPlayer")
+animation_player = NodePath("../Crow/crow/AnimationPlayer")
+character = NodePath("../Crow")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("8_ku6k6")
+speed = 1.5
+y_pos = 1.0
+x_min = 0.5
+z_max = 1.5
+state_name = "idle"
+animation = "idle"
+
+[node name="Canstun" type="Node" parent="StateMachine"]
+script = ExtResource("9_yj6io")
+speed = 1.5
+y_pos = 1.0
+state_name = "canstun"
+animation = "canstun"
+metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
+
+[node name="Stun" type="Node" parent="StateMachine"]
+script = ExtResource("10_s3d3b")
+speed = 1.5
+state_name = "stun"
+animation = "stun"
+metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
+
 [connection signal="body_entered" from="Crow/hitbox" to="StateMachine/Canstun" method="_on_hitbox_body_entered"]
 [connection signal="body_entered" from="effect_area" to="StateMachine/Idle" method="_on_effect_area_body_entered"]
+[connection signal="body_entered" from="effect_area" to="StateMachine/Canstun" method="_on_effect_area_body_entered"]
 [connection signal="body_exited" from="effect_area" to="StateMachine/Canstun" method="_on_effect_area_body_exited"]

@@ -18,6 +18,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if !stop_tick:
+		#print("IS TICKING!")
 		child.tick(actor, delta, blackboard)
 
 

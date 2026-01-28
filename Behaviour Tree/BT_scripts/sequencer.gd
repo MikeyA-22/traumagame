@@ -16,7 +16,7 @@ func assess_children(actor, delta, blackboard):
 			##TASK: REGISTER BLACKBOARD
 			child.blackboard = blackboard
 			##TASK: REGISTER CHILD RESPONSE
-			var response = child.tick(actor, tick, blackboard)
+			var response = child.tick(actor, delta, blackboard)
 			
 			##TASK: IF THE RESPONSE IS NOT SUCCESS, WE CAN ASSUME IT IS FAILURE OR RUNNING, EITHER WAY RETURN THE RESPONSEE
 			if response != STATUS.SUCCESS:

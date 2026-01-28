@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://pemvv5628ach"]
+[gd_scene load_steps=19 format=3 uid="uid://pemvv5628ach"]
 
 [ext_resource type="Script" uid="uid://xm0b12gg5cs8" path="res://AI_LAB(NOT PART OF GAME)/lab_enemy.gd" id="1_rbqb6"]
 [ext_resource type="Script" uid="uid://d0g66qs3oq1eu" path="res://bt_selector.gd" id="2_1mtmg"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://d10xieqky3rm" path="res://Behaviour Tree/BT_scripts/sequencer.gd" id="4_463xj"]
 [ext_resource type="Script" uid="uid://cpk7bj05cpjk6" path="res://AI_LAB(NOT PART OF GAME)/is_there_a_target.gd" id="4_rbqb6"]
 [ext_resource type="Script" uid="uid://xc4qp318hdiu" path="res://AI_LAB(NOT PART OF GAME)/find_new_target.gd" id="6_3od8k"]
-[ext_resource type="Script" uid="uid://c2i6ef7q1wxqq" path="res://Behaviour Tree/BT_scripts/bt_condition.gd" id="6_a0m1v"]
 [ext_resource type="Script" uid="uid://bl3vcgx4x8bxx" path="res://AI_LAB(NOT PART OF GAME)/player_in_range.gd" id="6_uvgde"]
 [ext_resource type="Script" uid="uid://cu6qc1f6430n5" path="res://AI_LAB(NOT PART OF GAME)/go_to_target.gd" id="7_gb864"]
 [ext_resource type="Script" uid="uid://b2drj5dgyii2s" path="res://AI_LAB(NOT PART OF GAME)/lab_player.gd" id="7_rbqb6"]
@@ -66,15 +65,6 @@ metadata/_custom_type_script = "uid://dwvxf1q0i0uf3"
 [node name="Selector" type="Node" parent="Enemy/root"]
 script = ExtResource("2_1mtmg")
 metadata/_custom_type_script = "uid://d0g66qs3oq1eu"
-
-[node name="Sequencer" type="Node" parent="Enemy/root/Selector"]
-script = ExtResource("4_463xj")
-metadata/_custom_type_script = "uid://d10xieqky3rm"
-
-[node name="Bored?" type="Node" parent="Enemy/root/Selector/Sequencer"]
-script = ExtResource("6_a0m1v")
-UID = "Boered?"
-metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
 
 [node name="Player" type="Node" parent="Enemy/root/Selector"]
 script = ExtResource("4_463xj")

@@ -5,6 +5,8 @@ extends Control
 @onready var Exit = $Exit
 @onready var main_title = $AnimatedSprite2D
 
+
+
 func _ready() -> void:
 	StartButton.connect("pressed", Callable(self, "_on_StartButton_pressed"))
 	Settings.connect("pressed", Callable(self,"_on_Settingsbutton_pressed"))
@@ -12,7 +14,9 @@ func _ready() -> void:
 	main_title.play("animation")
 
 func _on_StartButton_pressed():
-	get_tree().change_scene_to_file("res://Tutorial Level/tutorial_level.tscn")
+	get_tree().change_scene_to_file("res://loading_screen.tscn")
+	
+	
 
 func _on_ExitButton_pressed():
 	get_tree().quit()

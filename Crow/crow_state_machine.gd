@@ -5,8 +5,8 @@ class_name CrowStateMachine
 ## @export var animation_player : AnimationPlayer
 ## @export var character : CharacterBody3D
 ## var current_state: AIstate
-@onready var root = $".."
-@onready var player: Player = root.player
+@onready var my_root = $".."
+@onready var player: Player = my_root.player
 @onready var monster : Enemy = player.monster
 var noise_intensity = 0.06
 @export var animation_player_2: AnimationPlayer

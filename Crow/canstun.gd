@@ -50,3 +50,7 @@ func _on_hitbox_body_entered(body: Node3D) -> void:
 		hittable = true
 		
 		#SigBus.STUNNED.emit()
+
+
+func _on_effect_area_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

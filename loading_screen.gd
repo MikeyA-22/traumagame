@@ -1,41 +1,31 @@
 extends Control
-class_name LoadingScreen
-
-## This is emitted when the scene is finished loading.
-## Use `ResourceLoader.load_threaded_get(path)` to get the scene.
-signal scene_loaded(path: String)
 
 @onready var progress_bar = $ProgressBar
 
-## The path to the scene that's actually being loaded
-@export var path: String
-
-## Actual progress value; we move towards towards this
-var progress_value := 0.0
-
-
-## Load the scene at the given path.
-## When this is finished loading, the "scene_loaded" signal will be emitted.
-func load(path_to_load: String):
-	path = path_to_load
-	ResourceLoader.load_threaded_request(path)
+var progress =[]
+var scene_name
+var scene_load_status = 0
+var progress_value
 
 
-func _process(delta: float):
-	if not path:
-		return
 
-	var progress = []
-	var status = ResourceLoader.load_threaded_get_status(path, progress)
+func _ready() -> void:
+	scene_name = "res://Tutorial Level/tutorial_level.tscn"
+	ResourceLoader.load_threaded_request(scene_name)
+	
 
-	if status == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_IN_PROGRESS:
-		progress_value = progress[0] * 100
-		progress_bar.value = move_toward(progress_bar.value, progress_value, delta * 20)
+func _process(delta: float) -> void:
+	scene_load_status = ResourceLoader.load_threaded_get_status(scene_name,progress)
+	#countdown.text = str(floor(progress[0] * 100)) + "%"
+	progress_value = progress[0] * 100
+	progress_bar.value = move_toward(progress_bar.value, progress_value, delta * 20)
 
-	if status == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_LOADED:
-		# zip the progress bar to 100% so we don't get weird visuals
+	
+	# zip the progress bar to 100% so we don't get weird visuals
+	
+	if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED:
 		progress_bar.value = move_toward(progress_bar.value, 100.0, delta * 150)
-
-		# "done" loading :)
-		if progress_bar.value >= 99:
-			scene_loaded.emit(path)
+		
+	if progress_bar.value >= 99:
+		var new_scene = ResourceLoader.load_threaded_get(scene_name)
+		get_tree().change_scene_to_packed(new_scene)
