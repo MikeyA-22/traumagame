@@ -1,4 +1,4 @@
-[gd_scene load_steps=237 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=243 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_effxy"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://bs1o4ny60vtkx" path="res://Tutorial Level/tutv2/tutv2_floor_normal.png" id="38_871h3"]
 [ext_resource type="Texture2D" uid="uid://752m12p12it7" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_BaseMap.png" id="39_gijqh"]
 [ext_resource type="Texture2D" uid="uid://p0tgyr6dkd0x" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_Normal.png" id="40_nq8ga"]
+[ext_resource type="PackedScene" uid="uid://d1sbfpgkwpia1" path="res://Tutorial Level/micro.glb" id="40_xdk6f"]
 [ext_resource type="Texture2D" uid="uid://cblb0yd08n8fh" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_BaseMap.png" id="41_vhkfr"]
 [ext_resource type="Texture2D" uid="uid://cqb6qdgvo3v7p" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_Normal.png" id="42_63tng"]
 [ext_resource type="Texture2D" uid="uid://8p0j7s0fpbe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_BaseMap.png" id="43_sbyva"]
@@ -71,8 +72,11 @@
 [ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="61_4sfx6"]
 [ext_resource type="Resource" uid="uid://cqoda8bvqx5au" path="res://Resource/pills.tres" id="61_f5srq"]
 [ext_resource type="Script" uid="uid://dvxeamowg7jtb" path="res://Tutorial Level/state_changer.gd" id="61_jisp4"]
+[ext_resource type="PackedScene" uid="uid://c1hr4s2dt3duq" path="res://Tutorial Level/baseboard.glb" id="61_t5epy"]
 [ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="62_f8me0"]
 [ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="63_7spyc"]
+[ext_resource type="PackedScene" uid="uid://bwttnqf1jkbww" path="res://Tutorial Level/carpet.glb" id="64_qnwvc"]
+[ext_resource type="PackedScene" uid="uid://cl8dfrd6gw8ab" path="res://Tutorial Level/tutv2/baseboard_corner.glb" id="65_gsepi"]
 [ext_resource type="Shader" uid="uid://bm38vek87nfgh" path="res://chromatic_aberration.gdshader" id="65_l01go"]
 [ext_resource type="AudioStream" uid="uid://bs51sebxvp2w2" path="res://Music/sfx/phase 2.MP3" id="65_ndxse"]
 [ext_resource type="AudioStream" uid="uid://1cjtaa0o3d1x" path="res://phase 1.MP3" id="66_ehwpm"]
@@ -84,6 +88,8 @@
 [ext_resource type="Texture2D" uid="uid://cjj8h3nnd4nc0" path="res://Decals/blood_1.png" id="79_paxf5"]
 [ext_resource type="Texture2D" uid="uid://ci4jajqrnni8v" path="res://Decals/blood_4.png" id="80_lxb60"]
 [ext_resource type="Texture2D" uid="uid://0he0sumqw562" path="res://Decals/blood_2.png" id="81_sep3q"]
+[ext_resource type="PackedScene" uid="uid://bdye1to6yylud" path="res://Tutorial Level/knife_holder.glb" id="87_qnwvc"]
+[ext_resource type="PackedScene" uid="uid://cqlu68l1lvrg4" path="res://Tutorial Level/plug.glb" id="88_t5epy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_unsro"]
 shader = ExtResource("1_effxy")
@@ -1953,7 +1959,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_63yul")
 
 [node name="Plane" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
-transform = Transform3D(3.94683, 0, 0, 0, 1.992, 0, 0, 0, 1.992, 0, 0, 0)
+transform = Transform3D(3.94683, 0, 0, 0, 1.992, 0, 0, 0, 1.992, 0, 0, 0.026986837)
 mesh = SubResource("ArrayMesh_v7200")
 skeleton = NodePath("")
 
@@ -2090,7 +2096,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_jkvxg")
 
 [node name="Cube_009" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
-transform = Transform3D(-8.40426e-08, 0, -0.705, 0, 0.54, 0, 0.705, 0, -8.40426e-08, 6.91159, 0.653333, 2.30015)
+transform = Transform3D(-8.40426e-08, 0, -0.705, 0, 0.54, 0, 0.705, 0, -8.40426e-08, 6.7913756, 0.653333, 2.30015)
 mesh = SubResource("ArrayMesh_s70cl")
 skeleton = NodePath("")
 
@@ -2107,6 +2113,7 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Cube_003"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_003/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00015258789, 0.0010848045, 0.00017809868)
 shape = SubResource("ConvexPolygonShape3D_5jgo0")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_003/StaticBody3D"]
@@ -2201,7 +2208,7 @@ skeleton = NodePath("")
 shape = SubResource("ConvexPolygonShape3D_i0v8k")
 
 [node name="Plane_002" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
-transform = Transform3D(0.987983, 0, 0, 0, 0.987983, 0, 0, 0, 0.987983, 6.61787, 0, -3.99914)
+transform = Transform3D(0.987983, 0, 0, 0, 0.987983, 0, 0, 0, 0.987983, 6.563418, 0.008102179, -3.9944239)
 mesh = SubResource("ArrayMesh_hbcr7")
 skeleton = NodePath("")
 
@@ -2209,6 +2216,9 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Plane_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_uq4pb")
+
+[node name="micro" parent="Node3D/TutV2/tutv2/Plane_002/StaticBody3D" instance=ExtResource("40_xdk6f")]
+transform = Transform3D(-1.0121636, 0, -8.8486146e-08, 0, 1.0121636, 0, 8.8486146e-08, 0, -1.0121636, -0.14086485, 1.3108687, 10.827485)
 
 [node name="InstructionArea" type="Area3D" parent="Node3D/TutV2/tutv2/Plane_002"]
 transform = Transform3D(1.0000008, 0, 0, 0, 1.0000008, 0, 0, 0, 1.0000008, -6.3281074, 0.82993317, 26.270203)
@@ -2316,6 +2326,12 @@ shape = SubResource("ConvexPolygonShape3D_mm8lq")
 [node name="Door" parent="Node3D/TutV2/tutv2/Cube_036" instance=ExtResource("48_kcaaw")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
+[node name="knife_holder" parent="Node3D/TutV2/tutv2" instance=ExtResource("87_qnwvc")]
+transform = Transform3D(-0.71714175, 0, -0.6969274, 0, 1, 0, 0.6969274, 0, -0.71714175, 7.1119747, 1.1740518, 5.7808185)
+
+[node name="plug" parent="Node3D/TutV2/tutv2" instance=ExtResource("88_t5epy")]
+transform = Transform3D(0.017787263, -0.0012019426, 0.9998411, -0.9998394, -0.0022277937, 0.017784553, 0.002206063, -0.99999684, -0.0012414157, 7.3730736, 1.7910305, 6.9636955)
+
 [node name="cake2" type="Node3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02759, 0.857823, 1.20298)
 
@@ -2339,6 +2355,149 @@ item_name = "Bstteries"
 
 [node name="Node3D2" parent="Node3D/TutV2/tutv2" instance=ExtResource("59_ry6d7")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.165865, 1.1419928, 6.283122)
+
+[node name="carpet" parent="Node3D/TutV2/tutv2" instance=ExtResource("64_qnwvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7816505, 0.01341173, -0.84062624)
+
+[node name="BaseboardCollection" type="Node" parent="Node3D/TutV2/tutv2"]
+
+[node name="baseboard4" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.586, 0.212, 2.9311752)
+
+[node name="baseboard3" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 7.586, 0.212, 0.945577)
+
+[node name="baseboard2" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 7.586, 0.212, -1.0429947)
+
+[node name="baseboard5" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371144e-08, 0, -1.0000012, 0, 1.0000012, 0, 1.0000012, 0, -4.371144e-08, 7.586, 0.212, -5.016)
+
+[node name="baseboard" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1.0000006, 0, -8.742281e-08, 0, 1.0000006, 0, 8.742281e-08, 0, -1.0000006, 7.5862627, 0.21151878, -3.0407093)
+
+[node name="baseboard6" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.590655, 0.212, -5.016)
+
+[node name="baseboard7" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5985243, 0.212, -5.016)
+
+[node name="baseboard8" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6040841, 0.212, -5.016)
+
+[node name="baseboard9" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.6032157, 0.212, -5.016)
+
+[node name="baseboard10" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.4067453, 0.212, -5.0389094)
+
+[node name="baseboard11" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.407, 0.212, -7.0315194)
+
+[node name="baseboard12" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.3759849, 0.212, -8.98795)
+
+[node name="baseboard13" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.078, 0.212, -8.988)
+
+[node name="baseboard14" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.066218, 0.212, -8.988)
+
+[node name="baseboard_corner" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("65_gsepi")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.407, 0.212, -5.0316586)
+
+[node name="baseboard16" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.0582695, 0.212, -8.988)
+
+[node name="baseboard17" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.039427, 0.212, -8.988)
+
+[node name="baseboard15" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0621166, 0.212, -8.988)
+
+[node name="baseboard18" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.300348, 0.2115184, -8.981893)
+
+[node name="baseboard19" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, -6.991335)
+
+[node name="baseboard20" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, -5.018244)
+
+[node name="baseboard21" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, -3.0435)
+
+[node name="baseboard23" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, 0.89971995)
+
+[node name="baseboard24" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, 6.7998853)
+
+[node name="baseboard22" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, -1.0853871)
+
+[node name="baseboard25" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, 2.8331308)
+
+[node name="baseboard26" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.301, 0.212, 4.810738)
+
+[node name="baseboard27" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.311214, 0.212, 6.974099)
+
+[node name="baseboard28" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.320609, 0.212, 6.974)
+
+[node name="baseboard29" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.339649, 0.212, 6.974)
+
+[node name="baseboard30" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.375134, 0.212, 6.974)
+
+[node name="baseboard31" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.4142478, 0.212, 6.9711995)
+
+[node name="baseboard32" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.915, -1.2980644, 0.21200003, 6.986744)
+
+[node name="baseboard_corner2" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("65_gsepi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2987058, 0.2118314, 6.9849195)
+
+[node name="baseboard_corner3" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("65_gsepi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.3116896, 0.212, 8.828)
+
+[node name="baseboard33" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.3032012, 0.212, 6.971)
+
+[node name="baseboard34" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.586, 0.212, 4.795751)
+
+[node name="baseboard_corner4" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("65_gsepi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 10.075702)
+
+[node name="baseboard35" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 10.067378)
+
+[node name="baseboard37" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 13.644338)
+
+[node name="baseboard36" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 12.034171)
+
+[node name="baseboard_corner5" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("65_gsepi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.3126094, 0.21220367, 15.631078)
+
+[node name="baseboard_corner6" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("65_gsepi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 16.883272)
+
+[node name="baseboard38" parent="Node3D/TutV2/tutv2/BaseboardCollection" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 16.871262)
+
+[node name="baseboard" parent="Node3D/TutV2/tutv2" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 18.85415)
+
+[node name="baseboard2" parent="Node3D/TutV2/tutv2" instance=ExtResource("61_t5epy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.299, 0.212, 20.016306)
 
 [node name="Player" parent="Node3D/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
@@ -2424,7 +2583,7 @@ third_phase = ExtResource("67_kvd7i")
 final_phase = ExtResource("68_f5srq")
 
 [node name="Hiding Table" parent="Node3D/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("34_kcaaw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61785, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61785, 0, -0.7825607)
 hide_offset = Vector3(0, 0, 0)
 player = NodePath("../Player")
 
