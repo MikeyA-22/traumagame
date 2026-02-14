@@ -11,7 +11,7 @@ const JUMP_VELOCITY = 5
 @export var DECELERATION:float = 0.25
 
 func _ready() -> void:
-	animation = "walk"
+	animation = "walking"
 
 func check_request(input: InputPackage) -> String:
 	if not player.is_on_floor():

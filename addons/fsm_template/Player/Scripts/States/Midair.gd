@@ -9,7 +9,7 @@ var landing_height : float =  1.63
 
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
-	animation = "in_air"
+	animation = "idle"
 	move_name = "in_air"
 
 # Step 3: implement a check_relevance function

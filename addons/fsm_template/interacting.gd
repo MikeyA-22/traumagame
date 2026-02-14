@@ -9,7 +9,7 @@ const transition_timing = 0.1
 @onready var inventory = $"../Inventory"
 @onready var photobook = $"../Photobook"
 func _ready() -> void:
-	animation = "pick"
+	animation = "idle"
 
 
 func check_request(input: InputPackage):

@@ -7,7 +7,7 @@ class_name Hidden
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
 	hidden = true
-	animation = "idle"
+	animation = "in table"
 
 # Step 3: implement a check_relevance function
 func check_request(input: InputPackage):

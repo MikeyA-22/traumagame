@@ -11,8 +11,8 @@ const transition_timing = 0.1
 
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
-	animation = "pick"
-	move_name = "pick"
+	animation = "idle"
+	move_name = "idle"
 	#start_marker = "start"
 	#end_marker = "stop"
 

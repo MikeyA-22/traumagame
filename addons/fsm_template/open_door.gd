@@ -5,7 +5,7 @@ class_name open_door
 const transition_timing = 0.1
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
-	animation = "pick"
+	animation = "idle"
 
 # Step 3: implement a check_relevance function
 func check_request(input: InputPackage):

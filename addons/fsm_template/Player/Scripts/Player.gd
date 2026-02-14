@@ -6,12 +6,12 @@ class_name Player
 @onready var inputgatherer = $InputGatherer
 @onready var Model = $Model
 @onready var inventory = $Model/Inventory
-@onready var camera_mount =$visuals/Cube_022/LocalCamera
+@onready var camera_mount = $LocalCamera
 @onready var visuals = $visuals as PlayerVisuals
-@onready var light = $"visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
+@onready var light = $"LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
 @export var monster: Enemy
 @export var resources: PlayerResources
-@onready var interaction_catcher = $visuals/Cube_022/LocalCamera/Camera3D/InteractionCatcher
+@onready var interaction_catcher = $LocalCamera/Camera3D/InteractionCatcher
 @export var inventory_list : Array[ItemData]
 @export var active_item : ItemData
 var hidden = false

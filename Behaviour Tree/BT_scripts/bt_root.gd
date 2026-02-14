@@ -4,7 +4,7 @@ class_name root
 @onready var child = self.get_child(0)
 var stop_tick: bool
 
-@export var actor: CharacterBody3D
+@export var actor: CharacterBody2D
 @export var blackboard_resource: Blackboard
 
 var blackboard: Dictionary

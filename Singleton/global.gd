@@ -13,6 +13,10 @@ static var current_gState: game_state = game_state.STATE_1
 static var madness_increment: float
 static var pills_amount: int = 5
 
+static var loadable_scene: String
+static var loading_screen: String = "res://loading_screen.tscn"
+
+
 enum game_state{
 	STATE_1,
 	STATE_ENEMY_ATTACK,

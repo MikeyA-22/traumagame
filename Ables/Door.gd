@@ -3,6 +3,7 @@ extends Interactable
 class_name Door
 
 var current_scene:SceneState
+@export var next_level : String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,5 +26,6 @@ func _process(delta: float) -> void:
 	pass
 	
 func _open_door(door:bool):
-	get_tree().change_scene_to_file("res://next_level_placeholder.tscn")
+	Game_Global.loadable_scene = next_level
+	get_tree().change_scene_to_file(Game_Global.loading_screen)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

@@ -15,7 +15,7 @@ sky_material = SubResource("ProceduralSkyMaterial_3dk0h")
 
 [resource]
 sky = SubResource("Sky_f7g2b")
-tonemap_mode = 3
+tonemap_mode = 2
 ssil_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true

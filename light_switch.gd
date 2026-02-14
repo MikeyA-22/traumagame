@@ -25,6 +25,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		for light in connected_light:
+			#light.emit(on)
 			if on and light:
 				light.light_energy = light_value
 				light.light_color = light_color
@@ -55,6 +56,7 @@ func get_interaction_data(player) -> Dictionary:
 func switch_light(turn_on:bool):
 	on = !on
 	for light in connected_light:
+			#light.emit(on)
 			if on ==  true:
 				light.light_energy = light_value
 			else:

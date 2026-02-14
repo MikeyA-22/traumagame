@@ -4,7 +4,7 @@ class_name Inventory
 
 @onready var model = $".."
 @onready var items = []
-@onready var right_hand = $"../RightHand"
+@onready var right_hand = $"../RightHand/Right"
 @onready var active_item: Pickable
 @onready var inventory_display = $InventoryDisplay
 

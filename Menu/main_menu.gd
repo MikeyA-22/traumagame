@@ -14,6 +14,7 @@ func _ready() -> void:
 	main_title.play("animation")
 
 func _on_StartButton_pressed():
+	Game_Global.loadable_scene = "res://Tutorial Level/tutorial_level.tscn"
 	get_tree().change_scene_to_file("res://loading_screen.tscn")
 	
 	

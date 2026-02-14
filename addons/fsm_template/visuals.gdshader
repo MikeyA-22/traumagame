@@ -12,6 +12,8 @@ uniform sampler2D albedo : source_color, filter_nearest;
 uniform float alpha_scissor : hint_range(0, 1) = 0.5;
 uniform float jitter: hint_range(0, 1) = 0.25;
 uniform ivec2 resolution = ivec2(320, 240);
+uniform vec3 emission: source_color;
+uniform float emission_power: hint_range(0.0, 10.0) = 1.0;
 
 vec4 snap_to_position(vec4 base_position)
 {
@@ -45,7 +47,7 @@ void fragment()
 	vec4 color_base = color;
 	vec4 texture_color = texture(albedo, UV);
 
-	ALBEDO = (color_base * texture_color).rgb;
+	ALBEDO = (color_base * texture_color).rgb * emission * emission_power;
 	ALPHA = texture_color.a * color_base.a;
 	ALPHA_SCISSOR_THRESHOLD = alpha_scissor;
 }

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="1_o6jke"]
 [ext_resource type="PackedScene" uid="uid://c2ckyb5vl1bwt" path="res://Ables/Pills/pills.tscn" id="1_qyhmy"]
-[ext_resource type="Texture2D" uid="uid://cwlxyx4eqje67" path="res://UI/pills.png" id="2_wjhsv"]
+[ext_resource type="Texture2D" uid="uid://buk5ulc57ss4e" path="res://Ables/Pills/BA1F7035D0E7DFECA197D702FF8E196C.png" id="2_wjhsv"]
 
 [resource]
 script = ExtResource("1_o6jke")

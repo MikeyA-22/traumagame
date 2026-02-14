@@ -11,13 +11,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var dampener = 0.1
 
 @onready var player = $".."
-@onready var skeleton = %Skeleton3D
-@onready var animator = $Skeleton3D/AnimationPlayer as AnimationPlayer
+@onready var skeleton = %GeneralSkeleton2
+@onready var animator = $GeneralSkeleton2/AnimationPlayer as AnimationPlayer
 #@onready var combat = $Combat as HumanoidCombat
 @onready var interact = $InteractManager as Interact
 #@export var objects : Array[Pickable]
 @onready var active_object: Pickable
-@onready var right_hand = $RightHand
+@onready var right_hand = $RightHand/Right
 @onready var inventory = $Inventory as Node
 @onready var Photobook = $Photobook
 @onready var hidden

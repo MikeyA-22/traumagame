@@ -1,0 +1,355 @@
+[gd_scene load_steps=28 format=3 uid="uid://dssk2h0uoitqa"]
+
+[ext_resource type="Script" uid="uid://dbacw7ql5gxcj" path="res://AI_LAB(NOT PART OF GAME)/Game_Manager.gd" id="1_wgts8"]
+[ext_resource type="Script" uid="uid://cwnrcxhn7f0aj" path="res://AI_LAB(NOT PART OF GAME)/pong_root.gd" id="2_sarxd"]
+[ext_resource type="Script" uid="uid://bhy15oftu33ug" path="res://AI_LAB(NOT PART OF GAME)/PongEnemy.gd" id="3_yd65e"]
+[ext_resource type="Script" uid="uid://d0g66qs3oq1eu" path="res://bt_selector.gd" id="5_jhtpg"]
+[ext_resource type="Script" uid="uid://eyfj7b1majcf" path="res://Behaviour Tree/BT_scripts/blackboard.gd" id="5_sae0q"]
+[ext_resource type="Script" uid="uid://c2i6ef7q1wxqq" path="res://Behaviour Tree/BT_scripts/bt_condition.gd" id="6_sae0q"]
+[ext_resource type="Script" uid="uid://d10xieqky3rm" path="res://Behaviour Tree/BT_scripts/sequencer.gd" id="7_fpktk"]
+[ext_resource type="Script" uid="uid://ddi1nbt18wif8" path="res://AI_LAB(NOT PART OF GAME)/is_ball_in_range.gd" id="7_sae0q"]
+[ext_resource type="Script" uid="uid://gbq8d21ovpo2" path="res://AI_LAB(NOT PART OF GAME)/done.gd" id="8_adej5"]
+[ext_resource type="Script" uid="uid://c2s76yf3exru0" path="res://AI_LAB(NOT PART OF GAME)/go_to_ball.gd" id="9_fpktk"]
+[ext_resource type="Script" uid="uid://brjhpyb7tm77x" path="res://Behaviour Tree/BT_scripts/bt_action.gd" id="9_ghg4i"]
+[ext_resource type="Script" uid="uid://2uoqjqq1st0h" path="res://AI_LAB(NOT PART OF GAME)/ball_scored.gd" id="10_8jvpw"]
+[ext_resource type="Script" uid="uid://b5ycoo7d7rm4u" path="res://AI_LAB(NOT PART OF GAME)/moving.gd" id="11_8jvpw"]
+[ext_resource type="Script" uid="uid://dl6a85ipbv35t" path="res://AI_LAB(NOT PART OF GAME)/increase_score.gd" id="11_sarxd"]
+[ext_resource type="Script" uid="uid://bevlj4dlki6r6" path="res://AI_LAB(NOT PART OF GAME)/start_game_pong.gd" id="12_ahkaj"]
+[ext_resource type="Script" uid="uid://cmln0c5cap62f" path="res://AI_LAB(NOT PART OF GAME)/pongmove.gd" id="12_sarxd"]
+
+[sub_resource type="Resource" id="Resource_fpktk"]
+script = ExtResource("5_sae0q")
+blackboard = {
+"ball_pos": null,
+"my_pos": Vector2(1000, 391)
+}
+metadata/_custom_type_script = "uid://eyfj7b1majcf"
+
+[sub_resource type="Gradient" id="Gradient_1ste2"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vr5fe"]
+gradient = SubResource("Gradient_1ste2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr5fe"]
+size = Vector2(1161, 20)
+
+[sub_resource type="Gradient" id="Gradient_vr5fe"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wgts8"]
+gradient = SubResource("Gradient_vr5fe")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ste2"]
+size = Vector2(30, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57ooi"]
+size = Vector2(435, 632)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wgts8"]
+radius = 10.198039
+
+[sub_resource type="Gradient" id="Gradient_wgts8"]
+offsets = PackedFloat32Array(0, 0.22131148, 0.24473068, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yd65e"]
+gradient = SubResource("Gradient_wgts8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("Ball", "player_paddle", "enemy_paddle")]
+script = ExtResource("1_wgts8")
+Ball = NodePath("Ball")
+player_paddle = NodePath("Pong")
+enemy_paddle = NodePath("Enemy")
+
+[node name="root" type="Node" parent="." node_paths=PackedStringArray("Ball", "player_paddle", "enemy_paddle", "actor")]
+script = ExtResource("2_sarxd")
+Ball = NodePath("../Ball")
+player_paddle = NodePath("../Pong")
+enemy_paddle = NodePath("../Enemy")
+actor = NodePath("../Enemy")
+blackboard_resource = SubResource("Resource_fpktk")
+metadata/_custom_type_script = "uid://dwvxf1q0i0uf3"
+
+[node name="Selector" type="Node" parent="root"]
+script = ExtResource("5_jhtpg")
+metadata/_custom_type_script = "uid://d0g66qs3oq1eu"
+
+[node name="EnemySelector" type="Node" parent="root/Selector"]
+script = ExtResource("5_jhtpg")
+metadata/_custom_type_script = "uid://d0g66qs3oq1eu"
+
+[node name="EnemySequencer" type="Node" parent="root/Selector/EnemySelector"]
+script = ExtResource("7_fpktk")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="Is ball in range?" type="Node" parent="root/Selector/EnemySelector/EnemySequencer"]
+script = ExtResource("7_sae0q")
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Go to ball" type="Node" parent="root/Selector/EnemySelector/EnemySequencer" node_paths=PackedStringArray("ball")]
+script = ExtResource("9_fpktk")
+ball = NodePath("../../../../../Ball")
+speed = 500.0
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="NearBall?" type="Node" parent="root/Selector/EnemySelector/EnemySequencer"]
+script = ExtResource("8_adej5")
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="PlayerSequencer" type="Node" parent="root/Selector"]
+script = ExtResource("7_fpktk")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="Moving?" type="Node" parent="root/Selector/PlayerSequencer"]
+script = ExtResource("11_8jvpw")
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="Move" type="Node" parent="root/Selector/PlayerSequencer" node_paths=PackedStringArray("player")]
+script = ExtResource("12_sarxd")
+player = NodePath("../../../../Pong")
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="ScoreSelector" type="Node" parent="root/Selector"]
+script = ExtResource("5_jhtpg")
+metadata/_custom_type_script = "uid://d0g66qs3oq1eu"
+
+[node name="PlayerScoreSequencer" type="Node" parent="root/Selector/ScoreSelector"]
+script = ExtResource("7_fpktk")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="BallScored?" type="Node" parent="root/Selector/ScoreSelector/PlayerScoreSequencer"]
+script = ExtResource("10_8jvpw")
+scorer_name = "player"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="IncreaseScore" type="Node" parent="root/Selector/ScoreSelector/PlayerScoreSequencer" node_paths=PackedStringArray("label")]
+script = ExtResource("11_sarxd")
+label = NodePath("../../../../../PlayerLabel")
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="StartGame" type="Node" parent="root/Selector/ScoreSelector/PlayerScoreSequencer" node_paths=PackedStringArray("our_root")]
+script = ExtResource("12_ahkaj")
+our_root = NodePath("../../../..")
+direction = Vector2(1, 0)
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="EnemyScoreSequencer" type="Node" parent="root/Selector/ScoreSelector"]
+script = ExtResource("7_fpktk")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="BallScored?" type="Node" parent="root/Selector/ScoreSelector/EnemyScoreSequencer"]
+script = ExtResource("10_8jvpw")
+scorer_name = "enemy"
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="IncreaseScore" type="Node" parent="root/Selector/ScoreSelector/EnemyScoreSequencer" node_paths=PackedStringArray("label")]
+script = ExtResource("11_sarxd")
+label = NodePath("../../../../../EnemyLabel")
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="StartGame" type="Node" parent="root/Selector/ScoreSelector/EnemyScoreSequencer" node_paths=PackedStringArray("our_root")]
+script = ExtResource("12_ahkaj")
+our_root = NodePath("../../../..")
+direction = Vector2(-1, 0)
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="InteractionSequencer" type="Node" parent="root/Selector"]
+script = ExtResource("7_fpktk")
+metadata/_custom_type_script = "uid://d10xieqky3rm"
+
+[node name="InteractionHappened?" type="Node" parent="root/Selector/InteractionSequencer"]
+script = ExtResource("6_sae0q")
+metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
+
+[node name="ExecuteInteraction" type="Node" parent="root/Selector/InteractionSequencer"]
+script = ExtResource("9_ghg4i")
+metadata/_custom_type_script = "uid://brjhpyb7tm77x"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 647.0
+texture = SubResource("GradientTexture2D_vr5fe")
+
+[node name="PlayerLabel" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 98.0
+offset_right = 195.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 48
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyLabel" type="Label" parent="."]
+offset_left = 989.0
+offset_top = 98.0
+offset_right = 1084.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 48
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Top" type="StaticBody2D" parent="Walls"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Top"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/Top"]
+texture_scale = Vector2(100, 1)
+polygon = PackedVector2Array(0.009986588, -7.239717, 1151.7252, -7.6688123, 1151.9542, 8.752285, 0, 8)
+uv = PackedVector2Array(-16, -8, -8, -8.000001, -8, 0, -16, 0)
+
+[node name="TopArea" type="Area2D" parent="Walls/Top"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Top/TopArea"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="Bottom" type="StaticBody2D" parent="Walls"]
+position = Vector2(0, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Bottom"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/Bottom"]
+texture_scale = Vector2(100, 1)
+polygon = PackedVector2Array(0.009986588, -7.239717, 1151.7252, -7.6688123, 1151.9542, 8.752285, 0, 8)
+uv = PackedVector2Array(-16, -8, -8, -8.000001, -8, 0, -16, 0)
+
+[node name="BottomArea" type="Area2D" parent="Walls/Bottom"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Bottom/BottomArea"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="LeftGoal" type="StaticBody2D" parent="Walls"]
+position = Vector2(-24, 647)
+rotation = -1.5707964
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftGoal"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/LeftGoal"]
+texture_scale = Vector2(100, 1)
+polygon = PackedVector2Array(0.009986588, -7.239717, 1151.7252, -7.6688123, 1151.9542, 8.752285, 0, 8)
+uv = PackedVector2Array(-16, -8, -8, -8.000001, -8, 0, -16, 0)
+
+[node name="LeftArea" type="Area2D" parent="Walls/LeftGoal"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftGoal/LeftArea"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="RightGoal" type="StaticBody2D" parent="Walls"]
+position = Vector2(1176, 647)
+rotation = -1.5707964
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightGoal"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/RightGoal"]
+texture_scale = Vector2(100, 1)
+polygon = PackedVector2Array(0.009986588, -7.239717, 1151.7252, -7.6688123, 1151.9542, 8.752285, 0, 8)
+uv = PackedVector2Array(-16, -8, -8, -8.000001, -8, 0, -16, 0)
+
+[node name="RightArea" type="Area2D" parent="Walls/RightGoal"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightGoal/RightArea"]
+position = Vector2(570.5, 0)
+shape = SubResource("RectangleShape2D_vr5fe")
+
+[node name="Pong" type="CharacterBody2D" parent="."]
+position = Vector2(100, 404)
+motion_mode = 1
+slide_on_ceiling = false
+
+[node name="Polygon2D" type="Polygon2D" parent="Pong"]
+offset = Vector2(-19.61, -18.93)
+texture = SubResource("GradientTexture2D_wgts8")
+polygon = PackedVector2Array(8.116304, 48.10424, 9.970224, -9.72322, 31.111832, -12.766991, 33.087334, 47.529854)
+uv = PackedVector2Array(2.2857056, 7.428314, 130.85715, -46.28598, 49.142853, 15.428299, 39.42856, 46.285446)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pong"]
+shape = SubResource("RectangleShape2D_1ste2")
+
+[node name="PlayerArea" type="Area2D" parent="Pong"]
+collision_mask = 6
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pong/PlayerArea"]
+shape = SubResource("RectangleShape2D_1ste2")
+
+[node name="Enemy" type="CharacterBody2D" parent="." node_paths=PackedStringArray("label")]
+position = Vector2(1000, 391)
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_yd65e")
+label = NodePath("../EnemyLabel")
+
+[node name="Polygon2D" type="Polygon2D" parent="Enemy"]
+offset = Vector2(-19.61, -18.93)
+texture = SubResource("GradientTexture2D_wgts8")
+polygon = PackedVector2Array(8.116304, 48.10424, 9.970224, -9.72322, 31.111832, -12.766991, 33.087334, 47.529854)
+uv = PackedVector2Array(2.2857056, 7.428314, 130.85715, -46.28598, 49.142853, 15.428299, 39.42856, 46.285446)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("RectangleShape2D_1ste2")
+
+[node name="EnemyArea" type="Area2D" parent="Enemy"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy/EnemyArea"]
+shape = SubResource("RectangleShape2D_1ste2")
+
+[node name="BallRange" type="Area2D" parent="."]
+position = Vector2(1000, 391)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BallRange"]
+position = Vector2(-207.5, -64)
+shape = SubResource("RectangleShape2D_57ooi")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(571, 372)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_wgts8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+texture = SubResource("GradientTexture2D_yd65e")
+
+[connection signal="body_entered" from="Walls/Top/TopArea" to="." method="_on_top_area_body_entered"]
+[connection signal="body_entered" from="Walls/Bottom/BottomArea" to="." method="_on_bottom_area_body_entered"]
+[connection signal="body_entered" from="Walls/LeftGoal/LeftArea" to="root" method="_on_left_area_body_entered"]
+[connection signal="body_entered" from="Walls/RightGoal/RightArea" to="root" method="_on_right_area_body_entered"]
+[connection signal="body_entered" from="Pong/PlayerArea" to="." method="_on_player_area_body_entered"]
+[connection signal="body_entered" from="Enemy/EnemyArea" to="." method="_on_enemy_area_body_entered"]
+[connection signal="body_entered" from="BallRange" to="root" method="_on_ball_range_body_entered"]
+[connection signal="body_exited" from="BallRange" to="root" method="_on_ball_range_body_exited"]

@@ -23,6 +23,7 @@ UIAnimation="*res://addons/godot_ui_animations/UIAnimationHandler.tscn"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [editor]
@@ -116,9 +117,13 @@ photobook={
 [layer_names]
 
 3d_render/layer_2="interactable"
+2d_physics/layer_1="Paddles"
 3d_physics/layer_1="player"
+2d_physics/layer_2="Ball"
 3d_physics/layer_2="interactable"
+2d_physics/layer_3="Walls"
 3d_physics/layer_3="ground"
+2d_physics/layer_4="Goals"
 3d_physics/layer_4="rope"
 3d_physics/layer_5="crow"
 3d_physics/layer_6="enemy"

@@ -2,13 +2,14 @@ extends State
 class_name PillsState
 #Step 1: redefine your class_name
 
-const transition_timing = 0.3
+const transition_timing = 3.333
+
 var pills_amount = 5
 @onready var inventory_display = $"../Inventory/InventoryDisplay"
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
-	animation = "pick"
-	move_name = "pick"
+	animation = "Pills"
+	move_name = "Pills"
 
 # Step 3: implement a check_relevance function
 func check_request(input: InputPackage):

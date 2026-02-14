@@ -7,14 +7,14 @@ signal batteries
 
 @onready var inventory = $"../Inventory"
 var battery_charge: int = 50
-const transition_timing = 0.1
+const transition_timing = 1.333
 var item_data: ItemData = load("res://Resource/Batteries.tres")
 #Step 1: redefine your class_name
 
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
-	animation = "pick"
-	move_name = "pick"
+	animation = "Batteries"
+	move_name = "Batteries"
 	#start_marker = "start"
 	#end_marker = "stop"
 

@@ -51,34 +51,41 @@
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
 			"title": "Todo",
 			"tasks": [
-				"c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
-				"044a71d0-8635-4ca9-bca2-983a4bc2a860",
-				"25b56742-bdf6-47f5-b553-fe213102ecc0",
-				"911c0794-6b92-44f3-8dc3-0869a5cbfd13",
-				"00162ebc-db8b-45cb-bd10-4b27261ae87e",
+				"452ccf0a-5514-4bd6-84b8-c5f96291a6d4",
 				"5ed1d3ac-67a0-42e0-b0f7-9c1dc3a37d35",
 				"d3ce35d9-37fb-4505-9378-01046e1c6842",
-				"b97a2357-e7ab-449b-8f23-fd139feee3d8",
-				"28233433-f752-4e47-bf64-8b876af6bbb0"
+				"b97a2357-e7ab-449b-8f23-fd139feee3d8"
 			]
 		},
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing",
 			"tasks": [
-				"3e34a01b-2556-4b11-b206-1be73d734aa3",
+				"af814cd4-2f09-4a7e-89fe-d38ab8828d1f",
+				"414fa42e-7ab7-423b-a5c9-b5e192d99948",
+				"d157a1f2-9a76-4d33-87f5-c522d714d632",
 				"e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
-				"46a8d6c7-3a6f-4fb2-8583-314254a446d9",
+				"25b56742-bdf6-47f5-b553-fe213102ecc0",
 				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
 				"a21e4b9a-47ab-4127-b153-7c14cf32fb8d",
-				"a1917cc1-6279-484d-9b62-62b761bdaa67",
-				"5ab85688-a91f-4244-9197-23b621d59adb"
+				"5ab85688-a91f-4244-9197-23b621d59adb",
+				"c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
+				"044a71d0-8635-4ca9-bca2-983a4bc2a860",
+				"17b4d706-f8b1-4965-9b5e-796ae87fddc5"
 			]
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"e55933b2-b273-49e2-a766-0ca3dc064d93",
+				"a1917cc1-6279-484d-9b62-62b761bdaa67",
+				"c9a934ab-b19b-4b51-a183-6895a05d38f9",
+				"376c569a-7dc3-4738-a308-490bdf783e73",
+				"00162ebc-db8b-45cb-bd10-4b27261ae87e",
+				"911c0794-6b92-44f3-8dc3-0869a5cbfd13",
+				"3e34a01b-2556-4b11-b206-1be73d734aa3",
+				"46a8d6c7-3a6f-4fb2-8583-314254a446d9",
 				"8590b930-5c5b-4ece-aea3-6ea17be5f6c5",
 				"635a45b1-32a1-45bc-9778-c7d65a8725de",
 				"ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
@@ -337,7 +344,7 @@
 		},
 		{
 			"uuid": "a21e4b9a-47ab-4127-b153-7c14cf32fb8d",
-			"title": "Remove prints and comment code",
+			"title": "Remove prints and comment code? IS THIS NECESSARY",
 			"description": "",
 			"category": "abae2c11-19e5-48a8-a5b8-9fe2f3522ad7",
 			"steps": []
@@ -372,7 +379,7 @@
 		},
 		{
 			"uuid": "044a71d0-8635-4ca9-bca2-983a4bc2a860",
-			"title": "Laughing sfx",
+			"title": "Crying sfx",
 			"description": "",
 			"category": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
 			"steps": []
@@ -392,13 +399,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "28233433-f752-4e47-bf64-8b876af6bbb0",
-			"title": "Interactable and pickable tool",
-			"description": "",
-			"category": "9434f123-45e1-4235-84c0-ad30ba7c8ab9",
-			"steps": []
-		},
-		{
 			"uuid": "1a3d4b94-acae-4989-8b00-a4d6ea6d0597",
 			"title": "Crow caw vfx",
 			"description": "",
@@ -407,7 +407,7 @@
 		},
 		{
 			"uuid": "5ab85688-a91f-4244-9197-23b621d59adb",
-			"title": "Windows Carpets Doors",
+			"title": "Doors",
 			"description": "",
 			"category": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
 			"steps": []
@@ -436,6 +436,62 @@
 		{
 			"uuid": "a1917cc1-6279-484d-9b62-62b761bdaa67",
 			"title": "Consider flashing lights appearing later",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "376c569a-7dc3-4738-a308-490bdf783e73",
+			"title": "Windows Carpets",
+			"description": "",
+			"category": "b94d05df-0d3a-4f10-8bd9-645ac18c8942",
+			"steps": []
+		},
+		{
+			"uuid": "d157a1f2-9a76-4d33-87f5-c522d714d632",
+			"title": "Bloody hands",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "452ccf0a-5514-4bd6-84b8-c5f96291a6d4",
+			"title": "Redo Pills Animation",
+			"description": "",
+			"category": "dc327489-82ef-4e57-a043-9d268687a2be",
+			"steps": []
+		},
+		{
+			"uuid": "c9a934ab-b19b-4b51-a183-6895a05d38f9",
+			"title": "Light Particles",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "af814cd4-2f09-4a7e-89fe-d38ab8828d1f",
+			"title": "Pills Implementation",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "414fa42e-7ab7-423b-a5c9-b5e192d99948",
+			"title": "TextBox Implementation",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "17b4d706-f8b1-4965-9b5e-796ae87fddc5",
+			"title": "Audio Implementation",
+			"description": "",
+			"category": "445b946d-5169-4e5c-b959-ac82680d2e43",
+			"steps": []
+		},
+		{
+			"uuid": "e55933b2-b273-49e2-a766-0ca3dc064d93",
+			"title": "Light work, Cookies",
 			"description": "",
 			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
 			"steps": []

@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bihop1oxwj67m"]
+[gd_scene load_steps=4 format=3 uid="uid://bihop1oxwj67m"]
 
 [ext_resource type="Script" uid="uid://b0wovfelipykb" path="res://Menu/game_over.gd" id="1_t716e"]
+[ext_resource type="Texture2D" uid="uid://cx5lsaltuw3sr" path="res://Menu/Gameover_pic.jpg" id="2_cteaj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cteaj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -11,29 +24,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t716e")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("2_cteaj")
+expand_mode = 1
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(120, 40)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -60.0
-offset_top = -20.0
+offset_top = -40.0
 offset_right = 60.0
-offset_bottom = 20.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+color = Color(0.31764707, 0.31764707, 0.31764707, 0)
 
 [node name="return to menu" type="Button" parent="ColorRect2"]
 custom_minimum_size = Vector2(80, 40)
@@ -49,18 +63,6 @@ offset_right = 53.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_cteaj")
 text = "return to menu"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -105.0
-offset_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-scale = Vector2(2, 2)
-text = "GAME OVER!!!"
-horizontal_alignment = 1
-uppercase = true

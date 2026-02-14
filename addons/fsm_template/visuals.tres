@@ -10,6 +10,8 @@ shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/alpha_scissor = 0.012
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_power = 1.0
 
 [resource]
 resource_name = "Material.003"

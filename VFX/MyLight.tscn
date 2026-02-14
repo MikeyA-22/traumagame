@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv7ww5i2mty82"]
+
+[ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="1_p141i"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ry6d7"]
+noise_type = 5
+seed = 5
+frequency = 0.1627
+offset = Vector3(346.94, 0, 0)
+fractal_gain = 100.0
+domain_warp_type = 1
+domain_warp_amplitude = 10.0
+domain_warp_frequency = 0.003
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_c4f25"]
+noise = SubResource("FastNoiseLite_ry6d7")
+
+[node name="OmniLight3D" type="OmniLight3D"]
+transform = Transform3D(3.563411, 0, 0, 0, 30.287706, 0, 0, 0, 3.563411, 0, 0, 0)
+light_energy = 0.1
+light_volumetric_fog_energy = 3.0
+omni_range = 1.7628316
+omni_attenuation = -2.122
+script = ExtResource("1_p141i")
+noise = SubResource("NoiseTexture3D_c4f25")
+light_multiplier = 3.0

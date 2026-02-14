@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://go0nwkxm05ck"]
+[gd_scene load_steps=19 format=3 uid="uid://go0nwkxm05ck"]
 
 [ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://addons/fsm_template/Player/Scripts/Player.gd" id="1_hqtel"]
 [ext_resource type="PackedScene" uid="uid://j5il4etq1a5a" path="res://Player/Player_ui.tscn" id="2_78wmc"]
@@ -7,16 +7,13 @@
 [ext_resource type="Script" uid="uid://ksyx12j2sj82" path="res://addons/fsm_template/Player/flashlight_receiver.gd" id="4_3dtqd"]
 [ext_resource type="Script" uid="uid://q50py11ulaxd" path="res://addons/fsm_template/Player/Interaction_catcher.gd" id="4_71weq"]
 [ext_resource type="PackedScene" uid="uid://bvyu35md1spyq" path="res://addons/fsm_template/model.tscn" id="4_k53q1"]
+[ext_resource type="Texture2D" uid="uid://gamnpcnnvd6m" path="res://VFX/Flight_cookie.png" id="5_2h7ej"]
 [ext_resource type="Script" uid="uid://xyst0hde5uas" path="res://addons/fsm_template/Player/camera_3d.gd" id="5_ctqa1"]
 [ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="7_ctqa1"]
 [ext_resource type="PackedScene" uid="uid://dmbx332sa1c3h" path="res://addons/fsm_template/visuals.tscn" id="8_od3ui"]
 [ext_resource type="Script" uid="uid://dyfit4serk60d" path="res://addons/fsm_template/Player/resources.gd" id="10_5uwn6"]
 [ext_resource type="AudioStream" uid="uid://oxq8lwd8spx4" path="res://Music/sfx/fs 1.MP3" id="11_qrbxm"]
 [ext_resource type="PackedScene" uid="uid://ca52yb5i5ot6e" path="res://Crow/noose_bone.tscn" id="12_ctqa1"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
-radius = 0.290004
-height = 1.84675
 
 [sub_resource type="Animation" id="Animation_q4017"]
 length = 0.1
@@ -30,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 1.5, 0.057)]
+"values": [Vector3(0, 1.75, 0.2)]
 }
 
 [sub_resource type="Animation" id="Animation_78wmc"]
@@ -42,10 +39,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8),
+"times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 1.5, 0.088), Vector3(0, 1.45, 0.088), Vector3(0, 1.5, 0.088)]
+"values": [Vector3(0, 1.65, 0.2), Vector3(0, 1.75, 0.2), Vector3(0, 1.65, 0.2)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -71,28 +68,23 @@ _data = {
 &"head_bob": SubResource("Animation_78wmc")
 }
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
+radius = 0.290004
+height = 1.84675
+
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("resources")]
 script = ExtResource("1_hqtel")
 resources = NodePath("Resources")
 
-[node name="UI" parent="." instance=ExtResource("2_78wmc")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.861784, 0.0167608)
-shape = SubResource("CapsuleShape3D_sh265")
-
-[node name="visuals" parent="." instance=ExtResource("8_od3ui")]
-
-[node name="LocalCamera" type="Node3D" parent="visuals/Cube_022" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.381, 0.08)
+[node name="LocalCamera" type="Node3D" parent="."]
 script = ExtResource("2_k53q1")
 
-[node name="Camera3D" type="Camera3D" parent="visuals/Cube_022/LocalCamera"]
-transform = Transform3D(-1, 1.15622e-08, 8.66548e-08, -3.55271e-15, 0.991216, -0.132256, -8.74228e-08, -0.132256, -0.991216, 0, 1.5, 0.057)
+[node name="Camera3D" type="Camera3D" parent="LocalCamera"]
+transform = Transform3D(-1, 1.1562182e-08, 8.665484e-08, -3.55271e-15, 0.99121565, -0.13225596, -8.74228e-08, -0.13225596, -0.99121565, 0, 1.75, 0.2)
 current = true
 script = ExtResource("5_ctqa1")
 
-[node name="InteractionCatcher" type="RayCast3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
+[node name="InteractionCatcher" type="RayCast3D" parent="LocalCamera/Camera3D"]
 target_position = Vector3(0, 0, -2)
 collision_mask = 2
 hit_from_inside = true
@@ -100,11 +92,12 @@ collide_with_areas = true
 debug_shape_custom_color = Color(0.55, 0, 0, 1)
 script = ExtResource("4_71weq")
 
-[node name="Flashlight Receiver" type="SpotLight3D" parent="visuals/Cube_022/LocalCamera/Camera3D" node_paths=PackedStringArray("bat_timer")]
+[node name="Flashlight Receiver" type="SpotLight3D" parent="LocalCamera/Camera3D" node_paths=PackedStringArray("bat_timer")]
 light_color = Color(0.949333, 0.803302, 0.72842, 1)
 light_energy = 0.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
+light_projector = ExtResource("5_2h7ej")
 shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = -0.77
@@ -115,14 +108,14 @@ flashlight = ExtResource("7_ctqa1")
 bat_timer = NodePath("BatteryTimer")
 wait_time = 50.0
 
-[node name="BatteryTimer" type="Timer" parent="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver"]
+[node name="BatteryTimer" type="Timer" parent="LocalCamera/Camera3D/Flashlight Receiver"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="visuals/Cube_022/LocalCamera/Camera3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LocalCamera/Camera3D"]
 libraries = {
 &"": SubResource("AnimationLibrary_5uwn6")
 }
 
-[node name="Fstep Player" type="AudioStreamPlayer3D" parent="visuals/Cube_022/LocalCamera/Camera3D"]
+[node name="Fstep Player" type="AudioStreamPlayer3D" parent="LocalCamera/Camera3D"]
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, 7.10543e-15, -1.82554, 0.243578)
 stream = ExtResource("11_qrbxm")
 volume_db = 40.0
@@ -130,15 +123,24 @@ unit_size = 30.0
 max_db = 6.0
 parameters/looping = true
 
+[node name="UI" parent="." instance=ExtResource("2_78wmc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.861784, 0.0167608)
+shape = SubResource("CapsuleShape3D_sh265")
+
+[node name="visuals" parent="." instance=ExtResource("8_od3ui")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
 [node name="Model" parent="." instance=ExtResource("4_k53q1")]
 
 [node name="InputGatherer" type="Node" parent="."]
 script = ExtResource("3_i3pqv")
 
 [node name="Crow" parent="." node_paths=PackedStringArray("player", "camera") instance=ExtResource("12_ctqa1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13424128, 1.5587194, -0.20632952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36200655, 1.5587194, 0.04044515)
 player = NodePath("..")
-camera = NodePath("../visuals/Cube_022/LocalCamera/Camera3D")
+camera = NodePath("../LocalCamera/Camera3D")
 
 [node name="Resources" type="Node" parent="."]
 script = ExtResource("10_5uwn6")
@@ -147,6 +149,6 @@ script = ExtResource("10_5uwn6")
 doppler_tracking = 1
 current = true
 
-[connection signal="timeout" from="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver/BatteryTimer" to="visuals/Cube_022/LocalCamera/Camera3D/Flashlight Receiver" method="_on_battery_timer_timeout"]
+[connection signal="timeout" from="LocalCamera/Camera3D/Flashlight Receiver/BatteryTimer" to="LocalCamera/Camera3D/Flashlight Receiver" method="_on_battery_timer_timeout"]
 
 [editable path="visuals"]

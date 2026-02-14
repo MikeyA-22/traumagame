@@ -1,17 +1,19 @@
 extends Control
 
 @onready var progress_bar = $ProgressBar
+@onready var loading_anim = $AnimatedSprite2D
 
 var progress =[]
-var scene_name
+@export var scene_name: String
 var scene_load_status = 0
 var progress_value
 
 
 
 func _ready() -> void:
-	scene_name = "res://Tutorial Level/tutorial_level.tscn"
+	scene_name = Game_Global.loadable_scene
 	ResourceLoader.load_threaded_request(scene_name)
+	loading_anim.play("loading")
 	
 
 func _process(delta: float) -> void:

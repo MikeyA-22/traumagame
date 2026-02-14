@@ -17,7 +17,7 @@ var info_statement: String = "OFF"
 @export var wait_time: float
 @export var bat_min: int = 20
 var battery_percent: int = 100
-@onready var inventory_display = $"../../../../../Model/Inventory"/InventoryDisplay
+@onready var inventory_display = $"../../../Model/Inventory/InventoryDisplay"
 
 
 func _ready() -> void:

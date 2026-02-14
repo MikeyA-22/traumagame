@@ -18,6 +18,7 @@ func _ready() -> void:
 	interactable_actions = {"light_action_pressed":"hidden"}
 	SigBus.connect("HIDE", hide_now)
 	hide_label.visible = false
+	print("At ready, player is: ", player)
 	if hidden:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -104,7 +105,7 @@ func hide_player(player):
 		hide_label.visible = false
 	else:
 		player.camera_mount.player_camera.make_current()
-		player.set_position(hide_point.global_position)
+		player.set_position(hide_point.global_position - hide_offset)
 		player.visible = true
 
 	Game_Global.hidden = hidden
@@ -116,4 +117,5 @@ func hide_now(sig_val):
 	if data.spot != self:
 		print("Not ",self," my spot")
 		return # not my hiding spot
+	print("Player is: ", data.player)
 	hide_player(data.player)

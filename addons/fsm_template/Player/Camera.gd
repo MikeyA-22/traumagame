@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var player = $"../../.."
+@onready var player = $".."
 @onready var player_camera = $Camera3D
 var mouse_is_captured = true
 @onready var anim_player : AnimationPlayer = $Camera3D/AnimationPlayer

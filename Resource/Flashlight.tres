@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="1_qij17"]
 [ext_resource type="PackedScene" uid="uid://coynvr6waaniq" path="res://Ables/Flashlight/flashlight.tscn" id="1_ypl2x"]
-[ext_resource type="Texture2D" uid="uid://qeeh162hiqpv" path="res://UI/flashlight.png" id="2_3g24g"]
+[ext_resource type="Texture2D" uid="uid://c8kv4mf6c8q76" path="res://Ables/Flashlight/flashlight.png" id="2_3g24g"]
 
 [resource]
 script = ExtResource("1_qij17")

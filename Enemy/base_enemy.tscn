@@ -2774,6 +2774,5 @@ target_desired_distance = 0.1
 path_height_offset = 0.1
 max_neighbors = 2
 keep_y_velocity = false
-debug_enabled = true
 
 [connection signal="timeout" from="StunTimer" to="StateMachine/Stunned" method="_on_stun_timer_timeout"]

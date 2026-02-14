@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://db5t6a3c5q7l7"]
+
+[ext_resource type="Texture2D" uid="uid://bupmh2sc8bhuj" path="res://Player/char_rigged_Char_tex.png" id="1_n8qhb"]
+
+[resource]
+resource_name = "char_m"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+emission_enabled = true
+emission_texture = ExtResource("1_n8qhb")
+texture_filter = 0

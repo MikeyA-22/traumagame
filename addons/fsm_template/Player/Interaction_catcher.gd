@@ -3,7 +3,7 @@ extends RayCast3D
 
 var reticlenumber: float = 0
 var reticlenumber2: float  = 0
-@onready var root_player = $"../../../../.."
+@onready var root_player = $"../../.."
 var sig
 var sig_value
 var interactable = false
@@ -22,6 +22,7 @@ func _process(delta:float) -> void:
 		else:
 			assess_interactable(collider)
 			if Input.is_action_just_pressed("interact") and interactable:
+				print("SIG VALUE IS:", sig_value)
 				sig.emit(sig_value)
 	else:
 		Game_Global.is_pickable = false
@@ -74,5 +75,6 @@ func assess_interactable(collider):
 	reticlenumber2 = data.get("reticle2", 0)
 	sig = data.sig
 	sig_value = data.sig_value
+	
 
 	Game_Global.current_interactor = collider

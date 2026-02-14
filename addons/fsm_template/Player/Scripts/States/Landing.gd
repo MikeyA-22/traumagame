@@ -6,7 +6,7 @@ const transition_timing = 0.2
 
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
-	animation = "landing"
+	animation = "idle"
 	start_marker = "start"
 	end_marker = "stop"
 

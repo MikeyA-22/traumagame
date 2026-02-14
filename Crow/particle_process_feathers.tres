@@ -41,8 +41,8 @@ curve = SubResource("Curve_abvlb")
 
 [resource]
 particle_flag_rotate_y = true
-emission_shape = 1
-emission_sphere_radius = 0.15
+emission_shape = 3
+emission_box_extents = Vector3(0.065, 0.09, 0.08)
 angle_min = -445.19998
 angle_max = 441.1
 angle_curve = SubResource("CurveTexture_yj6io")
