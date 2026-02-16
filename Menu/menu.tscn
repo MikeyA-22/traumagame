@@ -276,11 +276,11 @@ GO TOWARDS THE CANDLES!!"
 [node name="StartButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(362, 167)
 layout_mode = 0
-offset_left = 522.0
+offset_left = 263.00006
 offset_top = 297.0
-offset_right = 884.0
+offset_right = 625.00006
 offset_bottom = 464.0
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.28, 0.4)
 focus_mode = 0
 texture_hover = ExtResource("3_8w4re")
 ignore_texture_size = true
@@ -307,11 +307,11 @@ expand_mode = 1
 [node name="Settings" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(362, 167)
 layout_mode = 0
-offset_left = 522.0
+offset_left = 263.00006
 offset_top = 395.0
-offset_right = 884.0
+offset_right = 625.00006
 offset_bottom = 562.0
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.28, 0.4)
 texture_hover = ExtResource("3_8w4re")
 ignore_texture_size = true
 stretch_mode = 0
@@ -337,11 +337,11 @@ expand_mode = 1
 [node name="Exit" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(362, 167)
 layout_mode = 0
-offset_left = 522.0
+offset_left = 263.00006
 offset_top = 494.0
-offset_right = 884.0
+offset_right = 625.00006
 offset_bottom = 661.0
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.28, 0.4)
 texture_hover = ExtResource("3_8w4re")
 ignore_texture_size = true
 stretch_mode = 0
@@ -364,11 +364,11 @@ texture = ExtResource("4_ofseh")
 expand_mode = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(550, 76)
-scale = Vector2(0.17536218, 0.13648145)
+position = Vector2(534, 65)
+scale = Vector2(0.11981227, 0.098796286)
 sprite_frames = SubResource("SpriteFrames_drmwo")
 animation = &"animation"
-frame_progress = 0.27690542
+frame_progress = 0.3857856
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("63_gbw5f")

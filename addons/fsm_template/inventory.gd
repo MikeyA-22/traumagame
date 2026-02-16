@@ -5,6 +5,7 @@ class_name Inventory
 @onready var model = $".."
 @onready var items = []
 @onready var right_hand = $"../RightHand/Right"
+@onready var left_hand = $"../LeftHand/Left"
 @onready var active_item: Pickable
 @onready var inventory_display = $InventoryDisplay
 
@@ -42,7 +43,7 @@ func switch_item():
 		active_item.free()
 		active_item = items.front()._load_item()
 		items.pop_front()
-		right_hand.add_child(active_item)
+		assign_item(active_item)
 		inventory_display.display(item_data)
 		set_active_item(active_item)
 	else:
@@ -60,10 +61,24 @@ func set_active_item(item: Pickable):
 	inventory_display.display(item_data)
 	print(item_data.item_name)
 	#object.basis = right_hand.basis
-	item.reparent(right_hand)
-	item.transform = right_hand.transform
-	item.position = Vector3.ZERO
-	item.remove_outline()
+	put_item_in_hand(item)
 
 func remove_item_data(item_data: ItemData):
 	items.erase(item_data)
+	
+func assign_item(active_item):
+	if active_item.name == "Flashlight":
+		left_hand.add_child(active_item)
+	else:
+		right_hand.add_child(active_item)
+
+func put_item_in_hand(item):
+	if item.item_data.item_name != "Flashlight":
+		item.reparent(right_hand)
+		item.transform = right_hand.transform
+	else:
+		print("PUTTING IN LEFT HAND!!!")
+		item.reparent(left_hand)
+		item.transform = left_hand.transform
+	item.position = Vector3.ZERO
+	item.remove_outline()

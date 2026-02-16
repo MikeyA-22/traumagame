@@ -420,7 +420,7 @@ shadow_mesh = SubResource("ArrayMesh_phwex")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el4hw"]
 emission_enabled = true
-emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -459,7 +459,7 @@ shadow_mesh = SubResource("ArrayMesh_grbf7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlvrw"]
 emission_enabled = true
-emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+emission = Color(1, 1, 1, 1)
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0oswy"]
@@ -579,7 +579,7 @@ shadow_mesh = SubResource("ArrayMesh_4a01q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5f5h"]
 emission_enabled = true
-emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -652,7 +652,7 @@ shadow_mesh = SubResource("ArrayMesh_f0ne6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igodg"]
 emission_enabled = true
-emission = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -2012,8 +2012,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light"]
 transform = Transform3D(3.563411, 0, 0, 0, 30.287706, 0, 0, 0, 3.563411, 0, -29.79332, 0)
-light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
-light_energy = 0.7
+light_energy = 0.1
 light_volumetric_fog_energy = 3.0
 omni_range = 1.7628316
 omni_attenuation = -2.122
@@ -2038,8 +2037,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
-light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
-light_energy = 0.7
+light_energy = 0.1
 light_volumetric_fog_energy = 3.449
 omni_range = 27.477
 script = ExtResource("14_f8me0")
@@ -2057,8 +2055,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
-light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
-light_energy = 0.7
+light_energy = 0.1
 light_volumetric_fog_energy = 3.449
 omni_range = 27.477
 script = ExtResource("14_f8me0")
@@ -2078,10 +2075,10 @@ skeleton = NodePath("")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.2679443, 0, 0)
 connected_light = [NodePath("../../Light/OmniLight3D"), NodePath("../../Light2/OmniLight3D"), NodePath("../../Light3/OmniLight3D")]
 emission_obj = [NodePath("../../Light"), NodePath("../../Light2"), NodePath("../../Light3"), NodePath("../../Cube_024")]
-light_value = 0.7
+light_value = 0.1
 on = true
-starter_value = 0.7
-light_color = Color(0.9700257, 0.962158, 7.70092e-07, 1)
+starter_value = 0.1
+light_color = Color(1, 1, 1, 1)
 
 [node name="CollisionShape3D" parent="Node3D/TutV2/tutv2/LightSwitch/light_switch2" index="1"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, -0.50546265)
