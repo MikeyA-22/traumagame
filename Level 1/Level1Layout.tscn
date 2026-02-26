@@ -1,0 +1,4474 @@
+[gd_scene load_steps=16 format=4 uid="uid://du748vuy3ycgc"]
+
+[ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_bfrko"]
+[ext_resource type="Texture2D" uid="uid://c36umqa1xhhem" path="res://Level 1/walls_Substance_graph_roughness.png" id="2_tnsyo"]
+[ext_resource type="Texture2D" uid="uid://dvh3k1afhhm4" path="res://Level 1/walls_Substance_graph_normal_6.png" id="3_7la38"]
+[ext_resource type="Texture2D" uid="uid://dxkdb5b4nj3hq" path="res://Level 1/walls_floor_basecolor.png" id="4_60sww"]
+[ext_resource type="Texture2D" uid="uid://cuuou7ibvwnh" path="res://Level 1/walls_floor_metallic-floor_roughness.png" id="5_ga0a4"]
+[ext_resource type="Texture2D" uid="uid://dijpcnv7n8ih4" path="res://Level 1/walls_floor_normal.png" id="6_8xmtt"]
+[ext_resource type="PackedScene" uid="uid://b8jygrod30eaq" path="res://Player/char_rigged.glb" id="7_ga0a4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq072"]
+resource_name = "floor_washroom"
+cull_mode = 2
+albedo_texture = ExtResource("1_bfrko")
+metallic_texture = ExtResource("2_tnsyo")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_tnsyo")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_7la38")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3n0b2"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "floor_washroom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP9/AAD//wAAAAAAAP//AAD/fwAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_60sww"]
+resource_name = "walls_Plane_032"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("/38GAPj/+P//f/j/+P8GAAYABgAGAPj/"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"material": SubResource("StandardMaterial3D_fq072"),
+"name": "floor_washroom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP9/VNX//wAAAABU1f//AAD/f1TVAAAAAAAAVNUAAAAA//9U1f//AAD//1TVVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3n0b2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00kf5"]
+resource_name = "ground"
+cull_mode = 2
+albedo_texture = ExtResource("4_60sww")
+metallic = 1.0
+metallic_texture = ExtResource("5_ga0a4")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("5_ga0a4")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("6_8xmtt")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yrdk1"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "ground",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP9/AAD//wAAAAAAAP//AAD/fwAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_drr5x"]
+resource_name = "walls_Plane"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("g6AHQf////+DoP////8HQQdBB0EHQf//"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"material": SubResource("StandardMaterial3D_00kf5"),
+"name": "ground",
+"primitive": 3,
+"uv_scale": Vector4(3.936657, 3.9366567, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP9/VNX//wAAAABU1f//AAD/f1TVAAAAAAAAVNUAAAAA//9U1f//AAD//1TVVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yrdk1")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ga0a4"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"name": "floor_washroom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP9/AAD//wAAAAAAAP//AAD/fwAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8xmtt"]
+resource_name = "walls_Plane_032"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("/38GAPj/+P//f/j/+P8GAAYABgAGAPj/"),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUA"),
+"material": SubResource("StandardMaterial3D_fq072"),
+"name": "floor_washroom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP9/VNX//wAAAABU1f//AAD/f1TVAAAAAAAAVNUAAAAA//9U1f//AAD//1TVVNWqKlTVqipU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ga0a4")
+
+[node name="Level1Layout" type="Node3D"]
+
+[node name="Floor" type="Node" parent="."]
+
+[node name="floor_002" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_004" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1.9997132)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_007" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.9997132)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_008" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2.0002868)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_009" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0.00028681755)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_003" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9997132)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_006" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2.0002868)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_005" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.0002868)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_001" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor5" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor9" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor3" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor2" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor12" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor6" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor10" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor317" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor318" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor319" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor320" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor321" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor322" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor323" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor324" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor325" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor326" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor4" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor7" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor13" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor8" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor11" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor312" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor313" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor314" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor315" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor316" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor14" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor15" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor16" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor17" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor18" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor19" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor20" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor21" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor22" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor23" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor307" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor308" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor309" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor310" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor311" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor24" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor25" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor26" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor27" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor28" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor29" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor30" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor286" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor287" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor288" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor289" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor290" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor291" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor292" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor293" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor294" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor295" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor296" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor297" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor298" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor299" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor300" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor31" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor272" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor306" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor301" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor302" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor303" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor304" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor305" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor277" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor278" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor279" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor280" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor281" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor282" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor283" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor284" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor285" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor273" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor274" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor275" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor276" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor32" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor33" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor34" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor35" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor36" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor37" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor38" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor39" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor40" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor242" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor243" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor244" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor245" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor246" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor247" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor248" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor249" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor250" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor251" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor252" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor253" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor254" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor255" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor256" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor257" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor258" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor259" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor260" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor261" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor262" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor263" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor264" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor265" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor266" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor267" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor268" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor269" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor270" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor271" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor41" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor237" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor238" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor239" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor240" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor241" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor42" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor43" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor44" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor45" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor46" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor47" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor48" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor49" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor50" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor231" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor232" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor233" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor234" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor235" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor236" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor51" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor52" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor53" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor54" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor55" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor56" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor57" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor58" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor59" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor60" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor230" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor61" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor62" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor63" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor64" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor65" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor66" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor67" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor68" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor69" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor70" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor71" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor72" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor73" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor74" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor75" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor76" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor77" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor78" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor79" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor80" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor81" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor82" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor83" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor84" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor85" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor86" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor87" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(0.9999968, 3.7155965e-05, 0.0025363266, -3.8616476e-05, 0.9999998, 0.00057306903, -0.0025363048, -0.00057316554, 0.9999966, -4, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor88" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor89" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor90" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor91" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor92" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor93" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor94" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor95" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor96" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor97" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor98" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor99" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor100" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor101" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor102" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor103" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor104" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor132" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor105" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor106" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor107" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor108" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor109" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor110" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor111" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor112" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor113" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor114" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor115" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor116" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor117" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor118" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor119" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor120" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor121" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor327" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor328" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor329" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor330" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor331" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor332" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor122" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor123" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor124" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor125" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor126" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor127" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor128" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor129" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor130" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor131" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor133" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor134" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor135" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor136" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor137" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor138" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor139" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor140" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor141" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor142" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor143" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor144" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor145" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor146" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor147" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor148" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor149" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor150" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor151" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor152" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor153" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor154" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor155" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor156" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor157" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor158" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor159" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor160" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor161" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor162" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor163" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor164" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor165" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor166" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor167" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor168" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor169" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor170" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor171" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor172" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor173" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor174" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor175" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor176" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor177" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor178" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor179" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor180" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor181" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor182" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor183" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor184" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor185" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor186" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor187" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor188" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor189" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor190" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor191" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor192" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor193" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor194" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor195" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor196" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor197" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor198" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor199" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor200" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor201" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor202" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor203" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor204" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor205" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor206" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor207" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor208" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor209" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor210" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor211" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor212" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor213" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor214" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor215" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor216" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor217" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor218" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor219" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor220" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor221" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor222" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor223" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor224" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor225" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor226" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor227" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor228" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor229" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor_010" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_011" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_012" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_013" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_014" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_015" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_016" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_017" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_018" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_019" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_020" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor333" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor334" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor335" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor336" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor337" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor338" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor339" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor340" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor341" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor342" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor343" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor344" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor345" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor346" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor347" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor348" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor349" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor350" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor351" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor352" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor353" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor354" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor355" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor356" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor357" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor358" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor359" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor360" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor361" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor362" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor363" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor364" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor365" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor366" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(0.9999968, 3.7155965e-05, 0.0025363266, -3.8616476e-05, 0.9999998, 0.00057306903, -0.0025363048, -0.00057316554, 0.9999966, -4, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor367" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor368" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor369" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor370" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor371" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor372" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor373" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor374" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor375" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor376" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor377" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor378" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor379" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor380" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(0.9999968, 3.7155965e-05, 0.0025363266, -3.8616476e-05, 0.9999998, 0.00057306903, -0.0025363048, -0.00057316554, 0.9999966, -4, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor381" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor382" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor383" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor384" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor385" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor386" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor387" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor388" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor389" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor390" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor391" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor392" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor393" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor394" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(0.9999968, 3.7155965e-05, 0.0025363266, -3.8616476e-05, 0.9999998, 0.00057306903, -0.0025363048, -0.00057316554, 0.9999966, -4, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor395" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor396" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor397" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor398" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor399" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor400" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor401" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor402" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor403" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor404" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor405" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor406" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor407" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor408" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(0.9999968, 3.7155965e-05, 0.0025363266, -3.8616476e-05, 0.9999998, 0.00057306903, -0.0025363048, -0.00057316554, 0.9999966, -4, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor409" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor410" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor411" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor412" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor413" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor414" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor415" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor416" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor417" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor418" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor419" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor420" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor421" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor422" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor423" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor424" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor425" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor426" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor427" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor428" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor429" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor430" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor431" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor432" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor433" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor434" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor435" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor436" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor437" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor438" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor439" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor440" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor441" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor442" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor443" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor444" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor445" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor446" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor447" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor448" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor449" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor450" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor451" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor452" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor453" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor454" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor455" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor456" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor457" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor458" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor459" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor460" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor461" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor462" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor463" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor464" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor465" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor466" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor467" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor468" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor469" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor470" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor471" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor472" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor473" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor474" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor475" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor476" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor477" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor478" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor479" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor480" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor481" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor482" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor483" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor484" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor485" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor486" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor487" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor488" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor489" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor490" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor491" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor492" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor493" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor494" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor495" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor496" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor497" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor498" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor499" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor500" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor501" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor502" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor503" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor504" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor505" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor506" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor507" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor508" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor509" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor510" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor511" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor512" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor513" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor514" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor515" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor516" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor517" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor518" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor519" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor520" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor521" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor522" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor523" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor524" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor525" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor526" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor527" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor528" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor529" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor530" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor531" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor532" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor533" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor534" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor535" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor536" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor537" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor538" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor539" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor540" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor541" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor542" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor543" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor544" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor545" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor546" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor547" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor548" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor549" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor550" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor551" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor552" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor553" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor554" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor555" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor556" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor557" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor558" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor559" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor560" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor561" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor562" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor563" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor564" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor565" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor566" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor567" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor568" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor569" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor570" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor571" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor572" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor573" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor574" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor575" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor576" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor577" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor578" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor579" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor580" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor581" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor582" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor583" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor584" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor585" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor586" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor587" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor588" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor589" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor590" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor591" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor592" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor593" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor594" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor595" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor596" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor597" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor598" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor599" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor600" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor601" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor602" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor603" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor604" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor605" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor606" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor607" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor608" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor609" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor610" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor611" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor612" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor613" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor614" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor615" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor616" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor617" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor618" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor619" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor620" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor621" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor622" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor623" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor624" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor625" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor626" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor627" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor628" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor629" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor630" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor631" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor632" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor633" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor634" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor635" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor636" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor637" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor638" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor639" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor640" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor641" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor642" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor643" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor644" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor645" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor646" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor647" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor648" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor649" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor650" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor651" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor652" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor653" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor654" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor655" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor656" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor657" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor658" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor659" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor660" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor661" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor662" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor663" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor664" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor665" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor666" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor667" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor668" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor669" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor670" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor671" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor672" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor673" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor674" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor675" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor676" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor677" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor678" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor679" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor680" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor681" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor682" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor683" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor684" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor685" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor686" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor687" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor688" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor689" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -2)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor690" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, 0)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor691" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -4)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="char_rigged" parent="." instance=ExtResource("7_ga0a4")]
+visible = false
+
+[node name="floor667" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor670" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor673" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor676" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor679" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor682" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -6)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor668" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor671" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor674" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor677" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor680" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor683" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -8)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor669" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor672" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor675" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor678" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor681" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor684" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -10)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor685" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor686" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor687" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor688" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor689" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor690" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -12)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor691" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor692" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor693" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor694" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor695" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor696" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -14)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor80" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor82" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor118" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor120" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor327" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor329" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor333" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor335" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor339" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor341" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor345" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor347" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor351" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor353" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor590" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor592" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor596" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor598" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor602" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor604" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor608" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor610" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor614" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -16)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor616" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -18)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor620" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor621" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor622" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor623" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor624" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor625" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor626" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor627" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor628" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor629" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor630" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor631" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor632" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor633" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor634" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor635" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor636" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor637" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor638" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor639" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor640" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor641" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor642" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor643" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor644" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor645" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor646" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor647" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor648" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor649" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor650" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor651" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor652" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor653" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -22)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor654" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -20)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor655" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -24)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor656" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor657" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor659" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor660" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor662" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor663" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor665" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor666" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor697" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor698" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor699" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor700" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor701" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor702" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor703" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor704" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor705" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor706" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor707" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor708" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor709" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor710" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor711" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -28)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor712" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -26)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor658" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor661" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor664" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor713" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor714" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor715" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor716" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor717" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor718" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor719" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor720" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor721" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor722" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor723" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor724" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor725" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor726" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor727" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor728" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor729" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor730" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor731" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor732" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -32)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor733" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, 0, -30)
+mesh = SubResource("ArrayMesh_drr5x")
+skeleton = NodePath("")
+
+[node name="floor_002" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -36)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_004" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -37.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_007" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -37.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_008" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -33.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_009" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -35.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_003" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -37.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_006" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -33.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_005" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -33.999714)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -36)
+mesh = SubResource("ArrayMesh_60sww")
+skeleton = NodePath("")
+
+[node name="floor_010" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -34)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_011" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -36)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_012" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -38)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_013" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_014" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_015" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_016" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_017" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_018" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_019" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
+
+[node name="floor_020" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, -40)
+mesh = SubResource("ArrayMesh_8xmtt")
+skeleton = NodePath("")
