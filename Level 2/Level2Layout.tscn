@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://1sb65ghkxyip"]
+[gd_scene load_steps=15 format=4 uid="uid://1sb65ghkxyip"]
 
 [ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_yhy5a"]
 [ext_resource type="Texture2D" uid="uid://c36umqa1xhhem" path="res://Level 1/walls_Substance_graph_roughness.png" id="2_o6c5q"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dxkdb5b4nj3hq" path="res://Level 1/walls_floor_basecolor.png" id="4_322fo"]
 [ext_resource type="Texture2D" uid="uid://cuuou7ibvwnh" path="res://Level 1/walls_floor_metallic-floor_roughness.png" id="5_1leun"]
 [ext_resource type="Texture2D" uid="uid://dijpcnv7n8ih4" path="res://Level 1/walls_floor_normal.png" id="6_mi0to"]
-[ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="7_1leun"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq072"]
 resource_name = "floor_washroom"
@@ -9131,108 +9130,106 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 0, 4.000287)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="Ceiling" type="Node" parent="."]
-
-[node name="Wall" type="Node" parent="."]
-
-[node name="Player" parent="." instance=ExtResource("7_1leun")]
-
-[node name="floor_007" type="MeshInstance3D" parent="."]
+[node name="floor_041" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0.00028681755)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="floor_009" type="MeshInstance3D" parent="."]
+[node name="floor_042" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 2.0002868)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="floor_016" type="MeshInstance3D" parent="."]
+[node name="floor_043" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_020" type="MeshInstance3D" parent="."]
+[node name="floor_044" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_021" type="MeshInstance3D" parent="."]
+[node name="floor_045" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4.000287)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="floor_008" type="MeshInstance3D" parent="."]
+[node name="floor_046" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0.00028681755)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="floor_010" type="MeshInstance3D" parent="."]
+[node name="floor_047" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 2.0002868)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="floor_017" type="MeshInstance3D" parent="."]
+[node name="floor_048" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_022" type="MeshInstance3D" parent="."]
+[node name="floor_049" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_023" type="MeshInstance3D" parent="."]
+[node name="floor_050" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4.000287)
 mesh = SubResource("ArrayMesh_322fo")
 skeleton = NodePath("")
 
-[node name="floor_029" type="MeshInstance3D" parent="."]
+[node name="floor_051" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 0, 4)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_030" type="MeshInstance3D" parent="."]
+[node name="floor_052" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 0, 2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_031" type="MeshInstance3D" parent="."]
+[node name="floor_053" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 0, 0)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_032" type="MeshInstance3D" parent="."]
+[node name="floor_054" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_036" type="MeshInstance3D" parent="."]
+[node name="floor_055" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_033" type="MeshInstance3D" parent="."]
+[node name="floor_056" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 0, 4)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_034" type="MeshInstance3D" parent="."]
+[node name="floor_057" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 0, 2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_035" type="MeshInstance3D" parent="."]
+[node name="floor_058" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 0, 0)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_037" type="MeshInstance3D" parent="."]
+[node name="floor_059" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
 
-[node name="floor_038" type="MeshInstance3D" parent="."]
+[node name="floor_060" type="MeshInstance3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 0, -2)
 mesh = SubResource("ArrayMesh_1leun")
 skeleton = NodePath("")
+
+[node name="Ceiling" type="Node" parent="."]
+
+[node name="Wall" type="Node" parent="."]
