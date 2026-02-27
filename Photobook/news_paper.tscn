@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqtbo1erqrc2t"]
+
+[ext_resource type="Script" uid="uid://evjqaarvb3jn" path="res://Photobook/news_paper.gd" id="1_ga85l"]
+[ext_resource type="Resource" uid="uid://c6nm2a5icvkxp" path="res://Photobook/newspaperdata.tres" id="2_ei8b3"]
+[ext_resource type="Shader" uid="uid://civjb3gyxb4oa" path="res://Photobook/paper.gdshader" id="3_nuiq8"]
+[ext_resource type="Texture2D" uid="uid://py30on4nm21q" path="res://Photobook/newspaper.jpg" id="4_yv2ln"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ga85l"]
+size = Vector3(1, 0.50439453, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yv2ln"]
+render_priority = 0
+shader = ExtResource("3_nuiq8")
+shader_parameter/paper_texture = ExtResource("4_yv2ln")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cwra7"]
+material = SubResource("ShaderMaterial_yv2ln")
+
+[node name="NewsPaper" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_ga85l")
+photodata = ExtResource("2_ei8b3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24780273, 0)
+shape = SubResource("BoxShape3D_ga85l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.305, 0, 0, 0, 1, 0, 0, 0, 0.505, 0, 0, 0)
+mesh = SubResource("PlaneMesh_cwra7")

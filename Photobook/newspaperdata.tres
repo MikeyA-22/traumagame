@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PhotoData" load_steps=3 format=3 uid="uid://c6nm2a5icvkxp"]
+
+[ext_resource type="Script" uid="uid://clljws8qmx4hp" path="res://Photobook/PhotoData.gd" id="1_1anac"]
+[ext_resource type="Texture2D" uid="uid://bje0bxbexjdd4" path="res://Photobook/newspaper_tiny.jpg" id="1_vffba"]
+
+[resource]
+script = ExtResource("1_1anac")
+photo_name = "newspaper"
+photo_pic = ExtResource("1_vffba")
+photo_no = 4
+metadata/_custom_type_script = "uid://clljws8qmx4hp"

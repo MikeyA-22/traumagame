@@ -7,6 +7,8 @@ var can_move
 func check_transition(delta) -> Array:
 	if can_move == true:
 		return [true,"idle"]
+	elif can_move == true and player.global_position.distance_to(character.global_position) < character.attack_radius and !Game_Global.hidden:
+		return [true, "attack"]
 	return [false,""]
 
 func _on_stun_timer_timeout() -> void:

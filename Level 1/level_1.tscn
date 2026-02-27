@@ -1,4 +1,4 @@
-[gd_scene load_steps=273 format=4 uid="uid://dh37dwj5owa62"]
+[gd_scene load_steps=274 format=4 uid="uid://dh37dwj5owa62"]
 
 [ext_resource type="Script" uid="uid://chmve4wg5qil2" path="res://Level 1/level_1.gd" id="1_3qwse"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_5i7a4"]
@@ -83,6 +83,7 @@
 [ext_resource type="PackedScene" uid="uid://b4va8ehcltmpj" path="res://Dialogue system/dialogue_manager.tscn" id="73_hp663"]
 [ext_resource type="Shader" uid="uid://bm38vek87nfgh" path="res://chromatic_aberration.gdshader" id="74_8j5jx"]
 [ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="74_a4j8g"]
+[ext_resource type="PackedScene" uid="uid://dqtbo1erqrc2t" path="res://Photobook/news_paper.tscn" id="75_7cy2h"]
 [ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="75_ay3vd"]
 [ext_resource type="AudioStream" uid="uid://bs8lholhwj0pe" path="res://Music/Main.MP3" id="79_inwc4"]
 [ext_resource type="Script" uid="uid://ct66ujxpfr6ir" path="res://Music/bg_music.gd" id="80_rdtp5"]
@@ -2895,6 +2896,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="NewsPaper" parent="." instance=ExtResource("75_7cy2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.7, -8)
 
 [connection signal="body_entered" from="SubViewport/Level1/WorldEnvironment/state_changer" to="SubViewport/Level1" method="_on_state_changer_body_entered"]
 [connection signal="body_entered" from="SubViewport/Level1/WorldEnvironment/state_changer" to="SubViewport/Level1/WorldEnvironment/state_changer" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bvyu35md1spyq"]
+[gd_scene load_steps=40 format=3 uid="uid://bvyu35md1spyq"]
 
 [ext_resource type="Script" uid="uid://cu6d8y2wq0bwv" path="res://addons/fsm_template/Player/Scripts/Model.gd" id="1_8c8pa"]
 [ext_resource type="Script" uid="uid://dybfxryljd88n" path="res://addons/fsm_template/Player/Scripts/States/Landing.gd" id="2_isc21"]
@@ -22,7 +22,10 @@
 [ext_resource type="Script" uid="uid://bshmfha7dgv6b" path="res://addons/fsm_template/open_door.gd" id="16_y5m0o"]
 [ext_resource type="PackedScene" uid="uid://d0tlivjqck1nf" path="res://Inventory/inventory.tscn" id="17_63g1w"]
 [ext_resource type="PackedScene" uid="uid://b7aoi0qc2ixig" path="res://Photobook/photobook.tscn" id="20_3katm"]
-[ext_resource type="AudioStream" uid="uid://oxq8lwd8spx4" path="res://Music/sfx/fs 1.MP3" id="23_q2lvs"]
+[ext_resource type="AudioStream" uid="uid://dib6adpnm1pux" path="res://Music/footstep/carpet_2.MP3" id="21_ogk8n"]
+[ext_resource type="AudioStream" uid="uid://c2r48hgt4rkhd" path="res://Music/footstep/Creeky wood_1.MP3" id="23_07va4"]
+[ext_resource type="AudioStream" uid="uid://okgdd67g2w67" path="res://Music/footstep/wood_2.MP3" id="23_q2lvs"]
+[ext_resource type="AudioStream" uid="uid://tq2jrc5tgsoj" path="res://Music/footstep/concrete_1.MP3" id="24_m3fcv"]
 
 [sub_resource type="Animation" id="Animation_oigbe"]
 resource_name = "Batteries"
@@ -6983,10 +6986,18 @@ metadata/_custom_type_script = "uid://2kxa3t55e673"
 
 [node name="Downcast" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98245, 0)
-target_position = Vector3(0, -1.63, 0)
+target_position = Vector3(0, -1.515, 0)
 collision_mask = 4
+hit_from_inside = true
+collide_with_areas = true
 debug_shape_custom_color = Color(1, 0, 0, 1)
 script = ExtResource("11_ossvb")
+sound_mapping = {
+"Carpet": ExtResource("21_ogk8n"),
+"Concrete": ExtResource("24_m3fcv"),
+"CreakyWood": ExtResource("23_07va4"),
+"Wood": ExtResource("23_q2lvs")
+}
 
 [node name="buttsphere" type="CSGSphere3D" parent="Downcast"]
 visible = false
@@ -7038,11 +7049,12 @@ transform = Transform3D(0.999999, 0.0005517155, -0.00016457587, -0.0005525062, 1
 tree_root = SubResource("AnimationNodeStateMachine_1bops")
 
 [node name="Fstep Player" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, 7.10543e-15, -1.82554, 0.243578)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.10543e-15, 0.0005173683, 0.04908614)
 stream = ExtResource("23_q2lvs")
 volume_db = 40.0
 unit_size = 30.0
 max_db = 6.0
+area_mask = 7
 parameters/looping = true
 
 [editable path="Inventory"]

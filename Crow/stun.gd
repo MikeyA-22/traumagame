@@ -12,7 +12,10 @@ var monster_inrange : bool = true
 
 @onready var cooldown_timer : CrowCooldownTimer = $"../../CooldownTimer"
 
+@onready var crow_caw_player = $"../../crowplayer"
+
 func on_enter():
+	crow_caw_player.play()
 	if player.resources.sanity > 0:
 		RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
 		Game_Global.madness_increment += .0075

@@ -1,4 +1,4 @@
-[gd_scene load_steps=252 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=253 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_effxy"]
@@ -55,7 +55,6 @@
 [ext_resource type="PackedScene" uid="uid://d1sbfpgkwpia1" path="res://Tutorial Level/micro.glb" id="40_xdk6f"]
 [ext_resource type="Texture2D" uid="uid://cblb0yd08n8fh" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_BaseMap.png" id="41_vhkfr"]
 [ext_resource type="Texture2D" uid="uid://cqb6qdgvo3v7p" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_Normal.png" id="42_63tng"]
-[ext_resource type="Script" uid="uid://ckbmjl2layxim" path="res://Tutorial Level/floor_area.gd" id="43_nq8ga"]
 [ext_resource type="Texture2D" uid="uid://8p0j7s0fpbe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_BaseMap.png" id="43_sbyva"]
 [ext_resource type="Texture2D" uid="uid://c00y01ohyjpe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_Normal.png" id="44_luq6j"]
 [ext_resource type="Texture2D" uid="uid://6k8r6ajdc3bc" path="res://Tutorial Level/tutv2/tutv2_can_DefaultMaterial_BaseMap.png" id="45_0jq7l"]
@@ -1800,6 +1799,9 @@ shadow_mesh = SubResource("ArrayMesh_5ppkk")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ybo5e"]
 points = PackedVector3Array(0.781332, -0.277743, -3.03125, 1.07042, -0.181313, 1.59107, 0.973985, -0.0850897, 3.13185, -1, -1, 0.969368, -0.977733, 1, -0.937511, 1, 1, -0.937511, -0.977733, 1, 0.949129, 1, -0.977733, -0.937511, -1, -1, -0.959754, 1, 1, 0.949129, 1, -0.977733, 0.949129, 0.973985, -0.0850897, -3.03125, 0.781332, -0.277743, 3.13185, 1.07042, -0.181313, -1.48987, -0.69677, 0.896107, -1.27658, -0.696306, 0.895528, 1.28821, 0.719036, 0.896107, -1.27658, 0.718573, 0.895528, 1.28821, 0.973985, -0.277743, 3.13185, 0.973985, -0.277743, -3.03125, 0.781332, -0.0850897, 3.13185, 0.781332, -0.0850897, -3.03125)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nq8ga"]
+size = Vector3(31.59542, 0.12548828, 96.11789)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_xwcvj"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -2.98313, 2, 2, 6.06684),
@@ -1918,6 +1920,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_utbx6")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nq8ga"]
+points = PackedVector3Array(-1.0158731, -0.046863686, -0.9840524, 1.0158669, 0.048355754, 0.9838536, 0.9840464, 0.048355754, 1.0158731, 1.0158669, -0.046863686, 0.9838536, 0.9840464, 0.048355754, -1.0158731, -1.0158731, 0.048355754, 0.9840524, -0.9838537, -0.046863686, 1.0158731, 1.0158669, -0.046863686, -0.9840524, -1.0158731, 0.048355754, -0.9840524, -0.9838537, -0.046863686, -1.0158731, -1.0158731, -0.046863686, 0.9840524, 0.9840464, -0.046863686, 1.0158731, -0.9838537, 0.048355754, -1.0158731, 0.9840464, -0.046863686, -1.0158731, -0.9838537, 0.048355754, 1.0158731, 1.0158669, 0.048355754, -0.9840524)
+
 [sub_resource type="FogMaterial" id="FogMaterial_vcvag"]
 density = 1.3
 albedo = Color(0.041331246, 0.0413312, 0.0413312, 1)
@@ -1995,14 +2000,16 @@ visible = false
 mesh = SubResource("ArrayMesh_ch3aw")
 skeleton = NodePath("")
 
-[node name="Plane_001" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
+[node name="Bathroom" type="MeshInstance3D" parent="Node3D/TutV2/tutv2" groups=["Concrete"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.06725, 0, 22.9768)
 mesh = SubResource("ArrayMesh_skxqp")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Plane_001"]
+[node name="Bathroom Body" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Bathroom" groups=["Concrete"]]
+collision_layer = 4
+collision_priority = 2.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Plane_001/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Bathroom/Bathroom Body"]
 shape = SubResource("ConcavePolygonShape3D_63yul")
 
 [node name="Plane" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
@@ -2251,17 +2258,19 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_010/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_i0v8k")
 
-[node name="Floor" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
+[node name="Floor" type="MeshInstance3D" parent="Node3D/TutV2/tutv2" groups=["Wood"]]
 transform = Transform3D(0.987983, 0, 0, 0, 0.987983, 0, 0, 0, 0.987983, 6.615319, 0.008102179, -3.9944239)
+layers = 4
 mesh = SubResource("ArrayMesh_hbcr7")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Floor"]
+[node name="REAL FLOOR" type="StaticBody3D" parent="Node3D/TutV2/tutv2/Floor" groups=["Wood"]]
+collision_layer = 4
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Floor/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Floor/REAL FLOOR"]
 shape = SubResource("ConcavePolygonShape3D_uq4pb")
 
-[node name="micro" parent="Node3D/TutV2/tutv2/Floor/StaticBody3D" instance=ExtResource("40_xdk6f")]
+[node name="micro" parent="Node3D/TutV2/tutv2/Floor/REAL FLOOR" instance=ExtResource("40_xdk6f")]
 transform = Transform3D(-1.0121636, 0, -8.8486146e-08, 0, 1.0121636, 0, 8.8486146e-08, 0, -1.0121636, -0.14086485, 1.3108687, 10.827485)
 
 [node name="InstructionArea" type="Area3D" parent="Node3D/TutV2/tutv2/Floor"]
@@ -2271,14 +2280,6 @@ script = ExtResource("37_xg7y2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Floor/InstructionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24481198, -0.15979016, -0.41967773)
 shape = SubResource("BoxShape3D_ndxse")
-
-[node name="FloorArea" type="Area3D" parent="Node3D/TutV2/tutv2/Floor"]
-monitorable = false
-script = ExtResource("43_nq8ga")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Floor/FloorArea"]
-transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_uq4pb")
 
 [node name="Cube_012" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-4.22597e-08, 0, -0.3545, 0, 0.3545, 0, 0.3545, 0, -4.22597e-08, 1.63762, 0.374931, 26.089)
@@ -2365,6 +2366,15 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_022/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ybo5e")
 
+[node name="HALLWAY AREA" type="Area3D" parent="Node3D/TutV2/tutv2/Cube_022" groups=["CreakyWood"]]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8779272, -35.253616)
+collision_layer = 4
+collision_priority = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/Cube_022/HALLWAY AREA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.716196, 0.07700014, -13.288047)
+shape = SubResource("BoxShape3D_nq8ga")
+
 [node name="DOOR" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(-6.44681e-08, 0, 0.0276275, 0, 1, 0, -0.540797, 0, -3.29345e-09, 1.32152, 1.00871, 11.4572)
 mesh = SubResource("ArrayMesh_bj2jt")
@@ -2412,6 +2422,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7461276, 0.01341173, -0.81
 transform = Transform3D(1.4559824, 0, 0, 0, -0.4320613, 0, 0, 0, 2.3632548, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xc3vl")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/TutV2/tutv2/carpet/Cube" groups=["Carpet"]]
+collision_layer = 4
+collision_priority = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/TutV2/tutv2/carpet/Cube/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nq8ga")
 
 [node name="BaseboardCollection" type="Node" parent="Node3D/TutV2/tutv2"]
 
@@ -2674,6 +2691,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.29
 
 [node name="Player" parent="Node3D/TutV2" node_paths=PackedStringArray("monster") instance=ExtResource("2_tfbhh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.289424)
+collision_mask = 5
 monster = NodePath("../Base Enemy")
 
 [node name="Base Enemy" parent="Node3D/TutV2" node_paths=PackedStringArray("player") instance=ExtResource("3_3hotv")]
@@ -2968,7 +2986,6 @@ grow_vertical = 2
 
 [connection signal="body_entered" from="Node3D/TutV2/tutv2/Floor/InstructionArea" to="Node3D/TutV2" method="_on_instruction_area_body_entered"]
 [connection signal="body_entered" from="Node3D/TutV2/tutv2/Floor/InstructionArea" to="Node3D/TutV2/tutv2/Floor/InstructionArea" method="_on_body_entered"]
-[connection signal="body_entered" from="Node3D/TutV2/tutv2/Floor/FloorArea" to="Node3D/TutV2/tutv2/Floor/FloorArea" method="_on_body_entered"]
 [connection signal="body_entered" from="Node3D/TutV2/state_changer" to="Node3D/TutV2" method="_on_state_changer_body_entered"]
 [connection signal="body_entered" from="Node3D/TutV2/state_changer" to="Node3D/TutV2/state_changer" method="_on_body_entered"]
 

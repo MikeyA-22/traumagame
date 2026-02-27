@@ -51,6 +51,7 @@
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
 			"title": "Todo: NEXT WEEK!!",
 			"tasks": [
+				"df747c11-5f11-489c-a2a6-c0185da7b221",
 				"d157a1f2-9a76-4d33-87f5-c522d714d632",
 				"5ab85688-a91f-4244-9197-23b621d59adb",
 				"25b56742-bdf6-47f5-b553-fe213102ecc0",
@@ -65,11 +66,8 @@
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing: BY TODAY!!",
 			"tasks": [
-				"17b4d706-f8b1-4965-9b5e-796ae87fddc5",
-				"df747c11-5f11-489c-a2a6-c0185da7b221",
-				"90c1066b-f004-4145-9f68-0fec1660f7b4",
-				"72c9093b-2737-40e8-a24b-2b04d115dc05",
 				"c1109262-4ba2-4dff-bebe-1af689eaab41",
+				"b2294e6d-96e8-4055-86cb-eafd831a90c7",
 				"c9a934ab-b19b-4b51-a183-6895a05d38f9"
 			]
 		},
@@ -77,6 +75,9 @@
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"72c9093b-2737-40e8-a24b-2b04d115dc05",
+				"90c1066b-f004-4145-9f68-0fec1660f7b4",
+				"17b4d706-f8b1-4965-9b5e-796ae87fddc5",
 				"bbd3965a-ee3b-4751-b590-55fbc54bfbc5",
 				"5b289d32-56e9-4274-af62-a31737db8808",
 				"e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
@@ -542,6 +543,13 @@
 			"title": "Level 2 Photo",
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "b2294e6d-96e8-4055-86cb-eafd831a90c7",
+			"title": "Flashing eyes",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
 			"steps": []
 		}
 	],

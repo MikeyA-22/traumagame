@@ -10,8 +10,11 @@ const JUMP_VELOCITY = 5
 @export var ACCELERATION:float = 0.1
 @export var DECELERATION:float = 0.25
 
+
+
 func _ready() -> void:
 	animation = "walking"
+	fstep_player = $"../Fstep Player"
 
 func check_request(input: InputPackage) -> String:
 	if not player.is_on_floor():
@@ -33,10 +36,11 @@ func update(input: InputPackage, delta: float):
 	player.move_and_slide()
 	
 func on_enter_state():
-	pass
+	fstep_player.stream_paused = false
+	fstep_player.play()
 
 func on_exit_state():
-	pass
+	fstep_player.stop()
 
 
 func velocity_by_input(input : InputPackage, delta: float) ->  Vector3:

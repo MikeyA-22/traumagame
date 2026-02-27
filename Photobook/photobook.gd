@@ -4,6 +4,8 @@ class_name Photobook
 
 @export var photoslots:Array[Photoslot]
 @onready var anim_player = $AnimationPlayer
+
+var photo_datas = []
 var is_open = false
 ##This is photobook.
 ##it adds photos to itself, and displays itself at the photoslot. which also
@@ -25,7 +27,15 @@ func add(photo: Photo, use_message:bool):
 	
 	open_photobook()
 	is_open = true
-	display(photodata)
+	
+	if Game_Global.save_game != null:
+		Game_Global.save_game.photos = photo_datas
+
+	photo_datas.append(photodata)
+	print(photo_datas)
+	
+	
+	set_photos()
 	
 	
 	photo.free()
@@ -33,7 +43,7 @@ func add(photo: Photo, use_message:bool):
 
 
 
-func display(photodata: PhotoData):
+func set_photo(photodata: PhotoData):
 	photoslots[photodata.photo_no].photo.texture = photodata.photo_pic
 
 
@@ -60,5 +70,6 @@ func close_photobook():
 	is_open = !is_open
 	
 	
-func set_photo(photodata: PhotoData):
-	pass
+func set_photos():
+	for photo_data in photo_datas:
+		set_photo(photo_data)

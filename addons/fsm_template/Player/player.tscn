@@ -103,6 +103,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_5uwn6")
 }
 
+[node name="AudioListener3D" type="AudioListener3D" parent="LocalCamera/Camera3D"]
+doppler_tracking = 1
+current = true
+
 [node name="UI" parent="." instance=ExtResource("2_78wmc")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -124,10 +128,6 @@ camera = NodePath("../LocalCamera/Camera3D")
 
 [node name="Resources" type="Node" parent="."]
 script = ExtResource("10_5uwn6")
-
-[node name="AudioListener3D" type="AudioListener3D" parent="."]
-doppler_tracking = 1
-current = true
 
 [connection signal="timeout" from="LocalCamera/Camera3D/Flashlight Receiver/BatteryTimer" to="LocalCamera/Camera3D/Flashlight Receiver" method="_on_battery_timer_timeout"]
 
