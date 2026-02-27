@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4swyp6bu6dje"]
+
+[ext_resource type="Script" uid="uid://cb8yeokpa4slo" path="res://Ables/Mirror/mirror.gd" id="1_efn6r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_efn6r"]
+size = Vector3(0.1, 4.6258545, 3.071289)
+
+[node name="Mirror" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_efn6r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.456604, 0)
+shape = SubResource("BoxShape3D_efn6r")

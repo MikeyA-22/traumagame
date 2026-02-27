@@ -1,6 +1,6 @@
 extends AIstate
 
-
+class_name Pursuit
 
 
 func check_transition(delta) -> Array:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://difl8lyj342wn"
-path="res://.godot/imported/dian.png-2875a646b736615287b8895de9f327d7.ctex"
+uid="uid://dpe3tdgyu1lgc"
+path="res://.godot/imported/halfpill_right.png-dd3008906da6095fb89b95cde692a2da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ables/dian.png"
-dest_files=["res://.godot/imported/dian.png-2875a646b736615287b8895de9f327d7.ctex"]
+source_file="res://Ables/Pills/halfpill_right.png"
+dest_files=["res://.godot/imported/halfpill_right.png-dd3008906da6095fb89b95cde692a2da.ctex"]
 
 [params]
 

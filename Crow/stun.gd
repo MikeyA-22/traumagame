@@ -10,6 +10,7 @@ var angle:float = 0.0
 @onready var root:Node3D = $"../.."
 var monster_inrange : bool = true
 
+@onready var cooldown_timer : CrowCooldownTimer = $"../../CooldownTimer"
 
 func on_enter():
 	if player.resources.sanity > 0:
@@ -20,6 +21,8 @@ func on_enter():
 		#print(player.resources.sanity)
 		monster.statemachine.switch_to("stunned")
 	monster_inrange = false
+	cooldown_timer.start()
+	cooldown_timer.set_eye_mat(0)
 
 func check_transition(delta)->Array:
 	if monster_inrange == false:
@@ -37,4 +40,4 @@ func circular_motion():
 	
 	character.position.x = (radius * x_pos) + root.position.x
 	character.position.y = 0
-	character.position.z = (radius * z_pos) + root.position.z
+	character.posit

@@ -18,9 +18,10 @@ var hidden = false
 
 func _ready() -> void:
 	visuals.accept_skeleton(Model.skeleton)
-	inventory.items = inventory_list
+	inventory.items = Game_Global.save_game.inventory_items
+	active_item = Game_Global.save_game.active_item
 	if active_item != null:
-		inventory.active_item = active_item.item_model.instantiate()
+		inventory.active_item = Game_Global.save_game.active_item.item_model.instantiate()
 	inventory.switch_item()
 	
 	#Model.anim_tree.set("parameters/conditions/idle", true)

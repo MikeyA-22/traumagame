@@ -11,6 +11,8 @@ signal message_completed
 
 signal finished
 
+signal key_pressed
+
 var messages = []
 var active_dialogue_offset = 0
 var is_active = false
@@ -28,6 +30,7 @@ func show_messages(message_list: Array, position: Vector2, time: float) -> void:
 	active_dialogue_offset = 0
 	visible_time = time
 	
+	
 	var _dialogue = DIALOGUE_SCENE.instantiate()
 	_dialogue.connect(
 		"message_completed", 
@@ -38,6 +41,7 @@ func show_messages(message_list: Array, position: Vector2, time: float) -> void:
 		"finished",
 		Callable(self,"on_finished")
 	)
+	
 	get_tree().get_root().add_child(_dialogue)
 	
 	cur_dialogue_instance = _dialogue
@@ -71,6 +75,7 @@ func _input(event: InputEvent) -> void:
 			
 func hide() -> void:
 	cur_dialogue_instance.disconnect("message_completed", Callable(self, "on_message_completed"))
+	
 	var tween = create_tween()
 	tween.tween_property(cur_dialogue_instance, "modulate:a", 0, 1.0)
 	await tween.finished
@@ -92,3 +97,5 @@ func on_finished():
 	else:
 			hide()
 			#print("done")
+
+	

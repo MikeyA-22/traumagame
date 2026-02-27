@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PillTexList" load_steps=8 format=3 uid="uid://drl7qejhloybi"]
+
+[ext_resource type="Script" uid="uid://oxmdnbh4sudf" path="res://Ables/Pills/Pill_ListResource.gd" id="1_g8ljn"]
+[ext_resource type="Texture2D" uid="uid://cu3dr45vl3afc" path="res://Ables/Pills/pill_0.png" id="1_krsm5"]
+[ext_resource type="Texture2D" uid="uid://dxov38n6wqyl1" path="res://Ables/Pills/pill_1.png" id="2_kbhnd"]
+[ext_resource type="Texture2D" uid="uid://c5bswdvmempio" path="res://Ables/Pills/pill_2.png" id="3_jkcn2"]
+[ext_resource type="Texture2D" uid="uid://df6bxv0apwh72" path="res://Ables/Pills/pill_3.png" id="4_qua0h"]
+[ext_resource type="Texture2D" uid="uid://bnko51dkxwg8v" path="res://Ables/Pills/pill_4.png" id="5_dcyu8"]
+[ext_resource type="Texture2D" uid="uid://rrf7ecxx7f8" path="res://Ables/Pills/pill_5.png" id="6_amgkb"]
+
+[resource]
+script = ExtResource("1_g8ljn")
+pill_images = Array[Texture2D]([ExtResource("1_krsm5"), ExtResource("2_kbhnd"), ExtResource("3_jkcn2"), ExtResource("4_qua0h"), ExtResource("5_dcyu8"), ExtResource("6_amgkb")])
+metadata/_custom_type_script = "uid://oxmdnbh4sudf"

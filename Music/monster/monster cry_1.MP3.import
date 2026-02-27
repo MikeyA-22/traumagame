@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4yma7dgo2by8"
+path="res://.godot/imported/monster cry_1.MP3-9a1dffa90b395f28c34840a2c1415876.mp3str"
+
+[deps]
+
+source_file="res://Music/monster/monster cry_1.MP3"
+dest_files=["res://.godot/imported/monster cry_1.MP3-9a1dffa90b395f28c34840a2c1415876.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,12 +4,12 @@ extends Node3D
 @onready var player_camera = $Camera3D
 var mouse_is_captured = true
 @onready var anim_player : AnimationPlayer = $Camera3D/AnimationPlayer
-@onready var fstep_player : AudioStreamPlayer3D = $"Camera3D/Fstep Player"
+
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	top_level = true
-	fstep_player.max_db = 20
+
 
 
 func _process(delta):
@@ -32,6 +32,10 @@ func _input(event):
 			var d_ver = event.relative.y
 			clamp(d_ver,0,10)
 			player_camera.rotate_x(d_ver/100)
+			if Game_Global.active_tut_index == 1:
+				##SEND AND INCREASE
+				Game_Global.progress_tutorial()
+				
 			
 			
 
