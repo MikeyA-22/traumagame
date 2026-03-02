@@ -23,7 +23,7 @@ func _input(event):
 		if Input.get_vector("ui_up","ui_down","ui_right","ui_left"):
 			anim_player.play("head_bob")
 			if anim_player.is_playing():
-				print("animating headbob")
+				pass#print("animating headbob")
 			
 		if event is InputEventMouseMotion and mouse_is_captured:
 			var d_hor = event.relative.x

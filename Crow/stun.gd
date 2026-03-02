@@ -12,9 +12,10 @@ var monster_inrange : bool = true
 
 @onready var cooldown_timer : CrowCooldownTimer = $"../../CooldownTimer"
 
-@onready var crow_caw_player = $"../../crowplayer"
+@onready var crow_caw_player : AudioStreamPlayer3D = $"../../crowplayer"
 
 func on_enter():
+	crow_caw_player.volume_db = 200
 	crow_caw_player.play()
 	if player.resources.sanity > 0:
 		RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
@@ -23,6 +24,7 @@ func on_enter():
 		player.resources.sanity -= 10
 		#print(player.resources.sanity)
 		monster.statemachine.switch_to("stunned")
+		SigBus.STUNNED.emit()
 	monster_inrange = false
 	cooldown_timer.start()
 	cooldown_timer.set_eye_mat(0)

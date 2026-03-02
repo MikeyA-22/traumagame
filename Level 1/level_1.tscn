@@ -1,4 +1,4 @@
-[gd_scene load_steps=274 format=4 uid="uid://dh37dwj5owa62"]
+[gd_scene load_steps=275 format=4 uid="uid://dh37dwj5owa62"]
 
 [ext_resource type="Script" uid="uid://chmve4wg5qil2" path="res://Level 1/level_1.gd" id="1_3qwse"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_5i7a4"]
@@ -92,6 +92,7 @@
 [ext_resource type="AudioStream" uid="uid://c8eiceuuh6b72" path="res://Music/sfx/phase 3.MP3" id="83_vjns4"]
 [ext_resource type="AudioStream" uid="uid://c2uk4g62w05pg" path="res://Music/sfx/phase4.MP3" id="84_x5mxi"]
 [ext_resource type="Resource" uid="uid://dy8s8gewdv14x" path="res://Resource/Batteries.tres" id="89_7cy2h"]
+[ext_resource type="PackedScene" uid="uid://ddriaht17atfl" path="res://Ables/batteries.tscn" id="91_b4sao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vjns4"]
 shader = ExtResource("1_5i7a4")
@@ -2885,6 +2886,9 @@ player = NodePath("../Player")
 aggro_radius = 2.0
 attack_radius = 1.0
 deaggro_radius = 4.0
+
+[node name="Battery" parent="SubViewport/Level1" instance=ExtResource("91_b4sao")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.7240598, -6.7572417)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
 follow_viewport_enabled = true

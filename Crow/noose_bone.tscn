@@ -1199,7 +1199,7 @@ bind/356/bone = -1
 bind/356/pose = Transform3D(0.057977855, 0.81867516, -0.57132244, -0.571314, 0.49651736, 0.6535065, 0.81868106, 0.28851584, 0.49650756, -1.7620512, -0.82928145, -1.0764413)
 
 [sub_resource type="Curve" id="Curve_s3d3b"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.8, 0.005), 0.0, 0.0, 0, 0, Vector2(1, 0.0025373697), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.8, 0.002), 0.0, 0.0, 0, 0, Vector2(1, 0.0025373697), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="Animation" id="Animation_o11ao"]
@@ -20839,10 +20839,12 @@ external_skeleton = NodePath("../..")
 [node name="TrailRenderer" type="Node3D" parent="Crow2/rig/GeneralSkeleton/Cube/BoneAttachment3D"]
 transform = Transform3D(1, -2.9802322e-08, 2.9802322e-08, -2.9802322e-08, 1, -7.450581e-09, -2.9802322e-08, 3.7252903e-09, 1, -0.009002477, 0.005860612, -0.0016996264)
 script = ExtResource("5_xhqd6")
+lifetime = 0.01
 min_vertex_distance = 0.005
 curve = SubResource("Curve_s3d3b")
 alignment = 0
 material = ExtResource("4_s3d3b")
+texture_mode = 1
 metadata/_custom_type_script = "uid://brqh6t5d1dyrl"
 
 [node name="BoneAttachment3D2" type="BoneAttachment3D" parent="Crow2/rig/GeneralSkeleton/Cube"]
@@ -20855,11 +20857,12 @@ external_skeleton = NodePath("../..")
 [node name="TrailRenderer" type="Node3D" parent="Crow2/rig/GeneralSkeleton/Cube/BoneAttachment3D2"]
 transform = Transform3D(1, -2.9802322e-08, 0, 0, 0.9999999, 0, 2.9802322e-08, -1.1175871e-08, 1, 0.008721709, 0.00580436, -0.0054208636)
 script = ExtResource("5_xhqd6")
-lifetime = 0.05
+lifetime = 0.01
 min_vertex_distance = 0.005
 curve = SubResource("Curve_s3d3b")
 alignment = 0
 material = ExtResource("4_s3d3b")
+texture_mode = 1
 metadata/_custom_type_script = "uid://brqh6t5d1dyrl"
 
 [node name="Feathers" type="GPUParticles3D" parent="Crow2/rig/GeneralSkeleton"]

@@ -53,5 +53,5 @@ func change_footsteps():
 				fstep_player.stream = sound_mapping[surface_name]
 				fstep_player.play()
 		
-		print("Footstep is : ", fstep_player.stream, " Surface is: ", surface_name)
+		#print("Footstep is : ", fstep_player.stream, " Surface is: ", surface_name)
 	
