@@ -4,8 +4,8 @@ class_name InventoryDisplay
 
 
 @onready var inventory: Inventory = $".."
-@onready var item_name: RichTextLabel = $VBoxContainer/HBoxContainer/ItemName
-@onready var item_info: RichTextLabel = $VBoxContainer/HBoxContainer/ItemInfo
+@onready var item_name: RichTextLabel = $VBoxContainer/ItemName
+@onready var item_info_image: TextureRect = $VBoxContainer/ItemInfoImage
 @onready var item_image: TextureRect = $VBoxContainer/ItemImage
 @onready var items = []
 ##SERVES AS OUR DATA SOURCE FOR ACTIVE ITEMS(IF ANY)
@@ -15,18 +15,18 @@ func _ready() -> void:
 	pass
 
 func display(item_data: ItemData):
-	##clear text
-	item_info.text = ""
+	##clear image
+	item_info_image.texture = null
 	##check if item has information, then display if so
 	if item_data.item_info != null:
-		display_info(str(item_data.item_info))
+		display_info(item_data.item_info)
 	## Animate and display the inventory items
 	displayAnim.play("display")
 	item_name.text = item_data.item_name
 	item_image.texture = item_data.item_photo
 	
 
-func display_info(item_info_entry: String):
-	item_info.text = str(item_info_entry)
+func display_info(item_info_entry):
+	item_info_image.texture = item_info_entry
 	#print(item_info.text)
 	

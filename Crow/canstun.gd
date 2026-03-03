@@ -2,25 +2,36 @@ extends AIstate
 
 class_name Canstun
 
-@export var radius:float = 0.2
-var angle:float = 0.0
-@export var speed:float = 2
-@export var y_pos:float = 0
+
+
+
 @onready var root:Node3D = $"../.."
+
+
+var angle:float = 0.0
 var monster_inrange : bool = true
 var hittable = false
+var canstun = true
 
 func on_enter():
 	monster_inrange = true
+	
+	
 
 func check_transition(delta)->Array:
 	if Game_Global.hidden:
 		return[true,"idle"]
 	elif monster_inrange == false:
 		return[true, "idle"]
-	elif hittable == true and Input.is_action_just_pressed("twogbosa"):
+	elif hittable == true and Input.is_action_just_pressed("twogbosa") and canstun == true:
+		canstun = false
+		
+		print("GOING TO STUN!!")
 		return[true,"stun"]
 	return[false,""]
+	
+func on_exit():
+	pass
 	
 func update(delta):
 	#circular_motion()
@@ -29,15 +40,7 @@ func update(delta):
 
 	#print(Game_Global.madness_increment)
 	
-func circular_motion():
-	angle += monster.rotation.y - character.rotation.y
-	
-	var x_pos = cos(angle)
-	var z_pos = sin(angle)
-	
-	character.position.x = (radius * x_pos) + root.position.x
-	character.position.y = 0
-	character.position.z = (radius * z_pos) + root.position.z
+
 
 
 func _on_effect_area_body_exited(body: Node3D) -> void:
@@ -54,3 +57,12 @@ func _on_hitbox_body_entered(body: Node3D) -> void:
 
 func _on_effect_area_body_entered(body: Node3D) -> void:
 	pass # Replace with function body.
+
+
+func _on_cooldown_timer_timeout() -> void:
+	print("I CAN GO AGAIN!")
+	canstun = true
+
+
+	
+	

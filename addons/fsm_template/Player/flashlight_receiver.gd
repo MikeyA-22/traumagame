@@ -9,16 +9,18 @@ var on_sfx = preload("res://Music/sfx/flashlight turn on.MP3")
 var off_sfx = preload("res://Music/sfx/flashlight turn off.MP3")
 @export var flashlight: ItemData
 
-
+var battery_percent: int = 100
 var battery_difference: int = 20
 var info_statement: String = "OFF"
 @export_group("Battery Variables")
 @export var bat_timer: Timer
-@export var wait_time: float
+@export var wait_time: float = 50
 @export var bat_min: int = 20
-var battery_percent: int = 100
+
+
 @onready var inventory_display = $"../../../Model/Inventory/InventoryDisplay"
 
+@export var bat_image : Array[Texture2D]
 
 func _ready() -> void:
 	light_energy = 0
@@ -39,7 +41,7 @@ func on_flashlight() -> void:
 		info_statement = "ON"
 		assign_sfx(on_sfx)
 		play_sfx()
-		resource_display("%s: %d" % [info_statement, battery_percent])
+		resource_display(get_bat_image(battery_percent))
 		bat_timer.start()
 		
 		#print(light_energy)
@@ -55,7 +57,7 @@ func off_flashlight():
 	play_sfx()
 	info_statement = "OFF"
 	bat_timer.stop()
-	resource_display("%s: %d" % [info_statement, battery_percent])
+	resource_display(get_bat_image(battery_percent))
 	
 	
 		#print(light_energy)
@@ -77,35 +79,45 @@ func play_sfx():
 	#print("Stream valid:", pick_sfx.stream)
 	fs_sfx.play()
 
-func resource_display(info: String):
+func resource_display(info: Texture2D):
 	set_info(info)
 	inventory_display.display_info(info)
 	
 
-func set_info(info: String):
+func set_info(info: Texture2D):
 	flashlight.item_info = info
 
 func _on_battery_timer_timeout() -> void:
-	print("Battery percent: ", battery_percent)
 	## EVERYTIME THE TIMER HITS 0, REDUCE PERCENTAGE BY 20
 	## DROPS BELOW MINIMUM? KILL IT.
 	if battery_percent > bat_min:
 		battery_percent -= battery_difference
 		bat_timer.wait_time = wait_time
 		bat_timer.start()
+		set_info(get_bat_image(battery_percent))
 		if inventory_display.active_item_data.item_name == "Flashlight":
-			resource_display("%s: %d" % [info_statement, battery_percent])
+			resource_display(get_bat_image(battery_percent))
 		
 	else:
 		off_flashlight()
-		
+	print("Battery percent: ", battery_percent)
 
 func recharge_flashlight(bat_charge: int, inventory: Inventory, item_data: ItemData):
 	battery_percent += bat_charge
 	inventory.switch_item()
 	inventory.remove_item_data(item_data)
-	set_info("%s: %d" % [info_statement, battery_percent])
+	set_info(get_bat_image(battery_percent))
 	
 	if inventory_display.active_item_data.item_name == "Flashlight":
-			resource_display("%s: %d" % [info_statement, battery_percent])
+		resource_display(get_bat_image(battery_percent))
 	## THE BATTERY SHOULD INCREASE
+
+func get_bat_image(battery_percent) -> Texture2D:
+	if battery_percent > 75:
+		return bat_image[0]
+	elif battery_percent > 50 and battery_percent < 75:
+		return bat_image[1]
+	elif battery_percent > 30 and battery_percent < 50:
+		return bat_image[2]
+	else:
+		return bat_image[3]

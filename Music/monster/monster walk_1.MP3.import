@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqj5lho7rmgim"
+path="res://.godot/imported/monster walk_1.MP3-da6c9b3792ad65dcd0206a805203576e.mp3str"
+
+[deps]
+
+source_file="res://Music/monster/monster walk_1.MP3"
+dest_files=["res://.godot/imported/monster walk_1.MP3-da6c9b3792ad65dcd0206a805203576e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

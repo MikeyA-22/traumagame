@@ -13,3 +13,5 @@ signal HIDE
 signal REVEALKEY
 signal SWITCH
 signal BATTERIES
+signal SAVE
+signal TUT_KEY_PRESSED

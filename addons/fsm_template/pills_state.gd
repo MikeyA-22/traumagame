@@ -6,6 +6,8 @@ const transition_timing = 3.333
 
 var pills_amount = 5
 @onready var inventory_display = $"../Inventory/InventoryDisplay"
+@export var pill_images: Array[Texture2D]
+@onready var item_data = load("res://Resource/pills.tres")
 # Step 2: redefine your overriden parameters
 func _ready() -> void:
 	animation = "Pills"
@@ -34,5 +36,15 @@ func on_enter_state():
 		pills_amount -= 1
 		#print(pills_amount)
 		Game_Global.pills_amount = pills_amount
-		inventory_display.display_info(str(pills_amount))
+		set_info(pills_image(pills_amount))
+		display_info(pills_image(pills_amount))
 		
+func pills_image(pills_amount) -> Texture2D:
+	return pill_images[pills_amount]
+	
+	
+func display_info(info):
+	inventory_display.display_info(info)
+	
+func set_info(info):
+	item_data.item_info = info

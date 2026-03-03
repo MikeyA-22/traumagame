@@ -2,6 +2,7 @@ extends AIstate
 
 
 
+var in_range: bool
 
 func check_transition(delta) -> Array:
 	if Game_Global.hidden:
@@ -9,7 +10,7 @@ func check_transition(delta) -> Array:
 	elif player.global_position.distance_to(character.global_position) > character.deaggro_radius and !Game_Global.hidden:
 		return [true, "pursuit"]
 	elif player.global_position.distance_to(character.global_position) < character.attack_radius and !Game_Global.hidden:
-		return [true, "idle"]
+		return [true, "attack"]
 	return [false, ""]
 
 
@@ -25,6 +26,7 @@ func update(delta):
 	character.move_and_slide()
 
 func on_enter():
+	in_range = false
 	fstep2.play()
 	
 func on_exit():

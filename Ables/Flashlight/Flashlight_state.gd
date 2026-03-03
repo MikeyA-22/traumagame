@@ -30,3 +30,5 @@ func update(input: InputPackage, delta: float):
 
 func on_enter_state():
 	SigBus.FLASH.emit()
+	if Game_Global.active_tut_index == 2:
+		Game_Global.progress_tutorial()

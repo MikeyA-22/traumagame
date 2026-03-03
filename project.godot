@@ -42,6 +42,10 @@ import/blender/enabled=false
 
 Doors="Doors. the group has doors"
 nav_mesh_group=""
+Carpet=""
+Concrete=""
+Wood=""
+CreakyWood=""
 
 [gui]
 
@@ -117,6 +121,7 @@ photobook={
 [layer_names]
 
 3d_render/layer_2="interactable"
+3d_render/layer_3="ground"
 2d_physics/layer_1="Paddles"
 3d_physics/layer_1="player"
 2d_physics/layer_2="Ball"

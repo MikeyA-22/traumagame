@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://h64joqc37hva"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c1a4g"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_1cly3"]
-
-[node name="Node3D" type="GPUParticles3D"]
-process_material = SubResource("ParticleProcessMaterial_c1a4g")
-draw_pass_1 = SubResource("QuadMesh_1cly3")

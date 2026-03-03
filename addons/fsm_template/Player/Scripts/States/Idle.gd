@@ -5,6 +5,8 @@ class_name Idle
 
 func _ready() -> void:
 	animation = "idle"
+	start_marker = "start"
+	end_marker = "stop"
 
 func check_request(input: InputPackage) -> String:
 	if !player.is_on_floor():

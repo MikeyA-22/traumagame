@@ -16,6 +16,15 @@ static var pills_amount: int = 5
 static var loadable_scene: String
 static var loading_screen: String = "res://loading_screen.tscn"
 
+static var pressed: bool = true
+
+static var active_tut_index = 0
+
+const SAVE_PATH = "user://save.tres"
+
+
+static var save_game: SaveGame = null
+
 
 enum game_state{
 	STATE_1,
@@ -25,7 +34,10 @@ enum game_state{
 
 
 func _ready() -> void:
-	pass
+	if ResourceLoader.exists(SAVE_PATH):
+		save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
+	else:
+		save_game = SaveGame.new()
 	
 func _process(delta: float) -> void:
 	RenderingServer.global_shader_parameter_set("warp_strength", madness_increment)
@@ -34,3 +46,7 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://Menu/Game_over.tscn")
 		current_gState = game_state.STATE_END_GAME
 	#print(current_gState)
+	
+static func progress_tutorial():
+	SigBus.TUT_KEY_PRESSED.emit()
+	Game_Global.active_tut_index += 1

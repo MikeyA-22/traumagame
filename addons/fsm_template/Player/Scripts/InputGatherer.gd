@@ -5,6 +5,7 @@ var mouse = false
 
 #@onready var InteractionCatcher = $"../visuals/Cube_022/LocalCamera/Camera3D/InteractionCatcher"
 
+var pressed = false
 func gather_input() -> InputPackage:
 	var new_input = InputPackage.new() 
 	
@@ -18,6 +19,9 @@ func gather_input() -> InputPackage:
 	if Game_Global.hidden == false:
 		if new_input.input_direction != Vector2.ZERO:
 			new_input.actions.append("run")
+			if Game_Global.active_tut_index == 0:
+				SigBus.TUT_KEY_PRESSED.emit()
+				Game_Global.active_tut_index += 1
 
 	
 	

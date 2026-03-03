@@ -4,23 +4,35 @@ extends CharacterBody3D
 class_name Player
 
 @onready var inputgatherer = $InputGatherer
+
 @onready var Model = $Model
 @onready var inventory = $Model/Inventory
+@onready var photobook = $Model/Photobook
 @onready var camera_mount = $LocalCamera
 @onready var visuals = $visuals as PlayerVisuals
 @onready var light = $"LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
+
+@onready var interaction_catcher = $LocalCamera/Camera3D/InteractionCatcher
+
 @export var monster: Enemy
 @export var resources: PlayerResources
-@onready var interaction_catcher = $LocalCamera/Camera3D/InteractionCatcher
+
 @export var inventory_list : Array[ItemData]
 @export var active_item : ItemData
+@export var photos: Array[PhotoData]
 var hidden = false
 
 func _ready() -> void:
 	visuals.accept_skeleton(Model.skeleton)
-	inventory.items = inventory_list
+	inventory.items = Game_Global.save_game.inventory_items
+	active_item = Game_Global.save_game.active_item
+	photos = Game_Global.save_game.photos
+	photobook.photo_datas = photos
+	photobook.set_photos()
+	
+	
 	if active_item != null:
-		inventory.active_item = active_item.item_model.instantiate()
+		inventory.active_item = Game_Global.save_game.active_item.item_model.instantiate()
 	inventory.switch_item()
 	
 	#Model.anim_tree.set("parameters/conditions/idle", true)

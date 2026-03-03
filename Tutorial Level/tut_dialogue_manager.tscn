@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://10kbkbufr0i2"]
+
+[ext_resource type="Script" uid="uid://bd8q2jon3wvmk" path="res://tut_dialogue_manager.gd" id="1_cywvp"]
+
+[node name="TutDialogueManager" type="Node"]
+script = ExtResource("1_cywvp")

@@ -49,36 +49,46 @@
 	"stages": [
 		{
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
-			"title": "Todo: END OF READING WEEK!!!",
+			"title": "Todo: NEXT WEEK!!",
 			"tasks": [
-				"d157a1f2-9a76-4d33-87f5-c522d714d632",
-				"c1109262-4ba2-4dff-bebe-1af689eaab41",
-				"121d99c8-c491-4397-b4ea-d677e5dc4754",
 				"25b56742-bdf6-47f5-b553-fe213102ecc0",
-				"2be82a9f-8e32-4ec4-918e-19cca05f9c88"
+				"e9e632dc-acc2-475f-8f15-acf854292392",
+				"121d99c8-c491-4397-b4ea-d677e5dc4754",
+				"2be82a9f-8e32-4ec4-918e-19cca05f9c88",
+				"f1699121-2497-428a-a949-f71dd1c3716a",
+				"0da6abe8-a378-4852-82fc-cb821262d6e7"
 			]
 		},
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
-			"title": "Doing: BY WEDNESDAY!!!",
+			"title": "Doing: BY MONDAY!!",
 			"tasks": [
-				"2df7b5e9-6fb6-43c6-bf90-5a47a310bee6",
-				"c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
-				"af814cd4-2f09-4a7e-89fe-d38ab8828d1f",
-				"414fa42e-7ab7-423b-a5c9-b5e192d99948",
-				"17b4d706-f8b1-4965-9b5e-796ae87fddc5",
-				"5ab85688-a91f-4244-9197-23b621d59adb",
-				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1"
+				"08a9489c-c07c-4f82-9479-4500a0290a0b",
+				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
+				"df747c11-5f11-489c-a2a6-c0185da7b221",
+				"5ab85688-a91f-4244-9197-23b621d59adb"
 			]
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"c9a934ab-b19b-4b51-a183-6895a05d38f9",
+				"b2294e6d-96e8-4055-86cb-eafd831a90c7",
+				"c1109262-4ba2-4dff-bebe-1af689eaab41",
+				"72c9093b-2737-40e8-a24b-2b04d115dc05",
+				"90c1066b-f004-4145-9f68-0fec1660f7b4",
+				"17b4d706-f8b1-4965-9b5e-796ae87fddc5",
+				"bbd3965a-ee3b-4751-b590-55fbc54bfbc5",
+				"5b289d32-56e9-4274-af62-a31737db8808",
 				"e1bbc78d-9dfe-4b3c-a53a-00f72a1cbbe3",
+				"bada6278-da2a-4a04-b5be-875e7310d0c2",
+				"c2c166f5-4ff2-4d94-befa-ea4a436eb54e",
+				"af814cd4-2f09-4a7e-89fe-d38ab8828d1f",
+				"2df7b5e9-6fb6-43c6-bf90-5a47a310bee6",
+				"414fa42e-7ab7-423b-a5c9-b5e192d99948",
 				"e55933b2-b273-49e2-a766-0ca3dc064d93",
 				"a1917cc1-6279-484d-9b62-62b761bdaa67",
-				"c9a934ab-b19b-4b51-a183-6895a05d38f9",
 				"376c569a-7dc3-4738-a308-490bdf783e73",
 				"00162ebc-db8b-45cb-bd10-4b27261ae87e",
 				"911c0794-6b92-44f3-8dc3-0869a5cbfd13",
@@ -411,13 +421,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "d157a1f2-9a76-4d33-87f5-c522d714d632",
-			"title": "Mesh Distortion",
-			"description": "",
-			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
-			"steps": []
-		},
-		{
 			"uuid": "c9a934ab-b19b-4b51-a183-6895a05d38f9",
 			"title": "Light Particles",
 			"description": "",
@@ -476,6 +479,83 @@
 		{
 			"uuid": "2df7b5e9-6fb6-43c6-bf90-5a47a310bee6",
 			"title": "Inventory Flashlight Fix",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "e9e632dc-acc2-475f-8f15-acf854292392",
+			"title": "Game Over Screen Fix",
+			"description": "",
+			"category": "445b946d-5169-4e5c-b959-ac82680d2e43",
+			"steps": []
+		},
+		{
+			"uuid": "bada6278-da2a-4a04-b5be-875e7310d0c2",
+			"title": "Crow Cooldown with indication",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "df747c11-5f11-489c-a2a6-c0185da7b221",
+			"title": "Save Level loading",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "bbd3965a-ee3b-4751-b590-55fbc54bfbc5",
+			"title": "Model Implementation",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "f1699121-2497-428a-a949-f71dd1c3716a",
+			"title": "Quantization Shader",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "5b289d32-56e9-4274-af62-a31737db8808",
+			"title": "Set dressing",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "90c1066b-f004-4145-9f68-0fec1660f7b4",
+			"title": "Implement Attack State",
+			"description": "",
+			"category": "a7118a95-9443-458b-b8bc-910727220608",
+			"steps": []
+		},
+		{
+			"uuid": "72c9093b-2737-40e8-a24b-2b04d115dc05",
+			"title": "Level 2 Photo",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "b2294e6d-96e8-4055-86cb-eafd831a90c7",
+			"title": "Eye trail",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
+			"steps": []
+		},
+		{
+			"uuid": "0da6abe8-a378-4852-82fc-cb821262d6e7",
+			"title": "FIX ITEM USE CONFUSION",
+			"description": "",
+			"category": "a7118a95-9443-458b-b8bc-910727220608",
+			"steps": []
+		},
+		{
+			"uuid": "08a9489c-c07c-4f82-9479-4500a0290a0b",
+			"title": "BUG FIXES",
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
 			"steps": []

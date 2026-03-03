@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://go0nwkxm05ck"]
+[gd_scene load_steps=22 format=3 uid="uid://go0nwkxm05ck"]
 
 [ext_resource type="Script" uid="uid://bxo1xpdejcplg" path="res://addons/fsm_template/Player/Scripts/Player.gd" id="1_hqtel"]
 [ext_resource type="PackedScene" uid="uid://j5il4etq1a5a" path="res://Player/Player_ui.tscn" id="2_78wmc"]
@@ -10,9 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://gamnpcnnvd6m" path="res://VFX/Flight_cookie.png" id="5_2h7ej"]
 [ext_resource type="Script" uid="uid://xyst0hde5uas" path="res://addons/fsm_template/Player/camera_3d.gd" id="5_ctqa1"]
 [ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="7_ctqa1"]
+[ext_resource type="Texture2D" uid="uid://f5maxylk8g4l" path="res://Ables/batteries.png" id="8_8u0uq"]
 [ext_resource type="PackedScene" uid="uid://dmbx332sa1c3h" path="res://addons/fsm_template/visuals.tscn" id="8_od3ui"]
+[ext_resource type="Texture2D" uid="uid://cves600dkak54" path="res://Ables/battery_2.png" id="9_4x707"]
 [ext_resource type="Script" uid="uid://dyfit4serk60d" path="res://addons/fsm_template/Player/resources.gd" id="10_5uwn6"]
-[ext_resource type="AudioStream" uid="uid://oxq8lwd8spx4" path="res://Music/sfx/fs 1.MP3" id="11_qrbxm"]
+[ext_resource type="Texture2D" uid="uid://fj1swaalghyf" path="res://Ables/battery_1.png" id="10_wei4s"]
+[ext_resource type="Texture2D" uid="uid://c05ke2iacx3p6" path="res://Ables/battery_empty.png" id="11_w7wgc"]
 [ext_resource type="PackedScene" uid="uid://ca52yb5i5ot6e" path="res://Crow/noose_bone.tscn" id="12_ctqa1"]
 
 [sub_resource type="Animation" id="Animation_q4017"]
@@ -43,23 +46,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 1.65, 0.2), Vector3(0, 1.75, 0.2), Vector3(0, 1.65, 0.2)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Fstep Player")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [0.0],
-"method": &"play"
-}, {
-"args": [],
-"method": &"stop"
-}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5uwn6"]
@@ -108,7 +94,7 @@ script = ExtResource("4_3dtqd")
 energy = 80.0
 flashlight = ExtResource("7_ctqa1")
 bat_timer = NodePath("BatteryTimer")
-wait_time = 50.0
+bat_image = Array[Texture2D]([ExtResource("8_8u0uq"), ExtResource("9_4x707"), ExtResource("10_wei4s"), ExtResource("11_w7wgc")])
 
 [node name="BatteryTimer" type="Timer" parent="LocalCamera/Camera3D/Flashlight Receiver"]
 
@@ -117,13 +103,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_5uwn6")
 }
 
-[node name="Fstep Player" type="AudioStreamPlayer3D" parent="LocalCamera/Camera3D"]
-transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, 0, 0, 1, 7.10543e-15, -1.82554, 0.243578)
-stream = ExtResource("11_qrbxm")
-volume_db = 40.0
-unit_size = 30.0
-max_db = 6.0
-parameters/looping = true
+[node name="AudioListener3D" type="AudioListener3D" parent="LocalCamera/Camera3D"]
+doppler_tracking = 1
+current = true
 
 [node name="UI" parent="." instance=ExtResource("2_78wmc")]
 
@@ -146,10 +128,6 @@ camera = NodePath("../LocalCamera/Camera3D")
 
 [node name="Resources" type="Node" parent="."]
 script = ExtResource("10_5uwn6")
-
-[node name="AudioListener3D" type="AudioListener3D" parent="."]
-doppler_tracking = 1
-current = true
 
 [connection signal="timeout" from="LocalCamera/Camera3D/Flashlight Receiver/BatteryTimer" to="LocalCamera/Camera3D/Flashlight Receiver" method="_on_battery_timer_timeout"]
 

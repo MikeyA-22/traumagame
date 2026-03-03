@@ -1,13 +1,14 @@
 extends Control
 
 class_name Dialogue
-@onready var background : NinePatchRect = $background
+@onready var background : TextureRect = $background
 @onready var content : RichTextLabel = $content
 @onready var type_timer : Timer = $typetimer
 @onready var pause_timer : Timer = $pausetimer
 @onready var audio_player : AudioStreamPlayer
 @onready var pause_calc : PauseCalculator = $PauseCalculator
 @onready var done_timer : Timer = $Donetimer
+
 
 var playing_voice:bool
 

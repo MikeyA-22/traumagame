@@ -47,7 +47,7 @@ void fragment()
 	vec4 color_base = color;
 	vec4 texture_color = texture(albedo, UV);
 
-	ALBEDO = (color_base * texture_color).rgb * emission * emission_power;
+	ALBEDO = (texture_color).rgb;
 	ALPHA = texture_color.a * color_base.a;
 	ALPHA_SCISSOR_THRESHOLD = alpha_scissor;
 }

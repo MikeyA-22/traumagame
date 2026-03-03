@@ -22,8 +22,12 @@ func _process(delta:float) -> void:
 		else:
 			assess_interactable(collider)
 			if Input.is_action_just_pressed("interact") and interactable:
+				
 				print("SIG VALUE IS:", sig_value)
 				sig.emit(sig_value)
+				if Game_Global.active_tut_index == 2:
+					Game_Global.progress_tutorial()
+	
 	else:
 		Game_Global.is_pickable = false
 		reticlenumber = 0

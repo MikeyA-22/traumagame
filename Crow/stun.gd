@@ -10,8 +10,13 @@ var angle:float = 0.0
 @onready var root:Node3D = $"../.."
 var monster_inrange : bool = true
 
+@onready var cooldown_timer : CrowCooldownTimer = $"../../CooldownTimer"
+
+@onready var crow_caw_player : AudioStreamPlayer3D = $"../../crowplayer"
 
 func on_enter():
+	crow_caw_player.volume_db = 200
+	crow_caw_player.play()
 	if player.resources.sanity > 0:
 		RenderingServer.global_shader_parameter_set("heat_strength", Game_Global.madness_increment)
 		Game_Global.madness_increment += .0075
@@ -19,7 +24,10 @@ func on_enter():
 		player.resources.sanity -= 10
 		#print(player.resources.sanity)
 		monster.statemachine.switch_to("stunned")
+		SigBus.STUNNED.emit()
 	monster_inrange = false
+	cooldown_timer.start()
+	cooldown_timer.set_eye_mat(0)
 
 func check_transition(delta)->Array:
 	if monster_inrange == false:
@@ -37,4 +45,4 @@ func circular_motion():
 	
 	character.position.x = (radius * x_pos) + root.position.x
 	character.position.y = 0
-	character.position.z = (radius * z_pos) + root.position.z
+	character.posit
