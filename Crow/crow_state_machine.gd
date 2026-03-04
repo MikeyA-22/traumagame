@@ -1,4 +1,4 @@
-extends StateMachine 
+extends MobStateMachine 
 class_name CrowStateMachine
 
 

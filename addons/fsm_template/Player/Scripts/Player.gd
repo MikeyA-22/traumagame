@@ -5,7 +5,7 @@ class_name Player
 
 @onready var inputgatherer = $InputGatherer
 
-@onready var Model = $Model
+@onready var Model: MyModel = $Model
 @onready var inventory = $Model/Inventory
 @onready var photobook = $Model/Photobook
 @onready var camera_mount = $LocalCamera
@@ -24,6 +24,24 @@ var hidden = false
 
 func _ready() -> void:
 	visuals.accept_skeleton(Model.skeleton)
+	set_items()
+	
+	#Model.anim_tree.set("parameters/conditions/idle", true)
+	#Model.animator.play("idle")
+
+func _physics_process(delta: float) -> void:
+	var input = inputgatherer.gather_input()
+	
+	
+	Model.update(input, delta)
+	Model.hidden = hidden
+	
+	
+	input.queue_free()
+	#Visuals -> follow parent transformation
+	
+
+func set_items():
 	inventory.items = Game_Global.save_game.inventory_items
 	active_item = Game_Global.save_game.active_item
 	photos = Game_Global.save_game.photos
@@ -34,16 +52,3 @@ func _ready() -> void:
 	if active_item != null:
 		inventory.active_item = Game_Global.save_game.active_item.item_model.instantiate()
 	inventory.switch_item()
-	
-	#Model.anim_tree.set("parameters/conditions/idle", true)
-	#Model.animator.play("idle")
-
-func _physics_process(delta: float) -> void:
-	var input = inputgatherer.gather_input()
-	
-	Model.update(input, delta)
-	
-	
-	input.queue_free()
-	#Visuals -> follow parent transformation
-	

@@ -66,7 +66,8 @@
 				"08a9489c-c07c-4f82-9479-4500a0290a0b",
 				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
 				"df747c11-5f11-489c-a2a6-c0185da7b221",
-				"5ab85688-a91f-4244-9197-23b621d59adb"
+				"5ab85688-a91f-4244-9197-23b621d59adb",
+				"ff39d04c-5235-467a-a872-a69764854c05"
 			]
 		},
 		{
@@ -556,6 +557,13 @@
 		{
 			"uuid": "08a9489c-c07c-4f82-9479-4500a0290a0b",
 			"title": "BUG FIXES",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "ff39d04c-5235-467a-a872-a69764854c05",
+			"title": "Photobook Appear and disappear",
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
 			"steps": []

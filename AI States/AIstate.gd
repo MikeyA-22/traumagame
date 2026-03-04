@@ -38,8 +38,7 @@ func update(delta):
 	pass
 	#RenderingServer.global_shader_parameter_set("static_noise_intensity",static_noise)
 	#static_noise = (character.global_position.y - player.global_position.y) * -1 * stat_adjuster
-	#print(static_noise)
- 
+	#print(static_noise) 
 
 func on_enter():
 	pass

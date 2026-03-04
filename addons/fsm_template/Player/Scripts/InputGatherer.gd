@@ -18,7 +18,7 @@ func gather_input() -> InputPackage:
 	new_input.input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	if Game_Global.hidden == false:
 		if new_input.input_direction != Vector2.ZERO:
-			new_input.actions.append("run")
+			new_input.actions.append("walk")
 			if Game_Global.active_tut_index == 0:
 				SigBus.TUT_KEY_PRESSED.emit()
 				Game_Global.active_tut_index += 1

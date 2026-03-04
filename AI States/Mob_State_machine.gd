@@ -1,5 +1,5 @@
 extends Node
-class_name StateMachine
+class_name MobStateMachine
 
 @export var animation_player : AnimationPlayer
 @export var character : CharacterBody3D

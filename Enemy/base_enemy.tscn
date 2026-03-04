@@ -1,9 +1,8 @@
-[gd_scene load_steps=36 format=4 uid="uid://d1y5wyjmkk0x"]
+[gd_scene load_steps=35 format=4 uid="uid://d1y5wyjmkk0x"]
 
 [ext_resource type="Script" uid="uid://bolvok7bxj3mf" path="res://Enemy/Enemy.gd" id="1_m4cmf"]
 [ext_resource type="Texture2D" uid="uid://cq7ell753jcjw" path="res://Enemy/Monster _rig_v006_monster_DefaultMaterial_BaseMap.png" id="2_dqk8d"]
 [ext_resource type="Texture2D" uid="uid://cf8mbxl581ccd" path="res://Enemy/Monster _rig_v006_monster_DefaultMaterial_Normal.png" id="3_puq40"]
-[ext_resource type="AudioStream" uid="uid://bsneodn8mhtam" path="res://Music/monster/monster run.MP3" id="4_berbw"]
 [ext_resource type="AudioStream" uid="uid://cqj5lho7rmgim" path="res://Music/monster/monster walk_1.MP3" id="5_o8lgo"]
 [ext_resource type="Script" uid="uid://b8eojm05pep7g" path="res://AI States/Mob_State_machine.gd" id="5_ud51s"]
 [ext_resource type="AudioStream" uid="uid://rigdl56nxvgg" path="res://Music/monster/monster attack.MP3" id="6_d3qvc"]
@@ -10836,7 +10835,6 @@ libraries = {
 }
 
 [node name="FStep Player" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("4_berbw")
 volume_db = 20.0
 area_mask = 5
 

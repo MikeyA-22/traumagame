@@ -34,6 +34,18 @@ script/templates_search_path="res://addons/fsm_template/Templates"
 
 enabled=PackedStringArray("res://addons/fsm_template/plugin.cfg", "res://addons/godot_ui_animations/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Ables/": "gray",
+"res://Behaviour Tree/": "yellow",
+"res://Enemy/": "red",
+"res://MyStateMachine/": "blue",
+"res://Player/": "green",
+"res://Shaders/": "purple",
+"res://VFX/": "orange"
+}
+
 [filesystem]
 
 import/blender/enabled=false

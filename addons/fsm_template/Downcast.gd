@@ -1,7 +1,7 @@
 extends RayCast3D
 
 @onready var root = $"../Root"
-@onready var model: PlayerModel = $".."
+@onready var model: MyModel = $".."
 @onready var targetsphere = $targetsphere
 @onready var fstep_player = $"../Fstep Player"
 
@@ -15,8 +15,7 @@ var current_surface_name: String = ""
 	"Concrete" : preload("res://Music/footstep/concrete_3.MP3")
 }
 
-func free() -> void:
-	fstep_player.max_db = 20
+
 
 
 func _process(delta: float) -> void:
@@ -24,11 +23,12 @@ func _process(delta: float) -> void:
 	targetsphere.global_position = get_collision_point()
 	
 	
-	if model.current_state.name == "Run":
+	if model.movement_machine.current_state.state_name == "walk":
+		
 		change_footsteps()
 		#play_footsteps()
 	else:
-		fstep_player.stream_paused = true
+		fstep_player.stop()
 
 
 func change_footsteps():

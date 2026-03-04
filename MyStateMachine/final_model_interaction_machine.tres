@@ -1,0 +1,27 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=6 format=3 uid="uid://vtcxwfane2gw"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fuvjt"]
+animation = &"Pills"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_waqsl"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ywnxm"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5l5ia"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"pills"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rlwff"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[resource]
+states/Pills/node = SubResource("AnimationNodeAnimation_fuvjt")
+states/Pills/position = Vector2(378.61224, 196.2857)
+states/Start/position = Vector2(214.85715, 70.28571)
+states/idle/node = SubResource("AnimationNodeAnimation_waqsl")
+states/idle/position = Vector2(378.85715, 64.85715)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ywnxm"), "idle", "Pills", SubResource("AnimationNodeStateMachineTransition_5l5ia"), "Pills", "idle", SubResource("AnimationNodeStateMachineTransition_rlwff")]
