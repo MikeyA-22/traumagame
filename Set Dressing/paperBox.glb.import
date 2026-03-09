@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxi32tomyh2i4"
-path="res://.godot/imported/monsteraftersolidify.glb-1f18c1097f652496cdce345d325ec3e0.scn"
+uid="uid://u4i78b3ti40b"
+path="res://.godot/imported/paperBox.glb-e1386736f590487755c0bf0e69a671dc.scn"
 
 [deps]
 
-source_file="res://Enemy/monsteraftersolidify.glb"
-dest_files=["res://.godot/imported/monsteraftersolidify.glb-1f18c1097f652496cdce345d325ec3e0.scn"]
+source_file="res://Set Dressing/paperBox.glb"
+dest_files=["res://.godot/imported/paperBox.glb-e1386736f590487755c0bf0e69a671dc.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1
