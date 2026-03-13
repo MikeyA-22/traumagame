@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxi32tomyh2i4"
-path="res://.godot/imported/monsteraftersolidify.glb-1f18c1097f652496cdce345d325ec3e0.scn"
+uid="uid://dlru05c14hpbc"
+path="res://.godot/imported/folder_x1.glb-d188756e5b4a124df77fdf6878e24dc1.scn"
 
 [deps]
 
-source_file="res://Enemy/monsteraftersolidify.glb"
-dest_files=["res://.godot/imported/monsteraftersolidify.glb-1f18c1097f652496cdce345d325ec3e0.scn"]
+source_file="res://Set Dressing/folder_x1.glb"
+dest_files=["res://.godot/imported/folder_x1.glb-d188756e5b4a124df77fdf6878e24dc1.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1
