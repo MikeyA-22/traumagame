@@ -21,6 +21,11 @@ var interaction_label: Label = Label.new()
 @export var mat_array : Array[StandardMaterial3D]
 @export var item_data: ItemData
 
+var indicator_scene: PackedScene
+var indicator : IndicatorMesh
+var showing : bool = true
+var hiding : bool = true
+
 #@export var main_mat: StandardMaterial3D
 
 
@@ -28,6 +33,38 @@ var interaction_label: Label = Label.new()
 func _init() -> void:
 	add_indication_area()
 	assign_sfx()
+	
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_READY:
+		setup_indicator()
+
+
+func setup_indicator():
+	indicator_scene = preload("res://Ables/indicator.tscn")
+	indicator = indicator_scene.instantiate()
+	add_child(indicator)
+	indicator.position.y = 0.2
+	
+func show_indication():
+	if indicator != null:
+		if showing == true:
+			indicator.animator.play("startindicate")
+			print("INDICATIONSHOWING")
+			showing = false
+		
+
+func remove_indication():
+	if indicator != null:
+		indicator.queue_free()
+
+func hide_indication():
+	if indicator != null:
+		if showing == false:
+			print("HIDINGINDICATION")
+			indicator.animator.play("endindicate")
+			showing = true
+	
 
 func show_outline(body: Node3D)->void:
 	if body is Player:
@@ -59,6 +96,7 @@ func assign_sfx():
 func add_indication_area():
 	collision_layer = LAYER_INTERACTABLE
 	collision_mask = MASK_PLAYER | MASK_ENVIRONMENT
+	
 	##INTERACTION INDICATOR SETUP
 	#A. SET RADIUS OF THE SHAPE REFERENCE FOR COLLISION
 	pickable_shape.radius = pickable_float_range
@@ -71,6 +109,7 @@ func add_indication_area():
 	pickable_area.connect("body_exited",Callable(self,"hide_outline"))
 	#E. ADD AREA AS CHILD
 	add_child(pickable_area)
+	
 	
 
 func remove_outline():

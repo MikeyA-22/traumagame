@@ -21,11 +21,8 @@ blackboard = {
 }
 metadata/_custom_type_script = "uid://eyfj7b1majcf"
 
-[node name="root" type="Node" node_paths=PackedStringArray("animation_player_2", "animation_player", "actor")]
+[node name="root" type="Node"]
 script = ExtResource("1_0ag8t")
-animation_player_2 = NodePath("")
-animation_player = NodePath("")
-actor = NodePath("")
 blackboard_resource = SubResource("Resource_xhqd6")
 metadata/_custom_type_script = "uid://dwvxf1q0i0uf3"
 

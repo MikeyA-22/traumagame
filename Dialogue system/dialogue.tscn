@@ -23,6 +23,7 @@ size_flags_horizontal = 4
 script = ExtResource("1_kp46k")
 
 [node name="background" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.54300004
@@ -37,6 +38,7 @@ texture = ExtResource("2_4sfd0")
 expand_mode = 1
 
 [node name="content" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.208

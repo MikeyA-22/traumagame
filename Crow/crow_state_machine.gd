@@ -19,9 +19,13 @@ func _ready() -> void:
 	current_state = states["idle"]
 	switch_to("idle")
 	RenderingServer.global_shader_parameter_set("static_noise_intensity", noise_intensity)
+	SigBus.connect("SETMONSTER", assign_monster)
 	
 
-
+func assign_monster(monster : Enemy):
+	for child in get_children():
+		if child is AIstate:
+			child.monster = monster
 
 func _physics_process(delta: float) -> void:
 	var verdict = current_state.check_transition(delta)

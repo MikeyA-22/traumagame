@@ -10,9 +10,9 @@ func _ready() -> void:
 	SigBus.connect("PICKING_UP", on_object_picked)
 	Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
 
-func on_object_picked(messages: Array)->void:
+func on_object_picked(messages: Array, time)->void:
 	dialogue_manager.show_messages(messages
-	, dialogue_position.position)
+	, dialogue_position.position, time)
 
 func on_DialogueManager_message_completed()->void:
 	next_label.visible = true

@@ -20,7 +20,7 @@ func assess_children(actor, delta, blackboard):
 			
 			##TASK: IF THE RESPONSE IS NOT SUCCESS, WE CAN ASSUME IT IS FAILURE OR RUNNING, EITHER WAY RETURN THE RESPONSEE
 			if response != STATUS.SUCCESS:
-				#print("response is: ", response , " at child: ", child.UID)
+				print("response is: ", response , " at child: ", child.UID)
 				return response
 		##TASK: OUTSIDE OF ALL THIS, RETURN SUCCESS, AS WE CAN ASSUME IT SUCCEEDED IF THE FOR LOOP FINISHED, SO WE NEEEEED TO MOVE ON TO THE NEXT 
 	stop.emit(stop_after_failure)

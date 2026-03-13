@@ -1,12 +1,10 @@
-[gd_scene load_steps=275 format=4 uid="uid://dh37dwj5owa62"]
+[gd_scene load_steps=271 format=4 uid="uid://dh37dwj5owa62"]
 
 [ext_resource type="Script" uid="uid://chmve4wg5qil2" path="res://Level 1/level_1.gd" id="1_3qwse"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_5i7a4"]
 [ext_resource type="Texture2D" uid="uid://bqniwh48idlru" path="res://textures/Substance_graph_basecolor.png" id="1_q584y"]
 [ext_resource type="Texture2D" uid="uid://ddt2p7ei1u0nj" path="res://textures/Substance_graph_roughness.png" id="2_hp663"]
-[ext_resource type="Resource" uid="uid://cei2leye1yops" path="res://Resource/Flashlight.tres" id="2_uddcx"]
 [ext_resource type="Texture2D" uid="uid://bsxste7otx5cv" path="res://textures/Substance_graph_normal.png" id="3_3qwse"]
-[ext_resource type="Resource" uid="uid://cqoda8bvqx5au" path="res://Resource/pills.tres" id="3_ay3vd"]
 [ext_resource type="Texture2D" uid="uid://bo61l2v2uj4gg" path="res://textures/floor_basecolor.png" id="4_1ywr4"]
 [ext_resource type="Texture2D" uid="uid://dbbg8680uvici" path="res://textures/floor_roughness.png" id="5_uddcx"]
 [ext_resource type="Texture2D" uid="uid://dfm3mb6uuuxjg" path="res://textures/floor_normal.png" id="6_ay3vd"]
@@ -75,8 +73,6 @@
 [ext_resource type="Texture2D" uid="uid://cyiae8vbb5gc2" path="res://textures/tolet_DefaultMaterial_Normal.png" id="68_lcfgl"]
 [ext_resource type="Texture2D" uid="uid://cj15v7bhgvs1c" path="res://textures/faucet_Material_BaseMap.001.png" id="69_jxbqa"]
 [ext_resource type="Texture2D" uid="uid://bu2ptir1rl4m4" path="res://textures/faucet_Material_Normal.001.png" id="70_ieokk"]
-[ext_resource type="PackedScene" uid="uid://go0nwkxm05ck" path="res://addons/fsm_template/Player/player.tscn" id="71_nx253"]
-[ext_resource type="PackedScene" uid="uid://d1y5wyjmkk0x" path="res://Enemy/base_enemy.tscn" id="72_5notj"]
 [ext_resource type="Script" uid="uid://dvxeamowg7jtb" path="res://Tutorial Level/state_changer.gd" id="72_f7vnk"]
 [ext_resource type="Material" uid="uid://hgodhplhtbky" path="res://Shaders/heat_distort.tres" id="73_3n2pe"]
 [ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="73_a4j8g"]
@@ -84,14 +80,14 @@
 [ext_resource type="Shader" uid="uid://bm38vek87nfgh" path="res://chromatic_aberration.gdshader" id="74_8j5jx"]
 [ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="74_a4j8g"]
 [ext_resource type="PackedScene" uid="uid://dqtbo1erqrc2t" path="res://Photobook/news_paper.tscn" id="75_7cy2h"]
-[ext_resource type="Script" uid="uid://dk6bs118bwbsv" path="res://Resource/Item_data.gd" id="75_ay3vd"]
 [ext_resource type="AudioStream" uid="uid://bs8lholhwj0pe" path="res://Music/Main.MP3" id="79_inwc4"]
 [ext_resource type="Script" uid="uid://ct66ujxpfr6ir" path="res://Music/bg_music.gd" id="80_rdtp5"]
 [ext_resource type="AudioStream" uid="uid://bs51sebxvp2w2" path="res://Music/sfx/phase 2.MP3" id="81_a4j8g"]
 [ext_resource type="AudioStream" uid="uid://1cjtaa0o3d1x" path="res://phase 1.MP3" id="82_5i7a4"]
 [ext_resource type="AudioStream" uid="uid://c8eiceuuh6b72" path="res://Music/sfx/phase 3.MP3" id="83_vjns4"]
 [ext_resource type="AudioStream" uid="uid://c2uk4g62w05pg" path="res://Music/sfx/phase4.MP3" id="84_x5mxi"]
-[ext_resource type="Resource" uid="uid://dy8s8gewdv14x" path="res://Resource/Batteries.tres" id="89_7cy2h"]
+[ext_resource type="PackedScene" uid="uid://ccwaxapbke6h2" path="res://addons/fsm_template/Player/final_player.tscn" id="85_5i7a4"]
+[ext_resource type="PackedScene" uid="uid://kluhkctuki4x" path="res://Enemy/BT_base_enemy.tscn" id="86_vjns4"]
 [ext_resource type="PackedScene" uid="uid://ddriaht17atfl" path="res://Ables/batteries.tscn" id="91_b4sao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vjns4"]
@@ -2493,7 +2489,7 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_5i7a4")
 
-[node name="HidingPointCloset" type="StaticBody3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label", "player")]
+[node name="HidingPointCloset" type="StaticBody3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label")]
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("44_vjns4")
@@ -2501,7 +2497,6 @@ hidden_cam = NodePath("../Hideset/Camera3D2")
 hide_point = NodePath("../Hideset/hide_point")
 hide_offset = Vector3(0, 0, 1)
 hide_label = NodePath("../Hideset/HidingLabel")
-player = NodePath("../../../Player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base/HidingPointCloset"]
 shape = SubResource("ConvexPolygonShape3D_x5mxi")
@@ -2541,7 +2536,7 @@ skeleton = NodePath("")
 "blend_shapes/Key 1" = 0.0
 "blend_shapes/Key 2" = 0.0
 
-[node name="HidingPointCloset" type="StaticBody3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base_001" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label", "player")]
+[node name="HidingPointCloset" type="StaticBody3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base_001" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label")]
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("44_vjns4")
@@ -2549,7 +2544,6 @@ hidden_cam = NodePath("../Hideset/Camera3D2")
 hide_point = NodePath("../Hideset/hide_point")
 hide_offset = Vector3(0, 0, 1)
 hide_label = NodePath("../Hideset/HidingLabel")
-player = NodePath("../../../Player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/closet_base_001/HidingPointCloset"]
 shape = SubResource("ConvexPolygonShape3D_x5mxi")
@@ -2613,14 +2607,13 @@ layers = 3
 mesh = SubResource("ArrayMesh_pupxr")
 skeleton = NodePath("")
 
-[node name="HidingPointTable" type="StaticBody3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/table" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label", "player")]
+[node name="HidingPointTable" type="StaticBody3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/table" node_paths=PackedStringArray("hidden_cam", "hide_point", "hide_label")]
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("44_vjns4")
 hidden_cam = NodePath("../Hideset/Camera3D")
 hide_point = NodePath("../Hideset/hide_point1")
 hide_label = NodePath("../Hideset/HidingLabel")
-player = NodePath("../../../Player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/table/HidingPointTable"]
 shape = SubResource("ConvexPolygonShape3D_x5mxi")
@@ -2874,18 +2867,12 @@ start_position = Vector3(0, 0.5, 3.58)
 end_position = Vector3(0, 0.5, 0)
 travel_cost = 0.0
 
-[node name="Player" parent="SubViewport/Level1" node_paths=PackedStringArray("monster") instance=ExtResource("71_nx253")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.04794264, 0.37236416, -0.6191838)
+[node name="Player" parent="SubViewport/Level1" node_paths=PackedStringArray("monster") instance=ExtResource("85_5i7a4")]
 monster = NodePath("../Base Enemy")
-inventory_list = Array[ExtResource("75_ay3vd")]([ExtResource("2_uddcx"), ExtResource("89_7cy2h")])
-active_item = ExtResource("3_ay3vd")
 
-[node name="Base Enemy" parent="SubViewport/Level1" node_paths=PackedStringArray("player") instance=ExtResource("72_5notj")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.561, 0.14, -25.008)
+[node name="Base Enemy" parent="SubViewport/Level1" node_paths=PackedStringArray("player") instance=ExtResource("86_vjns4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.5762212, 0, -26.793919)
 player = NodePath("../Player")
-aggro_radius = 2.0
-attack_radius = 1.0
-deaggro_radius = 4.0
 
 [node name="Battery" parent="SubViewport/Level1" instance=ExtResource("91_b4sao")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6, 0.7240598, -6.7572417)

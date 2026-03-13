@@ -14,6 +14,8 @@ func get_interaction_data(player) -> Dictionary:
 		"sig_value": true,
 		"reticle": 1
 	}
+	
+
 
 func turn_off_candles(is_off: bool):
 	if is_off == true:

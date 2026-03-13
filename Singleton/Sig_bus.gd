@@ -15,3 +15,4 @@ signal SWITCH
 signal BATTERIES
 signal SAVE
 signal TUT_KEY_PRESSED
+signal SETMONSTER

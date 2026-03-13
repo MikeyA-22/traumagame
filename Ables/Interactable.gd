@@ -7,10 +7,18 @@ var interactable_actions: Dictionary
 
 
 @export var interactable_float_range:float = 2
+
+@export var indication_mouse_height: float = 0.5
+
 var interactable_area = Area3D.new()
 var interactable_shape = SphereShape3D.new()
 var interactable_range = CollisionShape3D.new()
 var pick_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+
+var indicator_scene: PackedScene
+var indicator : IndicatorMesh
+var showing : bool = true
+var hiding : bool = true
 
 func get_interaction_data(player) -> Dictionary:
 	return {}
@@ -20,6 +28,35 @@ func _init() -> void:
 
 func _ready() -> void:
 	pass
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_READY:
+		setup_indicator()
+
+func setup_indicator():
+	indicator_scene = preload("res://Ables/indicator.tscn")
+	indicator = indicator_scene.instantiate()
+	add_child(indicator)
+	indicator.position.y = indication_mouse_height
+
+func show_indication():
+	if indicator != null:
+		if showing == true:
+			indicator.animator.play("startindicate")
+			print("INDICATIONSHOWING")
+			showing = false
+		
+
+func remove_indication():
+	if indicator != null:
+		indicator.queue_free()
+
+func hide_indication():
+	if indicator != null:
+		if showing == false:
+			print("HIDINGINDICATION")
+			indicator.animator.play("endindicate")
+			showing = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

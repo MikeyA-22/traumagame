@@ -1,4 +1,7 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=6 format=3 uid="uid://dwh8l1xm1ees2"]
+[gd_resource type="AnimationNodeStateMachine" load_steps=9 format=3 uid="uid://dwh8l1xm1ees2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qbki2"]
+animation = &"in table"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ogk8n"]
 animation = &"idle"
@@ -19,9 +22,21 @@ switch_mode = 1
 advance_mode = 2
 advance_condition = &"idle"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rd1qh"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"hidden"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n7adp"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"idle"
+
 [resource]
+states/hidden/node = SubResource("AnimationNodeAnimation_qbki2")
+states/hidden/position = Vector2(441.7143, 103.71429)
 states/idle/node = SubResource("AnimationNodeAnimation_ogk8n")
-states/idle/position = Vector2(436, 90)
+states/idle/position = Vector2(339.4286, 185.38193)
 states/walking/node = SubResource("AnimationNodeAnimation_y8plj")
 states/walking/position = Vector2(533.1428, 205.42856)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_07va4"), "idle", "walking", SubResource("AnimationNodeStateMachineTransition_qanuf"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_y8plj")]
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_07va4"), "idle", "walking", SubResource("AnimationNodeStateMachineTransition_qanuf"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_y8plj"), "idle", "hidden", SubResource("AnimationNodeStateMachineTransition_rd1qh"), "hidden", "idle", SubResource("AnimationNodeStateMachineTransition_n7adp")]

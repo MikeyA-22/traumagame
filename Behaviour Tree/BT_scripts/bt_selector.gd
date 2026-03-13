@@ -21,6 +21,8 @@ func assess_children(actor, delta, blackboard):
 			if response != STATUS.FAIL:
 				if response == STATUS.SUCCESS:
 					stop.emit(stop_after_success)
+				if response == STATUS.RUNNING:
+					print("RUNNING:", STATUS.RUNNING)
 				return response
 	print("FAILURE")
 	stop.emit(stop_after_failure)

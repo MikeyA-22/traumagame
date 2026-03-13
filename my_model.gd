@@ -20,7 +20,10 @@ var dampener = 0.1
 @onready var Photobook = $Photobook
 @onready var hidden
 
+@onready var interaction_manager : InteractionManager = $InteractionMachine/InteractionManager
+
 @onready var movement_machine : StateMachine = $MovementMachine
+@onready var interaction_machine: StateMachine = $InteractionMachine
 
 
 static var flash = false
@@ -44,6 +47,9 @@ func _ready() -> void:
 func update(input: InputPackage, delta: float):
 	
 	movement_machine.update(input, delta)
+	var input_interaction = interaction_manager.translate_pickable_actions(input)
+	#print(input_interaction.interactions)
+	interaction_machine.update(input_interaction, delta)
 
 
 

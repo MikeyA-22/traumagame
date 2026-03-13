@@ -23,7 +23,7 @@ func on_enter():
 		#print(Game_Global.madness_increment)
 		player.resources.sanity -= 10
 		#print(player.resources.sanity)
-		monster.statemachine.switch_to("stunned")
+		#monster.statemachine.switch_to("stunned")
 		SigBus.STUNNED.emit()
 	monster_inrange = false
 	cooldown_timer.start()

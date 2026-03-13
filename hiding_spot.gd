@@ -76,12 +76,14 @@ func _input(event: InputEvent) -> void:
 
 
 func get_body_entered(body: Node3D):
-	if body is Player:
-		hide_label.visible = true
+	pass
+	#if body is Player:
+		#hide_label.visible = true
 
 func get_body_exited(body: Node3D):
-	if body is Player:
-		hide_label.visible = false
+	pass
+	#if body is Player:
+		#hide_label.visible = false
 
 func switch_mouse():
 	if mouse_is_captured:

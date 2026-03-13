@@ -76,7 +76,7 @@ func assign_item(active_item):
 	else:
 		right_hand.add_child(active_item)
 
-func put_item_in_hand(item):
+func put_item_in_hand(item : Pickable):
 	if item.item_data.item_name != "Flashlight":
 		item.reparent(right_hand)
 		item.transform = right_hand.transform
@@ -86,3 +86,6 @@ func put_item_in_hand(item):
 		item.transform = left_hand.transform
 	item.position = Vector3.ZERO
 	item.remove_outline()
+	item.remove_indication()
+	item.set_collision_layer_value(2,false)
+	item.set_collision_layer_value(9,true)

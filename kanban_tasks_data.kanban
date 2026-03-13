@@ -55,18 +55,16 @@
 				"e9e632dc-acc2-475f-8f15-acf854292392",
 				"121d99c8-c491-4397-b4ea-d677e5dc4754",
 				"2be82a9f-8e32-4ec4-918e-19cca05f9c88",
+				"1b4979d4-d9f5-4d1c-85bb-fb0aa35ebcf7",
 				"f1699121-2497-428a-a949-f71dd1c3716a",
-				"0da6abe8-a378-4852-82fc-cb821262d6e7"
+				"df747c11-5f11-489c-a2a6-c0185da7b221"
 			]
 		},
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
-			"title": "Doing: BY MONDAY!!",
+			"title": "Doing: BY FRIDAY!!",
 			"tasks": [
-				"08a9489c-c07c-4f82-9479-4500a0290a0b",
-				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
-				"df747c11-5f11-489c-a2a6-c0185da7b221",
-				"5ab85688-a91f-4244-9197-23b621d59adb",
+				"f9c65ace-fa64-45b9-892f-737d7a0a5e56",
 				"ff39d04c-5235-467a-a872-a69764854c05"
 			]
 		},
@@ -74,6 +72,10 @@
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"0dc714b8-329e-4d5b-a39e-5c2c14e9f4d1",
+				"3b0764fc-beab-4528-986c-94e5f9c4e48f",
+				"f3ac0b66-f02d-4ea1-ac3a-cb94da3b5b26",
+				"08a9489c-c07c-4f82-9479-4500a0290a0b",
 				"c9a934ab-b19b-4b51-a183-6895a05d38f9",
 				"b2294e6d-96e8-4055-86cb-eafd831a90c7",
 				"c1109262-4ba2-4dff-bebe-1af689eaab41",
@@ -142,7 +144,7 @@
 		{
 			"uuid": "25b56742-bdf6-47f5-b553-fe213102ecc0",
 			"title": "Animation transistions",
-			"description": "",
+			"description": "CUT??\n",
 			"category": "dc327489-82ef-4e57-a043-9d268687a2be",
 			"steps": [
 				{
@@ -380,13 +382,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "5ab85688-a91f-4244-9197-23b621d59adb",
-			"title": "Doors",
-			"description": "",
-			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
-			"steps": []
-		},
-		{
 			"uuid": "ccd3e14a-5f1d-4a0f-9b9d-4df456ae9295",
 			"title": "Battery functionality",
 			"description": "",
@@ -548,18 +543,28 @@
 			"steps": []
 		},
 		{
-			"uuid": "0da6abe8-a378-4852-82fc-cb821262d6e7",
-			"title": "FIX ITEM USE CONFUSION",
-			"description": "",
-			"category": "a7118a95-9443-458b-b8bc-910727220608",
-			"steps": []
-		},
-		{
 			"uuid": "08a9489c-c07c-4f82-9479-4500a0290a0b",
 			"title": "BUG FIXES",
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
-			"steps": []
+			"steps": [
+				{
+					"details": "Concurrent StateMachine",
+					"done": true
+				},
+				{
+					"details": "Flashlight depletion in hiding",
+					"done": true
+				},
+				{
+					"details": "Lock Camera Rotation",
+					"done": true
+				},
+				{
+					"details": "StickyCorners",
+					"done": true
+				}
+			]
 		},
 		{
 			"uuid": "ff39d04c-5235-467a-a872-a69764854c05",
@@ -567,6 +572,52 @@
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
 			"steps": []
+		},
+		{
+			"uuid": "f3ac0b66-f02d-4ea1-ac3a-cb94da3b5b26",
+			"title": "Indication",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": [
+				{
+					"details": "Pickable indication",
+					"done": true
+				},
+				{
+					"details": "Interactable Indication",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "f9c65ace-fa64-45b9-892f-737d7a0a5e56",
+			"title": "Inventory Indication next item",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "1b4979d4-d9f5-4d1c-85bb-fb0aa35ebcf7",
+			"title": "Reposition the flashlight's light",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "3b0764fc-beab-4528-986c-94e5f9c4e48f",
+			"title": "Monster spawn change",
+			"description": "\n",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": [
+				{
+					"details": "Monster spawns after you get to the bathroom",
+					"done": true
+				},
+				{
+					"details": "Spawns from your spawn point, or around where you were",
+					"done": true
+				}
+			]
 		}
 	],
 	"layout": {

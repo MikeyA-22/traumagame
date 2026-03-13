@@ -2,7 +2,7 @@ extends State
 
 class_name Flash
 
-signal flash
+
 
 
 

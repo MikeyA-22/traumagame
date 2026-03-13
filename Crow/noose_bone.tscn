@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://ca52yb5i5ot6e"]
+[gd_scene load_steps=46 format=4 uid="uid://ca52yb5i5ot6e"]
 
 [ext_resource type="Script" uid="uid://d0xlfghtlxf2a" path="res://Crow/character_body_3d.gd" id="1_5hwkx"]
 [ext_resource type="Script" uid="uid://dauw6ec6d3vuv" path="res://Crow/noose_bone.gd" id="1_ba1t2"]
@@ -17889,6 +17889,17 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_5hwkx"]
 radius = 0.13449743
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_s3d3b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhqd6"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_usfuv"]
+material = SubResource("StandardMaterial3D_xhqd6")
+size = Vector2(0.2, 0.2)
+
 [sub_resource type="Animation" id="Animation_ba1t2"]
 length = 0.001
 tracks/0/type = "value"
@@ -20841,6 +20852,7 @@ transform = Transform3D(1, -2.9802322e-08, 2.9802322e-08, -2.9802322e-08, 1, -7.
 script = ExtResource("5_xhqd6")
 lifetime = 0.01
 min_vertex_distance = 0.005
+is_emitting = false
 curve = SubResource("Curve_s3d3b")
 alignment = 0
 material = ExtResource("4_s3d3b")
@@ -20859,6 +20871,7 @@ transform = Transform3D(1, -2.9802322e-08, 0, 0, 0.9999999, 0, 2.9802322e-08, -1
 script = ExtResource("5_xhqd6")
 lifetime = 0.01
 min_vertex_distance = 0.005
+is_emitting = false
 curve = SubResource("Curve_s3d3b")
 alignment = 0
 material = ExtResource("4_s3d3b")
@@ -20888,6 +20901,12 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Crow2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2457858, 0.08017612, 0.36123642)
 shape = SubResource("SphereShape3D_5hwkx")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Crow2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2658037, 0.14444281, 0.4769908)
+visible = false
+process_material = SubResource("ParticleProcessMaterial_s3d3b")
+draw_pass_1 = SubResource("QuadMesh_usfuv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -114,9 +114,10 @@ mesh = SubResource("ArrayMesh_3cjb0")
 skeleton = NodePath("")
 
 [node name="hide_point" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18713799, -2.0610063)
 
 [node name="Camera3D" type="Camera3D" parent="hide_point"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11395365, -0.568795)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.6849886)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117188, 0.447815, -0.00390625)

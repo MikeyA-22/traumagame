@@ -7,6 +7,7 @@ class_name Crow extends Node3D
 @export var camera: PlayerCam
 @export var shake_intensity: int
 @export var duration: float
+@export var monster : Enemy
 func _ready() -> void:
 	pass
 

@@ -58,6 +58,8 @@ Carpet=""
 Concrete=""
 Wood=""
 CreakyWood=""
+rooms=""
+player=""
 
 [gui]
 
@@ -144,6 +146,7 @@ photobook={
 3d_physics/layer_4="rope"
 3d_physics/layer_5="crow"
 3d_physics/layer_6="enemy"
+3d_physics/layer_9="inventory"
 
 [rendering]
 

@@ -9,10 +9,10 @@ func tick(actor, delta, blackboard:Dictionary):
 	var response = child.tick(actor,delta,blackboard)
 		
 	if response == STATUS.FAIL:
-		print("SHOULD RETURN SUCCESS")
+		print("SHOULD RETURN SUCCESS AT: ", UID)
 		return STATUS.SUCCESS
-	if response == STATUS.SUCCESS:
-		print("SHOULD RETURN FAIL")
+	elif response == STATUS.SUCCESS:
+		print("SHOULD RETURN FAIL AT: ", UID)
 		return STATUS.FAIL
 		
 		

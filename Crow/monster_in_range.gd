@@ -1,6 +1,6 @@
 extends Condition
 
-##SIMPLE CONDITION TEMPLATE!!!
+
 
 @export_group("Bboard names")
 @export var monster_id: String

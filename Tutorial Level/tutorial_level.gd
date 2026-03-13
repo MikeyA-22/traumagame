@@ -8,12 +8,13 @@ extends Node3D
 
 @export var key_data: ItemData
 
-@onready var player = $Player
+@export var player : Player
 
 @export var current_level:int = 0
 
 
-
+@export var monster_resource : PackedScene
+var monster
 
 
 func _ready() -> void:
@@ -24,6 +25,7 @@ func _ready() -> void:
 	reset_params()
 	if Game_Global.save_game != null:
 		Game_Global.save_game.level = current_level
+	
 	#SigBus.connect("REVEALKEY", reveal_key)
 
 func initial_message():
@@ -61,16 +63,17 @@ func reveal_key(pos):
 
 	key.global_position = pos
 	print("key pos: ", key.global_position)
+	Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
+	add_monster()
 	
 	
 func _on_state_changer_body_entered(body: Node3D) -> void:
 	print("reached")
 	if body == player:
 		#print("working")
-		Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
-		dialogue_manager.show_messages(["[color=red][shake rate=5 level=10]USE[color=red] Q [/color] TO STUN!!",
-		"[color=red][shake rate=5 level=10] GO FIND THE PILLS TO GET UR SANITY BACK!![/shake][/color]",
-		 "[color=red][shake rate=5 level=10]OR GO HIDE AT THE TABLE NEXT TO THE TV!! [/shake][/color]",
+		
+		dialogue_manager.show_messages(["[color=red] WATCH OUT FOR THE MONSTER!! [/color]","[color=red][shake rate=5 level=10]USE[color=red] Q [/color] TO STUN!!",
+		"[color=red][shake rate=5 level=10] USE THE PILLS TO GET UR SANITY BACK!![/shake][/color]",
 		"[color=red][shake rate=5 level=10] BUT BE CAREFUULLL!!!![/shake][/color]"]
 		,dialogue_position.position,7)
 		
@@ -84,4 +87,11 @@ func reset_params():
 
 func _on_instruction_area_body_entered(body: Node3D) -> void:
 	if body == player:
-		dialogue_manager.show_messages(["[color=red]FIND THE [color=red]PILLS AND THE BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.25)
+		dialogue_manager.show_messages(["[color=red]FIND THE [color=red] BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.25)
+
+func add_monster():
+	monster = monster_resource.instantiate()
+	add_child(monster)
+	player.monster = monster
+	SigBus.SETMONSTER.emit(monster)
+	print("PLAYER MONSTER IS: ", player.monster)

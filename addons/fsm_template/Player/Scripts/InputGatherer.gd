@@ -4,6 +4,9 @@ class_name InputInternal
 var mouse = false
 
 #@onready var InteractionCatcher = $"../visuals/Cube_022/LocalCamera/Camera3D/InteractionCatcher"
+@export var interaction_var : String
+@export var interaction_bool: bool
+@export var walk_var: String
 
 var pressed = false
 func gather_input() -> InputPackage:
@@ -18,7 +21,7 @@ func gather_input() -> InputPackage:
 	new_input.input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	if Game_Global.hidden == false:
 		if new_input.input_direction != Vector2.ZERO:
-			new_input.actions.append("walk")
+			new_input.actions.append(walk_var)
 			if Game_Global.active_tut_index == 0:
 				SigBus.TUT_KEY_PRESSED.emit()
 				Game_Global.active_tut_index += 1
@@ -35,7 +38,8 @@ func gather_input() -> InputPackage:
 	
 		if Input.is_action_just_pressed("interact"):
 		#print_debug("interaction")
-			new_input.actions.append("Interacting")
+			new_input.interactions.append(interaction_var)# if interaction_bool else new_input.actions.append(interaction_var)
+			
 	
 		if new_input.actions.is_empty():
 			new_input.actions.append("idle")

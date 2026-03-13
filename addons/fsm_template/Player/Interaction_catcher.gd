@@ -17,8 +17,10 @@ func _process(delta:float) -> void:
 	
 	if is_colliding():
 		var collider = get_collider()
+		
 		if collider is Pickable:
 			assess_pickable(collider)
+			
 		else:
 			assess_interactable(collider)
 			if Input.is_action_just_pressed("interact") and interactable:
@@ -32,6 +34,11 @@ func _process(delta:float) -> void:
 		Game_Global.is_pickable = false
 		reticlenumber = 0
 		reticlenumber2 = 0
+		if Game_Global.current_interactor != null:
+			Game_Global.current_interactor.hide_indication()
+		if Game_Global.current_pickable != null:
+			Game_Global.current_pickable.hide_indication()
+
 		#print(collider.get_class())
 	
 	#if collider.is_in_group("Doors") and Game_Global.active_object is Key:
@@ -57,10 +64,13 @@ func _process(delta:float) -> void:
 			#
 	#
 		
-func assess_pickable(collider):
+func assess_pickable(collider: Pickable):
 	reticlenumber = 1
 	Game_Global.is_pickable = true
 	Game_Global.current_pickable = collider
+	Game_Global.current_pickable.show_indication()
+	
+	
 	#print("ASSESSING PICKABLE")
 
 func assess_interactable(collider):
@@ -82,3 +92,4 @@ func assess_interactable(collider):
 	
 
 	Game_Global.current_interactor = collider
+	Game_Global.current_interactor.show_indication()

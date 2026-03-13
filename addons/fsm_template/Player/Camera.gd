@@ -30,8 +30,12 @@ func _input(event):
 			rotate_y(- d_hor / 100)
 			player.rotate_y(- d_hor / 100)
 			var d_ver = event.relative.y
-			clamp(d_ver,0,10)
+			
+			
 			player_camera.rotate_x(d_ver/100)
+			player_camera.rotation.x = clamp(player_camera.rotation.x,deg_to_rad(-75),deg_to_rad(30))
+			
+			
 			if Game_Global.active_tut_index == 1:
 				##SEND AND INCREASE
 				Game_Global.progress_tutorial()

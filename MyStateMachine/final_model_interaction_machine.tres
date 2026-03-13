@@ -1,27 +1,83 @@
-[gd_resource type="AnimationNodeStateMachine" load_steps=6 format=3 uid="uid://vtcxwfane2gw"]
+[gd_resource type="AnimationNodeStateMachine" load_steps=18 format=3 uid="uid://vtcxwfane2gw"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rlwff"]
+animation = &"Batteries"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fuvjt"]
 animation = &"Pills"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ywnxm"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5l5ia"]
+animation = &"idle"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_waqsl"]
 animation = &"idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ywnxm"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_aw5gj"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rlwff"]
+switch_mode = 2
 advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_aw5gj"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"addPickable"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m2jpo"]
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ep2g7"]
+advance_mode = 2
+advance_condition = &"flashlight"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bfpx8"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jflq0"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fuvjt"]
+advance_mode = 2
+advance_condition = &"batteries"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5l5ia"]
 switch_mode = 1
 advance_mode = 2
 advance_condition = &"pills"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rlwff"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_waqsl"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_76ith"]
+advance_mode = 2
+advance_condition = &"opendoor"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ahb3t"]
 advance_mode = 2
 advance_condition = &"idle"
 
 [resource]
+states/Batteries/node = SubResource("AnimationNodeAnimation_rlwff")
+states/Batteries/position = Vector2(142.85713, 140.85715)
 states/Pills/node = SubResource("AnimationNodeAnimation_fuvjt")
-states/Pills/position = Vector2(378.61224, 196.2857)
-states/Start/position = Vector2(214.85715, 70.28571)
+states/Pills/position = Vector2(527.18365, 233.99998)
+states/Start/position = Vector2(-152.57143, 80.57143)
+states/addPickable/node = SubResource("AnimationNodeAnimation_ywnxm")
+states/addPickable/position = Vector2(622.8572, 101.10204)
+states/flashlight/node = SubResource("AnimationNodeAnimation_5l5ia")
+states/flashlight/position = Vector2(334.85712, 234.24489)
 states/idle/node = SubResource("AnimationNodeAnimation_waqsl")
-states/idle/position = Vector2(378.85715, 64.85715)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ywnxm"), "idle", "Pills", SubResource("AnimationNodeStateMachineTransition_5l5ia"), "Pills", "idle", SubResource("AnimationNodeStateMachineTransition_rlwff")]
+states/idle/position = Vector2(381.14285, 125.42857)
+states/opendoor/node = SubResource("AnimationNodeAnimation_aw5gj")
+states/opendoor/position = Vector2(290.94305, -6.849369)
+transitions = ["Pills", "idle", SubResource("AnimationNodeStateMachineTransition_rlwff"), "idle", "addPickable", SubResource("AnimationNodeStateMachineTransition_aw5gj"), "addPickable", "idle", SubResource("AnimationNodeStateMachineTransition_m2jpo"), "idle", "flashlight", SubResource("AnimationNodeStateMachineTransition_ep2g7"), "flashlight", "idle", SubResource("AnimationNodeStateMachineTransition_bfpx8"), "Batteries", "idle", SubResource("AnimationNodeStateMachineTransition_jflq0"), "idle", "Batteries", SubResource("AnimationNodeStateMachineTransition_fuvjt"), "idle", "Pills", SubResource("AnimationNodeStateMachineTransition_5l5ia"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_waqsl"), "idle", "opendoor", SubResource("AnimationNodeStateMachineTransition_76ith"), "opendoor", "idle", SubResource("AnimationNodeStateMachineTransition_ahb3t")]
+graph_offset = Vector2(-87.54198, -47.135082)

@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://vhxxbuv7i1w8"]
+
+[ext_resource type="Script" uid="uid://dura0plyreghe" path="res://Ables/indicator.gd" id="2_4w1nd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u1p0s"]
+load_path = "res://.godot/imported/rightclick_icon.png-11c845f854a65ba73e2c7a82a1318a91.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4w1nd"]
+transparency = 1
+no_depth_test = true
+specular_mode = 2
+disable_ambient_light = true
+disable_fog = true
+disable_specular_occlusion = true
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("CompressedTexture2D_u1p0s")
+metallic_specular = 0.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 6.75
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_lysvt"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_4w1nd")
+size = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_lysvt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u1p0s"]
+resource_name = "endindicate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(0.065, 0.365), Vector2(0.34, 0.035), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4w1nd"]
+resource_local_to_scene = true
+resource_name = "startindicate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mesh:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0.34, 0.035), Vector2(0.065, 0.365), Vector2(0.25, 0.25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4w1nd"]
+resource_local_to_scene = true
+_data = {
+&"RESET": SubResource("Animation_lysvt"),
+&"endindicate": SubResource("Animation_u1p0s"),
+&"startindicate": SubResource("Animation_4w1nd")
+}
+
+[node name="Indicator" type="MeshInstance3D" node_paths=PackedStringArray("animator")]
+layers = 4
+mesh = SubResource("QuadMesh_lysvt")
+script = ExtResource("2_4w1nd")
+animator = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4w1nd")
+}

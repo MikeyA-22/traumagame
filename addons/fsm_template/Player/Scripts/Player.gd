@@ -5,7 +5,7 @@ class_name Player
 
 @onready var inputgatherer = $InputGatherer
 
-@onready var Model: MyModel = $Model
+@onready var Model = $Model
 @onready var inventory = $Model/Inventory
 @onready var photobook = $Model/Photobook
 @onready var camera_mount = $LocalCamera
@@ -17,10 +17,16 @@ class_name Player
 @export var monster: Enemy
 @export var resources: PlayerResources
 
+@export var crow : Crow
+
 @export var inventory_list : Array[ItemData]
 @export var active_item : ItemData
 @export var photos: Array[PhotoData]
 var hidden = false
+
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+var dampener = 0.1
 
 func _ready() -> void:
 	visuals.accept_skeleton(Model.skeleton)
@@ -36,6 +42,9 @@ func _physics_process(delta: float) -> void:
 	Model.update(input, delta)
 	Model.hidden = hidden
 	
+	if not is_on_floor():
+		velocity.y -= gravity * delta * dampener
+		move_and_slide()
 	
 	input.queue_free()
 	#Visuals -> follow parent transformation
