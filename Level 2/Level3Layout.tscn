@@ -1,4 +1,4 @@
-[gd_scene load_steps=556 format=4 uid="uid://1sb65ghkxyip"]
+[gd_scene load_steps=559 format=4 uid="uid://1sb65ghkxyip"]
 
 [ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_u7761"]
 [ext_resource type="Texture2D" uid="uid://c36umqa1xhhem" path="res://Level 1/walls_Substance_graph_roughness.png" id="2_bgsse"]
@@ -5003,6 +5003,50 @@ shadow_mesh = SubResource("ArrayMesh_6jltu")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3h70y"]
 points = PackedVector3Array(0.781332, -0.277743, -3.03125, 1.07042, -0.181313, 1.59107, 0.973985, -0.0850897, 3.13185, -1, -1, 0.969368, -0.977733, 1, -0.937511, 1, 1, -0.937511, -0.977733, 1, 0.949129, 1, -0.977733, -0.937511, -1, -1, -0.959754, 1, 1, 0.949129, 1, -0.977733, 0.949129, 0.973985, -0.0850897, -3.03125, 0.781332, -0.277743, 3.13185, 1.07042, -0.181313, -1.48987, -0.69677, 0.896107, -1.27658, -0.696306, 0.895528, 1.28821, 0.719036, 0.896107, -1.27658, 0.718573, 0.895528, 1.28821, 0.973985, -0.277743, 3.13185, 0.973985, -0.277743, -3.03125, 0.781332, -0.0850897, 3.13185, 0.781332, -0.0850897, -3.03125)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yujr"]
+resource_name = "wall_washroom"
+cull_mode = 2
+albedo_texture = ExtResource("7_uxplk")
+metallic = 1.0
+metallic_texture = ExtResource("8_nnkxc")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("8_nnkxc")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("9_7eopu")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aek54"]
+_surfaces = [{
+"aabb": AABB(-2, -0.049999997, -1, 2, 0.049999997, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAgABAAQABQADAAAAAgAFAAAAAQADAAYABQAGAAMAAQAGAAQAAgAHAAUABgAFAAcAAgAEAAcABgAHAAQA"),
+"name": "wall_washroom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAAAAAAA//8AAAAA/////wAA//8AAP//AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_w6whv"]
+resource_name = "walls (2)_Plane_027"
+_surfaces = [{
+"aabb": AABB(-2, -0.049999997, -1, 2, 0.049999997, 1),
+"attribute_data": PackedByteArray("8vxtPAWDcz8Fg2088vxzP/L8AAD//2088vxtPP//AADy/OB7BYMAAAWD4Hvy/AAABYNtPPl/AAAFgwAA+X9tPAWDcz/y/OB7BYPge/L8cz8Fg2088vwAAPL8bTwFgwAA"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_6yujr"),
+"name": "wall_washroom",
+"primitive": 3,
+"uv_scale": Vector4(2.009234, 1.0331068, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("////////AIAAAAAA//8AgAAA/////wCA//8AAP//AID/////AABU1f//AAD//1TV////////VNX//wAAAABU1f//AAAAAAAAAAD//wAAAAAAAAAAAAAAAP////8AAAAAAAD/////VNUAAAAAAABU1QAA//8AAFTVAAAAAP//VNUAAAAA////v///AAAAAP+/AAAAAAAA/7///wAA////vwAA//////+//////wAA/7//////////vwAA//8AAP+//3////9/////f////3///6qqVFWqqlRVqqpUVaqqVFX///9/////f////3////9/VNVU1VTVVNVU1VTVVNVU1QAA/38AAP9/AAD/fwAA/3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_aek54")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5q02e"]
 resource_name = "Material.018"
@@ -43965,6 +44009,1846 @@ transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 139
 mesh = SubResource("ArrayMesh_sblaa")
 skeleton = NodePath("")
 
+[node name="wall2*2_1119" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 132.5, 2, -24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1120" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 134.5, 2, -24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1121" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 136.5, 2, -24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1122" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 138.5, 2, -24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1123" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 138.5, 2, -28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1124" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 136.5, 2, -28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1125" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 132.5, 2, -28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1126" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 130.5, 2, -28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1127" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 142.5, 2, -28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1128" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 140.5, 2, -28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1129" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -1.7484555e-07, 0, 0, 0, -1, 1.7484555e-07, 1, 0, 136.5, 2, -31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1130" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 2.6226832e-07, 0, 0, 0, -1, -2.6226832e-07, -1, 0, 134.5, 2, -29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1131" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-3.934025e-07, -1, 0, 0, 0, -1, 1, -3.934025e-07, 0, 135.5, 2, -29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1132" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 134.5, 2, -27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1133" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0133185e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133185e-07, 0, 136.5, 2, -29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1134" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1135" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1136" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1137" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1138" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1139" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1140" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1141" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1142" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -13)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1143" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -15)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1144" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -17)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1145" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1146" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1147" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -7)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1148" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -9)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1149" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1150" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 3)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1151" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 1)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1152" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -1)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1153" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -3)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1154" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1155" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 9)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1156" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 7)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1157" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1158" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1159" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 17)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1160" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 15)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1161" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 13)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1162" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1163" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1164" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1165" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1166" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1167" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1168" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1169" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1920929e-07, 0, 0, 0, -1, 1.1920929e-07, 1.0000001, 0, 130, 2, -30)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1170" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(0.50000006, -1.1920929e-07, 0, 0, 0, -1, 5.9604645e-08, 1.0000001, 0, 131, 2, -30)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1171" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-8.146034e-08, -1.0000001, 0, 0, 0, -1, 0.50000006, -1.6292068e-07, 0, 129, 2, -32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1172" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-0.5, 2.2351742e-07, 0, 0, 0, -1, -1.1175871e-07, -1, 0, 128, 2, -32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1173" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.6292068e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -1.6292068e-07, 0, 128, 2, -30)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1174" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(2.5034348e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, 2.5034348e-07, 0, 131, 2, -32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1175" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.7748958e-08, 1.0000001, 0, 0, 0, -1, -0.50000006, 7.5497915e-08, 0, 131, 2, -33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1176" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.0663208e-07, 0, 0, 0, -1, -2.0663208e-07, -1.0000001, 0, 129, 2, -33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1177" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 140.5, 2, -21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1178" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 140.5, 2, -23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1179" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 142.5, 2, -22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1180" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 144.5, 2, -22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1181" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 140.5, 2, -19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1182" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 138.5, 2, -17)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1183" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 140.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1184" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 138.5, 2, -8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1185" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 139.5, 2, -8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1186" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 140.5, 2, 7)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1187" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 138.5, 2, 9)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1188" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 139.5, 2, 9)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1189" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(0.5, -7.1054274e-15, 0, 0, 0, -1, 3.5527137e-15, 1, 0, 140.5, 2, 32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1190" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 139, 2, 34)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1191" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 140, 2, 34)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1192" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 141, 2, 34)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1193" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -13)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1194" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0927847e-07, 0.9999999, 0, 0, 0, -1, -0.5, -2.185569e-07, 0, 140.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1195" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1196" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1197" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1198" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0927847e-07, 0.9999999, 0, 0, 0, -1, -0.5, -2.185569e-07, 0, 140.5, 2, -2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1199" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 138.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1200" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 136.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1201" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 134.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1202" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 132.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1203" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, -6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1204" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, -4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1205" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, -2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1206" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1207" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 7)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1208" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1209" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 13)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1210" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1211" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0927847e-07, 0.9999999, 0, 0, 0, -1, -0.5, -2.185569e-07, 0, 140.5, 2, 6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1212" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1213" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 9)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1214" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 13)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1215" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1216" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1217" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1218" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1219" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 132.5, 2, -2.9999998)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1220" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 134.5, 2, -3)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1221" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 136.5, 2, -3.0000002)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1222" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 130.5, 2, -2.9999998)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1223" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1224" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 138.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1225" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 136.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1226" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 134.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1227" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 132.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1228" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 130.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1229" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 128.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1230" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 134.5, 2, -1.0000002)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1231" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 132.5, 2, -0.9999998)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1232" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 130.5, 2, -0.9999994)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1233" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 136.5, 2, -1.0000004)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1234" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 138.5, 2, -1.0000002)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1235" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 140.5, 2, -1.0000004)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1236" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -0.9999994)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1237" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -2.9999995)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1238" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -4.9999995)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1239" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -6.9999995)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1240" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -9)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1241" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 128.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1242" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1243" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 124.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1244" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 122.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1245" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 132.5, 2, 3.9999998)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1246" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 134.5, 2, 4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1247" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 136.5, 2, 4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1248" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 138.5, 2, 4.0000005)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1249" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 136.5, 2, 12)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1250" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 134.5, 2, 12)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1251" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 132.5, 2, 12)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1252" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 130.5, 2, 12)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1253" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 136, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1254" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 134, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1255" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 134.5, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1256" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 30)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1257" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1258" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1259" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 30)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1260" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 26)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1261" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1262" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1263" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 26)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1264" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1265" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1266" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 20)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1267" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1268" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 18)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1269" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 15)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1270" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.675686e-08, 1.0000001, 0, 0, 0, -1, -0.50000006, 7.351372e-08, 0, 140.5, 2, 17)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1271" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 20)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1272" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0133185e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133185e-07, 0, 136, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1273" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0133185e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133185e-07, 0, 136, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1274" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 134, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1275" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 132, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1276" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 130, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1277" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 139.5, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1278" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 137.5, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1279" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 133, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1280" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 131, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1281" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 129, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1282" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 129, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1283" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 129, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1284" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1285" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1286" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1287" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1288" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1289" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1290" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1291" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1292" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 125, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1293" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 123, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1294" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 129, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1295" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 127, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1296" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 133, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1297" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 131, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1298" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 121, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1299" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 119, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1300" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 113, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1301" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 111, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1302" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 103, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1303" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 101, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1304" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 129, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1305" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 127, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1306" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 125, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1307" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 123, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1308" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 121, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1309" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 117, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1310" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0133184e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133184e-07, 0, 116, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1311" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0133184e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133184e-07, 0, 116, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1312" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1313" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1314" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1315" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1316" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909052e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909052e-08, 0, 112, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1317" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909052e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909052e-08, 0, 112, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1318" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1319" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1320" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1321" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1322" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 109, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1323" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 109, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1324" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 109, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1325" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.954526e-09, -1.0000001, 0, 0, 0, -1, 0.50000006, 1.3909052e-08, 0, 112, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1326" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.6756866e-08, 1.0000001, 0, 0, 0, -1, -0.50000006, 7.351373e-08, 0, 116, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1327" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802333e-08, 0, 0, 0, -1, -2.9802333e-08, -1.0000001, 0, 114, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1328" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802333e-08, 0, 0, 0, -1, -2.9802333e-08, -1.0000001, 0, 112, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1329" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722511e-07, 0, 0, 0, -1, 1.1722511e-07, 1.0000001, 0, 110.5, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1330" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722511e-07, 0, 0, 0, -1, 1.1722511e-07, 1.0000001, 0, 110.5, 2, 22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1331" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 110.5, 2, 22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1332" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.6093652e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -1.6093652e-07, 0, 108.5, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1333" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 103, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1334" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 101, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1335" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 99, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1336" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 97, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1337" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 95, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1338" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 93, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1339" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 18)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1340" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 20)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1341" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1342" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1343" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 26)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1344" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 28)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1345" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 30)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1346" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1347" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 34)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1348" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 36)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1349" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 38)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1350" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1351" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1352" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1353" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1354" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1355" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-0.5, 6.119597e-07, 0, 0, 0, -1, -3.0597974e-07, -1.0000004, 0, 99, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1356" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1357" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1358" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1359" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 98, 2, 20)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1360" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 98, 2, 22)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1361" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 98, 2, 24)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1362" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.2783544e-07, 1.0000004, 0, 0, 0, -1, -0.5, 6.556711e-07, 0, 100, 2, 18)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1363" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 6.119595e-07, 0, 0, 0, -1, -6.119595e-07, -1, 0, 98, 2, 18)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1364" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(4.808253e-07, 1, 0, 0, 0, -1, -1, 4.808253e-07, 0, 99, 2, 16)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1365" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1366" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 118, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1367" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 120, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1368" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 122, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1369" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 124, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1370" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 126, 2, 32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1371" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1372" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 124, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1373" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 122, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1374" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1375" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 126, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1376" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 118, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1377" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 116, 2, 32)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1378" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1379" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1380" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1381" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1382" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126, 2, 27.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1383" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126, 2, 29.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1384" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 126, 2, 27.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1385" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 124, 2, 29.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1386" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 131, 2, 27.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1387" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 131, 2, 29.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1388" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 131, 2, 27.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1389" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 129, 2, 29.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1390" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120, 2, 27.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1391" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120, 2, 29.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1392" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 120, 2, 27.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1393" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 118, 2, 29.5)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1394" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -2.6226832e-07, 0, 0, 0, -1, 2.6226832e-07, -1, 0, 128, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1395" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 3.496911e-07, 0, 0, 0, -1, -3.496911e-07, 1, 0, 130, 2, 35)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1396" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 129, 2, 37)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1397" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1398" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1399" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1400" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1401" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 137, 2, 34)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1402" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 135, 2, 34)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1403" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1404" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1405" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1406" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1407" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 33)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1408" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-0.5, -8.742276e-08, 0, 0, 0, -1, 4.3711385e-08, -0.99999994, 0, 133, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1409" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1410" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1411" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1412" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 6.0000005)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1413" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1414" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 29)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1415" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 27)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1416" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1417" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1418" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1419" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1420" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802347e-08, 0, 0, 0, -1, -2.9802347e-08, -1.0000001, 0, 107, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1421" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802347e-08, 0, 0, 0, -1, -2.9802347e-08, -1.0000001, 0, 103, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1422" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1.0000001, 2.9802347e-08, 0, 0, 0, -1, -2.9802347e-08, -1.0000001, 0, 105, 2, 31)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1423" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620436e-08, 0, 0, 0, -1, -5.7620436e-08, 1.0000001, 0, 105, 2, 36)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1424" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620436e-08, 0, 0, 0, -1, -5.7620436e-08, 1.0000001, 0, 109, 2, 36)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1425" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, 5.7620436e-08, 0, 0, 0, -1, -5.7620436e-08, 1.0000001, 0, 107, 2, 36)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1426" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 115, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1427" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 117, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1428" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 119, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1429" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 109, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1430" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 111, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1431" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 113, 2, 19)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1432" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.0663208e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -2.0663208e-07, 0, 119, 2, 23)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1433" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.0663208e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -2.0663208e-07, 0, 119, 2, 25)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1434" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-2.0663208e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -2.0663208e-07, 0, 119, 2, 21)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1435" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1436" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1437" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1438" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1439" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 0)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1440" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -2)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1441" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -4)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1442" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -6)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1443" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -8)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1444" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -10)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1445" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -12)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1446" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1447" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 118.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1448" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 116.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1449" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 114.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1450" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 112.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1451" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 110.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1452" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 108.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1453" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 106.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1454" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 104.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1455" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 102.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1456" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 100.5, 2, -11)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1457" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 126.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1458" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 124.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1459" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 122.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1460" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 120.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1461" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 118.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1462" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 116.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1463" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 114.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1464" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 112.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1465" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 110.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1466" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 108.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1467" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 106.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1468" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 104.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1469" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 102.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1470" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 100.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1471" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 98.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1472" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 96.5, 2, 12.000001)
+mesh = SubResource("ArrayMesh_sblaa")
+skeleton = NodePath("")
+
+[node name="wall2*2_1473" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, 1, 0, 0, 0, -1, -1, -4.371139e-08, 0, 3, 2, -3)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1474" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, 1, 0, 0, 0, -1, -1, -4.371139e-08, 0, 3, 2, -1)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1475" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, 1, 0, 0, 0, -1, -1, -4.371139e-08, 0, 3, 2, 1)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1476" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, 1, 0, 0, 0, -1, -1, -4.371139e-08, 0, 3, 2, 3)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1477" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, -1, 0, 0, 0, -1, 1, -4.371139e-08, 0, -3.0000002, 2, 5)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1478" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, -1, 0, 0, 0, -1, 1, -4.371139e-08, 0, -3, 2, 3)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1479" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, -1, 0, 0, 0, -1, 1, -4.371139e-08, 0, -3, 2, 1)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1480" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-4.371139e-08, -1, 0, 0, 0, -1, 1, -4.371139e-08, 0, -2.9999998, 2, -1)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1481" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, -2.9999998, 2, -3)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1482" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, -0.99999976, 2, -3)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1483" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 1.0000002, 2, -3)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1484" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -1.7484555e-07, 0, 0, 0, -1, 1.7484555e-07, 1, 0, 3.0000002, 2, 5)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1485" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -1.7484555e-07, 0, 0, 0, -1, 1.7484555e-07, 1, 0, 1.0000002, 2, 5)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
+[node name="wall2*2_1486" type="MeshInstance3D" parent="Wall"]
+transform = Transform3D(1, -1.7484555e-07, 0, 0, 0, -1, 1.7484555e-07, 1, 0, -0.99999976, 2, 5)
+mesh = SubResource("ArrayMesh_w6whv")
+skeleton = NodePath("")
+
 [node name="deco" type="Node" parent="."]
 
 [node name="Cube_014" type="MeshInstance3D" parent="deco"]
@@ -47199,1773 +49083,3 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="deco/landlamp_027/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_ra07o")
-
-[node name="wall2*2_1070" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 132.5, 2, -24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1071" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 134.5, 2, -24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1072" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 136.5, 2, -24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1073" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620458e-08, 0, 0, 0, -1, -5.7620458e-08, 1.0000001, 0, 138.5, 2, -24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1074" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 138.5, 2, -28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1075" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 136.5, 2, -28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1076" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 132.5, 2, -28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1077" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 130.5, 2, -28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1078" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 142.5, 2, -28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1079" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802326e-08, 0, 0, 0, -1, -2.9802326e-08, -1.0000001, 0, 140.5, 2, -28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_835" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -1.7484555e-07, 0, 0, 0, -1, 1.7484555e-07, 1, 0, 136.5, 2, -31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_836" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 2.6226832e-07, 0, 0, 0, -1, -2.6226832e-07, -1, 0, 134.5, 2, -29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_837" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.934025e-07, -1, 0, 0, 0, -1, 1, -3.934025e-07, 0, 135.5, 2, -29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1106" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 134.5, 2, -27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1107" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0133185e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133185e-07, 0, 136.5, 2, -29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1080" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1081" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1082" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1083" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1084" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1085" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1086" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1087" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1088" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -13)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1089" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -15)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1090" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -17)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1091" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1092" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1093" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -7)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1094" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -9)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1095" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1096" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 3)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1097" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 1)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1098" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -1)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1099" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, -3)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1100" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1101" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 9)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1102" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 7)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1103" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1104" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1105" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 17)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1108" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 15)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1109" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 13)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1110" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1111" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1112" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1113" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1114" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1115" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1116" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 143, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1117" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1920929e-07, 0, 0, 0, -1, 1.1920929e-07, 1.0000001, 0, 130, 2, -30)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1118" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.50000006, -1.1920929e-07, 0, 0, 0, -1, 5.9604645e-08, 1.0000001, 0, 131, 2, -30)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1119" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.146034e-08, -1.0000001, 0, 0, 0, -1, 0.50000006, -1.6292068e-07, 0, 129, 2, -32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1120" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.5, 2.2351742e-07, 0, 0, 0, -1, -1.1175871e-07, -1, 0, 128, 2, -32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1121" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.6292068e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -1.6292068e-07, 0, 128, 2, -30)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1122" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.5034348e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, 2.5034348e-07, 0, 131, 2, -32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1123" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.7748958e-08, 1.0000001, 0, 0, 0, -1, -0.50000006, 7.5497915e-08, 0, 131, 2, -33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1124" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.0663208e-07, 0, 0, 0, -1, -2.0663208e-07, -1.0000001, 0, 129, 2, -33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1125" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 140.5, 2, -21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1126" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 140.5, 2, -23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1127" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 142.5, 2, -22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1128" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 144.5, 2, -22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1129" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 140.5, 2, -19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1130" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 138.5, 2, -17)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1131" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 140.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1132" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 138.5, 2, -8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1133" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 139.5, 2, -8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1134" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 140.5, 2, 7)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1135" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 138.5, 2, 9)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1136" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 139.5, 2, 9)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1137" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, -7.1054274e-15, 0, 0, 0, -1, 3.5527137e-15, 1, 0, 140.5, 2, 32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1138" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 139, 2, 34)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1139" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 140, 2, 34)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1140" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 141, 2, 34)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1141" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -13)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1142" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0927847e-07, 0.9999999, 0, 0, 0, -1, -0.5, -2.185569e-07, 0, 140.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1143" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1144" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1145" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, -4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1146" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0927847e-07, 0.9999999, 0, 0, 0, -1, -0.5, -2.185569e-07, 0, 140.5, 2, -2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1147" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 138.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1148" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 136.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1149" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 134.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1150" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 132.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1151" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, -6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1152" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, -4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1153" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, -2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1154" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1155" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 7)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1156" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1157" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 138.5, 2, 13)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1158" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1159" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0927847e-07, 0.9999999, 0, 0, 0, -1, -0.5, -2.185569e-07, 0, 140.5, 2, 6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1160" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1161" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 9)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1162" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 13)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1163" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1164" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1165" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1166" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130.5, 2, -4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1167" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 132.5, 2, -2.9999998)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1168" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 134.5, 2, -3)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1169" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 136.5, 2, -3.0000002)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1170" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 130.5, 2, -2.9999998)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1171" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1172" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 138.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1173" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 136.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1174" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 134.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1175" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 132.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1176" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 130.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1177" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 0, 0, 0, -1, 8.742278e-08, -1, 0, 128.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1178" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 134.5, 2, -1.0000002)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1179" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 132.5, 2, -0.9999998)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1180" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 130.5, 2, -0.9999994)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1181" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 136.5, 2, -1.0000004)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1182" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 138.5, 2, -1.0000002)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1183" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 140.5, 2, -1.0000004)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1184" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -0.9999994)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1185" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -2.9999995)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1186" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -4.9999995)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1187" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -6.9999995)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1188" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, -9)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1190" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 128.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1191" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1192" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 124.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1193" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 122.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1189" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 132.5, 2, 3.9999998)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1194" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 134.5, 2, 4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1195" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 136.5, 2, 4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1196" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 138.5, 2, 4.0000005)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1197" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 136.5, 2, 12)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1198" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 134.5, 2, 12)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1199" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 132.5, 2, 12)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1200" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 8.742278e-08, 0, 0, 0, -1, -8.742278e-08, -1, 0, 130.5, 2, 12)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1201" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 136, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1202" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 134, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1203" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 134.5, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1204" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 30)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1205" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1206" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1207" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 30)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1208" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 26)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1209" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1210" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1211" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 26)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1212" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1213" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1214" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 20)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1215" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1216" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351372e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351372e-08, 0, 140.5, 2, 18)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1217" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.1855693e-07, 1, 0, 0, 0, -1, -1, -2.1855693e-07, 0, 140.5, 2, 15)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1218" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.675686e-08, 1.0000001, 0, 0, 0, -1, -0.50000006, 7.351372e-08, 0, 140.5, 2, 17)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1219" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909066e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909066e-08, 0, 139.5, 2, 20)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1220" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0133185e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133185e-07, 0, 136, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1221" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0133185e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133185e-07, 0, 136, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1222" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 134, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1223" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 132, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1224" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 130, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1225" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 139.5, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1226" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 137.5, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1227" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 133, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1228" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 131, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1229" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 129, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1230" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 129, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1231" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 129, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1232" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1233" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1234" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1235" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1236" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1237" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1238" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1239" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909059e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909059e-08, 0, 133, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1240" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 125, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1241" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 123, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1242" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 129, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1243" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 127, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1244" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 133, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1245" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 131, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1246" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 121, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1247" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 119, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1248" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 113, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1249" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 111, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1250" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 103, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1251" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 101, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1252" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 129, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1253" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 127, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1254" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 125, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1255" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 123, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1256" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -7.1054274e-15, 0, 0, 0, -1, 7.1054274e-15, 1, 0, 121, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1257" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.762045e-08, 0, 0, 0, -1, -5.762045e-08, 1.0000001, 0, 117, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1258" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0133184e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133184e-07, 0, 116, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1259" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0133184e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.0133184e-07, 0, 116, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1260" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1261" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1262" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1263" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.01331835e-07, 1.0000001, 0, 0, 0, -1, -1.0000001, -1.01331835e-07, 0, 116, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1264" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909052e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909052e-08, 0, 112, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1265" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909052e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909052e-08, 0, 112, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1266" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1267" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1268" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1269" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3909045e-08, -1.0000001, 0, 0, 0, -1, 1.0000001, 1.3909045e-08, 0, 112, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1270" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 109, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1271" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 109, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1272" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 109, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1273" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.954526e-09, -1.0000001, 0, 0, 0, -1, 0.50000006, 1.3909052e-08, 0, 112, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1274" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.6756866e-08, 1.0000001, 0, 0, 0, -1, -0.50000006, 7.351373e-08, 0, 116, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1275" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802333e-08, 0, 0, 0, -1, -2.9802333e-08, -1.0000001, 0, 114, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1276" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802333e-08, 0, 0, 0, -1, -2.9802333e-08, -1.0000001, 0, 112, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1277" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722511e-07, 0, 0, 0, -1, 1.1722511e-07, 1.0000001, 0, 110.5, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1278" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722511e-07, 0, 0, 0, -1, 1.1722511e-07, 1.0000001, 0, 110.5, 2, 22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1279" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 110.5, 2, 22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1280" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.6093652e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -1.6093652e-07, 0, 108.5, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_720" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 103, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_721" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 101, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_722" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 99, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_723" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 97, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_724" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 95, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_725" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -5.245367e-07, 0, 0, 0, -1, 5.245367e-07, 1, 0, 93, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_726" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 18)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_727" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 20)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_728" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_729" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_730" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 26)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_731" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 28)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_732" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 30)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_733" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_734" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 34)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_735" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 36)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_736" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 103, 2, 38)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_737" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_738" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_739" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_740" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_741" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_718" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.5, 6.119597e-07, 0, 0, 0, -1, -3.0597974e-07, -1.0000004, 0, 99, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_742" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_743" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_744" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.556709e-07, 1, 0, 0, 0, -1, -1, 6.556709e-07, 0, 100, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_745" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 98, 2, 20)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_746" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 98, 2, 22)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_747" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.682481e-07, -1, 0, 0, 0, -1, 1, -5.682481e-07, 0, 98, 2, 24)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_748" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.2783544e-07, 1.0000004, 0, 0, 0, -1, -0.5, 6.556711e-07, 0, 100, 2, 18)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_749" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 6.119595e-07, 0, 0, 0, -1, -6.119595e-07, -1, 0, 98, 2, 18)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_750" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.808253e-07, 1, 0, 0, 0, -1, -1, 4.808253e-07, 0, 99, 2, 16)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_596" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1281" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 118, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1282" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 120, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1283" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 122, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1284" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 124, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1285" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 126, 2, 32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1286" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1287" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 124, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1288" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 122, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1289" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1290" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 126, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1291" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 118, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1292" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 116, 2, 32)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1293" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1294" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1295" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1296" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 130, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1297" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126, 2, 27.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1298" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 126, 2, 29.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1299" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 126, 2, 27.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1300" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 124, 2, 29.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1301" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 131, 2, 27.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1302" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 131, 2, 29.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1303" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 131, 2, 27.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1304" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 129, 2, 29.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1305" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120, 2, 27.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1306" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120, 2, 29.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1307" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371138e-08, 1, 0, 0, 0, -1, -1, -4.371138e-08, 0, 120, 2, 27.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1308" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.3711395e-08, -1, 0, 0, 0, -1, 1, -4.3711395e-08, 0, 118, 2, 29.5)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1309" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -2.6226832e-07, 0, 0, 0, -1, 2.6226832e-07, -1, 0, 128, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1310" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 3.496911e-07, 0, 0, 0, -1, -3.496911e-07, 1, 0, 130, 2, 35)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1311" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.059797e-07, -1, 0, 0, 0, -1, 1, 3.059797e-07, 0, 129, 2, 37)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1312" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1313" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1314" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1315" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 130.5, 2, 4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1316" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 137, 2, 34)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1317" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 135, 2, 34)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1318" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1319" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1320" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1321" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1322" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.3513725e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.3513725e-08, 0, 136, 2, 33)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1323" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.5, -8.742276e-08, 0, 0, 0, -1, 4.3711385e-08, -0.99999994, 0, 133, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1324" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1325" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1326" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1327" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 6.0000005)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1328" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, -1, 0, 0, 0, -1, 1, 1.3113416e-07, 0, 128.5, 2, 4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1329" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 29)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1330" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 27)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1331" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1332" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1333" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1334" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.351374e-08, 1.0000001, 0, 0, 0, -1, -1.0000001, 7.351374e-08, 0, 107, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1335" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802347e-08, 0, 0, 0, -1, -2.9802347e-08, -1.0000001, 0, 107, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1336" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802347e-08, 0, 0, 0, -1, -2.9802347e-08, -1.0000001, 0, 103, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1337" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.0000001, 2.9802347e-08, 0, 0, 0, -1, -2.9802347e-08, -1.0000001, 0, 105, 2, 31)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1338" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620436e-08, 0, 0, 0, -1, -5.7620436e-08, 1.0000001, 0, 105, 2, 36)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1339" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620436e-08, 0, 0, 0, -1, -5.7620436e-08, 1.0000001, 0, 109, 2, 36)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1340" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, 5.7620436e-08, 0, 0, 0, -1, -5.7620436e-08, 1.0000001, 0, 107, 2, 36)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1341" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 115, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1342" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 117, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1343" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 119, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1344" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 109, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1345" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 111, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1346" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.0000001, -1.1722513e-07, 0, 0, 0, -1, 1.1722513e-07, 1.0000001, 0, 113, 2, 19)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1347" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.0663208e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -2.0663208e-07, 0, 119, 2, 23)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1348" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.0663208e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -2.0663208e-07, 0, 119, 2, 25)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1349" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.0663208e-07, -1.0000001, 0, 0, 0, -1, 1.0000001, -2.0663208e-07, 0, 119, 2, 21)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_597" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_598" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_599" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_600" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_601" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, 0)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_602" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -2)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_603" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -4)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_604" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -6)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_605" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -8)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_606" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -10)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_607" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3113416e-07, 1, 0, 0, 0, -1, -1, 1.3113416e-07, 0, 98.5, 2, -12)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1350" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 120.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1351" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 118.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1352" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 116.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1353" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 114.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1354" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 112.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1355" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 110.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1356" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 108.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1357" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 106.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1358" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 104.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1359" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 102.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1360" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.7484555e-07, 0, 0, 0, -1, -1.7484555e-07, 1, 0, 100.5, 2, -11)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1361" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 126.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1362" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 124.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1363" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 122.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1364" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 120.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1365" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 118.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1366" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 116.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1367" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 114.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1368" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 112.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1369" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 110.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1370" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 108.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1371" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 106.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1372" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 104.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1373" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 102.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1374" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 100.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1375" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 98.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
-
-[node name="wall2*2_1376" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, 0, 0, 0, -1, 8.742277e-08, -1, 0, 96.5, 2, 12.000001)
-mesh = SubResource("ArrayMesh_sblaa")
-skeleton = NodePath("")
