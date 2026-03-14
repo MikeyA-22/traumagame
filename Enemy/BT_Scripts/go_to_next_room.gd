@@ -19,7 +19,7 @@ func tick(actor: Enemy, delta, blackboard: Dictionary):
 	else:
 		var dist : Vector3 = actor.global_position - target.global_position
 		actor.go_to_target(target, speed)
-		fstep_player.play()
+		play_sound()
 		if dist.length() <= close_dist:
 			print("GOT TO ROOM!! AT: ", UID)
 			blackboard.set("next_room", null)
@@ -28,3 +28,9 @@ func tick(actor: Enemy, delta, blackboard: Dictionary):
 		else:
 			return STATUS.RUNNING
 	
+
+func play_sound():
+	if fstep_player.playing == false:
+			fstep_player.play()
+			
+			

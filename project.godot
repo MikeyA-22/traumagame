@@ -150,6 +150,7 @@ photobook={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 driver/threads/thread_model=2
 global_illumination/voxel_gi/quality=1
 shading/overrides/force_lambert_over_burley.mobile=false

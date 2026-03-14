@@ -34,22 +34,23 @@
 [ext_resource type="Texture2D" uid="uid://cmtody22af888" path="res://Tutorial Level/tutv2/tutv2_fridge_DefaultMaterial_Normal.png" id="21_4sfx6"]
 [ext_resource type="Texture2D" uid="uid://ceeuu2itwawxr" path="res://Tutorial Level/tutv2/tutv2_faucet_Material_BaseMap.png" id="22_f8me0"]
 [ext_resource type="Texture2D" uid="uid://dgu8v673k7uvn" path="res://Tutorial Level/tutv2/tutv2_faucet_Material_Normal.png" id="23_ry6d7"]
+[ext_resource type="Texture2D" uid="uid://f8wwry6jnhvc" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_BaseMap.png" id="24_c4f25"]
+[ext_resource type="Texture2D" uid="uid://wa07gwyursfj" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_Normal.png" id="25_1pdd7"]
 [ext_resource type="Texture2D" uid="uid://bglsae3q6fk58" path="res://Tutorial Level/tutv2/tutv2_chair(1)_DefaultMaterial_BaseMap.png" id="26_rqa8w"]
 [ext_resource type="Texture2D" uid="uid://c6sueksire8q2" path="res://Tutorial Level/tutv2/tutv2_chair(1)_DefaultMaterial_Normal.png" id="27_un6er"]
-[ext_resource type="Shader" uid="uid://u44vjetvge3c" path="res://Shaders/ps1_model.gdshader" id="29_nq8ga"]
+[ext_resource type="Texture2D" uid="uid://djvuh86npfjop" path="res://Tutorial Level/tutv2/tutv2_couch_DefaultMaterial_BaseMap.png" id="28_4yu04"]
+[ext_resource type="Texture2D" uid="uid://mbfv3c3v5uiv" path="res://Tutorial Level/tutv2/tutv2_couch_DefaultMaterial_Normal.png" id="29_paxf5"]
 [ext_resource type="Texture2D" uid="uid://bttrpwcrgi4p2" path="res://Tutorial Level/tutv2/tutv2_tv_Stand_DefaultMaterial_BaseMap.png" id="30_lxb60"]
-[ext_resource type="Texture2D" uid="uid://dyveo7wv4vaa0" path="res://textures/kitchen_desk_DefaultMaterial_BaseMap.png" id="30_vhkfr"]
 [ext_resource type="Texture2D" uid="uid://br2ysjio7ppjt" path="res://Tutorial Level/tutv2/tutv2_tv_Stand_DefaultMaterial_Normal.png" id="31_sep3q"]
 [ext_resource type="Texture2D" uid="uid://cxvlwqbmavvpb" path="res://Tutorial Level/tutv2/tutv2_tv_DefaultMaterial_BaseMap.png" id="32_xdk6f"]
-[ext_resource type="Texture2D" uid="uid://bd72m5r36opji" path="res://textures/chair(1)_DefaultMaterial_BaseMap.png" id="33_63tng"]
 [ext_resource type="Texture2D" uid="uid://dshk81pqs43fj" path="res://Tutorial Level/tutv2/tutv2_tv_DefaultMaterial_Normal.png" id="33_t5epy"]
 [ext_resource type="PackedScene" uid="uid://8ankrs06jy67" path="res://Ables/hide_table.tscn" id="34_kcaaw"]
-[ext_resource type="Texture2D" uid="uid://b44ua22pelow3" path="res://textures/couch_DefaultMaterial_BaseMap.png" id="34_sbyva"]
+[ext_resource type="Texture2D" uid="uid://c52d4xjh7d05m" path="res://Tutorial Level/tutv2/tutv2_floor_basecolor.png" id="36_j1n11"]
+[ext_resource type="Texture2D" uid="uid://2h2sglxy1byw" path="res://Tutorial Level/tutv2/tutv2_floor_metallic.png" id="37_sgbny"]
 [ext_resource type="Script" uid="uid://cgy81woen4wd2" path="res://Tutorial Level/instruction_area.gd" id="37_xg7y2"]
+[ext_resource type="Texture2D" uid="uid://bs1o4ny60vtkx" path="res://Tutorial Level/tutv2/tutv2_floor_normal.png" id="38_871h3"]
 [ext_resource type="Texture2D" uid="uid://752m12p12it7" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_BaseMap.png" id="39_gijqh"]
-[ext_resource type="Texture2D" uid="uid://dfm3mb6uuuxjg" path="res://textures/floor_normal.png" id="40_63tng"]
 [ext_resource type="Texture2D" uid="uid://p0tgyr6dkd0x" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_Normal.png" id="40_nq8ga"]
-[ext_resource type="Texture2D" uid="uid://bo61l2v2uj4gg" path="res://textures/floor_basecolor.png" id="40_vhkfr"]
 [ext_resource type="PackedScene" uid="uid://d1sbfpgkwpia1" path="res://Tutorial Level/micro.glb" id="40_xdk6f"]
 [ext_resource type="Texture2D" uid="uid://cblb0yd08n8fh" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_BaseMap.png" id="41_vhkfr"]
 [ext_resource type="Texture2D" uid="uid://cqb6qdgvo3v7p" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_Normal.png" id="42_63tng"]
@@ -424,7 +425,7 @@ shadow_mesh = SubResource("ArrayMesh_phwex")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el4hw"]
 emission_enabled = true
-emission = Color(1, 0.69803923, 0.62352943, 1)
+emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -462,6 +463,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_grbf7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlvrw"]
+emission_enabled = true
 emission = Color(1, 1, 1, 1)
 texture_filter = 0
 
@@ -537,8 +539,6 @@ material = SubResource("StandardMaterial3D_63tng")
 size = Vector2(0.02, 0.02)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd78v"]
-emission_enabled = true
-emission = Color(0.7764706, 1, 1, 1)
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_53ch1"]
@@ -610,7 +610,7 @@ shadow_mesh = SubResource("ArrayMesh_4a01q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5f5h"]
 emission_enabled = true
-emission = Color(1, 0.69803923, 0.62352943, 1)
+emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -691,7 +691,7 @@ shadow_mesh = SubResource("ArrayMesh_f0ne6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igodg"]
 emission_enabled = true
-emission = Color(1, 0.69803923, 0.62352943, 1)
+emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 5.0
 texture_filter = 0
 
@@ -1069,22 +1069,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8saqw")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_luq6j"]
-render_priority = 0
-shader = ExtResource("29_nq8ga")
-shader_parameter/point_size = 0.0
-shader_parameter/roughness = 0.0
-shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
-shader_parameter/specular = 0.0
-shader_parameter/metallic = 0.0
-shader_parameter/emission = Color(0, 0, 0, 1)
-shader_parameter/emission_energy = 0.0
-shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("30_vhkfr")
-shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/affine_mapping = true
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.5250000249375
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0fwg"]
+resource_name = "Material.008"
+cull_mode = 2
+albedo_texture = ExtResource("24_c4f25")
+normal_enabled = true
+normal_texture = ExtResource("25_1pdd7")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7b133"]
 _surfaces = [{
@@ -1110,7 +1101,7 @@ _surfaces = [{
 "index_count": 540,
 "index_data": PackedByteArray("dgB3AAwAeAB3AHYACQAMAHcAeAAPAHcAdwAPAAkADwB4AHkADgB5AHgAeQALAA8AegB5AA4AegALAHkADAAJAHsADAB7AEQAewAJAAoARAB7AAgACgAIAHsACwB6AHwAfAAKAAsACAAKAHwADQB8AHoACAB8AA0AfQBBAH4AfQB/AEEABgCAAAcABgBAAIAAgQCCAAAAgQCDAIIAAwCEAIUAAwCGAIQAQwABAAIAQwBCAAEAhwCIAIkAhwCKAIgABQAEAIsABQCMAAQAjQCOAI8AjQCQAI4AkQBFAJIAkQBGAEUARQBGAEcARgCRAJMAkwCRAEgARgCTAEkAEACUABIAEACVAJQASwARAEoASwATABEAlgBMAJcAlgBNAEwAmAAaAJkAmAAbABoAmgBQAJsAmgBRAFAAnAAVAJ0AnAAUABUAFgCeABkAFgCfAJ4ATwAYAE4ATwAXABgAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AoABTAKEAoACiAFMAowCkAKUAowBSAKQApgAwAKcApgAyADAAqACpAKoAqABVAKkAqwCsAK0AqwCuAKwArACuAK8ArgCrALAAsACrALEArgCwALIAswC0ALUAswC2ALQAVAC3ALgAVAC5ALcAVgBYALoAVgBXAFgAWABXALsAVwBWALwAvABWAL0AVwC8AFkAvgAxAL8AvgAzADEAwADBAMIAwADDAMEAxABdAMUAxADGAF0AxwBbAMgAxwBaAFsAXgDJAFwAXgDKAMkAywA1AMwAywA3ADUAzQDOAGAAzQBfAM4AzgBfAM8AXwDNANAA0ADNANEAXwDQAGEA0gDTANQA0gDVANMA1gDXANgA1gDZANcAYgDaAGQAYgBjANoA2gBjANsAYwBiANwA3ABiAN0AYwDcAGUA3gDfAOAA3gDhAN8A4gA0AOMA4gA2ADQA5ABmAOUA5ADmAGYAOQDnADgAOQDoAOcAaADpAOoAaADrAOkA7ADtAO4A7ADvAO0A8ADxAPIA8ADzAPEA8QDzAPQA8wDwAPUA9QDwAPYA8wD1APcA+AD5APoA+AD7APkAZwD8AP0AZwD+APwA/wAAAWoA/wABAQABAAEBAWkAAQH/AAIBAgH/AAMBAQECAWsAOwAEAToAOwAFAQQBBgEHAQgBBgEJAQcBPQAKATwACwEMAQ0BDgEPARABDgFsAA8BbgARAW0AbgASAREBEwEUARUBEwEWARQBFwEYARkBFwFwABgBGAFwABoBcAAXAXIAcgAXAXEAcAByABsBHAEdAR4BHAEfAR0BbwA/ACABbwA+AD8AIQEiAXQAIQFzACIBIgFzACMBcwAhAXUAdQAhASQBcwB1ACUBJgEnASgBJgEpAScBKgErASwBKgEtASsB"),
 "lods": [0.0674407, PackedByteArray("BgBAAAcABwBAAEEABwBBAAUABQBBAAQABQAEAAMAAwAEAEIAAwBCAAAAQgBDAAAAQwBCAAEAQwABAAIARAAJAAoADAAJAEQACgAIAEQADgAJAAwACAAKAAsADgAPAAkACAALAA0ADQAPAA4ADQALAA8ARQBGAEcASABGAEUARgBIAEkAEABKABIAEABLAEoASwARAEoASwATABEAGQBMABAAGQBNAEwATQAaAEwATQAbABoAFgBOABkAFgBPAE4ATwAYAE4ATwAXABgAEgBQABYAEgBRAFAAUQAVAFAAUQAUABUAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMwBSAFMAMwAxAFIAVAAzAFMAVABTAFUAMABUAFUAMABVADIAVgBXAFgAVwBWAFkAWgBbAFwAWwBaAF0ANQBbAF0ANQBdADcAXABeAFoAXAA0AF4AXAA2ADQAXwBgAGEAYgBjAGQAYwBiAGUAOAA5AGYAZwA4AGYAZwBmAGgAOwBnAGgAOwBoADoAaQBqAGsAbAA9AG0APQBsADwAbQBuAGwAbQBvAG4AbwA/AG4AbwA+AD8AcABxAHIAcwB0AHUA"), 0.620305, PackedByteArray("AAABAAIAAwABAAAAAwAEAAEABQAEAAMABQAGAAQABwAGAAUACAAJAAoACAAKAAsADAAJAAgACAALAA0ADgAJAAwADQALAA8ADgAPAAkADQAPAA4AEAARABIAEAATABEAEgAUABUAEgAVABYAFgAXABgAFgAYABkAGQAaABAAGQAbABoAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANQA0ADcAOAA5ADoAOwA4ADoAPAA9AD4APgA/ADwA")],
-"material": SubResource("ShaderMaterial_luq6j"),
+"material": SubResource("StandardMaterial3D_v0fwg"),
 "name": "Material.008",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -1166,23 +1157,6 @@ shadow_mesh = SubResource("ArrayMesh_fwmut")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c37ic"]
 points = PackedVector3Array(0.729899, 0.0429732, 1, -0.72932, 0.0429732, 1, 0.729899, -0.000504911, 1, 0.706473, 0.0429732, -0.804929, 0.704331, 0.667692, -0.898614, -0.72932, -0.000504911, 1, -0.704323, 0.667692, -0.898614, -0.706751, 0.0429732, -0.804929, 0.674764, -0.674219, 0.90755, 0.674764, -0.674219, 0.806865, 0.706473, -0.000504911, -0.804929, 0.704331, 0.601753, -0.898614, 0.670907, 0.667692, -1.10349, -0.675042, -0.674219, 0.806865, -0.675042, -0.674219, 0.90755, -0.706751, -0.000504911, -0.804929, -0.704323, 0.601753, -0.898614, -0.670899, 0.667692, -1.10349, 0.631627, -0.674219, -0.928881, 0.674764, -0.00063622, -1.00012, 0.670907, 0.601753, -1.10349, -0.631905, -0.674219, -0.928881, -0.670899, 0.601753, -1.10349, -0.674899, -0.00063622, -1.00012)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0jq7l"]
-render_priority = 0
-shader = ExtResource("29_nq8ga")
-shader_parameter/point_size = 0.0
-shader_parameter/roughness = 0.0
-shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
-shader_parameter/specular = 0.0
-shader_parameter/metallic = 0.0
-shader_parameter/emission = Color(0, 0, 0, 1)
-shader_parameter/emission_energy = 0.0
-shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("33_63tng")
-shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/affine_mapping = true
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.6430000305425
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_fddls"]
 _surfaces = [{
 "aabb": AABB(-0.72932, -0.674219, -1.10349, 1.45922, 1.34191, 2.10349),
@@ -1205,7 +1179,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 1050,
 "index_data": PackedByteArray("AAABAAIAAwABAAAAAQADAAQAAQAEAAUAAQAFAAYABwAIAAkABwAKAAgACwAMAA0ACwAOAAwADwAQABEADwASABAAEwAUABUAFgAUABMAFAAWABcAFAAXABgAFAAYABkAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgAlACMAJgAnACgAJgApACcAKAAnACoAKAAqACsALAAtAC4ALAAvAC0AMAAxADIAMgAxADMAMAA0ADEAMgAzADUANgA0ADAANQAzADcANgA3ADQANQA3ADYAOAA5ADoAOgA5ADsAOAA8ADkAOgA7AD0APgA8ADgAPQA7AD8APgA/ADwAPQA/AD4AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWwBZAFgAWQBbAFwAXABbAF0AXABdAF4AXwBgAGEAYgBgAF8AYABiAGMAYABjAGQAYwBiAGUAYwBlAGYAZwBoAGkAagBoAGcAaABqAGsAawBqAGwAaABrAG0AbgBvAHAAcQBvAG4AbwBxAHIAbwByAHMAcgBxAHQAcgB0AHUAdgB3AHgAdgB5AHcAeQB2AHoAegB2AHsAegB7AHwAfQB+AH8AgAB+AH0AfgCAAIEAgQCAAIIAggCAAIMAhACFAIYAhACHAIUAiACJAIoAiACLAIkAjACNAI4AjACPAI0AkACRAJIAkACTAJEAlACVAJYAlACXAJUAmACZAJoAmACbAJkAnACdAJ4AnACfAJ0AoAChAKIAoACjAKEApAClAKYApACnAKUAqACpAKoAqwCsAK0ArgCvALAAsQCyALMAtAC1ALYAtAC3ALUAuAC5ALoAuAC7ALkAvAC9AL4AvAC/AL0AwADBAMIAwADDAMEAxADFAMYAxADHAMUAyADJAMoAyADLAMkAyQDMAMoAyQDNAMwAzADNAM4AzADOAM8A0ADRANIA0ADTANEA0wDQANQA0wDUANUA1gDVANQA1gDXANUA2ADZANoA2ADbANkA3ADbANgA3ADYAN0A3gDcAN0A3gDfANwA4ADhAOIA4ADjAOEA5ADlAOYA5ADnAOUA6ADpAOoA6ADrAOkA7ADtAO4A7ADvAO0A8ADxAPIA8ADzAPEA9AD1APYA9AD3APUA+AD5APoA+AD7APkA/AD7APgA/AD9APsA/gD9APwA/gD/AP0AAAH/AP4AAAEBAf8AAgEDAQQBBQEGAQcBCAEJAQoBCAELAQkBDAENAQ4BDAEPAQ0BEAERARIBEAETAREBFAEVARYBFAEXARUBGAEZARoBGwEcAR0BHgEfASABHwEeASEBIQEeASIBIQEiASMBHwEhASQBHwEkASUBJgEnASgBKQEnASYBJwEpASoBJwEqASsBKgEpASwBKgEsAS0BLgEvATABLgExAS8BMgEzATQBMgE1ATMBNgE3ATgBNgE5ATcBOgE7ATwBOgE9ATsBPgE/AUABPgFBAT8BQgFDAUQBQwFCAUUBRQFCAUYBRQFGAUcBSAFFAUkBSgFLAUwBTQFOAU8BTQFQAU4BUAFNAVEBTgFQAVIBTgFSAVMBVAFVAVYBVwFYAVkBWgFbAVwBXQFeAV8BYAFhAWIBYAFjAWEBZAFlAWYBZAFnAWUBaAFpAWoBawFsAW0BbgFvAXABcQFyAXMBdAFyAXEBdAF1AXIBdQF0AXYBcgF1AXcBcgF3AXgBeQF6AXsBeQF8AXoBfAF5AX0BfAF9AX4BegF8AX8BegF/AYABgQGCAYMBgQGEAYIBhQGGAYcBiAGJAYoBiwGMAY0BjgGPAZABjgGRAY8BkQGOAZIBjwGRAZMBjwGTAZQBlQGWAZcBmAGWAZUBlgGYAZkBmQGYAZoBlgGZAZsBnAGdAZ4BnwGgAaEBoAGfAaIBoAGiAaMBpAGlAaYBpAGnAaUBqAGpAaoBqwGsAa0BrgGvAbABsQGyAbMBtAG1AbYBtwG4AbkBtwG6AbgBugG3AbsBugG7AbwBuwG3Ab0BuwG9Ab4BvwHAAcEBwgHDAcQBwgHFAcMBxgHFAcIBxQHGAccByAHJAcoBywHMAc0BywHOAcwBzwHQAdEBzwHSAdAB0wHUAdUB0wHWAdQB1wHYAdkB1wHaAdgB2wHcAd0B2wHeAdwB3wHgAeEB3wHiAeAB4wHkAeUB4wHmAeQB5wHoAekB5wHqAegB6wHsAe0B6wHuAewB7wHwAfEB7wHyAfAB8wH0AfUB8wH2AfQB9wH4AfkB9wH6AfgB+wH8Af0B+wH+AfwB/wEAAgEC/wECAgACAwIEAgUCAwIGAgQCBwIIAgkCBwIKAggCCwIMAg0CCwIOAgwCDwIQAhECDwISAhACEwIUAhUCEwIWAhQCFwIYAhkCFwIaAhgCGwIcAh0CGwIeAhwCHwIgAiECHwIiAiACIwIkAiUCIwImAiQCJwIoAikCJwIqAigCKwIsAi0CKwIuAiwCLwIwAjECLwIyAjACMwI0AjUCMwI2AjQCNwI4AjkCNwI6AjgCOwI8Aj0COwI+AjwCPwJAAkECPwJCAkACQwJEAkUCQwJGAkQCRwJIAkkCRwJKAkgCSwJMAk0CSwJOAkwCTwJQAlECTwJSAlACUwJUAlUCUwJWAlQCVwJYAlkCVwJaAlgCWwJcAl0CWwJeAlwCXwJgAmECXwJiAmACYwJkAmUCYwJmAmQCZwJoAmkCZwJqAmgCawJsAm0CawJuAmwCbwJwAnECbwJyAnACcwJ0AnUCcwJ2AnQC"),
-"material": SubResource("ShaderMaterial_0jq7l"),
+"material": SubResource("StandardMaterial3D_n2qc1"),
 "name": "Material.009",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -1218,22 +1192,14 @@ shadow_mesh = SubResource("ArrayMesh_fddls")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r8xxc"]
 points = PackedVector3Array(0.729899, 0.0429732, 1, -0.72932, 0.0429732, 1, 0.729899, -0.000504911, 1, 0.706473, 0.0429732, -0.804929, 0.704331, 0.667692, -0.898614, -0.72932, -0.000504911, 1, -0.704323, 0.667692, -0.898614, -0.706751, 0.0429732, -0.804929, 0.674764, -0.674219, 0.90755, 0.674764, -0.674219, 0.806865, 0.706473, -0.000504911, -0.804929, 0.704331, 0.601753, -0.898614, 0.670907, 0.667692, -1.10349, -0.675042, -0.674219, 0.806865, -0.675042, -0.674219, 0.90755, -0.706751, -0.000504911, -0.804929, -0.704323, 0.601753, -0.898614, -0.670899, 0.667692, -1.10349, 0.631627, -0.674219, -0.928881, 0.674764, -0.00063622, -1.00012, 0.670907, 0.601753, -1.10349, -0.631905, -0.674219, -0.928881, -0.670899, 0.601753, -1.10349, -0.674899, -0.00063622, -1.00012)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_22rba"]
-render_priority = 0
-shader = ExtResource("29_nq8ga")
-shader_parameter/point_size = 0.0
-shader_parameter/roughness = 0.0
-shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
-shader_parameter/specular = 0.0
-shader_parameter/metallic = 0.0
-shader_parameter/emission = Color(0, 0, 0, 1)
-shader_parameter/emission_energy = 0.0
-shader_parameter/albedo = Color(1, 1, 1, 1)
-shader_parameter/texture_albedo = ExtResource("34_sbyva")
-shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/affine_mapping = true
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.65200003097
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nob5"]
+resource_name = "Material.010"
+cull_mode = 2
+albedo_texture = ExtResource("28_4yu04")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("29_paxf5")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8hc4h"]
 _surfaces = [{
@@ -1259,7 +1225,7 @@ _surfaces = [{
 "index_count": 1020,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A8AAgAPEA8AAjACAAJQDyACQAJQDzAPIAEAARABIAEwARABAAEQATABQAFAATABUAFAAVABYAFAAWABcA9ABZAPUA9AAiAFkAWwD2APcAWwD4APYA+QD6APsA+QBcAPoA+gBcAJcA/ABcAPkAXAD8AP0AXAD9AP4A/QD8AF8A/QBfAJoAXwD8AP8AXwD/AAABAQEhAFgAAQFaACEAAgEDAQQBAgEFAQMBBgEHAWIABgEIAQcBBwEIAWEACAEGAWMAYwAGAWAACAFjAAkBCgELAQwBCgENAQsBDgEPARABDgERAQ8BmwCdABIBmwCcAJ0AEwEcAJgAEwEYABwAFAEVARYBFAEXARUBGAEZARoBGAEbARkBHAEeAB0BHAEfAB4AlgAaAB4BlgAZABoAHwEgASEBHwEdACABIgFdACMBIgEkAV0AJQEmAScBJQEoASYBmQAbACkBmQBeABsAKgErASwBKgEtASsBLgGeAC8BLgEwAZ4AMQEyAZ8AMQEzATIBNAE1ATYBNAE3ATUBOAE5AToBOAE7ATkBPAE9AT4BPAE/AT0BQAFBAUIBQAFDAUEBRAGpAEUBRAFGAakARwFIAaoARwFJAUgBSgFLAUwBSgFNAUsBTgFPAVABTgFRAU8BUgFTAVQBUgFVAVMBVgFXAVgBVgFZAVcBWgGlAFsBWgFcAaUAXQFeAaYAXQFfAV4BYAFhAWIBYAFjAWEBZAFlAWYBZAFnAWUBaAFpAWoBaAFrAWkBbAFtAW4BbAFvAW0BcAFxAXIBcAF5AHEBcwGgAHQBcwF1AaAAdgF3AXgBdgGrAHcBeQFlAHoBeQGsAGUAewF8AX0BewF+AXwBfwFzAIABfwFxAHMAgQFpAIIBgQGuAGkAgwGEAYUBgwFnAIQBhgGHAagAhgGIAYcBiQF0AIoBiQFyAHQAsACLAW8AsACMAYsBjQGOAY8BjQGQAY4BkQGSAZMBkQGUAZIBlQF4AJYBlQF6AHgAlwGYAZkBlwGaAZgBmwF2AJwBmwGnAHYAnQGeAZ8BnQGtAJ4BoAFsAKEBoAFuAGwAogGjAaIAogGkAaMBpQF3AKYBpQF7AHcApwGoAaQApwGpAagBqgFwAKsBqgF1AHAAoQCsAaMAoQCtAawBrgGvAbABrgGxAa8BaABmAGoAaABkAGYAsgGzAbQBsgG1AbMBrwBtAGsArwCxAG0AtgG3AbgBtgG5AbcBugG7AbwBugG9AbsBvgG/AcABvgHBAb8BwgG3ALgAwgG2ALcAwwHEAcUBwwHGAcQBxwHIAckBxwHKAcgBywG6ALsAywG5ALoAJwDMASkAJwDNAcwBzgEmALUAzgGyACYAvwDPAbwAvwDQAc8BKgDRASgAKgDSAdEB0wG0ALMA0wF8ALQAvgDUAb0AvgDVAdQB1gHXAdgB1gHZAdcB2gHbAdwB2gHdAdsBMgDeAS8AMgDfAd4BMQDgATAAMQDhAeAB4gHjAeQB4gHlAeMBKwAsAC0AKwAuACwAwQDCAMAAwQDDAMIAMwA0ADUAMwA2ADQANwA4ADkANwA6ADgAOwA8AD0AOwA+ADwA5gHEAOcB5gHoAcQA6QHqAcUA6QHrAeoB7AHtAe4B7AHvAe0B8AHxAfIB8AHLAPEB8wH0AfUB8wH2AfQB9wH4AfkB9wH6AfgB+wHQAPwB+wH9AdAA/gH/AdEA/gEAAv8BAQICAgMCAQIEAgICBQIGAgcCBQIIAgYCCQIKAgsCCQIMAgoCDQIOAg8CDQLKAA4CEALNABECEAISAs0AEwIUAs4AEwIVAhQCFgIXAhgCFgIZAhcCGgIbAhwCGgIdAhsCHgIfAiACHgIhAh8CIgIjAiQCIgLSACMCJQImAicCJQKSACYCKALGACkCKAIqAsYAKwLUACwCKwLVANQALQJ+AC4CLQLWAH4ALwIwAjECLwIyAjACMwKMADQCMwKKAIwANQKCADYCNQLZAIIANwI4AjkCNwKAADgCOgI7AtMAOgI8AjsCPQKNAD4CPQKLAI0A2wA/AogA2wBAAj8C3ABBAkIC3ABDAkECRAJFAkYCRAJHAkUCSAKRAEkCSAKTAJEASgJLAkwCSgJNAksCTgKPAE8CTgLPAI8AUALXAFECUALYANcAUgKFAFMCUgKHAIUAVAJVAsgAVAJWAlUCVwKQAFgCVwKUAJAAWQJaAswAWQJbAloCXAKJAF0CXAKOAIkAxwBeAskAxwBfAl4CYAJhAmICYAJjAmECgQB/AIMAgQB9AH8AZAJlAmYCZAJnAmUC2gCGAIQA2gDdAIYAaAJpAmoCaAJrAmkCbAJtAm4CbAJvAm0CcAJxAnICcAJzAnECdALjAOQAdALiAOMAdQJ2AncCdQJ4AnYCeQJ6AnsCeQJ8AnoCfQLmAOcAfQLlAOYAQAB+AkIAQAB/An4CgAI/AOEAgALeAD8A6wCBAugA6wCCAoECQwCDAkEAQwCEAoMChQLgAN8AhQKVAOAA6gCGAukA6gCHAoYCiAKJAooCiAKLAokCjAKNAo4CjAKPAo0CSwCQAkgASwCRApACSgCSAkkASgCTApIClAKVApYClAKXApUCRABFAEYARABHAEUA7QDuAOwA7QDvAO4ATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUA"),
 "lods": [0.0407847, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEwARABAAEQATABQAFAATABUAFAAVABYAFAAWABcAWAAiAFkAWQAhAFgAIABZACIAIAAiACMAWQBaACEAWwAhAFoAWgAlAFsAWgAkACUAGACWABoAlgAZABoAlwAZAJYAXAAZAJcAlgBcAJcAGABcAJYAXABdABkAGwBdAFwAmABcABgAGAAcAJgAXACZABsAXACYAJkAmQBeABsAmgBeAJkAmgAdAF4AmQCYAF8AmQBfAJoAXwAdAJoAXwCYAB8AXwAeAB0AXwAfAB4AYABhAGIAYQBgAGMAmwCcAJ0AewCeAJ8AoACfAJ4AeQCgAJ4AngB7AHcAoQB5AJ4AngB3AKIAoQCeAKIAogB3AHoAoQCiAKMAogB6AHgAogB4AKMApABwAHEApQBwAKQApQB1AHAAdQClAKYAdgCmAKUApwB2AKUAqACnAKUAqAClAKQAqAB0AKcApABxAKkAqACkAKkAqQB0AKgAcQBzAKkAqQByAHQAcwCqAKkAcgCpAKoAZABlAGYAZACrAGUAaABkAGYAqwCsAGUAaABmAGoArABnAGUAagBsAGgArABpAGcAagCtAGwArgBnAGkArQBuAGwAawCuAGkAbwBsAG4AawBpAK8AbwBuALAArwBtAGsAsACxAG8ArwCxAG0AsABtALEAsgCzALQAKgC0ALMAKgCzACgAKgB8ALQAsgAnALMAfAAqALUAJwCyACYAfAC1ACYAJwAmALUAJwC1ACkAtgC3ALgAuQC6ALsAvAC9AL4AvAC/AL0AwAAvAMEAwAAxAC8AMgDBAC8AMQDAAMIAwQDCAMAAMQDCADAAMgDDAMEAwQDDAMIAMADDADIAMADCAMMAKwAsAC0AKwAuACwAMwA0ADUAMwA2ADQANwA4ADkANwA6ADgAOwA8AD0AOwA+ADwAlADEAMUAxgDFAMQAkgDGAMQAxACUAJAAxwCSAMQAxwDEAMgAxACQAMgAxwDIAMkAyACRAMkAyACTAJEAyACQAJMAkADKAJMAiQDLAIoAzACJAIoAzQCJAMwAzQCOAIkAjgDNAM4AjwDOAM0AzwCPAM0AzACKANAAigCMANAAjADRANAAiwDQANEA0ACLAI0AjQDSAM8A0wDMANAA0ACNANMA0wDNAMwA0wCNAM8A0wDPAM0AfQDUAH8AfQDVANQAgQB9AH8A1QB+ANQAgQB/AIMA1QDWAH4AgwDXAIEA1gCAAH4AgwDYANcA1gCCAIAA2ACFANcA2QCAAIIA2ACHAIUAhADZAIIAiACFAIcAhACCANoAiACHANsA2gCGAIQA2wDcAIgA2gDdAIYA3ACGAN0A3ADdAIgA3gDfAOAAQwDgAN8AQwDfAEEAQwCVAOAA3gBAAN8AlQBDAOEAQADeAD8AlQDhAD8AQAA/AOEAQADhAEIA4gDjAOQA5QDmAOcA6ADpAOoA6ADrAOkA7ABIAO0A7ABKAEgASwDtAEgASgDsAO4A7QDuAOwASgDuAEkASwDvAO0A7QDvAO4ASQDvAEsASQDuAO8ARABFAEYARABHAEUATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUA"), 0.35875, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEwARABAAEQATABQAFAATABUAFAAVABYAFAAWABcAWAAiAFkAWQAhAFgAIABZACIAIAAiACMAWQBaACEAWwAhAFoAWgAlAFsAWgAkACUAGAAZABoAGABcABkAXABdABkAGwBdAFwAHABcABgAXABeABsAXAAcAF4AXgAcAF8AXwAcAB8AXwAdAF4AXwAfAB4AXwAeAB0AYABhAGIAYQBgAGMAZABlAGYAZABnAGUAaABkAGYAZABpAGcAaABmAGoAawBnAGkAagBsAGgAaQBtAGsAagBuAGwAbQBpAG8AbwBsAG4AbwBuAG0AcABxAHIAcQBzAHIAdABwAHIAdAB1AHAAdAB2AHUAdwB4AHkAdwB6AHgAeQB7AHcAfAAnACgAJwB8ACkAKgB8ACgAfAAqACkAKwAsAC0AKwAuACwALwAwADEALwAyADAAMwA0ADUAMwA2ADQANwA4ADkANwA6ADgAOwA8AD0AOwA+ADwAfQB+AH8AfQCAAH4AgQB9AH8AfQCCAIAAgQB/AIMAhACAAIIAgwCFAIEAggCGAIQAgwCHAIUAhgCCAIgAiACFAIcAiACHAIYAiQCKAIsAigCMAIsAjQCJAIsAjQCOAIkAjQCPAI4AkACRAJIAkACTAJEAkgCUAJAAlQBAAEEAQACVAEIAQwCVAEEAlQBDAEIARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUA"), 1.09397, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEwARABAAEQATABQAFAATABUAFAAVABYAFAAWABcAGAAZABoAGAAbABkAHAAbABgAGwAcAB0AHQAcAB4AHgAcAB8AIAAhACIAIAAiACMAIAAkACEAJAAlACEAJgAnACgAJwAmACkAKgAmACgAJgAqACkAKwAsAC0AKwAuACwALwAwADEALwAyADAAMwA0ADUAMwA2ADQANwA4ADkANwA6ADgAOwA8AD0AOwA+ADwAPwBAAEEAQAA/AEIAQwA/AEEAPwBDAEIARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUA")],
-"material": SubResource("ShaderMaterial_22rba"),
+"material": SubResource("StandardMaterial3D_4nob5"),
 "name": "Material.010",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -1362,12 +1328,21 @@ shadow_mesh = SubResource("ArrayMesh_g8nem")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i0v8k"]
 points = PackedVector3Array(0.999999, 1, 0.970438, 0.999999, 0.991295, 0.991386, 0.999999, 1, -0.97083, -1.00024, 1, 0.970438, 0.999999, 0.970449, 1, -1.00024, 0.991295, 0.991386, 0.999999, 0.991295, -0.991582, -1.00024, 1, -0.97083, -7.6308, 0.376908, 0.208496, 0.999999, -0.970757, 1, -1.00024, 0.970449, 1, -10.7846, -1.28597, 0.724158, 0.999999, 0.970449, -1, -1.00024, 0.991295, -0.991582, -7.6308, 0.376908, -0.208692, 0.999999, -0.991603, 0.991386, -1.00024, -0.970757, 1, -10.7846, -1.28597, -0.72455, -10.7846, -1.34026, 0.724158, 0.999999, -0.970757, -1, -1.00024, 0.970449, -1, 0.999999, -1.00008, 0.970438, -1.00024, -0.991603, 0.991386, -1.92307, -1.34026, 0.724158, -10.7846, -1.34026, -0.72455, 0.999999, -0.991603, -0.991582, -1.00024, -0.970757, -1, 0.999999, -1.00008, -0.97083, -1.92307, -1.34026, -0.72455, -1.00024, -0.991603, -0.991582)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sbyva"]
-albedo_color = Color(1, 1, 1, 0)
-albedo_texture = ExtResource("40_vhkfr")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du7a1"]
+resource_name = "floor"
+cull_mode = 2
+albedo_texture = ExtResource("36_j1n11")
+metallic = 1.0
+metallic_texture = ExtResource("37_sgbny")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("37_sgbny")
+roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("40_63tng")
-uv1_scale = Vector3(6.29, 6.29, 6.29)
+normal_scale = 0.0
+normal_texture = ExtResource("38_871h3")
+uv1_scale = Vector3(10.2, 9.4, 1)
+uv1_offset = Vector3(-9.4, 1, 0)
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vumli"]
 _surfaces = [{
@@ -1391,7 +1366,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 30,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAUAAAAFAAYABgADAAAABgAHAAMABgAIAAcABgAJAAgACAAKAAcACAALAAoA"),
-"material": SubResource("StandardMaterial3D_sbyva"),
+"material": SubResource("StandardMaterial3D_du7a1"),
 "name": "floor",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -3286,15 +3261,12 @@ color = Color(1, 1, 1, 1)
 distortion_texture = null
 cull_near = 0.54
 
-[node name="Omni" type="SpotLight3D" parent="Node3D/TutV2/tutv2/MIRROR"]
+[node name="Omni" type="OmniLight3D" parent="Node3D/TutV2/tutv2/MIRROR"]
 transform = Transform3D(0.99977, 4.761205e-10, -0.021447044, 0.021447044, -4.440116e-08, 0.99977, -4.761205e-10, -1, -4.440116e-08, -4.7754354, 1.9708505, -0.8366165)
 light_color = Color(0.7764706, 1, 1, 1)
-light_energy = 5.0
-shadow_enabled = true
-spot_range = 3.915
-spot_attenuation = 0.6
-spot_angle = 60.88
-spot_angle_attenuation = 0.29730278
+light_energy = 0.0
+omni_range = 4.162
+omni_attenuation = 0.551
 
 [node name="crow" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(0.160879, 0, 0, 0, 0.0643432, 0, 0, 0, 0.160879, 0.64799, 0.0528235, 12.6762)
@@ -3349,10 +3321,8 @@ transform = Transform3D(-0.0059919, 0, 0, 0, 0.0723694, 0, 0, 0, -0.0423454, 2.0
 mesh = SubResource("ArrayMesh_sg88b")
 skeleton = NodePath("")
 
-[node name="light_switch" parent="Node3D/TutV2/tutv2/LightSwitch2" node_paths=PackedStringArray("connected_light", "emission_obj") instance=ExtResource("13_unsro")]
+[node name="light_switch" parent="Node3D/TutV2/tutv2/LightSwitch2" node_paths=PackedStringArray("connected_light") instance=ExtResource("13_unsro")]
 connected_light = [NodePath("../../MIRROR/Omni")]
-emission_obj = [NodePath("../../Cube_026")]
-light_value = 5.0
 on = true
 light_color = Color(0.7764706, 1, 1, 1)
 
@@ -3366,15 +3336,12 @@ transform = Transform3D(0.28063, 0, 0, 0, 0.0330167, 0, 0, 0, 0.28063, 0, 3.1855
 mesh = SubResource("ArrayMesh_rfc18")
 skeleton = NodePath("")
 
-[node name="OmniLight3D" type="SpotLight3D" parent="Node3D/TutV2/tutv2/Light" node_paths=PackedStringArray("gpuparticle")]
-transform = Transform3D(3.563411, 0, 0, 0, -18.320765, 30.210909, 0, -3.554376, -0.029836128, 0, -6.64579, 0)
-light_color = Color(1, 0.69803923, 0.62352943, 1)
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light" node_paths=PackedStringArray("gpuparticle")]
+transform = Transform3D(3.563411, 0, 0, 0, 30.287706, 0, 0, 0, 3.563411, 0, -29.79332, 0)
+light_energy = 0.0
 light_volumetric_fog_energy = 3.0
-shadow_enabled = true
-spot_range = 3.271
-spot_attenuation = -2.31
-spot_angle = 65.57
-spot_angle_attenuation = 0.14865069
+omni_range = 1.7628316
+omni_attenuation = -2.122
 script = ExtResource("14_f8me0")
 noise = SubResource("NoiseTexture3D_c4f25")
 gpuparticle = NodePath("../Light Particle")
@@ -3387,7 +3354,7 @@ process_material = SubResource("ParticleProcessMaterial_63tng")
 draw_pass_1 = SubResource("QuadMesh_sbyva")
 
 [node name="Cube_026" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
-transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 24.217321)
+transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 17.2327)
 mesh = SubResource("ArrayMesh_ch4mu")
 skeleton = NodePath("")
 
@@ -3403,9 +3370,8 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light3" node_paths=PackedStringArray("gpuparticle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
-light_color = Color(1, 0.69803923, 0.62352943, 1)
+light_energy = 0.0
 light_volumetric_fog_energy = 3.449
-shadow_enabled = true
 omni_range = 27.477
 script = ExtResource("14_f8me0")
 gpuparticle = NodePath("../Light Particle")
@@ -3428,9 +3394,8 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Node3D/TutV2/tutv2/Light2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.823244, 0)
-light_color = Color(1, 0.69803923, 0.62352943, 1)
+light_energy = 0.0
 light_volumetric_fog_energy = 3.449
-shadow_enabled = true
 omni_range = 27.477
 script = ExtResource("14_f8me0")
 light_multiplier = 0.1
@@ -3451,14 +3416,12 @@ layers = 16
 mesh = SubResource("ArrayMesh_md5a8")
 skeleton = NodePath("")
 
-[node name="light_switch2" parent="Node3D/TutV2/tutv2/LightSwitch" node_paths=PackedStringArray("connected_light", "emission_obj") instance=ExtResource("13_unsro")]
+[node name="light_switch2" parent="Node3D/TutV2/tutv2/LightSwitch" node_paths=PackedStringArray("connected_light") instance=ExtResource("13_unsro")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.2679443, 0, 0)
 connected_light = [NodePath("../../Light/OmniLight3D"), NodePath("../../Light2/OmniLight3D"), NodePath("../../Light3/OmniLight3D")]
-emission_obj = [NodePath("../../Light2"), NodePath("../../Cube_024"), NodePath("../../Light3")]
-light_value = 1.0
 on = true
 starter_value = 0.1
-light_color = Color(1, 0.69803923, 0.62352943, 1)
+light_color = Color(1, 1, 1, 1)
 
 [node name="CollisionShape3D" parent="Node3D/TutV2/tutv2/LightSwitch/light_switch2" index="1"]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, -0.50546265)

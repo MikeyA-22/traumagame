@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 
-uniform sampler2D screen_texture: hint_screen_texture,filter_nearest;
+uniform sampler2D screen_texture: hint_screen_texture,filter_nearest, repeat_disable;
 
 const float ps1_dither[16] = float[16](
 	-4.0, 0.0, -3.0, 1.0,

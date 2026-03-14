@@ -50,7 +50,7 @@ func _input(event: InputEvent) -> void:
 			var sensitivity := 0.002
 			var max_look_up := deg_to_rad(40)
 			var max_look_down := deg_to_rad(-40)
-			var max_look_side := deg_to_rad(60)
+			var max_look_side := deg_to_rad(90)
 
 
 			if not hidden_cam.has_meta("yaw"):

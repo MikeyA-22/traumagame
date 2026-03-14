@@ -17,6 +17,7 @@ var noise = FastNoiseLite.new()
 
 func _ready() -> void:
 	offset = Vector2(h_offset,v_offset)
+	make_current()
 
 func _physics_process(delta: float) -> void:
 	if active_shake_time > 0:

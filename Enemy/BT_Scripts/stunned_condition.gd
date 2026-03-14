@@ -16,6 +16,7 @@ func tick(actor, delta, blackboard: Dictionary):
 	stunned = blackboard.get("stunned")
 	if stunned == true:
 		print("STUNNED!!!")
+		stop_sounds()
 		return STATUS.SUCCESS
 	else:
 		return STATUS.FAIL
@@ -25,6 +26,8 @@ func Is_Stunned():
 	stunned = true
 	blackboard.set("stunned", stunned)
 	timer.start()
+	
+
+func stop_sounds():
 	for sound in all_sound_players:
 		sound.stop()
-	

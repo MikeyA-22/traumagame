@@ -30,7 +30,7 @@ offset_right = 139.5
 offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
-text = "Mipmap Adjuster tool"
+text = "PS1 Shader tool"
 
 [node name="objects" type="Label" parent="Background"]
 layout_mode = 1
@@ -60,7 +60,7 @@ offset_top = -100.0
 offset_right = -51.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "click to adjust mipmaps"
+text = "click to change shader"
 
 [node name="Show Material Button" type="Button" parent="."]
 custom_minimum_size = Vector2(200, 100)

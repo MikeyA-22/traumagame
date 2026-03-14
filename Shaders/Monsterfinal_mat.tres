@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://btk60q7hkje4s"]
+
+[ext_resource type="Shader" uid="uid://u44vjetvge3c" path="res://Shaders/ps1_model.gdshader" id="1_ieryk"]
+[ext_resource type="Texture2D" uid="uid://cq7ell753jcjw" path="res://Enemy/Monster _rig_v006_monster_DefaultMaterial_BaseMap.png" id="2_iy1s3"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ieryk")
+shader_parameter/point_size = 48.582002307645
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 0.0
+shader_parameter/albedo = Color(1, 1, 1, 0)
+shader_parameter/texture_albedo = ExtResource("2_iy1s3")
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/affine_mapping = true
+shader_parameter/alpha_scissor = 0.8250000391875
+shader_parameter/jitter = 0.5570000264575

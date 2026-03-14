@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ch3s4mobpmhby"]
+[gd_scene load_steps=20 format=3 uid="uid://ch3s4mobpmhby"]
 
 [ext_resource type="Script" uid="uid://3wai6u2l5eqq" path="res://Test Level/Test_level.gd" id="1_6emce"]
 [ext_resource type="Material" uid="uid://5b8jtaqc8qbb" path="res://Test Level/testmat.material" id="2_f7g2b"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ddriaht17atfl" path="res://Ables/batteries.tscn" id="13_svnyl"]
 [ext_resource type="PackedScene" uid="uid://kluhkctuki4x" path="res://Enemy/BT_base_enemy.tscn" id="14_0mciv"]
 [ext_resource type="Resource" uid="uid://dy8s8gewdv14x" path="res://Resource/Batteries.tres" id="14_5qknh"]
+[ext_resource type="PackedScene" uid="uid://8ankrs06jy67" path="res://Ables/hide_table.tscn" id="15_0mciv"]
 
 [sub_resource type="FogMaterial" id="FogMaterial_sb12i"]
 density = 0.7634
@@ -153,7 +154,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41165, -4.13469, -2.42908)
 item_data = ExtResource("11_im4t2")
 
 [node name="Player" parent="." node_paths=PackedStringArray("monster") instance=ExtResource("11_rfadj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7975063, -4.2810664, -1.6825119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.090257, -4.2810664, -11.445583)
 monster = NodePath("../Base Enemy2")
 
 [node name="Battery" parent="." instance=ExtResource("13_svnyl")]
@@ -182,6 +183,9 @@ navigation_mesh = SubResource("NavigationMesh_5qknh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0597229, -3.4920044, 0.05908203)
 shape = SubResource("BoxShape3D_5qknh")
+
+[node name="Hiding Table" parent="." instance=ExtResource("15_0mciv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.032362, -4.268466, -11.934921)
 
 [connection signal="finished" from="DialogueManager" to="." method="on_DialogueManager_finished"]
 [connection signal="message_completed" from="DialogueManager" to="." method="on_DialogueManager_message_completed"]

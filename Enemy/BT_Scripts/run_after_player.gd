@@ -17,6 +17,6 @@ func tick(actor: Enemy, delta, blackboard: Dictionary):
 	fstep_player.play()
 	var dist = actor.global_position.distance_to(target.global_position)
 	if dist <= actor.attack_radius:  # reached attack range, hand off
-		fstep_player.stop()
+		
 		return STATUS.SUCCESS
 	return STATUS.RUNNING

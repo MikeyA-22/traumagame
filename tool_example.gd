@@ -43,7 +43,8 @@ func _add_object():
 		if node is MeshInstance3D:
 			#print("MeshInstance",[node],"is: ",node)
 			var material: StandardMaterial3D = node.mesh.surface_get_material(0)
-			material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+			var material_texture = material.albedo_texture
+			print(material_texture)
 		else:
 			push_warning("Selected node is not a MeshInstance3D")
 	print("did the thing")
