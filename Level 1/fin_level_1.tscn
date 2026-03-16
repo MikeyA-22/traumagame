@@ -1,8 +1,8 @@
-[gd_scene load_steps=1892 format=4 uid="uid://dg8d0djsaoamx"]
+[gd_scene load_steps=1892 format=4 uid="uid://5iwisxyqyg4p"]
 
 [ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_07vk0"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_123ws"]
-[ext_resource type="Script" uid="uid://cg4ijxvjq4rcx" path="res://Level 1/level_1_layout.gd" id="2_0bddg"]
+[ext_resource type="Script" path="res://Level 1/level_1_layout.gd" id="2_0bddg"]
 [ext_resource type="Texture2D" uid="uid://c36umqa1xhhem" path="res://Level 1/walls_Substance_graph_roughness.png" id="2_123ws"]
 [ext_resource type="PackedScene" uid="uid://ccwaxapbke6h2" path="res://addons/fsm_template/Player/final_player.tscn" id="2_dv71h"]
 [ext_resource type="Texture2D" uid="uid://dvh3k1afhhm4" path="res://Level 1/walls_Substance_graph_normal_6.png" id="3_0bddg"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://cd1cs4bybrmo3" path="res://Level 1/walls (2)_Substance_graph_normal.png" id="22_r7cbx"]
 [ext_resource type="Texture2D" uid="uid://b300qg5b0g730" path="res://Level 1/walls (2)_baseboards_Material_BaseMap.png" id="23_kl5l0"]
 [ext_resource type="Texture2D" uid="uid://dqn7k5yaqh3c5" path="res://Level 1/walls (2)_baseboards_Material_Normal.png" id="24_i41ah"]
-[ext_resource type="PackedScene" uid="uid://bqwio64tbckxb" path="res://Enemy/Monster _rig_v006.glb" id="25_d3vbi"]
 [ext_resource type="Texture2D" uid="uid://8p0j7s0fpbe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_BaseMap.png" id="26_dyl7m"]
 [ext_resource type="Texture2D" uid="uid://cm1fj6y6pu8no" path="res://Level 1/walls_Substance_graph_basecolor.png" id="27_6oqyx"]
 [ext_resource type="Texture2D" uid="uid://c00y01ohyjpe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_Normal.png" id="27_rsoyc"]
@@ -104,6 +103,7 @@
 [ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="98_lq2ya"]
 [ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="100_0bddg"]
 [ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="100_y1l4h"]
+[ext_resource type="PackedScene" path="res://Enemy/BT_base_enemy.tscn" id="104_6oqyx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6oqyx"]
 shader = ExtResource("1_123ws")
@@ -29712,11 +29712,9 @@ shape = SubResource("ConvexPolygonShape3D_hdukf")
 
 [node name="CEILING" type="CSGMesh3D" parent="SubViewport/Level1Layout/Ceiling"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.49617, 3.2472086, 0)
+visible = false
 mesh = SubResource("BoxMesh_123ws")
 material = SubResource("StandardMaterial3D_3sd0r")
-
-[node name="Monster _rig_v006" parent="SubViewport/Level1Layout" instance=ExtResource("25_d3vbi")]
-transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -97.20215, 0, 13.09943)
 
 [node name="Cube_017" type="MeshInstance3D" parent="SubViewport/Level1Layout"]
 transform = Transform3D(4.5896954e-08, 0, 0.51, 0, 0.55, 0, -0.35, 0, 6.687842e-08, -0.80806065, 0.5533222, -4.596633)
@@ -35476,3 +35474,39 @@ sub_view = NodePath("../..")
 
 [node name="Player" parent="SubViewport" instance=ExtResource("2_dv71h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.135833, 0.025132656, -0.9389014)
+
+[node name="Base Enemy" parent="." instance=ExtResource("104_6oqyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 0, 4)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.06585, 0, -11.206528)
+
+[node name="Node3D2" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.06585, 0, 6.7934723)
+
+[node name="Node3D3" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.06585, 0, 1.7934723)
+
+[node name="Node3D4" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.06585, 0, 13.793472)
+
+[node name="Node3D5" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.71579, 0, 14.914391)
+
+[node name="Node3D6" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.71579, 0, 3.9143906)
+
+[node name="Node3D7" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.71579, 0, 3.9143906)
+
+[node name="Node3D8" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.71579, 0, 7.9143906)
+
+[node name="Node3D9" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.71579, 0, -12.085609)
+
+[node name="Node3D10" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.71579, 0, -27.08561)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=1663 format=4 uid="uid://du748vuy3ycgc"]
+[gd_scene load_steps=1666 format=4 uid="uid://du748vuy3ycgc"]
 
 [ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_bfrko"]
+[ext_resource type="Script" uid="uid://chmve4wg5qil2" path="res://Level 1/level_1.gd" id="1_oetvb"]
 [ext_resource type="Texture2D" uid="uid://c36umqa1xhhem" path="res://Level 1/walls_Substance_graph_roughness.png" id="2_tnsyo"]
 [ext_resource type="Texture2D" uid="uid://dvh3k1afhhm4" path="res://Level 1/walls_Substance_graph_normal_6.png" id="3_7la38"]
 [ext_resource type="Texture2D" uid="uid://dxkdb5b4nj3hq" path="res://Level 1/walls_floor_basecolor.png" id="4_60sww"]
+[ext_resource type="Script" uid="uid://dvxeamowg7jtb" path="res://Tutorial Level/state_changer.gd" id="4_bx47s"]
 [ext_resource type="Texture2D" uid="uid://cuuou7ibvwnh" path="res://Level 1/walls_floor_metallic-floor_roughness.png" id="5_ga0a4"]
 [ext_resource type="Texture2D" uid="uid://dijpcnv7n8ih4" path="res://Level 1/walls_floor_normal.png" id="6_8xmtt"]
 [ext_resource type="Texture2D" uid="uid://1kobvpuo7xth" path="res://Level 1/walls (2)_Substance_graph_basecolor_8.png" id="7_2ndwd"]
@@ -98,6 +100,7 @@
 [ext_resource type="Texture2D" uid="uid://f8wwry6jnhvc" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_BaseMap.png" id="96_bx47s"]
 [ext_resource type="Texture2D" uid="uid://wa07gwyursfj" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_Normal.png" id="97_arq8w"]
 [ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="98_n4old"]
+[ext_resource type="PackedScene" path="res://Enemy/BT_base_enemy.tscn" id="99_i1m4x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq072"]
 resource_name = "floor_washroom"
@@ -8703,6 +8706,11 @@ material = SubResource("StandardMaterial3D_63tng")
 size = Vector2(0.02, 0.02)
 
 [node name="Level1Layout" type="Node3D"]
+script = ExtResource("1_oetvb")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(4.5896954e-08, 0, 0.51, 0, 0.55, 0, -0.35, 0, 6.687842e-08, -51.80806, 0.5533222, 2.403367)
+script = ExtResource("4_bx47s")
 
 [node name="Floor" type="Node" parent="."]
 
@@ -25979,6 +25987,8 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/wall1*23/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_hdukf")
 
+[node name="Navigation" type="Node" parent="Wall"]
+
 [node name="Ceiling" type="Node" parent="."]
 
 [node name="Monster _rig_v006" parent="." instance=ExtResource("17_v8shy")]
@@ -31699,3 +31709,6 @@ transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, -6.753937, 0)
 amount = 4
 process_material = SubResource("ParticleProcessMaterial_nmbfo")
 draw_pass_1 = SubResource("QuadMesh_iuxxg")
+
+[node name="Base Enemy" parent="." instance=ExtResource("99_i1m4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 0, 4)
