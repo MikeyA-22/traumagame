@@ -1,4 +1,4 @@
-[gd_scene load_steps=1892 format=4 uid="uid://5iwisxyqyg4p"]
+[gd_scene load_steps=1903 format=4 uid="uid://5iwisxyqyg4p"]
 
 [ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_07vk0"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_123ws"]
@@ -103,7 +103,15 @@
 [ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="98_lq2ya"]
 [ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="100_0bddg"]
 [ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="100_y1l4h"]
-[ext_resource type="PackedScene" path="res://Enemy/BT_base_enemy.tscn" id="104_6oqyx"]
+[ext_resource type="Script" uid="uid://c5iu5uxibj7ra" path="res://Tutorial Level/decal_container.gd" id="103_whgpp"]
+[ext_resource type="PackedScene" uid="uid://kluhkctuki4x" path="res://Enemy/BT_base_enemy.tscn" id="104_6oqyx"]
+[ext_resource type="Texture2D" uid="uid://b0vl6g1y3jmg7" path="res://Decals/blood_6.png" id="104_b5scq"]
+[ext_resource type="Texture2D" uid="uid://cr6th2tev1j30" path="res://Decals/20fc20479b9fc41d.png" id="105_pvdq6"]
+[ext_resource type="Texture2D" uid="uid://c3ejn8wa35bfl" path="res://Decals/blood_6_small.png" id="106_b5scq"]
+[ext_resource type="Texture2D" uid="uid://ckhpupl2dyro1" path="res://Decals/blood_5.png" id="106_pbceb"]
+[ext_resource type="Texture2D" uid="uid://ci4jajqrnni8v" path="res://Decals/blood_4.png" id="107_x4okw"]
+[ext_resource type="Texture2D" uid="uid://cjj8h3nnd4nc0" path="res://Decals/blood_1.png" id="108_e3wdf"]
+[ext_resource type="Texture2D" uid="uid://0he0sumqw562" path="res://Decals/blood_2.png" id="109_2gpuv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6oqyx"]
 shader = ExtResource("1_123ws")
@@ -9381,6 +9389,1242 @@ billboard_mode = 1
 [sub_resource type="QuadMesh" id="QuadMesh_iuxxg"]
 material = SubResource("StandardMaterial3D_63tng")
 size = Vector2(0.02, 0.02)
+
+[sub_resource type="Animation" id="Animation_vhkfr"]
+resource_name = "DECAL ANIM"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Decal:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decal3:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decal6:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Decal7:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Decal14:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Decal15:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Decal16:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Decal17:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.27000004, 0.6433334, 0.91),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.2902832, 1.456543, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Decal4:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Decal5:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Decal2:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Decal13:size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Decal8:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Decal9:size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Decal12:size")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Decal10:size")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Decal11:size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Decal:emission_energy")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.56666666, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Decal3:emission_energy")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Decal6:emission_energy")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Decal7:emission_energy")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Decal14:emission_energy")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Decal15:emission_energy")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Decal16:emission_energy")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Decal17:emission_energy")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.58, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Decal4:emission_energy")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Decal5:emission_energy")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.58, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Decal2:emission_energy")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.53333336, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Decal13:emission_energy")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.6, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Decal8:emission_energy")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Decal9:emission_energy")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.5, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Decal12:emission_energy")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Decal10:emission_energy")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.58, 0.8333333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Decal11:emission_energy")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Decal11:modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Decal10:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Decal12:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Decal9:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Decal8:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Decal13:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Decal2:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Decal5:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Decal4:modulate")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Decal17:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Decal16:modulate")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.76000005, 0.91),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Decal15:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Decal14:modulate")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Decal7:modulate")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0.13333334, 0.56666666, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Decal6:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Decal3:modulate")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Decal:modulate")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_63tng"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Decal:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decal3:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decal6:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Decal7:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Decal14:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Decal15:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Decal16:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Decal17:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.2902832, 1.456543, 2)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Decal4:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Decal5:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Decal2:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Decal13:size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Decal8:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Decal9:size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Decal12:size")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Decal10:size")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Decal11:size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Decal:emission_energy")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Decal3:emission_energy")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Decal6:emission_energy")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Decal7:emission_energy")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Decal14:emission_energy")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Decal15:emission_energy")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Decal16:emission_energy")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Decal17:emission_energy")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Decal4:emission_energy")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Decal5:emission_energy")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Decal2:emission_energy")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Decal13:emission_energy")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Decal8:emission_energy")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Decal9:emission_energy")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Decal12:emission_energy")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Decal10:emission_energy")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Decal11:emission_energy")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Decal11:modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Decal10:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Decal12:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Decal9:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Decal8:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Decal13:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Decal2:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Decal5:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Decal4:modulate")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Decal17:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Decal16:modulate")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Decal15:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Decal14:modulate")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Decal7:modulate")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Decal6:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Decal3:modulate")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Decal:modulate")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sbyva"]
+_data = {
+&"DECAL ANIM": SubResource("Animation_vhkfr"),
+&"RESET": SubResource("Animation_63tng")
+}
 
 [node name="Level1" type="SubViewportContainer"]
 material = SubResource("ShaderMaterial_6oqyx")
@@ -35471,6 +36715,304 @@ environment = ExtResource("100_0bddg")
 script = ExtResource("100_y1l4h")
 env = NodePath(".")
 sub_view = NodePath("../..")
+
+[node name="DECAL CONTAINER" type="Node" parent="SubViewport/Level1Layout" node_paths=PackedStringArray("anim_player")]
+script = ExtResource("103_whgpp")
+anim_player = NodePath("DecalAnim")
+
+[node name="Decal" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -50.556206, 1.3688029, -1.6133085)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 3.166813
+lower_fade = 0.7647344
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal3" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -80.51999, 1.9237485, 17.005554)
+texture_albedo = ExtResource("105_pvdq6")
+texture_emission = ExtResource("105_pvdq6")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal18" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.3759494, 0.9265112, -0.015460655, 0.33542758, 0.120515026, -0.93432564, -0.8638001, -0.3564451, -0.35608503, -70.6918, 1.9237485, 7.4482403)
+size = Vector3(2, 4.5947266, 2)
+texture_albedo = ExtResource("106_b5scq")
+texture_emission = ExtResource("106_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal6" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.3275382, 0.6973119, 0.6375539, -0.503311, 0.6998363, -0.50686026, -0.79962313, -0.15487173, 0.5801878, -52.304012, 0.5478436, 14.528442)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal7" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.16671449, 0.75519794, 0.63394195, -0.113874316, 0.6238906, -0.77317095, -0.97940767, -0.2010885, -0.018013924, -97.04947, 1.2245212, 13.687658)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal14" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.16671449, 0.75519794, 0.63394195, -0.50487584, 0.48687753, -0.7127769, -0.8469398, -0.43889216, 0.30011168, -48.80846, 1.9442943, 9.7104645)
+texture_albedo = ExtResource("105_pvdq6")
+texture_emission = ExtResource("105_pvdq6")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal15" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.1232348, 0.7639031, 0.63345474, 0.990428, 0.13466698, 0.030282833, -0.062172256, 0.6311231, -0.77318704, -58.687534, 1.4855988, 0.06715202)
+size = Vector3(3.340332, 1.456543, 2)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("107_x4okw")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal16" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.08516426, -0.079074174, 0.99322426, -0.09066228, 0.99332523, 0.071308434, -0.9922335, -0.083975166, -0.09176497, -35.81647, 0.21588129, 15.71834)
+size = Vector3(3.340332, 1.456543, 2)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("107_x4okw")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal17" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -101.429436, 1.4824746, -8.522671)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal19" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.9914085, 0.12226169, -0.046489235, 0.118149094, 0.98953843, 0.08278979, 0.056124624, 0.076585755, -0.99548227, -102.209526, 2.0099254, -19.1403)
+size = Vector3(3.6468506, 2.529419, 1.9125977)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal20" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -93.889465, 1.4693156, -19.294483)
+size = Vector3(3, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal21" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -93.90194, 1.4336615, -32.220848)
+size = Vector3(3, 1.456543, 3)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("108_e3wdf")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal22" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -93.79365, 1.4824746, -38.373398)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal23" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -106.70393, 2.190562, -36.870056)
+size = Vector3(2, 3, 2)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal24" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.9940461, -0.094608456, 0.054051816, -0.09066228, 0.9933253, 0.07130843, -0.06043771, 0.065983295, -0.9959889, -103.335945, 1.4824746, -28.772423)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal4" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.9966074, 0.014298529, 0.08105207, 0.08088583, 0.011845894, -0.99665284, -0.015210887, 0.99982756, 0.0106490925, -106.60554, 2.1958964, 14.916284)
+size = Vector3(1.7910156, 0.48242188, 2)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("108_e3wdf")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal5" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.10100901, 0.9940878, -0.03983231, 0.5662154, 0.024520412, -0.82389224, -0.81804484, -0.10577446, -0.56534445, -87.03772, 1.8505085, 5.0625944)
+size = Vector3(1.7910156, 0.48242188, 2)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("107_x4okw")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal25" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.101009004, 0.9940878, -0.03983232, 0.95608985, 0.10806412, 0.27242362, 0.27511755, -0.010565974, -0.96135235, -107.11658, 2.0142636, 0.027255774)
+size = Vector3(3, 0.48242188, 3.2022095)
+texture_albedo = ExtResource("109_2gpuv")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal2" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -24.539505, 1.2489781, 12.371876)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("109_2gpuv")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 2.3999944
+lower_fade = 0.20490603
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal13" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.9210699, -0.38934314, 0.0064969864, 0.337228, 0.7892167, -0.51323915, 0.19469859, 0.47492012, 0.858221, -31.539505, 0.24897814, -15.393379)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("108_e3wdf")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+normal_fade = 0.418
+upper_fade = 1.4270439
+lower_fade = 6.5569997
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal8" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.93095386, 0.36508587, -0.0060921703, 0.36509606, 0.9304719, -0.030450672, -0.005448468, -0.030572385, -0.9995178, -24.516956, 2.842819, 6.604626)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("109_2gpuv")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 38.39991
+lower_fade = 1.4270486
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal9" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.17954716, -0.98338926, 0.026619917, 0.271089, -0.023447385, 0.9622687, -0.9456604, 0.179989, 0.2707959, -8.73095, 0.77779853, 15.428251)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal12" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.0011746362, 0.9999981, 0.0017178413, -0.20404014, 0.0014422667, -0.9789612, -0.97896177, -0.0015004203, 0.20403807, -21.003418, 1.6343133, -6.2675095)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal10" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.8696819, 0.096881345, 0.48401165, 0.49318415, 0.12970681, 0.86020076, 0.02055768, 0.98680806, -0.16058414, -15.066619, 1.4895521, -17.002363)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal11" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.99239534, -0.08000412, 0.09354379, 0.09792093, 0.052651495, -0.9938004, 0.07458267, 0.9954033, 0.060084984, -16.437727, 1.8414973, 10.986406)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="DecalAnim" type="AnimationPlayer" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+libraries = {
+&"": SubResource("AnimationLibrary_sbyva")
+}
 
 [node name="Player" parent="SubViewport" instance=ExtResource("2_dv71h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.135833, 0.025132656, -0.9389014)
