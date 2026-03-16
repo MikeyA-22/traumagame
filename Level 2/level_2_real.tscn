@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ixycgf0mc2al"]
+
+[ext_resource type="PackedScene" uid="uid://kmnm1h4aae83" path="res://Level 2/Level2Real.glb" id="1_nafnv"]
+
+[node name="Level2Real" instance=ExtResource("1_nafnv")]

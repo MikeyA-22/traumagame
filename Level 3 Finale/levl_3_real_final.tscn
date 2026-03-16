@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0ebjwfmnk4re"]
+
+[ext_resource type="PackedScene" uid="uid://cr68y68uy174d" path="res://Level 3 Finale/Levl3RealFinal.glb" id="1_lgq0g"]
+
+[node name="Levl3RealFinal" instance=ExtResource("1_lgq0g")]
