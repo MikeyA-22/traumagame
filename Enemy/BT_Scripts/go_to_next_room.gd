@@ -21,7 +21,7 @@ func tick(actor: Enemy, delta, blackboard: Dictionary):
 		actor.go_to_target(target, speed)
 		play_sound()
 		if dist.length() <= close_dist:
-			print("GOT TO ROOM!! AT: ", UID)
+			#print("GOT TO ROOM!! AT: ", UID)
 			blackboard.set("next_room", null)
 			#fstep_player.stop()
 			return STATUS.SUCCESS

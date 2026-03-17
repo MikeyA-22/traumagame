@@ -1,4 +1,4 @@
-[gd_scene load_steps=1892 format=4 uid="uid://dg8d0djsaoamx"]
+[gd_scene load_steps=1906 format=4 uid="uid://5iwisxyqyg4p"]
 
 [ext_resource type="Texture2D" uid="uid://cetbl6ywj5la5" path="res://Level 1/walls_Substance_graph_basecolor_7.png" id="1_07vk0"]
 [ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_123ws"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://cd1cs4bybrmo3" path="res://Level 1/walls (2)_Substance_graph_normal.png" id="22_r7cbx"]
 [ext_resource type="Texture2D" uid="uid://b300qg5b0g730" path="res://Level 1/walls (2)_baseboards_Material_BaseMap.png" id="23_kl5l0"]
 [ext_resource type="Texture2D" uid="uid://dqn7k5yaqh3c5" path="res://Level 1/walls (2)_baseboards_Material_Normal.png" id="24_i41ah"]
-[ext_resource type="PackedScene" uid="uid://bqwio64tbckxb" path="res://Enemy/Monster _rig_v006.glb" id="25_d3vbi"]
 [ext_resource type="Texture2D" uid="uid://8p0j7s0fpbe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_BaseMap.png" id="26_dyl7m"]
 [ext_resource type="Texture2D" uid="uid://cm1fj6y6pu8no" path="res://Level 1/walls_Substance_graph_basecolor.png" id="27_6oqyx"]
 [ext_resource type="Texture2D" uid="uid://c00y01ohyjpe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_Normal.png" id="27_rsoyc"]
@@ -102,8 +101,18 @@
 [ext_resource type="Texture2D" uid="uid://f8wwry6jnhvc" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_BaseMap.png" id="96_qxemc"]
 [ext_resource type="Texture2D" uid="uid://wa07gwyursfj" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_Normal.png" id="97_1y0dm"]
 [ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="98_lq2ya"]
-[ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="100_0bddg"]
 [ext_resource type="Script" uid="uid://bgy03ar6glwn4" path="res://environment_changer.gd" id="100_y1l4h"]
+[ext_resource type="Environment" uid="uid://ds6357vjalkkl" path="res://Level 1/visible_env.tres" id="101_pvdq6"]
+[ext_resource type="Script" uid="uid://c5iu5uxibj7ra" path="res://Tutorial Level/decal_container.gd" id="103_whgpp"]
+[ext_resource type="Texture2D" uid="uid://b0vl6g1y3jmg7" path="res://Decals/blood_6.png" id="104_b5scq"]
+[ext_resource type="Texture2D" uid="uid://cr6th2tev1j30" path="res://Decals/20fc20479b9fc41d.png" id="105_pvdq6"]
+[ext_resource type="Texture2D" uid="uid://c3ejn8wa35bfl" path="res://Decals/blood_6_small.png" id="106_b5scq"]
+[ext_resource type="Texture2D" uid="uid://ckhpupl2dyro1" path="res://Decals/blood_5.png" id="106_pbceb"]
+[ext_resource type="Texture2D" uid="uid://ci4jajqrnni8v" path="res://Decals/blood_4.png" id="107_x4okw"]
+[ext_resource type="Texture2D" uid="uid://cjj8h3nnd4nc0" path="res://Decals/blood_1.png" id="108_e3wdf"]
+[ext_resource type="Texture2D" uid="uid://0he0sumqw562" path="res://Decals/blood_2.png" id="109_2gpuv"]
+[ext_resource type="Material" uid="uid://hgodhplhtbky" path="res://Shaders/heat_distort.tres" id="112_pvdq6"]
+[ext_resource type="Shader" uid="uid://bm38vek87nfgh" path="res://chromatic_aberration.gdshader" id="113_pbceb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6oqyx"]
 shader = ExtResource("1_123ws")
@@ -9343,19 +9352,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0oswy")
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_ry6d7"]
-noise_type = 5
-seed = 5
-frequency = 0.1627
-offset = Vector3(346.94, 0, 0)
-fractal_gain = 100.0
-domain_warp_type = 1
-domain_warp_amplitude = 10.0
-domain_warp_frequency = 0.003
-
-[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_241eg"]
-noise = SubResource("FastNoiseLite_ry6d7")
-
 [sub_resource type="Curve" id="Curve_orac7"]
 _limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.14609571, 0), 0.0, 0.0, 0, 0]
@@ -9382,6 +9378,1267 @@ billboard_mode = 1
 material = SubResource("StandardMaterial3D_63tng")
 size = Vector2(0.02, 0.02)
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ry6d7"]
+noise_type = 5
+seed = 5
+frequency = 0.1627
+offset = Vector3(346.94, 0, 0)
+fractal_gain = 100.0
+domain_warp_type = 1
+domain_warp_amplitude = 10.0
+domain_warp_frequency = 0.003
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_241eg"]
+noise = SubResource("FastNoiseLite_ry6d7")
+
+[sub_resource type="Animation" id="Animation_vhkfr"]
+resource_name = "DECAL ANIM"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Decal:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decal3:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decal6:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Decal7:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Decal14:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2, 2, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Decal15:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Decal16:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Decal17:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.27000004, 0.6433334, 0.91),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.2902832, 1.456543, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Decal4:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Decal5:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2), Vector3(199.89, 198.683, 2), Vector3(199.89, 198.683, 2), Vector3(2, 2, 2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Decal2:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Decal13:size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Decal8:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Decal9:size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Decal12:size")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Decal10:size")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Decal11:size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(199.89, 198.683, 2.6938477), Vector3(2, 2, 2.6938477)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Decal:emission_energy")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.56666666, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Decal3:emission_energy")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Decal6:emission_energy")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Decal7:emission_energy")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Decal14:emission_energy")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Decal15:emission_energy")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Decal16:emission_energy")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Decal17:emission_energy")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.58, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Decal4:emission_energy")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.58, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Decal5:emission_energy")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.58, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Decal2:emission_energy")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.53333336, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Decal13:emission_energy")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.6, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Decal8:emission_energy")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Decal9:emission_energy")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.5, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Decal12:emission_energy")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.53333336, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Decal10:emission_energy")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.58, 0.8333333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Decal11:emission_energy")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.58, 0.67, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 2.0, 0.0, 2.0, 2.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Decal11:modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Decal10:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Decal12:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0, 0.6333333, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Decal9:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Decal8:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Decal13:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Decal2:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Decal5:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Decal4:modulate")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 0.73333335, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Decal17:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Decal16:modulate")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.76000005, 0.91),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Decal15:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0, 0.69, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Decal14:modulate")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0, 0.36666667, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Decal7:modulate")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0.13333334, 0.56666666, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Decal6:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0, 0.53333336, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Decal3:modulate")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Decal:modulate")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.85, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 0), Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_63tng"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Decal:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decal3:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decal6:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Decal7:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Decal14:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2, 2, 2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Decal15:size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Decal16:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.340332, 1.456543, 2)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Decal17:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.2902832, 1.456543, 2)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Decal4:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Decal5:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.7910156, 0.48242188, 2)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Decal2:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Decal13:size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Decal8:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Decal9:size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Decal12:size")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Decal10:size")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Decal11:size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.553711, 2, 2.6938477)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Decal:emission_energy")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Decal3:emission_energy")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Decal6:emission_energy")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Decal7:emission_energy")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Decal14:emission_energy")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Decal15:emission_energy")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Decal16:emission_energy")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Decal17:emission_energy")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Decal4:emission_energy")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Decal5:emission_energy")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Decal2:emission_energy")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Decal13:emission_energy")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Decal8:emission_energy")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Decal9:emission_energy")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Decal12:emission_energy")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Decal10:emission_energy")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Decal11:emission_energy")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Decal11:modulate")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Decal10:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Decal12:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Decal9:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Decal8:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Decal13:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Decal2:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Decal5:modulate")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Decal4:modulate")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Decal17:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Decal16:modulate")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Decal15:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Decal14:modulate")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Decal7:modulate")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Decal6:modulate")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Decal3:modulate")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Decal:modulate")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sbyva"]
+_data = {
+&"DECAL ANIM": SubResource("Animation_vhkfr"),
+&"RESET": SubResource("Animation_63tng")
+}
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_pvdq6"]
+vertices = PackedVector3Array(-100.3, 0.18366396, -39.7, -93.7, 0.18366396, -39.7, -93.7, 0.18366396, -44.3, -100.3, 0.18366396, -44.3, -92.9, 0.18366396, -13.199999, -92.9, 0.18366396, -12.5, -91.7, 0.18366396, -12.5, -93.3, 0.18366396, -13.699999, -91.7, 0.18366396, -15.1, -93.1, 0.18366396, -38.3, -93.7, 0.18366396, -38.9, -100.3, 0.18366396, -38.9, -100.9, 0.18366396, -38.3, -91.3, 0.18366396, -15.6, -102.7, 0.18366396, -15.6, -102.3, 0.18366396, -15.1, -95.3, 0.18366396, -13.799999, -85.7, 0.18366396, -15.699999, -85.7, 0.18366396, -38.3, -102.3, 0.18366396, -12.5, -95.9, 0.18366396, -12.5, -95.9, 0.18366396, -13.199999, -108.3, 0.18366396, -38.3, -108.3, 0.18366396, -15.699999, -39.9, 0.18366396, -16.3, -40.299995, 0.18366396, -16.199999, -40.299995, 0.18366396, -13.199999, -36.1, 0.18366396, -14.6, -35.6, 0.18366396, -14.6, -35.6, 0.18366396, -18.3, -39.4, 0.18366396, -16.9, -36.699997, 0.18366396, -13.199999, -36.6, 0.18366396, -14.199999, -39.4, 0.18366396, -17.699999, -40, 0.18366396, -18.3, -34.5, 0.18366396, -13.6, -34.6, 0.18366396, -10.5, -34.4, 0.18366396, -10.5, -33.9, 0.18366396, -9.799999, -24.900002, 0.18366396, -7.5, -24.5, 0.18366396, -8.099998, -35, 0.18366396, -14.5, -23.699997, 0.18366396, -8.200001, -23.699997, 0.18366396, -18.3, -34, 0.18366396, -7.799999, -18.5, 0.18366396, -10.399998, -16, 0.18366396, -10.299999, -16, 0.18366396, -11, -18.5, 0.18366396, -11.099998, -18.799995, 0.18366396, -15, -19.400002, 0.18366396, -14.4, -18.900002, 0.18366396, -11.599998, -20.299995, 0.18366396, -14.5, -20.299995, 0.18366396, -11.700001, -15.599998, 0.18366396, -16, -18.799995, 0.18366396, -15.799999, -15.199997, 0.18366396, -15.5, -15.599998, 0.18366396, -11.5, -15.599998, 0.18366396, -16.3, -19.199997, 0.18366396, -16.3, -14.599998, 0.18366396, -11.599998, -14.599998, 0.18366396, -15.4, -14.199997, 0.18366396, -11.599998, -7.699997, 0.18366396, -16.3, -11.699997, 0.18366396, -16.3, -11.799995, 0.18366396, -15.799999, -12.299995, 0.18366396, -15.4, -13.699997, 0.18366396, -11.200001, -13.599998, 0.18366396, -10.399998, -7.699997, 0.18366396, -10.5, -40.299995, 0.18366396, -7.299999, -36.699997, 0.18366396, -7.299999, -94.9, 0.18366396, -6.5, -94.7, 0.18366396, -11.099998, -95.3, 0.18366396, -11.099998, -96, 0.18366396, -6.5, -95.8, 0.18366396, -11.5, -102.3, 0.18366396, -5.5999985, -96.4, 0.18366396, -5.5999985, -96.4, 0.18366396, -6, -93, 0.18366396, -6, -92.9, 0.18366396, -5.5, -91.7, 0.18366396, -5.5, -92.9, 0.18366396, -11.700001, -93.3, 0.18366396, -11.200001, -93.7, 0.18366396, -6.5, -13.599998, 0.18366396, -8.799999, -7.699997, 0.18366396, -8.700001, -16, 0.18366396, -8.200001, -18.599998, 0.18366396, -7.799999, -19.099998, 0.18366396, -7.3999977, -20.299995, 0.18366396, -7.3999977, -20.299995, 0.18366396, -3.7000008, -15.599998, 0.18366396, -7.700001, -14.799995, 0.18366396, -3.7000008, -14.799995, 0.18366396, -7.5999985, -14, 0.18366396, -7.700001, -12.699997, 0.18366396, -3.5999985, -13.599998, 0.18366396, -8.200001, -12.299995, 0.18366396, -3.0999985, -12.299995, 0.18366396, -2.2999992, -7.699997, 0.18366396, -2.2999992, -22.5, 0.18366396, 6.9000015, -22.199997, 0.18366396, 6.4000015, -22.5, 0.18366396, 6.1000023, -23.400002, 0.18366396, 6.299999, -23.400002, 0.18366396, 6.799999, -34.4, 0.18366396, -7.200001, -34.6, 0.18366396, -7.200001, -34.699997, 0.18366396, -6.299999, -21.099998, 0.18366396, 0.29999924, -20.299995, 0.18366396, 0.29999924, -20.299995, 0.18366396, -0.29999924, -23.099998, 0.18366396, -0.29999924, -24.799995, 0.18366396, -6.5, -35.199997, 0.18366396, -5.8999977, -39.299995, 0.18366396, 3.2999992, -39.299995, 0.18366396, 4.4000015, -25, 0.18366396, 5.799999, -23.599998, 0.18366396, -0.70000076, -23.799995, 0.18366396, 5.799999, -22.5, 0.18366396, 4.799999, -23.699997, 0.18366396, -6.0999985, -24.299995, 0.18366396, -6.0999985, -36.299995, 0.18366396, -6, -40.299995, 0.18366396, -2.8999977, -40.9, 0.18366396, -2.2999992, -21.699997, 0.18366396, 0.9000015, -42.299995, 0.18366396, -2.2999992, -42.4, 0.18366396, -0.79999924, -39.9, 0.18366396, 2.7999992, -22.099998, 0.18366396, 4.299999, -21.699997, 0.18366396, 4.200001, -36.699997, 0.18366396, -6.5, -40.699997, 0.18366396, 2.9000015, -102.3, 0.18366396, -4.8999977, -96.3, 0.18366396, -4.8999977, -98.3, 0.18366396, 3.1000023, -95.8, 0.18366396, 3.1000023, -95.7, 0.18366396, -4.3999977, -102.6, 0.18366396, -4.5, -98.8, 0.18366396, 3.6000023, -95.4, 0.18366396, 3.2000008, -95.1, 0.18366396, 3.6000023, -94.5, 0.18366396, 3.7000008, -91.7, 0.18366396, -4.8999977, -93, 0.18366396, -5, -93.5, 0.18366396, -4.5999985, -91.2, 0.18366396, -4.3999977, -94.2, 0.18366396, 4.1000023, -107.2, 0.18366396, 5.1000023, -98.9, 0.18366396, 4.9000015, -102.9, 0.18366396, -4.299999, -108.3, 0.18366396, -4.299999, -107.7, 0.18366396, 4.6000023, -108.3, 0.18366396, 4.6000023, -94.1, 0.18366396, 4.6000023, -85.7, 0.18366396, 4.6000023, -85.7, 0.18366396, -4.299999, -2.2999954, 0.18366396, -1.7000008, 2.300003, 0.18366396, -1.7000008, 2.300003, 0.18366396, -4.299999, -2.2999954, 0.18366396, -4.299999, -61.6, 0.18366396, -1.7000008, -61.7, 0.18366396, -2.2999992, -62.3, 0.18366396, -2.2999992, -62.399998, 0.18366396, -0.70000076, -56.2, 0.18366396, 9.400002, -56.1, 0.18366396, 8.5, -56.8, 0.18366396, 8.5, -57.2, 0.18366396, 9.5, -59.3, 0.18366396, 9.299999, -57.3, 0.18366396, 8.100002, -57.3, 0.18366396, 6.799999, -62.899998, 0.18366396, -0.29999924, -63.8, 0.18366396, -0.29999924, -63.8, 0.18366396, 9.299999, -58.7, 0.18366396, 10.299999, -57.6, 0.18366396, 10.400002, -57.6, 0.18366396, 10, -58.8, 0.18366396, 9.700001, -61.1, 0.18366396, -1.2999992, -60.2, 0.18366396, -1.3999977, -56.8, 0.18366396, 6.299999, -55.899998, 0.18366396, 6.5, -54.8, 0.18366396, 5.5, -53.399998, 0.18366396, -0.5, -53.7, 0.18366396, -2.2999992, -59.6, 0.18366396, -2.2999992, -59.7, 0.18366396, -1.7999992, -53.7, 0.18366396, -0.8999977, -53.8, 0.18366396, 5.5, -7.0999985, 0.18366396, 0.29999924, -6.2999954, 0.18366396, 0.29999924, -6.2999954, 0.18366396, -0.29999924, -7.0999985, 0.18366396, -0.29999924, -12.299995, 0.18366396, -0.8999977, -7.5999985, 0.18366396, 0.70000076, -7.5999985, 0.18366396, -0.70000076, -12.900002, 0.18366396, -0.29999924, -12.900002, 0.18366396, 0.29999924, -12.299995, 0.18366396, 0.9000015, -7.699997, 0.18366396, 2.2999992, -12.299995, 0.18366396, 2.2999992, -2.9000015, 0.18366396, -0.29999924, -2.699997, 0.18366396, 0.40000153, -2.2999954, 0.18366396, 0.9000015, 2.300003, 0.18366396, 2.2999992, -2.2999954, 0.18366396, -0.8999977, -2.2999954, 0.18366396, 2.4000015, -47.5, 0.18366396, -0.29999924, -47.5, 0.18366396, -0.20000076, -46.8, 0.18366396, -0.099998474, -42.9, 0.18366396, -0.29999924, -41.199997, 0.18366396, 3.2999992, -41.299995, 0.18366396, 3.7999992, -46.399998, 0.18366396, 0.40000153, -46.399998, 0.18366396, 3.7999992, -48.2, 0.18366396, -0.099998474, -53.1, 0.18366396, -0.29999924, -53.3, 0.18366396, 6.1000023, -51.899998, 0.18366396, 6.5, -51.5, 0.18366396, 6.9000015, -51.399998, 0.18366396, 7.5, -48.6, 0.18366396, 7.5, -48.6, 0.18366396, 0.40000153, -66.3, 0.18366396, 10.900002, -65.2, 0.18366396, 10.799999, -65.1, 0.18366396, 9.700001, -66.899994, 0.18366396, 10.299999, -64.6, 0.18366396, 9.299999, -72.3, 0.18366396, -0.29999924, -69.1, 0.18366396, 10.299999, -72.3, 0.18366396, 11.700001, -69.7, 0.18366396, 11.700001, -69.7, 0.18366396, 10.900002, -14.900002, 0.18366396, 13.700001, -15.699997, 0.18366396, 13.700001, -15.699997, 0.18366396, 14.299999, -6.7999954, 0.18366396, 14.299999, -7.699997, 0.18366396, 3.1000023, -12.299995, 0.18366396, 3.1000023, -12.900002, 0.18366396, 3.7000008, -14.900002, 0.18366396, 10.299999, -14.299995, 0.18366396, 10.900002, -6.199997, 0.18366396, 12.799999, -5.699997, 0.18366396, 12.799999, -5.699997, 0.18366396, 3.7000008, -7.2999954, 0.18366396, 3.6000023, -14.400002, 0.18366396, 13.299999, -6.699997, 0.18366396, 13.200001, -18.299995, 0.18366396, 3.7000008, -18.299995, 0.18366396, 10.299999, -47.5, 0.18366396, 8.600002, -47.5, 0.18366396, 9.5, -46.8, 0.18366396, 9.600002, -46.8, 0.18366396, 8.5, -46.399998, 0.18366396, 10.100002, -46.399998, 0.18366396, 13, -39.9, 0.18366396, 16.3, -39.9, 0.18366396, 4.9000015, -46.399998, 0.18366396, 8, -40.9, 0.18366396, 4.799999, -47.5, 0.18366396, 13.600002, -47.5, 0.18366396, 15.400002, -46.899998, 0.18366396, 15.5, -46.8, 0.18366396, 13.5, -46.6, 0.18366396, 15.799999, -41.299995, 0.18366396, 4.299999, -46.5, 0.18366396, 16.3, -25.400002, 0.18366396, 6.200001, -39.699997, 0.18366396, 4.799999, -83.7, 0.18366396, 15.600002, -83.1, 0.18366396, 15.5, -83.1, 0.18366396, 13.700001, -85.1, 0.18366396, 13.700001, -94.4, 0.18366396, 14.700001, -94.3, 0.18366396, 15.5, -92.2, 0.18366396, 15.5, -94.2, 0.18366396, 5.200001, -95, 0.18366396, 5.700001, -95, 0.18366396, 14.299999, -85.7, 0.18366396, 13.100002, -84.2, 0.18366396, 16.3, -91.7, 0.18366396, 15.900002, -91.6, 0.18366396, 16.3, -28.799995, 0.18366396, 16.400002, -25.400002, 0.18366396, 7.200001, -102.3, 0.18366396, 14.900002, -102.3, 0.18366396, 15.700001, -99.7, 0.18366396, 15.700001, -99.7, 0.18366396, 14.900002, -107.2, 0.18366396, 6.200001, -107.8, 0.18366396, 6.700001, -108.3, 0.18366396, 14.299999, -102.9, 0.18366396, 14.299999, -99.3, 0.18366396, 14.400002, -98.5, 0.18366396, 5.5, -97.8, 0.18366396, 14.299999, -97.7, 0.18366396, 5.6000023, -108.3, 0.18366396, 6.700001, -23.5, 0.18366396, 7.299999, -22.5, 0.18366396, 8.100002, -24.099998, 0.18366396, 7.799999, -21.599998, 0.18366396, 13.299999, -21.699997, 0.18366396, 14.900002, -21.299995, 0.18366396, 14.400002, -21.099998, 0.18366396, 13.700001, -22.099998, 0.18366396, 8.600002, -24.799995, 0.18366396, 7.799999, -28.299995, 0.18366396, 16.900002, -28.299995, 0.18366396, 18.3, -21.699997, 0.18366396, 18.3, -21.699997, 0.18366396, 8.700001, -48, 0.18366396, 8.600002, -48.2, 0.18366396, 9.600002, -51.6, 0.18366396, 8.200001, -50.2, 0.18366396, 10.400002, -49.899998, 0.18366396, 10.200001, -48.5, 0.18366396, 8.200001, -48.6, 0.18366396, 10.200001, -54.2, 0.18366396, 9.5, -52.899998, 0.18366396, 8.600002, -52, 0.18366396, 8.5, -53.8, 0.18366396, 10, -53.899998, 0.18366396, 11.100002, -50.5, 0.18366396, 11.100002, -58.7, 0.18366396, 10.799999, -57.5, 0.18366396, 11.100002, -61.899998, 0.18366396, 18.3, -54.899998, 0.18366396, 18.3, -54.899998, 0.18366396, 17.7, -59.1, 0.18366396, 11.299999, -60.2, 0.18366396, 12.900002, -60.7, 0.18366396, 13.700001, -56.899998, 0.18366396, 11.600002, -60.2, 0.18366396, 11.400002, -61.2, 0.18366396, 14.100002, -54.399998, 0.18366396, 17.2, -54.8, 0.18366396, 11.600002, -61.899998, 0.18366396, 14.100002, -62.3, 1.083664, 12.299999, -62, 1.083664, 12.700001, -61.6, 1.083664, 12.299999, -61.6, 1.2836641, 10.700001, -62.3, 1.2836641, 10.700001, -64.6, 0.18366396, 11.400002, -63.6, 0.18366396, 13.100002, -63.7, 0.18366396, 11.400002, -65.5, 0.18366396, 17.600002, -62.899998, 0.18366396, 14, -66.3, 0.18366396, 17.100002, -65.399994, 0.18366396, 18.3, -50.399998, 0.18366396, 12.400002, -51.5, 0.18366396, 17.2, -72.899994, 0.18366396, 13.700001, -73.7, 0.18366396, 13.700001, -73.7, 0.18366396, 16.3, -72.399994, 0.18366396, 13.299999, -69.7, 0.18366396, 16.3, -48.1, 0.18366396, 17.8, -48, 0.18366396, 18.3, -47.7, 0.18366396, 18.3, -47.7, 0.18366396, 17.5, -48.1, 0.18366396, 17.400002, -48.2, 0.18366396, 13.5, -48.6, 0.18366396, 12.900002, -49.899998, 0.18366396, 12.900002, -48.5, 0.18366396, 16, -48.1, 0.18366396, 15.5, -48.6, 0.18366396, 17.400002, -48.5, 0.18366396, 16.900002, -51, 0.18366396, 17.7, -51, 0.18366396, 18.3, -50.5, 0.18366396, 18.3, -50.399998, 0.18366396, 17.8, -49.899998, 0.18366396, 17.400002, -82.5, 0.18366396, 15.600002, -82.1, 0.18366396, 16.3, -102.3, 0.18366396, 17.600002, -102, 0.18366396, 17.400002, -100, 0.18366396, 17.400002, -99.7, 0.18366396, 17.600002)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(4, 7, 6), PackedInt32Array(6, 7, 8), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 9), PackedInt32Array(8, 7, 13), PackedInt32Array(13, 7, 16), PackedInt32Array(13, 16, 15), PackedInt32Array(13, 15, 14), PackedInt32Array(9, 18, 17), PackedInt32Array(21, 20, 19), PackedInt32Array(11, 0, 10), PackedInt32Array(10, 0, 1), PackedInt32Array(12, 23, 22), PackedInt32Array(21, 19, 16), PackedInt32Array(16, 19, 15), PackedInt32Array(14, 23, 13), PackedInt32Array(13, 23, 17), PackedInt32Array(17, 23, 12), PackedInt32Array(17, 12, 9), PackedInt32Array(26, 25, 24), PackedInt32Array(29, 28, 27), PackedInt32Array(24, 30, 26), PackedInt32Array(26, 30, 32), PackedInt32Array(26, 32, 31), PackedInt32Array(32, 30, 27), PackedInt32Array(27, 30, 33), PackedInt32Array(27, 33, 29), PackedInt32Array(33, 34, 29), PackedInt32Array(37, 36, 35), PackedInt32Array(37, 35, 38), PackedInt32Array(38, 35, 39), PackedInt32Array(39, 35, 40), PackedInt32Array(29, 41, 28), PackedInt32Array(41, 29, 35), PackedInt32Array(35, 29, 43), PackedInt32Array(35, 43, 40), PackedInt32Array(40, 43, 42), PackedInt32Array(39, 44, 38), PackedInt32Array(48, 47, 45), PackedInt32Array(45, 47, 46), PackedInt32Array(51, 50, 49), PackedInt32Array(52, 50, 53), PackedInt32Array(53, 50, 51), PackedInt32Array(55, 54, 49), PackedInt32Array(49, 54, 56), PackedInt32Array(47, 48, 57), PackedInt32Array(57, 48, 51), PackedInt32Array(54, 55, 58), PackedInt32Array(58, 55, 59), PackedInt32Array(61, 60, 56), PackedInt32Array(56, 60, 57), PackedInt32Array(56, 57, 49), PackedInt32Array(49, 57, 51), PackedInt32Array(62, 60, 61), PackedInt32Array(65, 64, 63), PackedInt32Array(62, 61, 67), PackedInt32Array(67, 61, 66), PackedInt32Array(65, 63, 66), PackedInt32Array(66, 63, 67), PackedInt32Array(67, 63, 68), PackedInt32Array(68, 63, 69), PackedInt32Array(26, 31, 70), PackedInt32Array(70, 31, 71), PackedInt32Array(74, 73, 72), PackedInt32Array(76, 74, 75), PackedInt32Array(75, 74, 72), PackedInt32Array(79, 78, 77), PackedInt32Array(75, 79, 76), PackedInt32Array(76, 79, 20), PackedInt32Array(20, 79, 19), PackedInt32Array(19, 79, 77), PackedInt32Array(82, 81, 80), PackedInt32Array(83, 5, 6), PackedInt32Array(83, 6, 84), PackedInt32Array(84, 6, 85), PackedInt32Array(85, 6, 80), PackedInt32Array(80, 6, 82), PackedInt32Array(72, 73, 85), PackedInt32Array(85, 73, 84), PackedInt32Array(86, 68, 87), PackedInt32Array(87, 68, 69), PackedInt32Array(46, 88, 45), PackedInt32Array(45, 88, 89), PackedInt32Array(92, 91, 90), PackedInt32Array(89, 88, 93), PackedInt32Array(89, 93, 90), PackedInt32Array(90, 93, 95), PackedInt32Array(90, 95, 94), PackedInt32Array(90, 94, 92), PackedInt32Array(94, 95, 96), PackedInt32Array(96, 98, 94), PackedInt32Array(94, 98, 97), PackedInt32Array(101, 100, 99), PackedInt32Array(99, 97, 101), PackedInt32Array(101, 97, 98), PackedInt32Array(101, 98, 86), PackedInt32Array(101, 86, 87), PackedInt32Array(103, 102, 104), PackedInt32Array(104, 102, 105), PackedInt32Array(105, 102, 106), PackedInt32Array(109, 108, 107), PackedInt32Array(111, 110, 112), PackedInt32Array(112, 110, 113), PackedInt32Array(115, 109, 114), PackedInt32Array(116, 115, 117), PackedInt32Array(117, 115, 114), PackedInt32Array(117, 114, 119), PackedInt32Array(117, 119, 118), PackedInt32Array(105, 120, 104), PackedInt32Array(104, 120, 121), PackedInt32Array(123, 122, 119), PackedInt32Array(107, 44, 109), PackedInt32Array(109, 44, 39), PackedInt32Array(109, 39, 114), PackedInt32Array(125, 124, 126), PackedInt32Array(126, 124, 115), PackedInt32Array(126, 115, 116), PackedInt32Array(110, 127, 113), PackedInt32Array(128, 126, 129), PackedInt32Array(129, 126, 130), PackedInt32Array(130, 126, 116), PackedInt32Array(131, 121, 120), PackedInt32Array(113, 127, 119), PackedInt32Array(119, 127, 131), PackedInt32Array(119, 131, 120), PackedInt32Array(119, 120, 118), PackedInt32Array(114, 123, 119), PackedInt32Array(127, 132, 131), PackedInt32Array(70, 71, 133), PackedInt32Array(133, 124, 70), PackedInt32Array(70, 124, 125), PackedInt32Array(130, 134, 129), PackedInt32Array(77, 78, 135), PackedInt32Array(135, 78, 136), PackedInt32Array(137, 139, 138), PackedInt32Array(135, 136, 140), PackedInt32Array(140, 136, 139), PackedInt32Array(140, 139, 137), PackedInt32Array(140, 137, 141), PackedInt32Array(143, 142, 144), PackedInt32Array(144, 142, 139), PackedInt32Array(81, 82, 146), PackedInt32Array(146, 82, 145), PackedInt32Array(142, 138, 139), PackedInt32Array(146, 145, 147), PackedInt32Array(147, 145, 148), PackedInt32Array(147, 148, 139), PackedInt32Array(139, 148, 144), PackedInt32Array(144, 148, 149), PackedInt32Array(150, 154, 151), PackedInt32Array(151, 154, 141), PackedInt32Array(141, 154, 152), PackedInt32Array(152, 154, 153), PackedInt32Array(152, 140, 141), PackedInt32Array(154, 155, 153), PackedInt32Array(156, 149, 157), PackedInt32Array(157, 149, 148), PackedInt32Array(157, 148, 158), PackedInt32Array(162, 161, 159), PackedInt32Array(159, 161, 160), PackedInt32Array(164, 163, 165), PackedInt32Array(165, 163, 166), PackedInt32Array(168, 167, 169), PackedInt32Array(169, 167, 170), PackedInt32Array(172, 171, 173), PackedInt32Array(173, 171, 176), PackedInt32Array(173, 176, 174), PackedInt32Array(174, 176, 175), PackedInt32Array(178, 177, 179), PackedInt32Array(179, 177, 180), PackedInt32Array(166, 181, 174), PackedInt32Array(174, 181, 182), PackedInt32Array(174, 182, 173), PackedInt32Array(166, 163, 181), PackedInt32Array(169, 170, 172), PackedInt32Array(172, 170, 179), PackedInt32Array(172, 179, 180), PackedInt32Array(172, 180, 171), PackedInt32Array(184, 183, 185), PackedInt32Array(185, 183, 186), PackedInt32Array(188, 187, 189), PackedInt32Array(189, 187, 190), PackedInt32Array(190, 186, 189), PackedInt32Array(189, 186, 182), PackedInt32Array(182, 186, 183), PackedInt32Array(182, 183, 173), PackedInt32Array(186, 191, 185), PackedInt32Array(195, 194, 192), PackedInt32Array(192, 194, 193), PackedInt32Array(196, 100, 101), PackedInt32Array(192, 197, 195), PackedInt32Array(195, 197, 198), PackedInt32Array(199, 196, 200), PackedInt32Array(200, 196, 201), PackedInt32Array(201, 196, 202), PackedInt32Array(202, 196, 101), PackedInt32Array(197, 202, 198), PackedInt32Array(198, 202, 101), PackedInt32Array(199, 200, 112), PackedInt32Array(112, 200, 111), PackedInt32Array(202, 203, 201), PackedInt32Array(194, 204, 193), PackedInt32Array(193, 204, 205), PackedInt32Array(205, 204, 206), PackedInt32Array(206, 204, 208), PackedInt32Array(206, 208, 160), PackedInt32Array(206, 160, 207), PackedInt32Array(208, 159, 160), PackedInt32Array(207, 209, 206), PackedInt32Array(211, 210, 212), PackedInt32Array(212, 210, 213), PackedInt32Array(214, 213, 134), PackedInt32Array(134, 213, 129), PackedInt32Array(214, 215, 213), PackedInt32Array(213, 215, 216), PackedInt32Array(216, 215, 217), PackedInt32Array(216, 212, 213), PackedInt32Array(211, 218, 210), PackedInt32Array(210, 218, 219), PackedInt32Array(221, 220, 191), PackedInt32Array(224, 223, 222), PackedInt32Array(222, 221, 224), PackedInt32Array(191, 186, 219), PackedInt32Array(219, 218, 225), PackedInt32Array(221, 191, 224), PackedInt32Array(224, 191, 225), PackedInt32Array(225, 191, 219), PackedInt32Array(226, 229, 227), PackedInt32Array(227, 229, 228), PackedInt32Array(175, 176, 230), PackedInt32Array(228, 229, 230), PackedInt32Array(230, 229, 232), PackedInt32Array(230, 232, 175), PackedInt32Array(175, 232, 231), PackedInt32Array(235, 234, 233), PackedInt32Array(235, 233, 232), PackedInt32Array(232, 233, 231), PackedInt32Array(237, 236, 238), PackedInt32Array(238, 236, 239), PackedInt32Array(241, 203, 240), PackedInt32Array(240, 203, 202), PackedInt32Array(243, 242, 244), PackedInt32Array(244, 242, 247), PackedInt32Array(244, 247, 245), PackedInt32Array(245, 247, 246), PackedInt32Array(240, 248, 241), PackedInt32Array(241, 248, 242), PackedInt32Array(236, 249, 239), PackedInt32Array(239, 249, 250), PackedInt32Array(242, 248, 247), PackedInt32Array(252, 251, 243), PackedInt32Array(243, 251, 242), PackedInt32Array(250, 249, 245), PackedInt32Array(245, 249, 244), PackedInt32Array(253, 256, 254), PackedInt32Array(254, 256, 255), PackedInt32Array(258, 257, 259), PackedInt32Array(259, 257, 260), PackedInt32Array(256, 261, 255), PackedInt32Array(255, 261, 257), PackedInt32Array(257, 261, 262), PackedInt32Array(257, 262, 260), PackedInt32Array(265, 264, 263), PackedInt32Array(263, 266, 265), PackedInt32Array(265, 266, 267), PackedInt32Array(217, 215, 268), PackedInt32Array(268, 262, 217), PackedInt32Array(217, 262, 261), PackedInt32Array(267, 266, 269), PackedInt32Array(269, 266, 258), PackedInt32Array(269, 258, 259), PackedInt32Array(271, 117, 270), PackedInt32Array(270, 117, 118), PackedInt32Array(273, 272, 274), PackedInt32Array(274, 272, 275), PackedInt32Array(278, 277, 276), PackedInt32Array(280, 279, 281), PackedInt32Array(281, 279, 278), PackedInt32Array(278, 279, 282), PackedInt32Array(282, 279, 157), PackedInt32Array(272, 283, 275), PackedInt32Array(275, 283, 282), PackedInt32Array(282, 283, 285), PackedInt32Array(282, 285, 284), PackedInt32Array(278, 276, 281), PackedInt32Array(284, 278, 282), PackedInt32Array(279, 156, 157), PackedInt32Array(287, 286, 270), PackedInt32Array(270, 286, 259), PackedInt32Array(270, 259, 271), PackedInt32Array(271, 259, 260), PackedInt32Array(291, 290, 288), PackedInt32Array(288, 290, 289), PackedInt32Array(293, 292, 294), PackedInt32Array(294, 292, 295), PackedInt32Array(291, 288, 296), PackedInt32Array(296, 288, 295), PackedInt32Array(151, 297, 150), PackedInt32Array(150, 297, 292), PackedInt32Array(296, 295, 298), PackedInt32Array(298, 295, 299), PackedInt32Array(299, 295, 297), PackedInt32Array(297, 295, 292), PackedInt32Array(294, 300, 293), PackedInt32Array(280, 281, 299), PackedInt32Array(299, 281, 298), PackedInt32Array(301, 106, 102), PackedInt32Array(102, 302, 301), PackedInt32Array(301, 302, 303), PackedInt32Array(307, 306, 304), PackedInt32Array(304, 306, 305), PackedInt32Array(302, 308, 303), PackedInt32Array(303, 308, 309), PackedInt32Array(309, 308, 304), PackedInt32Array(309, 304, 305), PackedInt32Array(312, 311, 310), PackedInt32Array(308, 313, 304), PackedInt32Array(237, 238, 307), PackedInt32Array(307, 238, 306), PackedInt32Array(310, 286, 312), PackedInt32Array(312, 286, 305), PackedInt32Array(305, 286, 309), PackedInt32Array(309, 286, 287), PackedInt32Array(253, 254, 314), PackedInt32Array(314, 254, 315), PackedInt32Array(318, 317, 319), PackedInt32Array(319, 317, 224), PackedInt32Array(224, 317, 316), PackedInt32Array(224, 316, 223), PackedInt32Array(314, 315, 319), PackedInt32Array(319, 315, 320), PackedInt32Array(319, 320, 318), PackedInt32Array(167, 168, 321), PackedInt32Array(321, 168, 322), PackedInt32Array(323, 316, 324), PackedInt32Array(324, 316, 325), PackedInt32Array(325, 316, 317), PackedInt32Array(325, 317, 326), PackedInt32Array(321, 322, 324), PackedInt32Array(324, 322, 323), PackedInt32Array(177, 178, 327), PackedInt32Array(327, 178, 328), PackedInt32Array(331, 330, 329), PackedInt32Array(327, 328, 332), PackedInt32Array(332, 328, 335), PackedInt32Array(332, 335, 333), PackedInt32Array(333, 335, 334), PackedInt32Array(333, 336, 332), PackedInt32Array(329, 337, 334), PackedInt32Array(338, 331, 339), PackedInt32Array(339, 331, 335), PackedInt32Array(335, 331, 334), PackedInt32Array(334, 331, 329), PackedInt32Array(329, 340, 337), PackedInt32Array(342, 341, 343), PackedInt32Array(343, 341, 345), PackedInt32Array(343, 345, 344), PackedInt32Array(227, 346, 226), PackedInt32Array(226, 346, 347), PackedInt32Array(346, 348, 347), PackedInt32Array(349, 351, 329), PackedInt32Array(329, 351, 350), PackedInt32Array(350, 351, 347), PackedInt32Array(347, 351, 226), PackedInt32Array(349, 329, 352), PackedInt32Array(350, 340, 329), PackedInt32Array(326, 353, 325), PackedInt32Array(325, 353, 339), PackedInt32Array(339, 353, 354), PackedInt32Array(339, 354, 338), PackedInt32Array(357, 356, 355), PackedInt32Array(358, 233, 234), PackedInt32Array(355, 358, 357), PackedInt32Array(357, 358, 359), PackedInt32Array(359, 358, 234), PackedInt32Array(364, 363, 360), PackedInt32Array(360, 363, 361), PackedInt32Array(361, 363, 362), PackedInt32Array(366, 365, 367), PackedInt32Array(367, 365, 369), PackedInt32Array(367, 369, 368), PackedInt32Array(264, 369, 263), PackedInt32Array(263, 369, 365), PackedInt32Array(360, 370, 364), PackedInt32Array(364, 370, 371), PackedInt32Array(368, 371, 370), PackedInt32Array(374, 373, 375), PackedInt32Array(375, 373, 372), PackedInt32Array(370, 376, 368), PackedInt32Array(368, 376, 354), PackedInt32Array(368, 354, 367), PackedInt32Array(367, 354, 353), PackedInt32Array(375, 372, 376), PackedInt32Array(376, 372, 354), PackedInt32Array(377, 273, 274), PackedInt32Array(377, 274, 378), PackedInt32Array(378, 274, 357), PackedInt32Array(357, 274, 356), PackedInt32Array(380, 379, 289), PackedInt32Array(290, 382, 381), PackedInt32Array(380, 289, 381), PackedInt32Array(381, 289, 290)]
+geometry_source_geometry_mode = 1
+geometry_source_group_name = &"nav_mesh_group"
+cell_size = 0.1
+cell_height = 0.1
+agent_radius = 0.7
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x4okw"]
+shader = ExtResource("113_pbceb")
+
 [node name="Level1" type="SubViewportContainer"]
 material = SubResource("ShaderMaterial_6oqyx")
 custom_minimum_size = Vector2(1152, 648)
@@ -9398,10 +10655,12 @@ audio_listener_enable_3d = true
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="Level1Layout" type="Node3D" parent="SubViewport"]
+[node name="Level1Layout" type="Node3D" parent="SubViewport" node_paths=PackedStringArray("player", "spawn_point")]
 script = ExtResource("2_0bddg")
+player = NodePath("../Player")
+spawn_point = NodePath("../../room7")
 
-[node name="Floor" type="Node" parent="SubViewport/Level1Layout"]
+[node name="Floor" type="Node" parent="SubViewport/Level1Layout" groups=["nav_mesh_group"]]
 
 [node name="floor_007" type="MeshInstance3D" parent="SubViewport/Level1Layout/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.9997132)
@@ -29711,12 +30970,10 @@ shape = SubResource("ConvexPolygonShape3D_hdukf")
 [node name="Ceiling" type="Node" parent="SubViewport/Level1Layout"]
 
 [node name="CEILING" type="CSGMesh3D" parent="SubViewport/Level1Layout/Ceiling"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.49617, 3.2472086, 0)
+transform = Transform3D(2.085, 0, 0, 0, 1, 0, 0, 0, 1.69, -42.437836, 3.2472086, 0)
+visible = false
 mesh = SubResource("BoxMesh_123ws")
 material = SubResource("StandardMaterial3D_3sd0r")
-
-[node name="Monster _rig_v006" parent="SubViewport/Level1Layout" instance=ExtResource("25_d3vbi")]
-transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, -97.20215, 0, 13.09943)
 
 [node name="Cube_017" type="MeshInstance3D" parent="SubViewport/Level1Layout"]
 transform = Transform3D(4.5896954e-08, 0, 0.51, 0, 0.55, 0, -0.35, 0, 6.687842e-08, -0.80806065, 0.5533222, -4.596633)
@@ -34764,7 +36021,6 @@ spot_range = 10.03
 spot_attenuation = 1.21
 spot_angle = 68.06
 script = ExtResource("98_lq2ya")
-noise = SubResource("NoiseTexture3D_241eg")
 gpuparticle = NodePath("../Light Particle")
 light_multiplier = 3.0
 
@@ -34781,14 +36037,14 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="SpotLight3D" parent="SubViewport/Level1Layout/LIGHTS/Light2" node_paths=PackedStringArray("gpuparticle")]
 transform = Transform3D(3.563411, 0, 0, 0, 5.596405, 3.502052, 0, -29.766176, 0.65842855, 0, -1.9338455, 0)
-light_energy = 0.1
+light_color = Color(0.9019608, 1, 1, 1)
+light_energy = 4.42
 light_volumetric_fog_energy = 3.0
 shadow_enabled = true
 spot_range = 5.926
-spot_attenuation = 1.21
+spot_attenuation = 0.47
 spot_angle = 68.51
 script = ExtResource("98_lq2ya")
-noise = SubResource("NoiseTexture3D_241eg")
 gpuparticle = NodePath("../Light Particle")
 light_multiplier = 3.0
 
@@ -34805,7 +36061,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="SpotLight3D" parent="SubViewport/Level1Layout/LIGHTS/Light3" node_paths=PackedStringArray("gpuparticle")]
 transform = Transform3D(3.563411, 0, 0, 0, -7.256456, 3.4596286, 0, -29.405594, -0.853737, 0, -1.3695297, 0)
-light_energy = 0.1
+light_energy = 1.899
 light_volumetric_fog_energy = 3.0
 shadow_enabled = true
 spot_range = 6.45
@@ -34829,14 +36085,13 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="SpotLight3D" parent="SubViewport/Level1Layout/LIGHTS/Light4" node_paths=PackedStringArray("gpuparticle")]
 transform = Transform3D(3.563411, 0, 0, 0, -1.3239177e-06, 3.563411, 0, -30.287706, -1.5576164e-07, 0, -2.1738434, 0)
-light_energy = 0.18
+light_energy = 3.267
 light_volumetric_fog_energy = 3.0
 shadow_enabled = true
 spot_range = 7.388
 spot_attenuation = 1.21
 spot_angle = 71.82
 script = ExtResource("98_lq2ya")
-noise = SubResource("NoiseTexture3D_241eg")
 gpuparticle = NodePath("../Light Particle")
 light_multiplier = 3.0
 
@@ -34928,7 +36183,6 @@ spot_range = 7.774
 spot_attenuation = 1.21
 spot_angle = 72.55
 script = ExtResource("98_lq2ya")
-noise = SubResource("NoiseTexture3D_241eg")
 gpuparticle = NodePath("../Light Particle")
 light_multiplier = 3.0
 
@@ -34952,7 +36206,6 @@ spot_range = 5.632
 spot_attenuation = 1.21
 spot_angle = 60.8
 script = ExtResource("98_lq2ya")
-noise = SubResource("NoiseTexture3D_241eg")
 gpuparticle = NodePath("../Light Particle")
 light_multiplier = 3.0
 
@@ -35085,13 +36338,13 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SubViewport/Level1Layout/LIGHTS/Light15" node_paths=PackedStringArray("gpuparticle")]
 transform = Transform3D(3.563411, 0, 0, 0, 30.287706, 0, 0, 0, 3.563411, 0, -29.79332, 0)
+light_color = Color(0.8745098, 1, 1, 1)
 light_energy = 0.394
 light_volumetric_fog_energy = 3.0
 shadow_enabled = true
 omni_range = 3.784
 omni_attenuation = -1.877
 script = ExtResource("98_lq2ya")
-noise = SubResource("NoiseTexture3D_241eg")
 gpuparticle = NodePath("../Light Particle")
 light_multiplier = 3.0
 
@@ -35469,10 +36722,361 @@ process_material = SubResource("ParticleProcessMaterial_nmbfo")
 draw_pass_1 = SubResource("QuadMesh_iuxxg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport/Level1Layout" node_paths=PackedStringArray("env", "sub_view")]
-environment = ExtResource("100_0bddg")
+environment = ExtResource("101_pvdq6")
 script = ExtResource("100_y1l4h")
 env = NodePath(".")
 sub_view = NodePath("../..")
 
+[node name="DECAL CONTAINER" type="Node" parent="SubViewport/Level1Layout" node_paths=PackedStringArray("anim_player")]
+script = ExtResource("103_whgpp")
+anim_player = NodePath("DecalAnim")
+
+[node name="Decal" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -50.556206, 1.3688029, -1.6133085)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 3.166813
+lower_fade = 0.7647344
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal3" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -80.51999, 1.9237485, 17.005554)
+texture_albedo = ExtResource("105_pvdq6")
+texture_emission = ExtResource("105_pvdq6")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal18" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.3759494, 0.9265112, -0.015460655, 0.33542758, 0.120515026, -0.93432564, -0.8638001, -0.3564451, -0.35608503, -70.6918, 1.9237485, 7.4482403)
+size = Vector3(2, 4.5947266, 2)
+texture_albedo = ExtResource("106_b5scq")
+texture_emission = ExtResource("106_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal6" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.3275382, 0.6973119, 0.6375539, -0.503311, 0.6998363, -0.50686026, -0.79962313, -0.15487173, 0.5801878, -52.304012, 0.5478436, 14.528442)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal7" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.16671449, 0.75519794, 0.63394195, -0.113874316, 0.6238906, -0.77317095, -0.97940767, -0.2010885, -0.018013924, -97.04947, 1.2245212, 13.687658)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal14" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.16671449, 0.75519794, 0.63394195, -0.50487584, 0.48687753, -0.7127769, -0.8469398, -0.43889216, 0.30011168, -48.80846, 1.9442943, 9.7104645)
+texture_albedo = ExtResource("105_pvdq6")
+texture_emission = ExtResource("105_pvdq6")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 1.7569027
+lower_fade = 1.5833939
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal15" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.1232348, 0.7639031, 0.63345474, 0.990428, 0.13466698, 0.030282833, -0.062172256, 0.6311231, -0.77318704, -58.687534, 1.4855988, 0.06715202)
+size = Vector3(3.340332, 1.456543, 2)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("107_x4okw")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal16" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.08516426, -0.079074174, 0.99322426, -0.09066228, 0.99332523, 0.071308434, -0.9922335, -0.083975166, -0.09176497, -35.81647, 0.21588129, 15.71834)
+size = Vector3(3.340332, 1.456543, 2)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("107_x4okw")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal17" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -101.429436, 1.4824746, -8.522671)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal19" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.9914085, 0.12226169, -0.046489235, 0.118149094, 0.98953843, 0.08278979, 0.056124624, 0.076585755, -0.99548227, -102.209526, 2.0099254, -19.1403)
+size = Vector3(3.6468506, 2.529419, 1.9125977)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal20" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -93.889465, 1.4693156, -19.294483)
+size = Vector3(3, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal21" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -93.90194, 1.4336615, -32.220848)
+size = Vector3(3, 1.456543, 3)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("108_e3wdf")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal22" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -93.79365, 1.4824746, -38.373398)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal23" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.66016084, -0.11355552, 0.74249095, -0.090662286, 0.99332535, 0.071308434, -0.74563277, -0.020241044, -0.6660501, -106.70393, 2.190562, -36.870056)
+size = Vector3(2, 3, 2)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal24" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.9940461, -0.094608456, 0.054051816, -0.09066228, 0.9933253, 0.07130843, -0.06043771, 0.065983295, -0.9959889, -103.335945, 1.4824746, -28.772423)
+size = Vector3(3.2902832, 1.456543, 2)
+texture_albedo = ExtResource("106_pbceb")
+texture_emission = ExtResource("106_pbceb")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 0.36934307
+lower_fade = 1.3314705
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal4" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.9966074, 0.014298529, 0.08105207, 0.08088583, 0.011845894, -0.99665284, -0.015210887, 0.99982756, 0.0106490925, -106.60554, 2.1958964, 14.916284)
+size = Vector3(1.7910156, 0.48242188, 2)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("108_e3wdf")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal5" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.10100901, 0.9940878, -0.03983231, 0.5662154, 0.024520412, -0.82389224, -0.81804484, -0.10577446, -0.56534445, -87.03772, 1.8505085, 5.0625944)
+size = Vector3(1.7910156, 0.48242188, 2)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("107_x4okw")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal25" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.101009004, 0.9940878, -0.03983232, 0.95608985, 0.10806412, 0.27242362, 0.27511755, -0.010565974, -0.96135235, -107.11658, 2.0142636, 0.027255774)
+size = Vector3(3, 0.48242188, 3.2022095)
+texture_albedo = ExtResource("109_2gpuv")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+lower_fade = 2.3999994
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal2" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.37594938, 0.9265112, -0.015460655, 4.371149e-08, -0.01668462, -0.9998608, -0.9266402, -0.37589705, 0.006272532, -24.539505, 1.2489781, 12.371876)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("109_2gpuv")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 2.3999944
+lower_fade = 0.20490603
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal13" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.9210699, -0.38934314, 0.0064969864, 0.337228, 0.7892167, -0.51323915, 0.19469859, 0.47492012, 0.858221, -31.539505, 0.24897814, -15.393379)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("108_e3wdf")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+normal_fade = 0.418
+upper_fade = 1.4270439
+lower_fade = 6.5569997
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal8" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.93095386, 0.36508587, -0.0060921703, 0.36509606, 0.9304719, -0.030450672, -0.005448468, -0.030572385, -0.9995178, -24.516956, 2.842819, 6.604626)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("109_2gpuv")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 38.39991
+lower_fade = 1.4270486
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal9" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.17954716, -0.98338926, 0.026619917, 0.271089, -0.023447385, 0.9622687, -0.9456604, 0.179989, 0.2707959, -8.73095, 0.77779853, 15.428251)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal12" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.0011746362, 0.9999981, 0.0017178413, -0.20404014, 0.0014422667, -0.9789612, -0.97896177, -0.0015004203, 0.20403807, -21.003418, 1.6343133, -6.2675095)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("108_e3wdf")
+texture_emission = ExtResource("104_b5scq")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal10" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(-0.8696819, 0.096881345, 0.48401165, 0.49318415, 0.12970681, 0.86020076, 0.02055768, 0.98680806, -0.16058414, -15.066619, 1.4895521, -17.002363)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("104_b5scq")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Decal11" type="Decal" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+transform = Transform3D(0.99239534, -0.08000412, 0.09354379, 0.09792093, 0.052651495, -0.9938004, 0.07458267, 0.9954033, 0.060084984, -16.437727, 1.8414973, 10.986406)
+size = Vector3(3.553711, 2, 2.6938477)
+texture_albedo = ExtResource("107_x4okw")
+texture_emission = ExtResource("109_2gpuv")
+emission_energy = 2.0
+modulate = Color(1, 0, 0, 1)
+upper_fade = 18.545956
+lower_fade = 54.30571
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="DecalAnim" type="AnimationPlayer" parent="SubViewport/Level1Layout/DECAL CONTAINER"]
+libraries = {
+&"": SubResource("AnimationLibrary_sbyva")
+}
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="SubViewport/Level1Layout"]
+navigation_mesh = SubResource("NavigationMesh_pvdq6")
+
 [node name="Player" parent="SubViewport" instance=ExtResource("2_dv71h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.135833, 0.025132656, -0.9389014)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.135833, 0.025132656, -0.9389014)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="SubViewport/CanvasLayer"]
+material = ExtResource("112_pvdq6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="chroma" type="ColorRect" parent="SubViewport"]
+z_index = 1
+material = SubResource("ShaderMaterial_x4okw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="room" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.06585, 0, -11.206528)
+
+[node name="room2" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.06585, 0, 6.7934723)
+
+[node name="room3" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.06585, 0, 1.7934723)
+
+[node name="room4" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.06585, 0, 13.793472)
+
+[node name="room5" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.71579, 0, 14.914391)
+
+[node name="room6" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.71579, 0, 3.9143906)
+
+[node name="room7" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.71579, 0, 3.9143906)
+
+[node name="room8" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.71579, 0, 7.9143906)
+
+[node name="room9" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.71579, 0, -12.085609)
+
+[node name="room10" type="Node3D" parent="." groups=["rooms"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.71579, 0, -20.159382)

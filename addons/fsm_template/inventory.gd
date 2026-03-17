@@ -14,7 +14,7 @@ class_name Inventory
 func _ready() -> void:
 	pass
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("tab"):
+	if Input.is_action_just_pressed("tab") or Input.is_action_just_pressed("scroll_up") or Input.is_action_just_pressed("scroll_down"):
 		switch_item()
 
 

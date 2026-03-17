@@ -10867,8 +10867,10 @@ wait_time = 15.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_height_offset = 0.5
+path_postprocessing = 1
 max_neighbors = 2
 keep_y_velocity = false
+debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
 

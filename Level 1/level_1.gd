@@ -57,8 +57,9 @@ func reveal_key(pos):
 func _on_state_changer_body_entered(body: Node3D) -> void:
 	#print("reached")
 	if body == player:
-		#print("working")
-		Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
+		print("working")
+		
+		#Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
 		#dialogue_manager.show_messages(["[color=red] [shake rate=5 level=10] IT'S AFTER YOU NOW!![/shake][/color]",
 		#"[color=red][shake rate=5 level=10] GO FIND THE PILLS TO GET UR SANITY BACK!![/shake][/color]",
 		#"[color=red][shake rate=5 level=10]USE[color=green] Q [/color] TO STUN!!",

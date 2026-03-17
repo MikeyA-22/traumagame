@@ -2816,19 +2816,19 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/level1_baseNodoor+textFull/outerwall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_6vwo8")
 
+[node name="state_changer" type="Area3D" parent="SubViewport/Level1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85105467, -15.195385)
+script = ExtResource("72_f7vnk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/state_changer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.28797)
+shape = SubResource("BoxShape3D_646iq")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewport/Level1" node_paths=PackedStringArray("env", "sub_view")]
 environment = ExtResource("73_a4j8g")
 script = ExtResource("74_a4j8g")
 env = NodePath(".")
 sub_view = NodePath("../..")
-
-[node name="state_changer" type="Area3D" parent="SubViewport/Level1/WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85105467, -15.195385)
-script = ExtResource("72_f7vnk")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/Level1/WorldEnvironment/state_changer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.28797)
-shape = SubResource("BoxShape3D_646iq")
 
 [node name="DialogueManager" parent="SubViewport/Level1" instance=ExtResource("73_hp663")]
 
@@ -2868,6 +2868,7 @@ end_position = Vector3(0, 0.5, 0)
 travel_cost = 0.0
 
 [node name="Player" parent="SubViewport/Level1" node_paths=PackedStringArray("monster") instance=ExtResource("85_5i7a4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, -0.3827324)
 monster = NodePath("../Base Enemy")
 
 [node name="Base Enemy" parent="SubViewport/Level1" node_paths=PackedStringArray("player") instance=ExtResource("86_vjns4")]
@@ -2891,5 +2892,5 @@ grow_vertical = 2
 [node name="NewsPaper" parent="." instance=ExtResource("75_7cy2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.7, -8)
 
-[connection signal="body_entered" from="SubViewport/Level1/WorldEnvironment/state_changer" to="SubViewport/Level1" method="_on_state_changer_body_entered"]
-[connection signal="body_entered" from="SubViewport/Level1/WorldEnvironment/state_changer" to="SubViewport/Level1/WorldEnvironment/state_changer" method="_on_body_entered"]
+[connection signal="body_entered" from="SubViewport/Level1/state_changer" to="SubViewport/Level1" method="_on_state_changer_body_entered"]
+[connection signal="body_entered" from="SubViewport/Level1/state_changer" to="SubViewport/Level1/state_changer" method="_on_body_entered"]

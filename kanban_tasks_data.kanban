@@ -65,7 +65,8 @@
 			"title": "Doing: BY FRIDAY!!",
 			"tasks": [
 				"f9c65ace-fa64-45b9-892f-737d7a0a5e56",
-				"ff39d04c-5235-467a-a872-a69764854c05"
+				"ff39d04c-5235-467a-a872-a69764854c05",
+				"d8cd65a5-70eb-429d-993a-77044f2ecfff"
 			]
 		},
 		{
@@ -618,6 +619,13 @@
 					"done": true
 				}
 			]
+		},
+		{
+			"uuid": "d8cd65a5-70eb-429d-993a-77044f2ecfff",
+			"title": "Level1 Implementation",
+			"description": "",
+			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
 		}
 	],
 	"layout": {

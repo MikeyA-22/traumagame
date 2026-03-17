@@ -3740,7 +3740,7 @@ script = ExtResource("54_l01go")
 time = 1.8
 
 [node name="Batteries" parent="Node3D/TutV2/tutv2" instance=ExtResource("59_ry6d7")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.165865, 1.1419928, 6.283122)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.165865, 1.0694373, 6.283122)
 time = 4.0
 
 [node name="carpet" type="Node3D" parent="Node3D/TutV2/tutv2"]

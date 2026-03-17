@@ -15,7 +15,7 @@ func _ready() -> void:
 func tick(actor, delta, blackboard: Dictionary):
 	stunned = blackboard.get("stunned")
 	if stunned == true:
-		print("STUNNED!!!")
+		#print("STUNNED!!!")
 		stop_sounds()
 		return STATUS.SUCCESS
 	else:

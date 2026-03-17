@@ -15,8 +15,9 @@ sky_material = SubResource("ProceduralSkyMaterial_3dk0h")
 
 [resource]
 sky = SubResource("Sky_f7g2b")
+ambient_light_color = Color(0.0056822742, 0, 0.24918675, 1)
 tonemap_mode = 2
-ssil_enabled = true
+ssao_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 sdfgi_read_sky_light = false
@@ -26,12 +27,13 @@ fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
 fog_light_energy = 4.66
-fog_density = 1.0
+fog_density = 0.3179
 fog_height = 1.0
 fog_height_density = 0.25
-fog_depth_curve = 0.2176377
+fog_depth_curve = 0.49999988
 fog_depth_end = 50.0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.1963
 volumetric_fog_albedo = Color(0, 0, 0, 1)
 volumetric_fog_emission = Color(0.0789936, 0.0297113, 0.0179304, 1)
+volumetric_fog_temporal_reprojection_enabled = false

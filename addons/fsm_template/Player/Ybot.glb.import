@@ -14,9 +14,11 @@ source_file="res://addons/fsm_template/Player/Ybot.glb"
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -31,12 +33,16 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "animations": {
 "hit_1": {
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://hit_1.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "res://hit_1.tres",
+"save_to_file/path": "uid://drdqcesvrxd43",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -1834,8 +1840,9 @@ _subresources={
 },
 "hit_2": {
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://hit_2.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "res://hit_2.tres",
+"save_to_file/path": "uid://bsan5inxep6y7",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
@@ -3633,8 +3640,9 @@ _subresources={
 },
 "hit_3": {
 "save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://hit_3.tres",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "res://hit_3.tres",
+"save_to_file/path": "uid://d1qmrxm1tl3u4",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

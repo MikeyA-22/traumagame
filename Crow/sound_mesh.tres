@@ -1,7 +1,6 @@
 [gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://b7hafx6hnw7oc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ks60"]
-billboard_mode = 1
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_702s1"]
 _surfaces = [{
