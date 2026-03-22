@@ -5,6 +5,17 @@ class_name Door
 var current_scene:SceneState
 @export var next_level : String
 
+
+@export_group("ScreenTransition")
+@export var animation_player : AnimationPlayer
+@export var wing_sprites : Array[AnimatedSprite2D]
+
+func playscreen_transition():
+	animation_player.play("Wings")
+	for sprite in wing_sprites:
+		sprite.play("animation")
+	
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SigBus.connect("DOOR", _open_door)
@@ -27,5 +38,7 @@ func _process(delta: float) -> void:
 	
 func _open_door(door:bool):
 	Game_Global.loadable_scene = next_level
+	playscreen_transition()
+	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file(Game_Global.loading_screen)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

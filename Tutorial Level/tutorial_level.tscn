@@ -1,7 +1,7 @@
-[gd_scene load_steps=263 format=4 uid="uid://bh3cec7gn8ne7"]
+[gd_scene load_steps=259 format=4 uid="uid://bh3cec7gn8ne7"]
 
 [ext_resource type="Script" uid="uid://btqcy86qkxjvo" path="res://Tutorial Level/tutorial_level.gd" id="1_2dagw"]
-[ext_resource type="Shader" uid="uid://d0esjjlsq4i6m" path="res://Shaders/PS1_fx.gdshader" id="1_effxy"]
+[ext_resource type="Material" uid="uid://dwli71g63q5rw" path="res://Shaders/Color_dithershader.tres" id="1_nq8ga"]
 [ext_resource type="PackedScene" uid="uid://bbrfhhgqpyxov" path="res://Ables/candles.tscn" id="1_sp2du"]
 [ext_resource type="Resource" uid="uid://b452o3ldbd6tn" path="res://Resource/Key.tres" id="2_kcaaw"]
 [ext_resource type="Texture2D" uid="uid://b5qh5y7lfrxtc" path="res://Tutorial Level/tutv2/tutv2_Substance_graph_basecolor.png" id="4_2slkf"]
@@ -96,13 +96,6 @@
 [ext_resource type="Script" uid="uid://c5iu5uxibj7ra" path="res://Tutorial Level/decal_container.gd" id="88_vhkfr"]
 [ext_resource type="PackedScene" uid="uid://ccwaxapbke6h2" path="res://addons/fsm_template/Player/final_player.tscn" id="96_vhkfr"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_unsro"]
-shader = ExtResource("1_effxy")
-shader_parameter/enabled = true
-shader_parameter/dithering = true
-shader_parameter/colors = 12
-shader_parameter/dither_size = 2
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcaaw"]
 resource_local_to_scene = true
 transparency = 1
@@ -140,44 +133,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_c3nsa")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj54v"]
-resource_name = "crow"
-cull_mode = 2
-albedo_color = Color(0.126576, 0.126576, 0.126576, 1)
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_cd6dn"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
-"name": "crow",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_ch3aw"]
-resource_name = "tutv2_Cube_005"
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_fj54v"),
-"name": "crow",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cd6dn")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_444g4"]
 resource_name = "bathroom_wall"
@@ -3245,7 +3200,7 @@ _data = {
 shader = ExtResource("65_l01go")
 
 [node name="Subportcontainer" type="SubViewportContainer"]
-material = SubResource("ShaderMaterial_unsro")
+material = ExtResource("1_nq8ga")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -3263,12 +3218,13 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0798893, 0.95195854, 1.2055603)
 visible = false
 
-[node name="TutV2" type="Node3D" parent="Node3D" node_paths=PackedStringArray("photo", "player")]
+[node name="TutV2" type="Node3D" parent="Node3D" node_paths=PackedStringArray("photo", "player", "lightswitch")]
 script = ExtResource("1_2dagw")
 photo = NodePath("tutv2/Card")
 key_data = ExtResource("2_kcaaw")
 player = NodePath("Player")
 monster_resource = ExtResource("4_vhkfr")
+lightswitch = NodePath("tutv2/LightSwitch2/light_switch")
 
 [node name="tutv2" type="Node3D" parent="Node3D/TutV2" groups=["nav_mesh_group"]]
 
@@ -3278,6 +3234,10 @@ mesh = SubResource("ArrayMesh_6hybo")
 skeleton = NodePath("")
 
 [node name="Mirror" parent="Node3D/TutV2/tutv2/MIRROR" instance=ExtResource("4_sgbny")]
+indication_mouse_height = 0.25
+
+[node name="CollisionShape3D" parent="Node3D/TutV2/tutv2/MIRROR/Mirror" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.46394348, 0.049568176)
 
 [node name="Mirror3D" parent="Node3D/TutV2/tutv2/MIRROR" instance=ExtResource("8_l01go")]
 transform = Transform3D(-1.31134e-07, 0, 2, 0, 4, 0, -3, 0, -8.74228e-08, 0.85564, -0.580139, 0.127655)
@@ -3287,7 +3247,7 @@ distortion_texture = null
 cull_near = 0.54
 
 [node name="Omni" type="SpotLight3D" parent="Node3D/TutV2/tutv2/MIRROR"]
-transform = Transform3D(0.99977, 4.761205e-10, -0.021447044, 0.021447044, -4.440116e-08, 0.99977, -4.761205e-10, -1, -4.440116e-08, -4.7754354, 1.9708505, -0.8366165)
+transform = Transform3D(2.7160356, 1.2938437e-09, -0.05826434, 0.058264337, -1.2062286e-07, 2.7160356, -1.2934577e-09, -2.7166605, -1.2062286e-07, -0.53646946, 1.9708505, -0.8366165)
 light_color = Color(0.7764706, 1, 1, 1)
 light_energy = 5.0
 shadow_enabled = true
@@ -3295,12 +3255,6 @@ spot_range = 3.915
 spot_attenuation = 0.6
 spot_angle = 60.88
 spot_angle_attenuation = 0.29730278
-
-[node name="crow" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
-transform = Transform3D(0.160879, 0, 0, 0, 0.0643432, 0, 0, 0, 0.160879, 0.64799, 0.0528235, 12.6762)
-visible = false
-mesh = SubResource("ArrayMesh_ch3aw")
-skeleton = NodePath("")
 
 [node name="Bathroom" type="MeshInstance3D" parent="Node3D/TutV2/tutv2" groups=["Concrete"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.06725, 0, 22.9768)
@@ -3387,7 +3341,7 @@ process_material = SubResource("ParticleProcessMaterial_63tng")
 draw_pass_1 = SubResource("QuadMesh_sbyva")
 
 [node name="Cube_026" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
-transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 24.217321)
+transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 1.560359, 3.10455, 24.217321)
 mesh = SubResource("ArrayMesh_ch4mu")
 skeleton = NodePath("")
 
@@ -3714,7 +3668,7 @@ shape = SubResource("ConvexPolygonShape3D_mm8lq")
 
 [node name="Door" parent="Node3D/TutV2/tutv2/DOOR" instance=ExtResource("48_kcaaw")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1517124, 0)
-next_level = "res://Level 1/level_1.tscn"
+next_level = "C:/Users/subom/Documents/traumagame/Level 1/fin_level_1.tscn"
 
 [node name="knife_holder" parent="Node3D/TutV2/tutv2" instance=ExtResource("87_qnwvc")]
 transform = Transform3D(-0.71714175, 0, -0.6969274, 0, 1, 0, 0.6969274, 0, -0.71714175, 7.1119747, 1.1740518, 5.7808185)
@@ -3735,9 +3689,9 @@ transform = Transform3D(0.156, 0, 0, 0, 0.156, 0, 0, 0, 0.156, -0.00166166, 0.09
 indication_mouse_height = 2.0
 
 [node name="Card" parent="Node3D/TutV2/tutv2" instance=ExtResource("52_gkahi")]
-transform = Transform3D(0.20589676, 0.97857374, 0, -0.12198694, 0.025666656, 0.9921998, 0.97094065, -0.20429072, 0.12465789, 1.3958989, 1.0911629, 24.151134)
+transform = Transform3D(0.20589676, 0.97857374, 0, -0.12198694, 0.025666656, 0.9921998, 0.97094065, -0.20429072, 0.12465789, 1.3958989, 1.0911629, 24.998692)
 script = ExtResource("54_l01go")
-time = 1.8
+time = 1.5
 
 [node name="Batteries" parent="Node3D/TutV2/tutv2" instance=ExtResource("59_ry6d7")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.165865, 1.0694373, 6.283122)
@@ -4043,7 +3997,7 @@ env = NodePath(".")
 sub_view = NodePath("../..")
 
 [node name="Pills" parent="Node3D/TutV2" instance=ExtResource("7_ohhhg")]
-transform = Transform3D(2.725, 0, 0, 0, 2.7249577, 0.015172308, 0, -0.015172308, 2.7249577, 5.5177674, 1.0810817, 6.327289)
+transform = Transform3D(2.725, 0, 0, 0, 2.7249577, 0.015172308, 0, -0.015172308, 2.7249577, 1.5718122, 1.2098578, 24.136168)
 time = 10.0
 item_data = ExtResource("61_f5srq")
 
@@ -4084,6 +4038,7 @@ shape = SubResource("BoxShape3D_itqge")
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="Node3D/TutV2"]
 stream = ExtResource("9_ccse8")
+volume_db = 10.0
 parameters/looping = true
 script = ExtResource("9_d1gwl")
 alter = ExtResource("65_ndxse")
@@ -4099,6 +4054,14 @@ player = NodePath("../Player")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Node3D/TutV2"]
 navigation_mesh = SubResource("NavigationMesh_7spyc")
 
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="Node3D/TutV2"]
+transform = Transform3D(-0.0031765376, 0.999995, 0, -0.999995, -0.0031765376, 0, 0, 0, 1, -0.10922241, -0.068938375, 1.0177828)
+vertices = PackedVector3Array(-0.28913015, 0, -0.22949803, 2.3899586, 0, -0.19913185, 2.372417, 0, 1.1772054, -0.22594567, 0, 1.3135239)
+
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="Node3D/TutV2"]
+transform = Transform3D(1.3885086e-10, -4.3711164e-08, 0.99999994, -0.99999493, -0.0031765373, 0, 0.0031765376, -0.999995, -4.371139e-08, -4.3745527, -0.068938375, 0.13893187)
+vertices = PackedVector3Array(-0.54121226, 0, -0.5094037, 3.3600314, 0, -0.6268444, 3.3254578, 0, 0.89481497, -0.61252844, 0, 0.81178164)
+
 [node name="FogVolume2" type="FogVolume" parent="Node3D/TutV2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7564073, 3.486326, 2.7930017)
 size = Vector3(19.1968, 2, 9.477173)
@@ -4106,7 +4069,6 @@ material = SubResource("FogMaterial_c4f25")
 
 [node name="Player" parent="Node3D/TutV2" instance=ExtResource("96_vhkfr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07191563, -0.050296307, -0.2031138)
-safe_margin = 0.04
 
 [node name="DECAL CONTAINER" type="Node" parent="Node3D/TutV2" node_paths=PackedStringArray("anim_player")]
 script = ExtResource("88_vhkfr")
@@ -4343,5 +4305,6 @@ grow_vertical = 2
 [connection signal="body_entered" from="Node3D/TutV2/state_changer" to="Node3D/TutV2" method="_on_state_changer_body_entered"]
 [connection signal="body_entered" from="Node3D/TutV2/state_changer" to="Node3D/TutV2/state_changer" method="_on_body_entered"]
 
+[editable path="Node3D/TutV2/tutv2/MIRROR/Mirror"]
 [editable path="Node3D/TutV2/tutv2/LightSwitch2/light_switch"]
 [editable path="Node3D/TutV2/tutv2/LightSwitch/light_switch2"]

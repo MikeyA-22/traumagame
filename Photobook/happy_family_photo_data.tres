@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PhotoData" load_steps=3 format=3 uid="uid://orr50iwdbscf"]
+
+[ext_resource type="Texture2D" uid="uid://cgatgb1xjrcwb" path="res://Photobook/happy_family_photo_tiny.jpg" id="1_0ew6r"]
+[ext_resource type="Script" uid="uid://clljws8qmx4hp" path="res://Photobook/PhotoData.gd" id="1_jwuyy"]
+
+[resource]
+script = ExtResource("1_jwuyy")
+photo_name = "happyfamilyphoto"
+photo_pic = ExtResource("1_0ew6r")
+photo_no = 4
+metadata/_custom_type_script = "uid://clljws8qmx4hp"

@@ -100,7 +100,7 @@
 [ext_resource type="Texture2D" uid="uid://f8wwry6jnhvc" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_BaseMap.png" id="96_bx47s"]
 [ext_resource type="Texture2D" uid="uid://wa07gwyursfj" path="res://Tutorial Level/tutv2/tutv2_kitchen_desk_DefaultMaterial_Normal.png" id="97_arq8w"]
 [ext_resource type="Script" uid="uid://disi6y31rffjj" path="res://Tutorial Level/light_bulb.gd" id="98_n4old"]
-[ext_resource type="PackedScene" path="res://Enemy/BT_base_enemy.tscn" id="99_i1m4x"]
+[ext_resource type="PackedScene" uid="uid://kluhkctuki4x" path="res://Enemy/BT_base_enemy.tscn" id="99_i1m4x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fq072"]
 resource_name = "floor_washroom"

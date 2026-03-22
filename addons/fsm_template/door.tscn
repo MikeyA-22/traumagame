@@ -1,16 +1,138 @@
-[gd_scene load_steps=4 format=3 uid="uid://do7a3sk5ap5qk"]
+[gd_scene load_steps=21 format=3 uid="uid://do7a3sk5ap5qk"]
 
 [ext_resource type="Script" uid="uid://dodjy2t6qoy3n" path="res://Ables/Door.gd" id="1_yonr4"]
+[ext_resource type="Texture2D" uid="uid://dtowlyde3ko3g" path="res://12222/1.png" id="2_3niax"]
+[ext_resource type="Texture2D" uid="uid://j0hdpex3mehn" path="res://12222/2.png" id="3_ngqrh"]
+[ext_resource type="Texture2D" uid="uid://38t1llb3dqct" path="res://12222/3.png" id="4_nff2a"]
+[ext_resource type="Texture2D" uid="uid://mlfo0feu55ob" path="res://12222/4.png" id="5_qvcou"]
+[ext_resource type="Texture2D" uid="uid://bdyvdpntusjen" path="res://12222/5.png" id="6_hegxc"]
+[ext_resource type="Texture2D" uid="uid://wt5vf8vaf7fa" path="res://12222/6.png" id="7_md401"]
+[ext_resource type="Texture2D" uid="uid://csek3hncqin7d" path="res://12222/7.png" id="8_j5ffs"]
+[ext_resource type="Texture2D" uid="uid://cnso788e4ktts" path="res://12222/8.png" id="9_3y74x"]
+[ext_resource type="Texture2D" uid="uid://cnexyfebllh2i" path="res://12222/9.png" id="10_dyx25"]
+[ext_resource type="Texture2D" uid="uid://cjgno1681qocv" path="res://12222/10.png" id="11_poc04"]
+[ext_resource type="Texture2D" uid="uid://cfgtdssm6f0xc" path="res://12222/11.png" id="12_886u0"]
+[ext_resource type="Texture2D" uid="uid://di5m7afj3mlsp" path="res://12222/12.png" id="13_utbnq"]
+[ext_resource type="Texture2D" uid="uid://cj1xkmur30njp" path="res://12222/13.png" id="14_o41sd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yonr4"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yonr4"]
 data = PackedVector3Array(-0.5, -0.000480056, 0.0720842, -0.5, -0.000480056, -0.0869158, -0.5, 1.99952, -0.0869158, 0.5, -0.000480056, -0.0869158, -0.5, -0.000480056, -0.0869158, -0.5, -0.000480056, 0.0720842, -0.5, 1.99952, -0.0869158, -0.5, -0.000480056, -0.0869158, 0.5, -0.000480056, -0.0869158, -0.5, 1.99952, -0.0869158, -0.5, 1.99952, 0.0720842, -0.5, -0.000480056, 0.0720842, -0.5, -0.000480056, 0.0720842, -0.5, 1.99952, 0.0720842, 0.5, 1.99952, 0.0720842, 0.5, 1.99952, 0.0720842, -0.5, 1.99952, 0.0720842, -0.5, 1.99952, -0.0869158, -0.5, -0.000480056, 0.0720842, 0.5, -0.000480056, 0.0720842, 0.5, -0.000480056, -0.0869158, 0.5, 1.99952, 0.0720842, 0.5, -0.000480056, 0.0720842, -0.5, -0.000480056, 0.0720842, 0.5, -0.000480056, -0.0869158, 0.5, -0.000480056, 0.0720842, 0.5, 1.99952, 0.0720842, 0.5, -0.000480056, -0.0869158, 0.5, 1.99952, -0.0869158, -0.5, 1.99952, -0.0869158, -0.5, 1.99952, -0.0869158, 0.5, 1.99952, -0.0869158, 0.5, 1.99952, 0.0720842, 0.5, 1.99952, 0.0720842, 0.5, 1.99952, -0.0869158, 0.5, -0.000480056, -0.0869158)
 
-[node name="Door" type="StaticBody3D" groups=["Doors"]]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0s87k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3niax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ngqrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nff2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qvcou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hegxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_md401")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j5ffs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3y74x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dyx25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_poc04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_886u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_utbnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o41sd")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_8w85i"]
+resource_name = "Wings"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-356, 324), Vector2(520, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_4wqkx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-368, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wqkx"]
+_data = {
+&"RESET": SubResource("Animation_4wqkx"),
+&"Wings": SubResource("Animation_8w85i")
+}
+
+[node name="Door" type="StaticBody3D" node_paths=PackedStringArray("animation_player", "wing_sprites") groups=["Doors"]]
 collision_layer = 3
 collision_mask = 7
 script = ExtResource("1_yonr4")
+animation_player = NodePath("Node/AnimationPlayer")
+wing_sprites = [NodePath("Node/AnimatedSprite2D")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 collision_layer = 2
@@ -23,3 +145,18 @@ material = SubResource("StandardMaterial3D_yonr4")
 
 [node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_yonr4")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node"]
+visible = false
+position = Vector2(-368, 324)
+scale = Vector2(0.2832847, 0.25967744)
+sprite_frames = SubResource("SpriteFrames_0s87k")
+animation = &"animation"
+frame_progress = 0.22016583
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node"]
+libraries = {
+&"": SubResource("AnimationLibrary_4wqkx")
+}

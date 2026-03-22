@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://ca52yb5i5ot6e"]
+[gd_scene load_steps=47 format=4 uid="uid://ca52yb5i5ot6e"]
 
 [ext_resource type="Script" uid="uid://d0xlfghtlxf2a" path="res://Crow/character_body_3d.gd" id="1_5hwkx"]
 [ext_resource type="Script" uid="uid://dauw6ec6d3vuv" path="res://Crow/noose_bone.gd" id="1_ba1t2"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dsjrb13ig4gak" path="res://Crow/canstun.gd" id="9_yj6io"]
 [ext_resource type="Texture2D" uid="uid://2mlva161g07" path="res://Crow/sound_texture.png" id="10_hitqw"]
 [ext_resource type="Script" uid="uid://dx6ocglsn3v3n" path="res://Crow/stun.gd" id="10_s3d3b"]
+[ext_resource type="Texture2D" uid="uid://b16b87t5ljxew" path="res://Crow/UI indication.png" id="14_xhqd6"]
 
 [sub_resource type="Curve" id="Curve_hitqw"]
 _limits = [0.0, 5.0, 0.0, 1.0]
@@ -20935,9 +20936,11 @@ volume_db = 80.0
 wait_time = 15.0
 script = ExtResource("7_ku6k6")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("animation_player_2", "animation_player", "character")]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("animation_player_2", "progress", "timer", "animation_player", "character")]
 script = ExtResource("7_hitqw")
 animation_player_2 = NodePath("../AnimationPlayer")
+progress = NodePath("../Control/TextureProgressBar")
+timer = NodePath("../CooldownTimer")
 animation_player = NodePath("../Crow2/AnimationPlayer")
 character = NodePath("../Crow2")
 
@@ -20962,6 +20965,51 @@ speed = 1.5
 state_name = "stun"
 animation = "stun"
 metadata/_custom_type_script = "uid://cg8hvaar0rx7c"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 103.0
+offset_top = -18.0
+offset_right = 103.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -148.0
+offset_top = 21.0
+offset_right = -63.5
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "[Q]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.549
+anchor_right = 0.606
+anchor_bottom = 0.193
+offset_left = -147.948
+offset_top = 23.0
+offset_right = -147.612
+offset_bottom = 20.935997
+grow_horizontal = 2
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("14_xhqd6")
+texture_progress = ExtResource("14_xhqd6")
+tint_under = Color(1, 0, 0, 1)
 
 [connection signal="body_entered" from="Crow2/hitbox" to="StateMachine/Canstun" method="_on_hitbox_body_entered"]
 [connection signal="body_entered" from="effect_area" to="StateMachine/Idle" method="_on_effect_area_body_entered"]

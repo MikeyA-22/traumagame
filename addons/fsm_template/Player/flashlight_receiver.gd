@@ -3,31 +3,39 @@ extends SpotLight3D
 class_name FlashlightReceptor
 
 var flash_flag: bool
-@export var energy: float = 4
+
 var fs_sfx: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var on_sfx = preload("res://Music/sfx/flashlight turn on.MP3")
 var off_sfx = preload("res://Music/sfx/flashlight turn off.MP3")
-@export var flashlight: ItemData
+
 
 var battery_percent: int = 100
 var battery_difference: int = 20
 var info_statement: String = "OFF"
+var flashlight_data: ItemData = load("res://Resource/Flashlight.tres")
+
+
+@export var energy: float = 4
+
 @export_group("Battery Variables")
 @export var bat_timer: Timer
 @export var wait_time: float = 50
 @export var bat_min: int = 20
 
 
-@onready var inventory_display = $"../../../Model/Inventory/InventoryDisplay"
+var inventory_display
 
 @export var bat_image : Array[Texture2D]
 
 func _ready() -> void:
+	inventory_display = get_tree().root.find_child("InventoryDisplay", true, false)
 	light_energy = 0
 	SigBus.connect("FLASH", on_flashlight)
 	SigBus.connect("OFF_FLASH", off_flashlight)
 	SigBus.connect("BATTERIES", recharge_flashlight)
 	bat_timer.wait_time = wait_time
+	
+	print("FLASHLIGHT NAME IS: ", flashlight_data.item_name)
 	#print("inventory display is: ", inventory_display)
 	
 
@@ -85,7 +93,7 @@ func resource_display(info: Texture2D):
 	
 
 func set_info(info: Texture2D):
-	flashlight.item_info = info
+	flashlight_data.item_info = info
 
 func _on_battery_timer_timeout() -> void:
 	## EVERYTIME THE TIMER HITS 0, REDUCE PERCENTAGE BY 20

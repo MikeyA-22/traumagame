@@ -42,7 +42,6 @@ func velocity_by_input(input : InputPackage, delta: float) ->  Vector3:
 		new_velocity.x = lerp(body.velocity.x, 0.0, DECELERATION)
 		new_velocity.z = lerp(body.velocity.z, 0.0, DECELERATION)
 
-	if not body.is_on_floor():
-		new_velocity.y -= gravity * delta * dampener
+
 	
 	return new_velocity

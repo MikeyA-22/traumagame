@@ -255,24 +255,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -50.5
-offset_right = 380.0
-offset_bottom = 50.5
-grow_vertical = 2
-text = "WASD TO MOVE
-RIGHT CLICK TO INTERACT
-LEFT CLICK TO USE ITEM IN HAND
-ENTER TO PROGRESS DIALOGUE
-SWITCH ITEMS WITH TAB
-USE Q TO GET THE CROW TO STUN THE MONSTER
-GO TOWARDS THE CANDLES!!"
-
 [node name="StartButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(362, 167)
 layout_mode = 0

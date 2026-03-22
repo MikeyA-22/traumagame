@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxdhmx1s8d4ca"]
+
+[ext_resource type="Script" uid="uid://ceor6ah6rderp" path="res://Photobook/origami.gd" id="1_8m1yr"]
+[ext_resource type="Resource" uid="uid://ccvq07pb4ggia" path="res://Photobook/origami_data.tres" id="2_8m1yr"]
+[ext_resource type="Texture2D" uid="uid://c1n2o5ma2owxb" path="res://Photobook/origami.png" id="2_hfkk0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bm1f3"]
+size = Vector3(1, 0.5554199, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbh1l"]
+transparency = 1
+albedo_texture = ExtResource("2_hfkk0")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mdilw"]
+material = SubResource("StandardMaterial3D_pbh1l")
+size = Vector2(0.5, 0.5)
+
+[node name="Photo" type="CharacterBody3D"]
+script = ExtResource("1_8m1yr")
+photodata = ExtResource("2_8m1yr")
+metadata/_custom_type_script = "uid://cqeks8wkac7or"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28112793, 0)
+shape = SubResource("BoxShape3D_bm1f3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_mdilw")

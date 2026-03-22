@@ -52,11 +52,7 @@ func get_photodata(photo: Photo)-> PhotoData:
 	return photodata
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("photobook") and is_open:
-		close_photobook()
-		
-	elif event.is_action_pressed("photobook") and not is_open:
-		open_photobook()
+	pass
 		
 	
 func open_photobook():

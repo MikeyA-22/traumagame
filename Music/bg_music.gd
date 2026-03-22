@@ -19,5 +19,4 @@ func _process(delta: float) -> void:
 			play() # restart playback with the new stream
 		else:
 			stream = main
-			play()	
-	
+			play()

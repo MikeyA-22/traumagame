@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PhotoData" load_steps=3 format=3 uid="uid://ccvq07pb4ggia"]
+
+[ext_resource type="Script" uid="uid://clljws8qmx4hp" path="res://Photobook/PhotoData.gd" id="1_idf1h"]
+[ext_resource type="Texture2D" uid="uid://djd3kajjre7q1" path="res://Photobook/origami_tiny.png" id="1_yfyd3"]
+
+[resource]
+script = ExtResource("1_idf1h")
+photo_name = "Origami"
+photo_pic = ExtResource("1_yfyd3")
+photo_no = 2
+metadata/_custom_type_script = "uid://clljws8qmx4hp"

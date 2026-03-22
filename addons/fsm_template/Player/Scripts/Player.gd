@@ -10,7 +10,7 @@ class_name Player
 @onready var photobook = $Model/Photobook
 @onready var camera_mount = $LocalCamera
 @onready var visuals = $visuals as PlayerVisuals
-@onready var light = $"LocalCamera/Camera3D/Flashlight Receiver" as FlashlightReceptor
+
 
 @onready var interaction_catcher = $LocalCamera/Camera3D/InteractionCatcher
 

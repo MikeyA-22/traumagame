@@ -23,8 +23,7 @@ func gather_input() -> InputPackage:
 		if new_input.input_direction != Vector2.ZERO:
 			new_input.actions.append(walk_var)
 			if Game_Global.active_tut_index == 0:
-				SigBus.TUT_KEY_PRESSED.emit()
-				Game_Global.active_tut_index += 1
+				Game_Global.progress_tutorial()
 
 	
 	

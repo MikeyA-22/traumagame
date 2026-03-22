@@ -12,6 +12,7 @@ var eye_mat: StandardMaterial3D
 
 func _on_timeout() -> void:
 	set_eye_mat(0.75)
+	stop()
 
 
 func set_eye_mat(eye_mat_float):

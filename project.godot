@@ -23,6 +23,7 @@ UIAnimation="*res://addons/godot_ui_animations/UIAnimationHandler.tscn"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [dotnet]

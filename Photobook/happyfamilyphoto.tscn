@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://4gro7dit8urq"]
+
+[ext_resource type="Script" uid="uid://qrlshld6cjxm" path="res://Photobook/happyfamilyphoto.gd" id="1_8laqq"]
+[ext_resource type="Resource" uid="uid://orr50iwdbscf" path="res://Photobook/happy_family_photo_data.tres" id="2_f0jin"]
+[ext_resource type="Texture2D" uid="uid://cgatgb1xjrcwb" path="res://Photobook/happy_family_photo_tiny.jpg" id="2_ywkil"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0jin"]
+albedo_texture = ExtResource("2_ywkil")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_snr1e"]
+material = SubResource("StandardMaterial3D_f0jin")
+size = Vector2(0.4, 0.61)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wctel"]
+size = Vector3(1, 0.50390625, 1)
+
+[node name="Photo" type="CharacterBody3D"]
+script = ExtResource("1_8laqq")
+photodata = ExtResource("2_f0jin")
+time = 5.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_snr1e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24804688, 0)
+shape = SubResource("BoxShape3D_wctel")

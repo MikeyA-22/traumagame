@@ -8380,7 +8380,7 @@ speed = 2.0
 deaggro_radius = 12.0
 
 [node name="Monster _rig_v006" type="Node3D" parent="."]
-transform = Transform3D(-0.8, 0, -1.2079664e-07, 0, 0.8, 0, 1.2079664e-07, 0, -0.8, 0, 0, 0)
+transform = Transform3D(-0.91, 0, -1.3740619e-07, 0, 0.91, 0, 1.3740619e-07, 0, -0.91, 0, 0, 0)
 
 [node name="Plane_005" type="Node3D" parent="Monster _rig_v006"]
 transform = Transform3D(0.20449531, 0, 0, 0, 0.20449531, 0, 0, 0, 0.20449531, 0, 3.3473563, -0.18253821)
@@ -10868,9 +10868,9 @@ wait_time = 15.0
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_height_offset = 0.5
 path_postprocessing = 1
-max_neighbors = 2
+avoidance_enabled = true
+max_neighbors = 5
 keep_y_velocity = false
-debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
 
@@ -10971,6 +10971,7 @@ metadata/_custom_type_script = "uid://brjhpyb7tm77x"
 
 [node name="Go to Next Room" type="Node" parent="root/Selector/RoomSequencer" node_paths=PackedStringArray("fstep_player")]
 script = ExtResource("12_ralt7")
+speed = 3.0
 fstep_player = NodePath("../../../../walk player")
 UID = "Go to next Room"
 metadata/_custom_type_script = "uid://brjhpyb7tm77x"

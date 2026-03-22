@@ -11,8 +11,8 @@ func _ready() -> void:
 	item_data = load("res://Resource/pills.tres")
 	pill_images = pill_resource.pill_images
 	
-	messages = ["[color=red]Use [color=green]TAB[/color] to scroll through inventory
-	and [color=green]Z/Left click[/color]to switch[/color]"]
+	messages = ["[color=red]Use [color=green]MIDDLE MOUSE BUTTON[/color] to scroll through inventory
+	and [color=green]Left click[/color]to switch[/color]"]
 	
 	
 	pickable_action = {

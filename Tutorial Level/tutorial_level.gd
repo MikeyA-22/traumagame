@@ -16,6 +16,9 @@ extends Node3D
 @export var monster_resource : PackedScene
 var monster
 
+@export var lightswitch : light_switch
+
+
 
 func _ready() -> void:
 	next_label.visible = false
@@ -26,10 +29,10 @@ func _ready() -> void:
 	if Game_Global.save_game != null:
 		Game_Global.save_game.level = current_level
 	
-	#SigBus.connect("REVEALKEY", reveal_key)
+	
 
 func initial_message():
-	tut_dialogue_manager.show_message(["[color=red]WASD  or ARROW KEYS TO MOVE[/color]","[color=red] Use the [color=red] mouse to look around[/color]","[color=red]USE RIGHT CLICK OR E[/color][color=red]  TO BLOW OUT THE CANDLES 
+	tut_dialogue_manager.show_message(["[color=red]WASD  or ARROW KEYS TO MOVE[/color]","[color=red] Use the [color=red] mouse to look around[/color]","[color=red]USE RIGHT CLICK[/color][color=red]  TO BLOW OUT THE CANDLES 
 OR [/color][color=red]PICK UP THE FLASHLIGHT IN FRONT OF YOU![/color]"])
 	#dialogue_manager.show_messages(["
 #[color=red]WASD or Arrow keys[/color][color=red] TO MOVE[/color]",
@@ -64,13 +67,13 @@ func reveal_key(pos):
 	key.global_position = pos
 	print("key pos: ", key.global_position)
 	Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
+	dialogue_manager.show_messages(["[color=red]USE Q TO STUN!!![/color]"],dialogue_position.position, 5.5)
 	add_monster()
 	
 	
 func _on_state_changer_body_entered(body: Node3D) -> void:
 	print("reached")
 	if body == player:
-		#print("working")
 		
 		dialogue_manager.show_messages(["[color=red] WATCH OUT FOR THE MONSTER!! [/color]","[color=red][shake rate=5 level=10]USE[color=red] Q [/color] TO STUN!!",
 		"[color=red][shake rate=5 level=10] USE THE PILLS TO GET UR SANITY BACK!![/shake][/color]",
@@ -87,9 +90,10 @@ func reset_params():
 
 func _on_instruction_area_body_entered(body: Node3D) -> void:
 	if body == player:
-		dialogue_manager.show_messages(["[color=red]FIND THE [color=red] BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.25)
+		dialogue_manager.show_messages(["[color=red]FIND THE [color=red] BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.0)
 
 func add_monster():
+	lightswitch.light_color = Color.RED
 	monster = monster_resource.instantiate()
 	add_child(monster)
 	player.monster = monster

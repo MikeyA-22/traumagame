@@ -10,6 +10,9 @@ class_name CrowStateMachine
 @onready var monster : Enemy = player.monster
 var noise_intensity = 0.06
 @export var animation_player_2: AnimationPlayer
+
+@export var progress : TextureProgressBar
+@export var timer : CrowCooldownTimer
 #@onready var effect_area = $"../Area3D"
 
 ## var states : Dictionary #{ String: AIMove }
@@ -33,6 +36,7 @@ func _physics_process(delta: float) -> void:
 		switch_to(verdict[1])
 	current_state.update(delta)
 	
+	progress.value = 100 - (timer.time_left/timer.wait_time * 100)
 
 
 func switch_to(next_state_name: String):

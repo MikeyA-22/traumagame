@@ -14,8 +14,11 @@ class_name Inventory
 func _ready() -> void:
 	pass
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("tab") or Input.is_action_just_pressed("scroll_up") or Input.is_action_just_pressed("scroll_down"):
+	if Input.is_action_just_pressed("scroll_up"):
 		switch_item()
+	elif Input.is_action_just_pressed("scroll_down"):
+		switch_item_down()
+		
 
 
 func add(item: Pickable, use_message: bool):
@@ -36,6 +39,18 @@ func add(item: Pickable, use_message: bool):
 		#print("active_weapon has: ",right_hand.get_children())
 
 
+func switch_item_down():
+	if !items.is_empty():
+		#print(items)
+		var item_data: ItemData = load("res://Resource/%s.tres" % active_item.item_name)
+		items.insert(0,item_data)
+		if active_item.item_name != "Flashlight": active_item.free()
+		active_item = items.back()._load_item()
+		items.pop_back()
+		assign_item(active_item)
+		inventory_display.display(item_data)
+		
+		set_active_item(active_item)
 
 func switch_item():
 	if !items.is_empty():

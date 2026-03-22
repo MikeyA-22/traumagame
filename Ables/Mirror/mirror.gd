@@ -2,7 +2,7 @@ extends Interactable
 
 const SAVE_PATH = "user://save.tres"
 
-
+@onready var label : Label = $SAVELABEL
 func _ready() -> void:
 	SigBus.connect("SAVE", save)
 
@@ -23,5 +23,8 @@ func save(is_saved: bool) -> void:
 		is_saved = false
 		
 	else:
+		label.visible = true
+		await get_tree().create_timer(3.0).timeout
+		label.visible = false
 		is_saved = true
 		print("saved! LEVEL IS: ", Game_Global.save_game.level, " INVENTORY IS:", Game_Global.save_game.inventory_items, "ACTIVE ITEM IS:", Game_Global.save_game.active_item, " ACTIVE ITEM DATA IS: ", Game_Global.save_game.active_item.item_info)

@@ -45,7 +45,7 @@ func change_footsteps():
 		elif collider.is_in_group("CreakyWood"):
 			surface_name = "CreakyWood"
 		else:
-			surface_name = "Concrete"
+			surface_name = "Wood"
 		
 		if surface_name != current_surface_name:
 			current_surface_name = surface_name

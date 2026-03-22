@@ -11,12 +11,15 @@ class_name InventoryDisplay
 ##SERVES AS OUR DATA SOURCE FOR ACTIVE ITEMS(IF ANY)
 @onready var active_item_data: ItemData
 @onready var displayAnim: AnimationPlayer = $Displayanim
+@onready var label : Label = $VBoxContainer/Label
 func _ready() -> void:
 	pass
 
 func display(item_data: ItemData):
 	##clear image
 	item_info_image.texture = null
+	if label.visible == false:
+		label.visible = true
 	##check if item has information, then display if so
 	if item_data.item_info != null:
 		display_info(item_data.item_info)
@@ -28,5 +31,6 @@ func display(item_data: ItemData):
 
 func display_info(item_info_entry):
 	item_info_image.texture = item_info_entry
+	
 	#print(item_info.text)
 	
