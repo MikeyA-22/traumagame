@@ -10921,6 +10921,7 @@ metadata/_custom_type_script = "uid://c2i6ef7q1wxqq"
 [node name="Run after player" type="Node" parent="root/Selector/AttackSelector/Pursuit Sequencer" node_paths=PackedStringArray("fstep_player")]
 script = ExtResource("19_fd2cx")
 animation = "run"
+speed = 5
 fstep_player = NodePath("../../../../../run player")
 UID = "Run after player"
 metadata/_custom_type_script = "uid://brjhpyb7tm77x"

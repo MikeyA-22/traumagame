@@ -12,6 +12,7 @@ var progress_value
 
 func _ready() -> void:
 	scene_name = Game_Global.loadable_scene
+	Game_Global.save_game.level = Game_Global.loadable_scene
 	ResourceLoader.load_threaded_request(scene_name)
 	loading_anim.play("loading")
 	

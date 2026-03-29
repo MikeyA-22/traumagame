@@ -493,7 +493,7 @@ size = Vector2(0.02, 0.02)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wd78v"]
 emission_enabled = true
-emission = Color(0.7764706, 1, 1, 1)
+emission = Color(0.6509244, 0.8447404, 0.9970415, 1)
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_53ch1"]
@@ -3224,7 +3224,8 @@ photo = NodePath("tutv2/Card")
 key_data = ExtResource("2_kcaaw")
 player = NodePath("Player")
 monster_resource = ExtResource("4_vhkfr")
-lightswitch = NodePath("tutv2/LightSwitch2/light_switch")
+lightswitch = NodePath("tutv2/MIRROR/Omni")
+file_name = "res://Tutorial Level/tutorial_level.tscn"
 
 [node name="tutv2" type="Node3D" parent="Node3D/TutV2" groups=["nav_mesh_group"]]
 
@@ -3248,7 +3249,7 @@ cull_near = 0.54
 
 [node name="Omni" type="SpotLight3D" parent="Node3D/TutV2/tutv2/MIRROR"]
 transform = Transform3D(2.7160356, 1.2938437e-09, -0.05826434, 0.058264337, -1.2062286e-07, 2.7160356, -1.2934577e-09, -2.7166605, -1.2062286e-07, -0.53646946, 1.9708505, -0.8366165)
-light_color = Color(0.7764706, 1, 1, 1)
+light_color = Color(0.6509244, 0.8447404, 0.9970415, 1)
 light_energy = 5.0
 shadow_enabled = true
 spot_range = 3.915
@@ -3308,7 +3309,7 @@ connected_light = [NodePath("../../MIRROR/Omni")]
 emission_obj = [NodePath("../../Cube_026")]
 light_value = 5.0
 on = true
-light_color = Color(0.7764706, 1, 1, 1)
+light_color = Color(0.6509244, 0.8447404, 0.9970415, 1)
 
 [node name="Cube_024" type="MeshInstance3D" parent="Node3D/TutV2/tutv2"]
 transform = Transform3D(1, 0, 0, 0, 0.131592, 0, 0, 0, 1, 0, 3.10455, 7.46301)

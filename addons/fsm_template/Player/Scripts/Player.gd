@@ -54,6 +54,7 @@ func set_items():
 	inventory.items = Game_Global.save_game.inventory_items
 	active_item = Game_Global.save_game.active_item
 	photos = Game_Global.save_game.photos
+	Game_Global.save_game.level = get_tree().current_scene.scene_file_path
 	photobook.photo_datas = photos
 	photobook.set_photos()
 	

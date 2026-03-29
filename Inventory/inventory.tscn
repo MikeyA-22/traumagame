@@ -148,20 +148,32 @@ script = ExtResource("2_xqyry")
 [node name="VBoxContainer" type="VBoxContainer" parent="InventoryDisplay"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.554
+anchor_left = -0.39200002
+anchor_top = -0.060000002
 anchor_right = 1.3180001
-anchor_bottom = 1.0
-offset_left = -0.0079956055
+anchor_bottom = 1.0600001
+offset_left = 0.016002655
+offset_top = -0.03999996
 offset_right = -0.06401062
+offset_bottom = 0.039993286
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ItemImage" type="TextureRect" parent="InventoryDisplay/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
+
+[node name="NextImage" type="TextureRect" parent="InventoryDisplay/VBoxContainer/ItemImage"]
+z_index = 2
+layout_mode = 0
+offset_left = 142.0
+offset_top = -10.5
+offset_right = 182.0
+offset_bottom = 29.5
+expand_mode = 1
 
 [node name="ItemName" type="RichTextLabel" parent="InventoryDisplay/VBoxContainer"]
 custom_minimum_size = Vector2(0, 25)

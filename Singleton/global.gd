@@ -41,7 +41,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	RenderingServer.global_shader_parameter_set("warp_strength", madness_increment)
-	if madness_increment > 0.06:
+	if madness_increment > 0.03:
 		madness_increment = 0
 		get_tree().change_scene_to_file("res://Menu/Game_over.tscn")
 		current_gState = game_state.STATE_END_GAME

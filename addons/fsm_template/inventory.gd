@@ -22,6 +22,8 @@ func _process(delta: float) -> void:
 
 
 func add(item: Pickable, use_message: bool):
+	print("ADDING: ", item.name)
+	
 	if use_message:
 		SigBus.PICKING_UP.emit(item.messages, item.time)
 	if right_hand.get_children().is_empty() and left_hand.get_children().is_empty():
@@ -31,8 +33,10 @@ func add(item: Pickable, use_message: bool):
 		var itemdata: ItemData = load("res://Resource/%s.tres" % item.item_name)
 		items.append(itemdata)
 		item.free()
+		
 	if Game_Global.save_game != null:
 		Game_Global.save_game.inventory_items = items
+	inventory_display.display_next()
 		#object.free()
 		#print("objects array has: ", items)
 		#print("inventory node has: ",items)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://delu2qjrw6teu"]
+[gd_scene load_steps=10 format=3 uid="uid://delu2qjrw6teu"]
 
 [ext_resource type="Script" uid="uid://ctd4r0bvuy052" path="res://Mirror3D-d740c3223ca4a7ef4a7586a572014cb79844d8b6/addons/Mirror3D/Mirror3D.gd" id="1_mtvun"]
+[ext_resource type="Shader" uid="uid://0w718ij8g0pa" path="res://Shaders/overlay.gdshader" id="2_78onl"]
 [ext_resource type="Shader" uid="uid://bjf6fmae00yno" path="res://Mirror3D-d740c3223ca4a7ef4a7586a572014cb79844d8b6/addons/Mirror3D/Mirror3D.gdshader" id="2_qi7e4"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4kaam"]
@@ -8,15 +9,23 @@
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_707dm"]
 noise = SubResource("FastNoiseLite_4kaam")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_34v4g"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ds16"]
+render_priority = 1
+shader = ExtResource("2_78onl")
+shader_parameter/pixel_size = 2.0
+shader_parameter/levels = 0.0
+shader_parameter/gamma = Vector2(0, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_78onl"]
 viewport_path = NodePath("Viewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iv7pg"]
 resource_local_to_scene = true
-render_priority = 0
+render_priority = 1
+next_pass = SubResource("ShaderMaterial_5ds16")
 shader = ExtResource("2_qi7e4")
 shader_parameter/color = Color(0.9, 0.97, 0.94, 1)
-shader_parameter/mirror_texture_linear = SubResource("ViewportTexture_34v4g")
+shader_parameter/mirror_texture_linear = SubResource("ViewportTexture_78onl")
 shader_parameter/use_mirror_texture_linear = true
 shader_parameter/distortion_texture = SubResource("NoiseTexture2D_707dm")
 shader_parameter/distortion_strength = 0.0
@@ -33,12 +42,17 @@ distortion_texture = SubResource("NoiseTexture2D_707dm")
 size = Vector2i(200, 200)
 
 [node name="Camera" type="Camera3D" parent="Viewport"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 1.682942, 1.9177022, -3.0806046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.716673, 2.430194, 3.1105967)
 keep_aspect = 0
 projection = 2
-frustum_offset = Vector2(1.682942, -1.9177022)
-near = 3.1306045
-far = 54.0
+frustum_offset = Vector2(-3.716673, -2.430194)
+near = 3.1605966
+far = 55.421745
 
 [node name="Quad" type="MeshInstance3D" parent="."]
 mesh = SubResource("QuadMesh_5i7m6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5093225)
+light_energy = 2.67
+omni_range = 1.9558755

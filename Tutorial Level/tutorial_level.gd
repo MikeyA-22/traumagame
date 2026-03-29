@@ -16,9 +16,9 @@ extends Node3D
 @export var monster_resource : PackedScene
 var monster
 
-@export var lightswitch : light_switch
+@export var lightswitch : Light3D
 
-
+@export var file_name :String
 
 func _ready() -> void:
 	next_label.visible = false
@@ -27,7 +27,7 @@ func _ready() -> void:
 	photo.connect("picked_up", Callable(self,"reveal_key"))
 	reset_params()
 	if Game_Global.save_game != null:
-		Game_Global.save_game.level = current_level
+		Game_Global.save_game.level = file_name
 	
 	
 

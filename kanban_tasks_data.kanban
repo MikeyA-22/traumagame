@@ -51,25 +51,26 @@
 			"uuid": "fd417562-0c7f-4976-af9f-786b2edaca23",
 			"title": "Todo: NEXT WEEK!!",
 			"tasks": [
-				"e9e632dc-acc2-475f-8f15-acf854292392",
-				"121d99c8-c491-4397-b4ea-d677e5dc4754",
-				"2be82a9f-8e32-4ec4-918e-19cca05f9c88",
-				"f1699121-2497-428a-a949-f71dd1c3716a",
-				"df747c11-5f11-489c-a2a6-c0185da7b221"
+				"e9e632dc-acc2-475f-8f15-acf854292392"
 			]
 		},
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing: BY FRIDAY!!",
 			"tasks": [
-				"b3d9a05e-18e4-4637-a13a-030058b3c22e",
-				"f9c65ace-fa64-45b9-892f-737d7a0a5e56"
+				"121d99c8-c491-4397-b4ea-d677e5dc4754"
 			]
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"1f3cb551-2027-4308-b4e1-cb5159bac099",
+				"f9c65ace-fa64-45b9-892f-737d7a0a5e56",
+				"b3d9a05e-18e4-4637-a13a-030058b3c22e",
+				"2be82a9f-8e32-4ec4-918e-19cca05f9c88",
+				"df747c11-5f11-489c-a2a6-c0185da7b221",
+				"f1699121-2497-428a-a949-f71dd1c3716a",
 				"4a8bf11f-0bda-4af5-be64-e6e68294bd3c",
 				"25b56742-bdf6-47f5-b553-fe213102ecc0",
 				"80510c3e-2326-4a17-86c9-4d1754f78815",
@@ -658,6 +659,13 @@
 			"title": "BUGGY WALLS",
 			"description": "",
 			"category": "df0c15ae-a997-47af-ba76-430df8c7aefc",
+			"steps": []
+		},
+		{
+			"uuid": "1f3cb551-2027-4308-b4e1-cb5159bac099",
+			"title": "Sonic Blast redo",
+			"description": "",
+			"category": "6265ed33-9580-4b92-8c00-e02a65e2cf90",
 			"steps": []
 		}
 	],

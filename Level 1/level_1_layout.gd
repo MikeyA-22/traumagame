@@ -23,7 +23,7 @@ var monster : Enemy
 @export var current_level:int = 0
 
 
-
+@export var file_name : String
 
 
 func _ready() -> void:
@@ -33,7 +33,7 @@ func _ready() -> void:
 	photo.connect("picked_up", Callable(self,"reveal_path"))
 	reset_params()
 	if Game_Global.save_game != null:
-		Game_Global.save_game.level = current_level
+		Game_Global.save_game.level = file_name
 	spawn_monster()
 	Game_Global.current_gState = Game_Global.game_state.STATE_ENEMY_ATTACK
 	
