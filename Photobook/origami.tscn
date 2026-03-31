@@ -8,6 +8,7 @@
 size = Vector3(1, 0.5554199, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbh1l"]
+render_priority = 1
 transparency = 1
 albedo_texture = ExtResource("2_hfkk0")
 
@@ -25,4 +26,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28112793, 0)
 shape = SubResource("BoxShape3D_bm1f3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, -0.86602545, 0, 0.86602545, 0.49999997, 0, 0, 0)
 mesh = SubResource("PlaneMesh_mdilw")
