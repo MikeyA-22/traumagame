@@ -1,34 +1,116 @@
-[gd_scene load_steps=67 format=3 uid="uid://d0ebjwfmnk4re"]
+[gd_scene load_steps=144 format=4 uid="uid://d0ebjwfmnk4re"]
 
 [ext_resource type="PackedScene" uid="uid://cr68y68uy174d" path="res://Level 3 Finale/Levl3RealFinal.glb" id="1_lgq0g"]
 [ext_resource type="Texture2D" uid="uid://bberi3l5gvyi3" path="res://Tutorial Level/tutv2/tutv2_counter_Material_BaseMap.png" id="2_g2ge6"]
+[ext_resource type="Texture2D" uid="uid://c3rjwwv01e0lt" path="res://textures/bed01_DefaultMaterial_BaseMap.png" id="2_qaudl"]
 [ext_resource type="Texture2D" uid="uid://vbgmf372pgys" path="res://Tutorial Level/carpet_carpet_Material_BaseMap.png" id="2_qu7ef"]
 [ext_resource type="Texture2D" uid="uid://c36hg54cdxard" path="res://Tutorial Level/carpet_carpet_Material_Normal.png" id="3_5tu3e"]
+[ext_resource type="Texture2D" uid="uid://dlxqsmoxyj2u3" path="res://textures/bed01_DefaultMaterial_Normal.png" id="3_70eih"]
 [ext_resource type="Texture2D" uid="uid://4f3us7wrio37" path="res://Tutorial Level/tutv2/tutv2_counter_Material_Normal.png" id="3_bqn6s"]
 [ext_resource type="Texture2D" uid="uid://bkkt1rv5c4nta" path="res://textures/land_light_DefaultMaterial_BaseMap.001.png" id="4_2nsuc"]
 [ext_resource type="Texture2D" uid="uid://rethhjwxxvob" path="res://Tutorial Level/tutv2/tutv2_upcount_DefaultMaterial_BaseMap.png" id="4_1455q"]
+[ext_resource type="Texture2D" uid="uid://bxtwgv7oacjfa" path="res://textures/bed02_DefaultMaterial_BaseMap.png" id="4_pjjjv"]
+[ext_resource type="Texture2D" uid="uid://1pb6u6jss4bx" path="res://textures/bed02_DefaultMaterial_Normal.png" id="5_b8nwm"]
 [ext_resource type="Texture2D" uid="uid://bsejfscj5jjje" path="res://Tutorial Level/tutv2/tutv2_upcount_DefaultMaterial_Normal.png" id="5_mk537"]
 [ext_resource type="Texture2D" uid="uid://uq0u0hfq7d1e" path="res://textures/land_light_DefaultMaterial_Normal.001.png" id="5_uwh6o"]
 [ext_resource type="Texture2D" uid="uid://brx5h6aa4ml6g" path="res://Level 1/walls (2)_Substance_graph_basecolor.png" id="6_mgowd"]
+[ext_resource type="Texture2D" uid="uid://dyveo7wv4vaa0" path="res://textures/kitchen_desk_DefaultMaterial_BaseMap.png" id="7_5dxme"]
 [ext_resource type="Texture2D" uid="uid://rdivixlb3017" path="res://Level 1/walls (2)_Substance_graph_metallic-Substance_graph_roughness.png" id="7_ypuh0"]
 [ext_resource type="Texture2D" uid="uid://djvuh86npfjop" path="res://Tutorial Level/tutv2/tutv2_couch_DefaultMaterial_BaseMap.png" id="8_8ugbm"]
 [ext_resource type="Texture2D" uid="uid://cd1cs4bybrmo3" path="res://Level 1/walls (2)_Substance_graph_normal.png" id="8_smyl3"]
 [ext_resource type="Texture2D" uid="uid://mbfv3c3v5uiv" path="res://Tutorial Level/tutv2/tutv2_couch_DefaultMaterial_Normal.png" id="9_46ga4"]
 [ext_resource type="Texture2D" uid="uid://dkl50y5oicfxe" path="res://Level 2/WalkableLevel2_ground_albedo.png" id="9_dte5f"]
+[ext_resource type="Texture2D" uid="uid://bglsae3q6fk58" path="res://Tutorial Level/tutv2/tutv2_chair(1)_DefaultMaterial_BaseMap.png" id="10_sy6an"]
 [ext_resource type="Texture2D" uid="uid://b5q5vcfsf76vy" path="res://Tutorial Level/tutv2/tutv2_door_DefaultMaterial_BaseMap.png" id="10_u4uya"]
 [ext_resource type="Texture2D" uid="uid://ps4e5vfu51r1" path="res://Level 2/Level2Real_floor_washroom_albedo.png" id="10_xxrc3"]
 [ext_resource type="Texture2D" uid="uid://gk7ap4y7srh" path="res://Tutorial Level/tutv2/tutv2_door_DefaultMaterial_Normal.png" id="11_63o1u"]
+[ext_resource type="Texture2D" uid="uid://c6sueksire8q2" path="res://Tutorial Level/tutv2/tutv2_chair(1)_DefaultMaterial_Normal.png" id="11_ccc70"]
 [ext_resource type="Texture2D" uid="uid://27r2lc1k5vs3" path="res://Set Dressing/plug_plug_DefaultMaterial_BaseMap.png" id="11_iw72g"]
 [ext_resource type="Texture2D" uid="uid://d0mpt3cgvit37" path="res://textures/microWave_albedo.png" id="12_7j1m0"]
 [ext_resource type="Texture2D" uid="uid://g6g3f84gxcgu" path="res://textures/nifeholder_albedo.png" id="13_6qylr"]
 [ext_resource type="Shader" uid="uid://u44vjetvge3c" path="res://Shaders/ps1_model.gdshader" id="13_20xw7"]
 [ext_resource type="Texture2D" uid="uid://d2m4jypexap81" path="res://textures/tableCloth_DefaultMaterial_BaseMap.png" id="14_4lskt"]
+[ext_resource type="Texture2D" uid="uid://c4wlvapymp2el" path="res://Tutorial Level/tutv2/tutv2_fridge_DefaultMaterial_BaseMap.png" id="16_28mfc"]
+[ext_resource type="Texture2D" uid="uid://cmtody22af888" path="res://Tutorial Level/tutv2/tutv2_fridge_DefaultMaterial_Normal.png" id="17_g0lm4"]
 [ext_resource type="Texture2D" uid="uid://dxrwy4lh58126" path="res://textures/laundry cab_Material_BaseMap.png" id="17_wpha8"]
 [ext_resource type="Texture2D" uid="uid://cqd8dliokjlcs" path="res://textures/laundry cab_Material_Normal.png" id="18_1reob"]
 [ext_resource type="Texture2D" uid="uid://c7qcvv2tp4vtn" path="res://textures/laundry cab_Material.005_BaseMap.png" id="19_ncidx"]
+[ext_resource type="Texture2D" uid="uid://bttrpwcrgi4p2" path="res://Tutorial Level/tutv2/tutv2_tv_Stand_DefaultMaterial_BaseMap.png" id="20_fj64e"]
 [ext_resource type="Texture2D" uid="uid://by5ypntewwdxo" path="res://textures/laundry cab_Material.005_Normal.png" id="20_hy2f5"]
 [ext_resource type="Texture2D" uid="uid://dld0g1aba1fvt" path="res://textures/cab2_Material_BaseMap.png" id="21_1455q"]
+[ext_resource type="Texture2D" uid="uid://br2ysjio7ppjt" path="res://Tutorial Level/tutv2/tutv2_tv_Stand_DefaultMaterial_Normal.png" id="21_unw12"]
 [ext_resource type="Texture2D" uid="uid://cqq36m2n48rpn" path="res://textures/cab2_Material_Normal.png" id="22_mk537"]
+[ext_resource type="Texture2D" uid="uid://hpt41kdcqsa0" path="res://textures/living_room_chair_DefaultMaterial_BaseMap.png" id="22_sbxkg"]
+[ext_resource type="Texture2D" uid="uid://co2ucbxadgdop" path="res://textures/living_room_chair_DefaultMaterial_Normal.png" id="23_ove07"]
+[ext_resource type="Texture2D" uid="uid://752m12p12it7" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_BaseMap.png" id="24_2ym2c"]
+[ext_resource type="Texture2D" uid="uid://p0tgyr6dkd0x" path="res://Tutorial Level/tutv2/tutv2_tolet_DefaultMaterial_Normal.png" id="25_f0gas"]
+[ext_resource type="Texture2D" uid="uid://cblb0yd08n8fh" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_BaseMap.png" id="26_64g68"]
+[ext_resource type="Texture2D" uid="uid://cqb6qdgvo3v7p" path="res://Tutorial Level/tutv2/tutv2_bathtub_DefaultMaterial_Normal.png" id="27_q6nx6"]
+[ext_resource type="Texture2D" uid="uid://8p0j7s0fpbe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_BaseMap.png" id="28_acbr1"]
+[ext_resource type="Texture2D" uid="uid://c00y01ohyjpe" path="res://Tutorial Level/tutv2/tutv2_sink_Material_Normal.png" id="29_dv1wg"]
+[ext_resource type="Texture2D" uid="uid://6k8r6ajdc3bc" path="res://Tutorial Level/tutv2/tutv2_can_DefaultMaterial_BaseMap.png" id="30_igvlp"]
+[ext_resource type="Texture2D" uid="uid://yaeyxpmw1364" path="res://Tutorial Level/tutv2/tutv2_can_DefaultMaterial_Normal.png" id="31_1ijia"]
+[ext_resource type="Texture2D" uid="uid://cxvlwqbmavvpb" path="res://Tutorial Level/tutv2/tutv2_tv_DefaultMaterial_BaseMap.png" id="32_jxbxw"]
+[ext_resource type="Texture2D" uid="uid://dshk81pqs43fj" path="res://Tutorial Level/tutv2/tutv2_tv_DefaultMaterial_Normal.png" id="33_dl7hx"]
+[ext_resource type="Texture2D" uid="uid://cirxhmkr8ynmo" path="res://Tutorial Level/tutv2/tutv2_ac_Material_BaseMap.png" id="36_fmewj"]
+[ext_resource type="Texture2D" uid="uid://b51jpqg2dg2en" path="res://Tutorial Level/tutv2/tutv2_ac_Material_Normal.png" id="37_ukf8l"]
+[ext_resource type="Texture2D" uid="uid://c1bsqk1aselj6" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_BaseMap.png" id="38_46tp0"]
+[ext_resource type="Texture2D" uid="uid://cdlq44rg6fjrw" path="res://Tutorial Level/tutv2/tutv2_oven_DefaultMaterial_Normal.png" id="39_lxjwc"]
+[ext_resource type="Texture2D" uid="uid://bi4itvmnlyxxt" path="res://textures/night stand 2_Material_BaseMap.png" id="48_hguxb"]
+[ext_resource type="Texture2D" uid="uid://bk2yq5rtccggc" path="res://textures/night stand 2_Material_Normal.png" id="49_kyk1r"]
+[ext_resource type="Texture2D" uid="uid://6052by5hypgp" path="res://textures/nightstand_Material_BaseMap.png" id="50_ijquo"]
+[ext_resource type="Texture2D" uid="uid://cnolv1w7j8sf4" path="res://textures/nightstand_Material_Normal.png" id="51_gvtc5"]
+[ext_resource type="Texture2D" uid="uid://drn086cnsul40" path="res://textures/office_desk_DefaultMaterial_BaseMap.png" id="54_ca765"]
+[ext_resource type="Texture2D" uid="uid://cm1dngjfrhe5j" path="res://textures/office_desk_DefaultMaterial_Normal.png" id="55_cdnbr"]
+[ext_resource type="Texture2D" uid="uid://bondeiqflxx7u" path="res://textures/cab03_DefaultMaterial_BaseMap.png" id="56_xok6e"]
+[ext_resource type="Texture2D" uid="uid://3n6ee34cgxwa" path="res://textures/cab03_DefaultMaterial_Normal.png" id="57_xvkdi"]
+[ext_resource type="Texture2D" uid="uid://c85bbfit0iiww" path="res://Level 2/Level2Real_baseboard(White)_albedo.png" id="62_n2yho"]
+[ext_resource type="PackedScene" uid="uid://b4swyp6bu6dje" path="res://Ables/Mirror/mirror.tscn" id="66_h1mdf"]
+[ext_resource type="PackedScene" uid="uid://delu2qjrw6teu" path="res://Mirror3D-d740c3223ca4a7ef4a7586a572014cb79844d8b6/addons/Mirror3D/Mirror3D.tscn" id="67_3i27y"]
+[ext_resource type="PackedScene" uid="uid://dsqiwbyb6i22p" path="res://Set Dressing/beer_can.glb" id="68_kptkv"]
+[ext_resource type="PackedScene" uid="uid://cemos66uc40fv" path="res://Set Dressing/photo.glb" id="69_vbvbs"]
+[ext_resource type="PackedScene" uid="uid://u4i78b3ti40b" path="res://Set Dressing/paperBox.glb" id="70_8psxm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpiqp"]
+resource_name = "bed01"
+cull_mode = 2
+albedo_texture = ExtResource("2_qaudl")
+normal_enabled = true
+normal_texture = ExtResource("3_70eih")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5s0fh"]
+resource_name = "bed02"
+cull_mode = 2
+albedo_texture = ExtResource("4_pjjjv")
+normal_enabled = true
+normal_texture = ExtResource("5_b8nwm")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixlr3"]
+resource_name = "bed02"
+cull_mode = 2
+albedo_texture = ExtResource("4_pjjjv")
+normal_enabled = true
+normal_texture = ExtResource("5_b8nwm")
+texture_filter = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ng27i"]
+render_priority = 0
+shader = ExtResource("13_20xw7")
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 0.0
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("7_5dxme")
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/affine_mapping = true
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.5250000249375
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ic6on"]
 resource_name = "Material"
@@ -36,6 +118,31 @@ transparency = 1
 albedo_texture = ExtResource("2_qu7ef")
 normal_enabled = true
 normal_texture = ExtResource("3_5tu3e")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yildw"]
+render_priority = 0
+shader = ExtResource("13_20xw7")
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 0.0
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("7_5dxme")
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/affine_mapping = true
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.5250000249375
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myr1b"]
+resource_name = "Material.009"
+cull_mode = 2
+albedo_texture = ExtResource("10_sy6an")
+normal_enabled = true
+normal_texture = ExtResource("11_ccc70")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai5vx"]
 resource_name = "Material.003"
@@ -53,6 +160,15 @@ normal_enabled = true
 normal_texture = ExtResource("3_bqn6s")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5loq"]
+resource_name = "Material.006"
+cull_mode = 2
+albedo_texture = ExtResource("16_28mfc")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("17_g0lm4")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5ido"]
 resource_name = "Material.010"
 cull_mode = 2
@@ -60,6 +176,66 @@ albedo_texture = ExtResource("8_8ugbm")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("9_46ga4")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0ska"]
+resource_name = "Material.011"
+cull_mode = 2
+albedo_texture = ExtResource("20_fj64e")
+normal_enabled = true
+normal_texture = ExtResource("21_unw12")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lo15"]
+resource_name = "livingroomtable"
+cull_mode = 2
+albedo_texture = ExtResource("22_sbxkg")
+normal_enabled = true
+normal_texture = ExtResource("23_ove07")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pd7u"]
+resource_name = "Material.013"
+cull_mode = 2
+albedo_texture = ExtResource("24_2ym2c")
+normal_enabled = true
+normal_texture = ExtResource("25_f0gas")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfwrb"]
+resource_name = "Material.018"
+cull_mode = 2
+albedo_texture = ExtResource("26_64g68")
+roughness = 0.65
+normal_enabled = true
+normal_texture = ExtResource("27_q6nx6")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr3yh"]
+resource_name = "Material.019"
+cull_mode = 2
+albedo_texture = ExtResource("28_acbr1")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("29_dv1wg")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1h7tc"]
+resource_name = "Material.020"
+cull_mode = 2
+albedo_texture = ExtResource("30_igvlp")
+normal_enabled = true
+normal_texture = ExtResource("31_1ijia")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_031tl"]
+resource_name = "Material.012"
+cull_mode = 2
+albedo_texture = ExtResource("32_jxbxw")
+metallic = 0.513636
+roughness = 0.577273
+normal_enabled = true
+normal_texture = ExtResource("33_dl7hx")
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smx47"]
@@ -88,12 +264,38 @@ normal_enabled = true
 normal_texture = ExtResource("3_bqn6s")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q724w"]
+resource_name = "livingroomtable"
+cull_mode = 2
+albedo_texture = ExtResource("22_sbxkg")
+normal_enabled = true
+normal_texture = ExtResource("23_ove07")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qu7ef"]
 resource_name = "Material.005"
 cull_mode = 2
 albedo_texture = ExtResource("2_g2ge6")
 normal_enabled = true
 normal_texture = ExtResource("3_bqn6s")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urrk4"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("36_fmewj")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("37_ukf8l")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dfx7"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("38_46tp0")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("39_lxjwc")
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q72t"]
@@ -105,6 +307,14 @@ normal_enabled = true
 normal_texture = ExtResource("11_63o1u")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_od3wi"]
+resource_name = "livingroomtable"
+cull_mode = 2
+albedo_texture = ExtResource("22_sbxkg")
+normal_enabled = true
+normal_texture = ExtResource("23_ove07")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gndmj"]
 resource_name = "Material.022"
 cull_mode = 2
@@ -114,6 +324,15 @@ normal_enabled = true
 normal_texture = ExtResource("11_63o1u")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6f4fo"]
+resource_name = "Material.006"
+cull_mode = 2
+albedo_texture = ExtResource("16_28mfc")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("17_g0lm4")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ofnjs"]
 resource_name = "Material.010"
 cull_mode = 2
@@ -121,6 +340,14 @@ albedo_texture = ExtResource("8_8ugbm")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("9_46ga4")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7htsn"]
+resource_name = "Material.020"
+cull_mode = 2
+albedo_texture = ExtResource("30_igvlp")
+normal_enabled = true
+normal_texture = ExtResource("31_1ijia")
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gb2f"]
@@ -139,6 +366,24 @@ albedo_texture = ExtResource("10_u4uya")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("11_63o1u")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qtsmi"]
+resource_name = "livingroomtable"
+cull_mode = 2
+albedo_texture = ExtResource("22_sbxkg")
+normal_enabled = true
+normal_texture = ExtResource("23_ove07")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d70xo"]
+resource_name = "Material.012"
+cull_mode = 2
+albedo_texture = ExtResource("32_jxbxw")
+metallic = 0.513636
+roughness = 0.577273
+normal_enabled = true
+normal_texture = ExtResource("33_dl7hx")
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxrmk"]
@@ -205,6 +450,15 @@ normal_enabled = true
 normal_texture = ExtResource("20_hy2f5")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7djh8"]
+resource_name = "laundry_sink"
+cull_mode = 2
+albedo_texture = ExtResource("19_ncidx")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("20_hy2f5")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2cnb"]
 resource_name = "laundry_sink"
 cull_mode = 2
@@ -214,6 +468,33 @@ normal_enabled = true
 normal_texture = ExtResource("20_hy2f5")
 texture_filter = 0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmfji"]
+resource_name = "nightStand2"
+cull_mode = 2
+albedo_texture = ExtResource("48_hguxb")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("49_kyk1r")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lqov"]
+resource_name = "nightStand2"
+cull_mode = 2
+albedo_texture = ExtResource("48_hguxb")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("49_kyk1r")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mip0b"]
+resource_name = "nightStand01"
+cull_mode = 2
+albedo_texture = ExtResource("50_ijquo")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("51_gvtc5")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6qqx"]
 resource_name = "cab02"
 cull_mode = 2
@@ -221,6 +502,23 @@ albedo_texture = ExtResource("21_1455q")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("22_mk537")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5raq"]
+resource_name = "office_desk"
+cull_mode = 2
+albedo_texture = ExtResource("54_ca765")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("55_cdnbr")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2whf"]
+resource_name = "cab03"
+cull_mode = 2
+albedo_texture = ExtResource("56_xok6e")
+normal_enabled = true
+normal_texture = ExtResource("57_xvkdi")
 texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1455q"]
@@ -235,6 +533,47 @@ roughness_texture_channel = 1
 normal_enabled = true
 normal_scale = 0.0
 normal_texture = ExtResource("8_smyl3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gxfa"]
+resource_name = "landLamp_001"
+cull_mode = 2
+roughness = 0.5
+normal_enabled = true
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_umu4q"]
+_surfaces = [{
+"aabb": AABB(-0.40690035, -0.7313459, -0.42093143, 0.8138007, 1.9401097, 0.84186286),
+"format": 34896613377,
+"index_count": 684,
+"index_data": PackedByteArray("PgA/AAAAAAA/AAIAPgAiAD8APwAiAAIAAABAAD4AAAACAEAAQQAiAD4AQQA+AAQAPgBAAAQAQQABACIABAABAEEAAQBCACIABABCAAEAQwBCAAQAQwAHAEIAQwAEAAkACQAHAEMABwAFAEIACQAFAAcAQgAFACIACQAEAEQARAAEAEAACAAFAAkACAAJAEQACABFAAUARABFAAgABQAjACIAAgAiACMARQAGAAUARAAGAEUABgAjAAUAAwAGAEQAAwBGAAYARgAjAAYAAwBEAEcARwBGAAMARwAjAEYARwBEAEAASAACACMAQAACAEgAJAAjAEcAJABHAEAAJABIACMAQABIACQASQBKAAsACwBKAAoACwBLAEkACwAKAEsASgBJAEwATABJAE0ATABOAEoATQBJAA4ASQBLAA4ATQAMAEwADgAMAE0AJgBOAEwADAAmAEwATgAoAEoASgAoAAoATgAmACgAKABPAAoACgBPAFAASwAKAFAATwAoAFEATwBRAFAAKAAmAFEAUABSAEsAUwAmAAwAVABSAFAAUABRAFQAUgANAEsAUgBUAA0ADQBVAEsADgBLAFUAUQBWAFQADQBUAA8AVABWAA8ADQAPACcAJwBVAA0AVgAqAA8AVgBRACoAJwAPAFcADwAqAFcAVwBVACcAKgBYAFcAKgBRACkAWAAqACkAKQBRACYAVwBYAFkAWQBVAFcAWAApAFkAWQAQAFUAWgApACYAUwBaACYAWQApABEAEQAQAFkAWwApAFoAKQBbABEAEABcAFUAEQBcABAAXAAOAFUAEQBbAF0AXQBcABEAWwBaAF0AXgAOAFwAXQBeAFwAXgAlAA4AJQBeAF0AXQBaACUAWgBTACUADgAlAAwAJQBTAAwAXwBgABQAKwBgAF8AFABgAGEAYgBgACsAFABhADAAYgBjAGAAYgArAGMAYQBgAGQAMABhAGQAYABjAGQALAArAF8AGQBfABQALABfABkAGQAUAGUAZQAUADAAZgAZAGUAZQAwADUANQBmAGUAHQAZAGYAHQAsABkAOAAdAGYAZwArACwAZgA2ADgANgBmADUAKwBnABIAYwArABIALABoAGcAPQAsAB0APQBoACwAHwA9AB0AHwAdADgAaAA9ADwAaQA9AB8APAA9AGkAaQAfADwAaAAVAGcAEgBnABUAPAAaAGgAGgAVAGgAIQAaADwAPAAfAGoAIQA8AGoAOABrAB8AOAA2AGsAawA5AB8AHwA5AGoANgAgAGsAIAA5AGsAHAAgADYAHAA5ACAANQAcADYAagA7ACEAIQA7ABoAOwAuABoAGgAuABUAOgA7AGoAbAA7ADoAOwBsAC4AOgBqAB4AHgBqADkAbAA6ABsAGwA6AB4ALQAVAC4AEgAVAC0AbQAeADkANwAeAG0AOQA3AG0AGwAeADcAbgA3ADkAMwAbADcANwBuADMAbgA5ABwAbwASAC0AYwASAG8ALwBvAC0ALgAvAC0AbwBwAGMAcABvAC8AcQAvAC4ALgBsAHEALwByAHAAcAAxAGMAcgAxAHAAYwAxAGQAEwByAC8ALwBxABMAEwAxAHIAcQBsABgAEwBxABgAGABsABsAGAAbADMAEwAYAHMAcwAYADMAcwAxABMAMwAyAHMAMgAxAHMAdAAxADIAdAB1ADEAdAAyAHUAdQBkADEAdgAyADMAMwBuAHYAdQAyABYAMgB2ABYAdwBkAHUAdQAWAHcAZAB3ADAAdgBuABcAFgB2ABcAFwBuABwAFwAcADUAMAB3ADQAdwAWADQANQAwADQAFgAXADQANAAXADUA"),
+"lods": [0.050852496, PackedByteArray("AAAiAAIAAgAiACMAAAACACMAAAAjACQAJAAjAAYAJAADAAAAJAAGAAMABgAjAAUABQAjACIAAwAGAAUABAAiAAAAAwAEAAAABAABACIAAQAFACIACQAEAAMACQABAAQAAwAFAAgACAAJAAMACAAFAAkABwAFAAEACQAFAAcACQAHAAEACgALAAwADAALAA4ADgAlAAwAJQAmAAwADAAmAAoAJQAOABEAEQAmACUADgALABAAEQAOABAADQAQAAsACgANAAsAJwAQAA0AJgAoAAoADwAQACcADQAPACcAEQAQAA8ADwANAAoAKQAmABEADwAqABEAKgApABEACgAqAA8AKQAqACYAKAAqAAoAKAAmACoAEgAUACsALAArABQAKwAVABIAFQArACwAEgAVAC0ALQAVAC4ALQAvABIALgAvAC0AFAASADAALwAxABIAEgAxADAAEwAxAC8ALwAYABMAGAAvAC4AMgAxABMAEwAYADMAMwAyABMALgAbABgAGAAbADMAFgAxADIAFgAwADEAFwAyADMAMgAXABYANAAwABYAFgAXADQANQAwADQANAAXADUAMwAcABcAFwAcADUAGQAwADUAGQAUADAALAAUABkANQAdABkAHQAsABkANQAcADYANgAdADUANwAcADMAMwAbADcAHQA2ADgAHAAgADYAOAA2ACAAHwAdADgAOAAgAB8AHAA5ACAAHAA3ADkAIAA5AB8AOQA3AB4AGwAeADcAHwA5ACEAHgAhADkAGwA6AB4AOgAhAB4AGwA7ADoAOgA7ACEAOwAbAC4AOwAuABoAIQA7ABoAGgAuABUALAAaABUAIQAaADwAPAAfACEAPQAaACwAGgA9ADwAPAA9AB8APQAsAB0AHwA9AB0A"), 0.17577036, PackedByteArray("AAABAAIAAAACAAMABAABAAAAAwAEAAAABQACAAEAAwACAAYABgACAAUAAwAGAAUABwAFAAEAAwAFAAgACQAHAAEACQABAAQACQAFAAcACQAEAAMACAAFAAkACAAJAAMACgALAAwACgANAAsADAALAA4ADwANAAoACgAMAA8ADQAQAAsADgALABAADQAPABAADAAOABEAEQAPAAwAEQAOABAAEQAQAA8AEgATABQAFQATABIAFAAVABIAFgAUABMAEwAXABYAFwAUABYAGAATABUAFwATABgAFQAUABkAGQAUABcAGQAaABUAFQAbABgAGgAbABUAGAAcABcAGwAcABgAFwAdABkAHQAaABkAHAAdABcAGwAaAB4AHQAcAB8AHAAbACAAIAAbAB4AHwAcACAAHgAaACEAGgAdACEAHgAhACAAIQAdAB8AHwAgACEA")],
+"name": "landLamp_001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 120,
+"vertex_data": PackedByteArray("rYkgx8pvAAA7bwkIpHYAAK2JCQjKbwAArYkgxzSQAAA7byDHpHYAAFF2CQg0kAAArYkJCDSQAAA7bwkIWokAAFF2IMc0kAAAO28gx1qJAACY7eQGZhIAAJjtAABmEgAAmO3kBpjtAABlEgAAZhIAAJjtAACY7QAAZRLkBmYSAABlEgAAmO0AAGUS5AaY7QAASukWwsjlAABK6RbCNhoAALQWFsLI5QAATelM2MvlAAC0FhbCNhoAALEWTNgzGgAATelM2DMaAACxFkzYy+UAAPHfWde+3AAA8d9Z10AjAAAMIFnXQCMAAAwgWde+3AAA6rT//9hMAAAUS///JrMAABRL///YTAAA6rT//yazAABRdgkIym8AAFuTCQj+fwAAW5Mgx/5/AAAqweQG//8AAJLHxQrwtQAAAAAAANQ+AABnwsUKlj0AAJY9xQpowgAAbDjFCg1KAADX3hbC9+kAABshTNj36QAAnu0Wwq7bAACe7UzYuNsAAJ7tFsJQJAAAXxIWwq7bAABa1QnDFx8AACchFsIHFgAA4d5M2AcWAABfEhbCUCQAAF8STNhGJAAAvxtZ10gtAACQ1VnXFx8AAMtG//8mqQAAbFX//7NIAAAzuf//2FYAAD3kWde20gAAkqr//0u3AABuKlnX5uAAAP9/IMdJbQAA/38JCEltAADDkCDHpHYAAFF2IMfKbwAAomwJCP5/AACibCDH/n8AAP9/IMe1kgAA/38JCLWSAADDkAkIWokAAMOQIMdaiQAAw5AJCKR2AAD//wAA1D4AAP//5AbUPgAAKsEAAAAAAAD//+QGKsEAAP//AAAqwQAAksfFCg1KAADxtcUKbDgAACrB5AYAAAAADUrFCmw4AADUPgAAAAAAAGfCxQpowgAA1D7kBgAAAAAAAAAAKsEAAJY9xQqWPQAAAADkBtQ+AABsOMUK8LUAAAAA5AYqwQAA8bXFCpLHAAANSsUKkscAANQ+AAD//wAA1D7kBv//AAAqwQAA//8AACchFsL36QAApCoJw+bgAAAdIAnDr9wAAFrVCcPm4AAA4d8Jw6/cAAC/GwnDgtIAAF8STNi42wAAvxtZ17bSAADh3kzY9+kAAJDVWdfm4AAAbFX//0u3AAAzuf//JqkAAMtG///YVgAAPeRZ10gtAACSqv//s0gAAG4qWdcXHwAAPeQJw4LSAAA95AnDfC0AAJ7tTNhGJAAA4d8Jw08jAADX3hbCBxYAAKQqCcMXHwAAHSAJw08jAAAbIUzYBxYAAL8bCcN8LQAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m2rqe"]
+resource_name = "Levl3RealFinal_Mesh_8254"
+_surfaces = [{
+"aabb": AABB(-0.40690035, -0.7313459, -0.42093143, 0.8138007, 1.9401097, 0.84186286),
+"attribute_data": PackedByteArray("UvmrpDPwoQdS+b4HM/COpIXbq6SF274HFeerpBXnvgdS+aukUvm+B///vgf//6ukFeerpBXnvgeG6Y6khumhB4bpjqSG6aEHM/ChBzPwjqQ/VBBZzE3lTT1X5U0STFdUzE1WVyVhEFmwXStM3WXjULJaVlcjZFZXBuXMsa/qzLEG5f//r+r//4zVfmI12+gWNdt+YozV6Bb86v//pvBotKbw///86mi0rctMFFbRTBSty35iVtF+Yu9RPKvvUW75WAY8q1gGbvk3qjyrN6pu+aBePKugXm75fgGNWh1KjVp+AS2jHUoto1JQ9J9/kvSfGE0uo7mVLqMYTYxaf5LHXVJQx125lYxaNpdVcUu5q6Q2l9WVS7l+YnPbfmJz26ukXblVcV251ZWl0tK9pdL//4+wqcyPsCjxNpcoL0u5fmI2l6hTS7lRILfSXbf05P3/t9L///TkXrdzJ24QsTlvEHMnEFmxOQ9Zm8t9Yl253hmby98ZXbl+YsM5bhAATG8QwzkQWQBMD1n5JZZXegGWV/klFjN6ARYzpfK+B03hlgdN4YOk+FhXVCNk5U34WONQTOu6w6PRpFLSRJTlnUL//wpDpLo9FQbqdRMWv4+wFbsAACleGAWrpBgFEFmCRhBZX0huYZtLk5+CRquk5lNvoa9Qq6SbSyVeNpeXn9ZOXGH6k2CcIZIQWeqOS1xduRehSJfndG+553SF2xehobA60LfSavxduepeSJe6MsnSZ/wG5fm6wzkKFIYneFXDOXVVrct5HXC5514STAoU1Tl4VRJMdVVoIhBZcyeoNgAABVQLBZwx+/WgpPv1tAel8r4HpfKrpPbdjqT23aEHo+SOpKPkoQeo/KCkqPy0B93sg6Td7JYH+FjjUD9UK0zKUCtMPVdWV8pQEFkSTONQpfKrpCVhK0yyWuVN3WVXVPhYV1SwXRBZ/OqmwVPlpsFT5SXw/Ool8IXbLVPb1S1Thds5JtvVOSZM66zw9fCs8PXwusP6yyUko9ElJPrLpFLSRBa/R1iV6UdYFbu+Psy4nUKrpIkZzLiqFaukCkMG6j0VpLq+Pt3rqhX//wAAFbt1E5TlAACV6YkZ3euPsJXp8m2rpOWaq6RHWBW75Zr//+Wa//+PsJXp8m3//6BebvlHWJXpR1gVu/Jtq6QAAJOfOwNNnLwE7587A25hvATNXV4Ib6E9Q2+h3kbvn19ITZybSyle3kbNXT1DS1xeCEtc6o5voSGSq6TWTmCcm0uXn/qTXGE2lyVe5lNLXK9QEFlIl0OSXbkTZoXbE2ZvuUOSt9JmwaGwl+1IlxdQXbnnIwblY/zJ0vW6hicHFHC5dR2ty+Ne1TkHFAsFEFlzJwVUAACoNmginDE="),
+"format": 34896613399,
+"index_count": 684,
+"index_data": PackedByteArray("mQCaAAAAAACaAAIAmQCbAJoAnACbAJkABAAFAJ0AnQAFAJ4AnQCeAGgAaACeAGcAaABnAJ8AnwBnAKAAnwCgAAYABgCgAAcACAAJAKEAoQAJAKIAoQCiAAsACwCiAAoADAANAA4ADgANAA8AEAARAKMAowARAKQAowCkABMAEwCkABIAFgClAKYApgClABUApwCmABUAaQCoAKUAqACpAKUAqQAVAKUAFACpAKgAFwAVAKkAqgAVABcAGAAXAKkAAwABAKsAqwABAGYArABqABoAGgBqAGsArQAaAGsAGwCuAGoArgAZAGoAGQBrAGoAHQAZAK4AHABrABkArwBrABwAsAAcABkAsQCyAB8AHwCyAB4AsgCxALMAswCxALQAtAAgALMAIQAgALQAJAAiALUAtQAiALYAtgC3ALUAuAC3ALYAtwC4ACMAIwC4ACUAuQC6ACYAJgC6ACgAuQC7ALoAbAC7ALkAuwBsACcAJwBsACkAKgArALwAvAArAL0AvAC9AL4AvgC9AG0AbQAsAL4ALQAsAG0AvwBuAHAAbgC/AMAAwAC/AMEAvwBwAMEAwQBwAC4AcADCAC4ALgDCAMMAwgBwAMQAwgDEAMMAcABuAMQALwBuAMAAwwDEAMUAxgBuAC8AbwDGAC8AxADHAMUAxQDHADAAyADGAG8AxgDIAG4AyQDIAG8AxwByADAAxwDEAHIAMAByAMoAcgDLAMoAygDLAMwAzQDIAMkAMQDNAMkAzQBxAMgAcQDNADEAzABxADEAywBxAMwAywByAHEAcgDEAHEAyABxAG4AcQDEAG4AcwDOADIAMgDOAM8A0AAyAM8ANQDPAM4A0QDPADUA0gA1AM4AMwDTANQA1QDWANMA1wDYANYANADZANgA2gDbADgAdADbANoAOADbANwAOADcAHUA3QDbAHQA3QB0AN4A3QDeANsA3gB0ADYA3ADbAN8AdQDcAN8A2wDeAN8A3wDgAHUAdQDgAHoA4AA5AHoA4QA5AOAA4ADfAOEA4QB5ADkA4gB5AOEA4QDfAHgA4gDhAHgA4gB4AHkA3gB4AN8AeQB4AOMA4wB4ADcANwB4AOQANwDkAHcA5AB4AOUA5QB4AN4AdwDkAOUA5gDlAN4A5QDmAHcA3gA2AOYAdwDmAHYA5gA2AHYAewB8ADoAewDnAHwAOgB8ADwAfADnAOgAOgA8AOkA6ADnAD0A6QA8AOoAPQDnADsAfQDpAOoAPQA7AH4AfwDpAH0AfgA7AIAAfwB9AEAAgADrAH4AQAB9AD4AfgDrAOwAQAA+AO0A7ADrAEEA7QA+AO4AQQDrAD8AgQDtAO4AQQA/AIEAggDtAIEAgQA/AIIA7wCDAEQARACDAEMAhACDAO8A8ACDAIQAhABFAPAAQgBFAIQASABGAIUAhQBGAPEA8QCGAIUAhQCGAPIAhgBJAPIARwBJAIYA8wCHAEoASgCHAEwA8wCIAIcAhwCIAPQAiABNAPQASwBNAIgA9QCJAFAAUACJAE8AigCJAPUA9gCJAIoA9gCKAFEAUQCKAE4AiwD3AFQAVAD3AFMAiwCMAPcA+ACMAIsAjAD4AFUAVQD4AFIAVgBXAPkA+QBXAI0A+QCNAI4AjgCNAI8AjwBYAI4AWQBYAI8AkAD6AFwAXAD6AFsA+gCQAJEAkQCQAPsA+wBdAJEAWgBdAPsAkgD8AF8AXwD8AF4A/ACSAJMAkwCSAJQAlABgAJMAYQBgAJQAlQD9AGIAYgD9AJYA/gBiAJYAYwCXAP0AlwBlAP0AZQCWAP0A/wBlAJcAAAGWAGUAZACWAAABmAAAAWUA"),
+"lods": [0.050852496, PackedByteArray("AABmAAIAAwBmAAAAAwABAGYABAAFAGcABABnAGgAaABnAAcAaAAHAAYACAAJAAoACAAKAAsADAANAA4ADgANAA8AEAARABIAEAASABMAaQAUABYAFAAVABYAFwAVABQAGAAXABQAGgBqAGsAGQBrAGoAHABrABkAGwAZAGoAHQAZABsAHgAfACAAIAAfACEAIgAjACQAJQAjACIAJgAnACgAbAAnACYAJwBsACkAKgArACwALAArAG0ALQAsAG0ALwBuAC4AbwBuAC8AMQBuAG8AbgBwAC4AcQBuADEAcAByAC4AcABuAHIAcQByAG4AcgBxADEALgByADAAMAByADEAcwAzADIAMgAzADQANQA0ADMANgA4AHQAOAA2AHUAdgB3ADYAdwB4ADYANgB4AHUANwB4AHcAeQB4ADcAOQB4AHkAOQB1AHgAegB1ADkAewB8ADoAewA7AHwAOgB8ADwAfAA7AD0AfQA6ADwAPQA7AH4AfwA6AH0AfgA7AIAAfwB9AEAAgAA/AH4AQAB9AD4AfgA/AEEAgQBAAD4AQQA/AIEAggBAAIEAgQA/AIIARACDAEMAhACDAEQARQCDAIQAQgBFAIQASABGAIUARgCGAIUAhQCGAEkARwBJAIYASgCHAEwASgCIAIcAhwCIAE0ASwBNAIgAUACJAE8AigCJAFAAUQCJAIoAUQCKAE4AiwBTAFQAiwCMAFMAUgCMAIsAjABSAFUAVgBXAI0AVgCNAI4AjgCNAI8AjwBYAI4AWQBYAI8AkABbAFwAWwCQAJEAkQCQAFoAWgBdAJEAkgBeAF8AXgCSAJMAkwCSAJQAlABgAJMAYQBgAJQAlQBjAGIAYgBjAJYAZQCWAGMAlwBlAGMAZACWAGUAmABkAGUA"), 0.17577036, PackedByteArray("AAABAAIAAwABAAAABAAFAAYABgAFAAcACAAJAAoACAAKAAsADAANAA4ADgANAA8AEAARABIAEAASABMAFAAVABYAFwAVABQAGAAXABQAGQAaABsAHAAaABkAHQAZABsAHgAfACAAIAAfACEAIgAjACQAJQAjACIAJgAnACgAKQAnACYAKgArACwALQAsACsALgAvADAAMQAwAC8AMgAzADQANQA0ADMANgA3ADgAOQA4ADcAOgA7ADwAPAA7AD0APgA6ADwAOwA/AD0AQAA6AD4APQA/AEEAPwBAAEEAQQBAAD4AQgBDAEQARQBDAEIARgBHAEgASABHAEkASgBLAEwATABLAE0ATgBPAFAAUQBPAE4AUgBTAFQAUwBSAFUAVgBXAFgAWABXAFkAWgBbAFwAWwBaAF0AXgBfAGAAYABfAGEAYgBjAGQAZQBkAGMA")],
+"material": SubResource("StandardMaterial3D_7gxfa"),
+"name": "landLamp_001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 257,
+"vertex_data": PackedByteArray("rYkgx8pv7v87bwkIpHZ8/62JCQjKb+//O28gx6R2e/+tiSDHym98/62JCQjKb3z/rYkgxzSQwv6tiQkINJDC/q2JIMc0kH7/rYkJCDSQif9RdgkINJCI/1F2IMc0kH3/UXYgxzSQqv5RdgkINJCq/jtvIMdaicL+O28JCFqJwv47byDHWomY/ztvCQhaiZj/O28JCKR2sP87byDHpHav/62JIMc0kLDAO28gx6R2sMCtiSDHym+xwDtvIMdaibDAUXYgxzSQscBRdgkINJB2+K2JCQjKb3b4O28JCKR2gvitiQkINJB5+DtvCQhaiW/4mO3kBmYSyd6Y7QAAZhLJ3pjt5AaY7QTNmO0AAJjtBM2Y7eQGZhJg9GUSAABmEmD0mO0AAGYSYPRlEuQGZhJd9GUS5AaY7aTBmO0AAJjtpMFlEgAAmO2kwZjt5AaY7aTBZRLkBpjtBM1lEgAAmO0EzWUS5AZmEsneZRIAAGYSyd6Y7eQGZhJRxJjt5AaY7ee7ZRLkBmYSUcRlEuQGmO3mu2USAABmEv//ZRIAAJjt//+Y7QAAZhL7/5jtAACY7f//SukWwsjlJNtK6RbCNhpP1bQWFsLI5VjVtBYWwjYa9c/x31nXvtws2/HfWddAI1LVTelM2MvlK9tN6UzYMxpR1bEWTNjL5VrVDCBZ10Aj8M8MIFnXvtxY1bEWTNgzGvHP6rT//yaztMcMIFnXvtyAwBRL//8ms4PA8d9Z177cuscMIFnXvtzu3gwgWddAI+PoFEv//yaz694US///2Ezk6AwgWddAI5H58d9Z10AjkuYUS///2EyP+eq0///YTJHm6rT//9hMwNTx31nXvtw1v+q0//8mszS/8d9Z10AjwNRN6UzYy+WLwbQWFsLI5Y/BsRZM2MvljcFK6RbCyOWLwbEWTNjL5cXMtBYWwsjlxsyxFkzYMxoX37QWFsI2GhffSukWwjYauvSxFkzYMxq19LQWFsI2GrX0TelM2DMauvRN6UzYMxoa30rpFsI2GhvfTelM2MvlycxK6RbCyOXKzOq0///YTFXV6rT//yazUtUUS///2ExP1RRL//8ms1LVUXYJCMpvov9bkwkI/n///1uTIMf+f///W5Mgx/5/ssBRdgkIym93+FuTCQj+f3f4KsHkBv//acAAAAAA1D7w2ZLHxQrwtWW/KsHkBv//2blnwsUKlj2jwpY9xQpownK9bDjFCg1KwcAAAAAA1D77/9feFsL36SHbXxIWwq7bLdKe7RbCrtsk257tFsJQJKTYWtUJwxcf2dInIRbCBxb7z18SFsJQJPbPPeRZ17bSIdue7UzYuNso2xshTNj36a7Y4d5M2AcWItJuKlnX5uDy2ZDVWdcXHwHRXxJM2EYk8c+/G1nXSC32z24qWdfm4OHAkqr//0u3uMPLRv//JqkT378bWddILUjlbFX//7NIVvaQ1VnXFx/p6z3kWde20n3EM7n//9hWi88bIUzY9+lkwNfeFsL36WLAXxIWwq7b39BfEkzYRiQW2l8SFsJQJBXaJyEWwgcWV/rh3kzYBxZY+p7tFsJQJBfanu1M2Ljb3tCe7RbCrtvg0DO5///YVlTVbFX//7NIVNWSqv//S7dR1ctG//8mqVTV/38gx0lt////fwkISW3//1F2CQjKb+P/UXYgx8pv4P/DkCDHpHaE/8OQCQikdoT/w5Agx1qJLf/DkAkIWokt//9/IMe1kv///38JCLWS//+ibCDH/n///6JsCQj+f///w5Agx6R2scD/fyDHSW2wwFF2IMfKb7DAw5Agx1qJscD/fyDHtZKwwKJsIMf+f7LAUXYgx8pvo///fwkISW15+MOQCQikdm/4omwJCP5/dfjDkAkIWomC+P9/CQi1knn4//8AANQ+8dn//+QG1D7x2f//5AYqwQDR//8AACrBANEqwQAAAAAr+irB5AYAACv61D4AAAAAK/rUPuQGAAAr+tQ+5Ab//2nA1D4AAP//acAqwQAA//9pwAAA5AYqwQDRAAAAACrBANEAAOQG1D7w2ZLHxQoNSsHA///kBirBBb///+QG1D53wfG1xQpsOHnDKsHkBgAAKsYNSsUKbDh5w9Q+5AYAACrGZ8LFCmjCcr2WPcUKlj2iwvG1xQqSx4a81D7kBv//2bkAAOQG1D53wWw4xQrwtWW/AADkBirBBb8NSsUKkseHvAAAAAAqwf//KsEAAAAA///UPgAAAAD/////AADUPv//1D4AAP/////UPgAA/////wAAAAAqwf//KsEAAP////+Y7QAAmO35////AAAqwfn///8AANQ++/8qwQAAAAD7/ychFsL36a3YpCoJw+bg5tcdIAnDr9xY1VrVCcPm4IfY4d8Jw6/c6di/GwnDgtLd0r8bCcN8LULSHSAJw08j69GkKgnDFx9F0tfeFsIHFh/S4d8Jw08jVNU95AnDfC3k1z3kCcOC0onYPeRZ10gt8Nme7UzYRiSp2JDVWdfm4B7b4d5M2PfpIttuKlnXFx/7zxshTNgHFvbPvxtZ17bSA9FfEkzYuNsn0mxV//9LtyDBkNVZ1+bg4cS/G1nXttLt3stG///YVozjbipZ1xcfaPeSqv//s0h27jO5//8mqfrGPeRZ10gtKtEnIRbC9+lkwOHeTNj36WPAXxJM2Ljb3tAbIUzYBxZV+tfeFsIHFlr6nu1M2EYkGNozuf//JqlT1ZKq//+zSFbVbFX//0u3R9XLRv//2FZU1X3wTH+IJneBiPBcf4UmdoF3AXdZdwF3WVClYn9QpWJ/FwDhDhQA5A4DZUuAA2VPgIb/CuWG/wrlYv+u2mL/rtqm/5PIpv+TyNM3coDTN3KAq/JYZajyUmWl8kxlqvJWZaXyTGUWePRDF3jzQyN47UMaePJDEHj3Q9CvLlDQry5QzqQwW86kMFsKuvRF9EUKugq69EX0RQm6YG2ekp6SYG1gbZ6SnpJgbTBbzqQwW86kLlDQry5Q0K9P9Nl5KfPpedn5rovo+dSM/7////y///8AQPz//3//P0NS2VYjVYZaHFVYUBJZe1Pb1sAti9rYKtvWwC2M2tkqUNDiKnbT5SZN0OEqd9PlJhikQonciWqm2IlrphikQ4keaC+rtWCXuB9oM6u0YJS4fM6gNpjAfTl7zqA2lcB6OdDBnVvdtqxh3rapYc/BmFsyksRtxG0xksRtMpIyksRtYluZpGFbmaQEUPevBFD3rzS6y0XJRTa6yUU3ujS6y0X1rwVQ9q8GUJikYluYpGNbVNWpKlXVrCpX1bAqVdWsKmEcr4H/v/9//7//f57yPmUYePNDGHjzQ8yKMnWzUkutmfXWetX7En42+Pt7/PtCiNX6PIr+P/v/N1IIVDdXLE8wUrpZSFNWW9pWeFf+WJdWAFluUNna3i3B2dEtY9HALJjZwCjA0V8tNtnrJ2bQ+yZJzw8nS43Wno+as46vY1+uhWAvtY/JUTgFw9o5M7dNX8W7hVtzdYaKg4p1dTlYw6edUmGtnlJgrf9C/7z9vAJDX62fUsOnOVjDpzlYVNWqKlTVqipW1a0qVNWqKv7//3/+//9/aP+Am1n/jJvxAIxQ8QCMUKOub3+jrm9//3//f/9//3//P/9//z//f6byTmWn8lFlq/JYZaXyTWWp8lNlnvI+ZWIcsIEaePJDEHj3QxV49EMjeO1DGnjyQ0ytslJMrbJS26cjWNunI1jnvBdD57wXQxdD57wXQ+e8MnXMijJ1zIrMijJ1I1jcpyNY3KezUkutwfXcem/uWXfj7lF33P3hfmf8D37e/iSCD/6Xg7v3+nv3+8iHqv3efhL+KIRQ9xuR0Pplilj3j5Hi/lGC/3//P/9//z//f/8//3//P/9//z/8v////L////y///8AQPz/AED8/wBA/P8AQPz/SFNjUdJTSlNEVTBSflMDVFdTUlbfVqhRS1cCUpRXNlRRV6xWM1eZWUNViljQU+RYflN6WJ/bXS1c27osANPdLQbU0i3H1w8nmtb9JrHO7iclz8YoCo8sm8ed1owbZWOtf2CasyXLtjcUxOs5WrcyXrK9eVt1dYOKhopzdTpYw6cAQ/68/rwBQ2CtnlJU1asqU9WnKlzVuipU1asq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_umu4q")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ugbm"]
 albedo_texture = ExtResource("10_xxrc3")
@@ -251,6 +590,9 @@ roughness_texture_channel = 1
 normal_enabled = true
 normal_scale = 0.0
 normal_texture = ExtResource("8_smyl3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hi66v"]
+albedo_texture = ExtResource("62_n2yho")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4uya"]
 resource_name = "WallBasic"
@@ -361,6 +703,23 @@ albedo_texture = ExtResource("12_7j1m0")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlcsn"]
 albedo_texture = ExtResource("13_6qylr")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rn71f"]
+render_priority = 0
+shader = ExtResource("13_20xw7")
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0, 0, 0, 1)
+shader_parameter/emission_energy = 0.0
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("7_5dxme")
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/affine_mapping = true
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.5250000249375
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jvou3"]
 render_priority = 0
 shader = ExtResource("13_20xw7")
@@ -378,7 +737,60 @@ shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.5
 shader_parameter/jitter = 0.450000021375
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_suamn"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c3nsa"]
+_surfaces = [{
+"aabb": AABB(0.917185, -2.22557, -1.3767, 0.0828153, 3.22557, 2.3767),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l2kug"]
+resource_local_to_scene = true
+resource_name = "tutv2_Cube_006"
+_surfaces = [{
+"aabb": AABB(0.917185, -2.22557, -1.3767, 0.0828153, 3.22557, 2.3767),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_suamn"),
+"name": "glass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c3nsa")
+
 [node name="Levl3RealFinal" instance=ExtResource("1_lgq0g")]
+
+[node name="bedbig" parent="Level2Layout/deco" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_bpiqp")
+
+[node name="bedsmall" parent="Level2Layout/deco" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5s0fh")
+
+[node name="bedsmall3" parent="Level2Layout/deco" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ixlr3")
+
+[node name="bedsmall4" parent="Level2Layout/deco" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ixlr3")
+
+[node name="Cube1010" parent="Level2Layout/deco" index="4"]
+surface_material_override/0 = SubResource("ShaderMaterial_ng27i")
 
 [node name="Cube1110" parent="Level2Layout/deco" index="5"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
@@ -386,11 +798,20 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
 [node name="Cube1210" parent="Level2Layout/deco" index="6"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
 
+[node name="Cube1310" parent="Level2Layout/deco" index="7"]
+surface_material_override/0 = SubResource("ShaderMaterial_ng27i")
+
 [node name="Cube2100" parent="Level2Layout/deco" index="8"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
 
 [node name="Cube3100" parent="Level2Layout/deco" index="9"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
+
+[node name="Cube4100" parent="Level2Layout/deco" index="10"]
+surface_material_override/0 = SubResource("ShaderMaterial_ng27i")
+
+[node name="Cube5100" parent="Level2Layout/deco" index="11"]
+surface_material_override/0 = SubResource("ShaderMaterial_ng27i")
 
 [node name="Cube6100" parent="Level2Layout/deco" index="12"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
@@ -401,11 +822,23 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
 [node name="Cube842" parent="Level2Layout/deco" index="14"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ic6on")
 
+[node name="Cube910" parent="Level2Layout/deco" index="15"]
+surface_material_override/0 = SubResource("ShaderMaterial_yildw")
+
+[node name="Cube_002103" parent="Level2Layout/deco" index="16"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
 [node name="Cube_003103" parent="Level2Layout/deco" index="17"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ai5vx")
 
 [node name="Cube_004" parent="Level2Layout/deco" index="18"]
 surface_material_override/0 = SubResource("StandardMaterial3D_0t51q")
+
+[node name="Cube_005" parent="Level2Layout/deco" index="19"]
+surface_material_override/0 = SubResource("StandardMaterial3D_i5loq")
+
+[node name="Cube_00614" parent="Level2Layout/deco" index="20"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
 
 [node name="Cube_00714" parent="Level2Layout/deco" index="21"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
@@ -416,8 +849,50 @@ surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
 [node name="Cube_009" parent="Level2Layout/deco" index="23"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
 
+[node name="Cube_010103" parent="Level2Layout/deco" index="24"]
+surface_material_override/0 = SubResource("StandardMaterial3D_f0ska")
+
+[node name="Cube_011820" parent="Level2Layout/deco" index="25"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_012" parent="Level2Layout/deco" index="26"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pd7u")
+
+[node name="Cube_013103" parent="Level2Layout/deco" index="27"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sfwrb")
+
+[node name="Cube_014" parent="Level2Layout/deco" index="28"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sfwrb")
+
+[node name="Cube_01514" parent="Level2Layout/deco" index="29"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sfwrb")
+
+[node name="Cube_01614" parent="Level2Layout/deco" index="30"]
+surface_material_override/0 = SubResource("StandardMaterial3D_wr3yh")
+
+[node name="Cube_017" parent="Level2Layout/deco" index="31"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1h7tc")
+
+[node name="Cube_018" parent="Level2Layout/deco" index="32"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sfwrb")
+
+[node name="Cube_019" parent="Level2Layout/deco" index="33"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_020" parent="Level2Layout/deco" index="34"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_021" parent="Level2Layout/deco" index="35"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
 [node name="Cube_022" parent="Level2Layout/deco" index="36"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_023" parent="Level2Layout/deco" index="37"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_024" parent="Level2Layout/deco" index="38"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
 
 [node name="Cube_025105" parent="Level2Layout/deco" index="39"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
@@ -446,6 +921,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 [node name="Cube_03364" parent="Level2Layout/deco" index="47"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
+[node name="Cube_034108" parent="Level2Layout/deco" index="48"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sfwrb")
+
 [node name="Cube_03565" parent="Level2Layout/deco" index="49"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
@@ -454,6 +932,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
 [node name="Cube_037" parent="Level2Layout/deco" index="51"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_038" parent="Level2Layout/deco" index="52"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_039" parent="Level2Layout/deco" index="53"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
 
 [node name="Cube_040" parent="Level2Layout/deco" index="54"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
@@ -464,14 +948,26 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ai5vx")
 [node name="Cube_042" parent="Level2Layout/deco" index="56"]
 surface_material_override/0 = SubResource("StandardMaterial3D_l5p1h")
 
+[node name="Cube_043" parent="Level2Layout/deco" index="57"]
+surface_material_override/0 = SubResource("StandardMaterial3D_i5loq")
+
 [node name="Cube_044" parent="Level2Layout/deco" index="58"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
 [node name="Cube_045" parent="Level2Layout/deco" index="59"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
+[node name="Cube_046" parent="Level2Layout/deco" index="60"]
+surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
 [node name="Cube_047" parent="Level2Layout/deco" index="61"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_048" parent="Level2Layout/deco" index="62"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q724w")
+
+[node name="Cube_049" parent="Level2Layout/deco" index="63"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q724w")
 
 [node name="Cube_050103" parent="Level2Layout/deco" index="64"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
@@ -479,8 +975,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
 [node name="Cube_052" parent="Level2Layout/deco" index="66"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
 
+[node name="Cube_05314" parent="Level2Layout/deco" index="67"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_05414" parent="Level2Layout/deco" index="68"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
 [node name="Cube_0556" parent="Level2Layout/deco" index="69"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_056" parent="Level2Layout/deco" index="70"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
 
 [node name="Cube_0575" parent="Level2Layout/deco" index="71"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ai5vx")
@@ -488,11 +993,65 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ai5vx")
 [node name="Cube_0585" parent="Level2Layout/deco" index="72"]
 surface_material_override/0 = SubResource("StandardMaterial3D_qu7ef")
 
+[node name="Cube_059" parent="Level2Layout/deco" index="73"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
 [node name="Cube_060" parent="Level2Layout/deco" index="74"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
+[node name="Cube_061" parent="Level2Layout/deco" index="75"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_062" parent="Level2Layout/deco" index="76"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
 [node name="Cube_063" parent="Level2Layout/deco" index="77"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
+
+[node name="Cube_0645" parent="Level2Layout/deco" index="78"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_0656" parent="Level2Layout/deco" index="79"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_066" parent="Level2Layout/deco" index="80"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_0675" parent="Level2Layout/deco" index="81"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_068" parent="Level2Layout/deco" index="82"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_069" parent="Level2Layout/deco" index="83"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_070" parent="Level2Layout/deco" index="84"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_071" parent="Level2Layout/deco" index="85"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_072" parent="Level2Layout/deco" index="86"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_073" parent="Level2Layout/deco" index="87"]
+surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_074" parent="Level2Layout/deco" index="88"]
+surface_material_override/0 = SubResource("StandardMaterial3D_urrk4")
+
+[node name="Cube_075" parent="Level2Layout/deco" index="89"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7dfx7")
+
+[node name="Cube_076" parent="Level2Layout/deco" index="90"]
+surface_material_override/0 = SubResource("StandardMaterial3D_urrk4")
+
+[node name="Cube_077" parent="Level2Layout/deco" index="91"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7dfx7")
+
+[node name="Cube_078" parent="Level2Layout/deco" index="92"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
 
 [node name="Cube_079" parent="Level2Layout/deco" index="93"]
 surface_material_override/0 = SubResource("StandardMaterial3D_2q72t")
@@ -502,6 +1061,15 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2q72t")
 
 [node name="Cube_081" parent="Level2Layout/deco" index="95"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
+
+[node name="Cube_082" parent="Level2Layout/deco" index="96"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_083" parent="Level2Layout/deco" index="97"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_084" parent="Level2Layout/deco" index="98"]
+surface_material_override/0 = SubResource("StandardMaterial3D_od3wi")
 
 [node name="Cube_085" parent="Level2Layout/deco" index="99"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
@@ -518,11 +1086,65 @@ surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 [node name="Cube_0892" parent="Level2Layout/deco" index="103"]
 surface_material_override/0 = SubResource("StandardMaterial3D_gndmj")
 
+[node name="Cube_090" parent="Level2Layout/deco" index="104"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6f4fo")
+
+[node name="Cube_0912" parent="Level2Layout/deco" index="105"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_092" parent="Level2Layout/deco" index="106"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_093" parent="Level2Layout/deco" index="107"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_094" parent="Level2Layout/deco" index="108"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_095" parent="Level2Layout/deco" index="109"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_096" parent="Level2Layout/deco" index="110"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_097" parent="Level2Layout/deco" index="111"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_098" parent="Level2Layout/deco" index="112"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_099" parent="Level2Layout/deco" index="113"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_100" parent="Level2Layout/deco" index="114"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_101" parent="Level2Layout/deco" index="115"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_102" parent="Level2Layout/deco" index="116"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_103" parent="Level2Layout/deco" index="117"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
 [node name="Cube_104" parent="Level2Layout/deco" index="118"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
 
 [node name="Cube_1055" parent="Level2Layout/deco" index="119"]
 surface_material_override/0 = SubResource("StandardMaterial3D_ofnjs")
+
+[node name="Cube_106" parent="Level2Layout/deco" index="120"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_107" parent="Level2Layout/deco" index="121"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_108" parent="Level2Layout/deco" index="122"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_109" parent="Level2Layout/deco" index="123"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
 
 [node name="Cube_110" parent="Level2Layout/deco" index="124"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
@@ -539,8 +1161,32 @@ surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 [node name="Cube_114" parent="Level2Layout/deco" index="128"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
 
+[node name="Cube_115" parent="Level2Layout/deco" index="129"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_116" parent="Level2Layout/deco" index="130"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_117" parent="Level2Layout/deco" index="131"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7htsn")
+
+[node name="Cube_118" parent="Level2Layout/deco" index="132"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1h7tc")
+
+[node name="Cube_119" parent="Level2Layout/deco" index="133"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1h7tc")
+
+[node name="Cube_120" parent="Level2Layout/deco" index="134"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1h7tc")
+
+[node name="Cube_121" parent="Level2Layout/deco" index="135"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1h7tc")
+
 [node name="Cube_122" parent="Level2Layout/deco" index="136"]
 surface_material_override/0 = SubResource("StandardMaterial3D_7gb2f")
+
+[node name="Cube_123" parent="Level2Layout/deco" index="137"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
 
 [node name="Cube_124" parent="Level2Layout/deco" index="138"]
 surface_material_override/0 = SubResource("StandardMaterial3D_7gb2f")
@@ -550,6 +1196,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7gb2f")
 
 [node name="Cube_126" parent="Level2Layout/deco" index="140"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_127" parent="Level2Layout/deco" index="141"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
 
 [node name="Cube_128" parent="Level2Layout/deco" index="142"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
@@ -563,7 +1212,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 [node name="Cube_131" parent="Level2Layout/deco" index="145"]
 surface_material_override/0 = SubResource("StandardMaterial3D_7gb2f")
 
+[node name="Cube_132" parent="Level2Layout/deco" index="146"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
 [node name="Cube_133" parent="Level2Layout/deco" index="147"]
+surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_134" parent="Level2Layout/deco" index="148"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_135" parent="Level2Layout/deco" index="149"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
 [node name="Cube_136" parent="Level2Layout/deco" index="150"]
@@ -587,8 +1245,41 @@ surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 [node name="Cube_142" parent="Level2Layout/deco" index="156"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
 
+[node name="Cube_143" parent="Level2Layout/deco" index="157"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qtsmi")
+
+[node name="Cube_144" parent="Level2Layout/deco" index="158"]
+surface_material_override/0 = SubResource("StandardMaterial3D_d70xo")
+
+[node name="Cube_145" parent="Level2Layout/deco" index="159"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_146" parent="Level2Layout/deco" index="160"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
 [node name="Cube_147" parent="Level2Layout/deco" index="161"]
 surface_material_override/0 = SubResource("StandardMaterial3D_s5ido")
+
+[node name="Cube_148" parent="Level2Layout/deco" index="162"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lo15")
+
+[node name="Cube_149" parent="Level2Layout/deco" index="163"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_150" parent="Level2Layout/deco" index="164"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_151" parent="Level2Layout/deco" index="165"]
+surface_material_override/0 = SubResource("StandardMaterial3D_031tl")
+
+[node name="Cube_152" parent="Level2Layout/deco" index="166"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_153" parent="Level2Layout/deco" index="167"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube_154" parent="Level2Layout/deco" index="168"]
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
 
 [node name="Cube_155" parent="Level2Layout/deco" index="169"]
 surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
@@ -626,6 +1317,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yxrmk")
 [node name="Cube_166" parent="Level2Layout/deco" index="180"]
 surface_material_override/0 = SubResource("StandardMaterial3D_sqbcn")
 
+[node name="Cube_167" parent="Level2Layout/deco" index="181"]
+surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
+[node name="Cube_168" parent="Level2Layout/deco" index="182"]
+surface_material_override/0 = SubResource("StandardMaterial3D_smx47")
+
 [node name="floor3510" parent="Level2Layout/deco" index="185"]
 surface_material_override/0 = SubResource("StandardMaterial3D_mk537")
 
@@ -633,7 +1330,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_mk537")
 surface_material_override/0 = SubResource("StandardMaterial3D_mk537")
 
 [node name="floor7802" parent="Level2Layout/deco" index="187"]
-surface_material_override/0 = SubResource("StandardMaterial3D_mk537")
+surface_material_override/0 = SubResource("StandardMaterial3D_myr1b")
+
+[node name="Cube873" parent="Level2Layout/deco/Hiding Table2/Table+cloth2" index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_ng27i")
 
 [node name="Plane57" parent="Level2Layout/deco/Hiding Table2/Table+cloth2" index="1"]
 surface_material_override/0 = SubResource("ShaderMaterial_g6qqx")
@@ -737,8 +1437,29 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5obdm")
 [node name="laundrysink" parent="Level2Layout/deco" index="227"]
 surface_material_override/0 = SubResource("StandardMaterial3D_cntyt")
 
+[node name="laundrysink2" parent="Level2Layout/deco" index="228"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7djh8")
+
 [node name="laundrysink3" parent="Level2Layout/deco" index="229"]
 surface_material_override/0 = SubResource("StandardMaterial3D_x2cnb")
+
+[node name="nightstandA" parent="Level2Layout/deco" index="236"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xmfji")
+
+[node name="nightstandA2" parent="Level2Layout/deco" index="237"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8lqov")
+
+[node name="nightstandB" parent="Level2Layout/deco" index="238"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8lqov")
+
+[node name="nightstandB2" parent="Level2Layout/deco" index="239"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8lqov")
+
+[node name="nightstandC" parent="Level2Layout/deco" index="240"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mip0b")
+
+[node name="nightstandD" parent="Level2Layout/deco" index="241"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mip0b")
 
 [node name="officecabA" parent="Level2Layout/deco" index="242"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
@@ -752,10 +1473,22 @@ surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 [node name="officecabA4" parent="Level2Layout/deco" index="245"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
+[node name="officecabA5" parent="Level2Layout/deco" index="246"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
+[node name="officecabA6" parent="Level2Layout/deco" index="247"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
 [node name="OfficecabB" parent="Level2Layout/deco" index="248"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
+[node name="OfficecabB10" parent="Level2Layout/deco" index="249"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
 [node name="OfficecabB11" parent="Level2Layout/deco" index="250"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
+[node name="OfficecabB2" parent="Level2Layout/deco" index="251"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
 [node name="OfficecabB3" parent="Level2Layout/deco" index="252"]
@@ -770,6 +1503,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 [node name="OfficecabB6" parent="Level2Layout/deco" index="255"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
+[node name="OfficecabB7" parent="Level2Layout/deco" index="256"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
+[node name="OfficecabB8" parent="Level2Layout/deco" index="257"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
 [node name="OfficecabB9" parent="Level2Layout/deco" index="258"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
@@ -782,11 +1521,35 @@ surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 [node name="OfficeCabC3" parent="Level2Layout/deco" index="261"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
+[node name="OfficeCabC4" parent="Level2Layout/deco" index="262"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
 [node name="OfficeCabC5" parent="Level2Layout/deco" index="263"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
 
 [node name="OfficeCabC6" parent="Level2Layout/deco" index="264"]
 surface_material_override/0 = SubResource("StandardMaterial3D_g6qqx")
+
+[node name="officeddesk" parent="Level2Layout/deco" index="265"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m5raq")
+
+[node name="officeddesk2" parent="Level2Layout/deco" index="266"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m5raq")
+
+[node name="officeddesk3" parent="Level2Layout/deco" index="267"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m5raq")
+
+[node name="officeddesk4" parent="Level2Layout/deco" index="268"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m5raq")
+
+[node name="officeddesk6" parent="Level2Layout/deco" index="269"]
+surface_material_override/0 = SubResource("StandardMaterial3D_m5raq")
+
+[node name="oficecabD" parent="Level2Layout/deco" index="270"]
+surface_material_override/0 = SubResource("StandardMaterial3D_a2whf")
+
+[node name="oficecabD2" parent="Level2Layout/deco" index="271"]
+surface_material_override/0 = SubResource("StandardMaterial3D_a2whf")
 
 [node name="wall1*2corner632" parent="Level2Layout/deco" index="346"]
 surface_material_override/0 = SubResource("StandardMaterial3D_1455q")
@@ -824,12 +1587,1066 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1455q")
 [node name="wall2*7302" parent="Level2Layout/deco" index="357"]
 surface_material_override/0 = SubResource("StandardMaterial3D_1455q")
 
+[node name="beer_can731" parent="Level2Layout/deco" index="416" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029163582, -0.11186705, 0.48731643, -0.49999055, 0.00030289704, 0.0030617362, -0.000980219, -0.4873251, -0.11186318, 133.38306, 0.6381683, -14.930812)
+
+[node name="beer_can732" parent="Level2Layout/deco" index="417" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.112408414, 0.23444149, 0.42708498, 0.48198792, 0.010432922, -0.13258581, -0.0710787, 0.441507, -0.22365037, 133.45369, 0.6418739, -15.020213)
+
+[node name="beer_can733" parent="Level2Layout/deco" index="418" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00096870784, -0.48776248, -0.109940134, -0.49999055, 0.00030289753, 0.0030617358, -0.0029202022, 0.10994398, -0.487754, 132.92274, 0.6381683, -15.118358)
+
+[node name="beer_can734" parent="Level2Layout/deco" index="419" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13229223, -0.013586475, -0.4819898, 0.4819878, 0.010432928, -0.1325858, 0.013659902, -0.49970657, 0.010336718, 132.7889, 0.6418739, -15.1776)
+
+[node name="beer_can735" parent="Level2Layout/deco" index="420" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0012506135, -0.4346029, 0.24722254, -0.4999905, 0.00030289651, 0.0030617355, -0.0028110396, -0.24722545, -0.43459386, 133.28127, 0.6381683, -15.201175)
+
+[node name="beer_can736" parent="Level2Layout/deco" index="421" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.023678953, 0.4837634, 0.12414623, 0.4819879, 0.010432923, -0.1325858, -0.13087068, 0.12595287, -0.46584204, 133.2632, 0.6418739, -15.31367)
+
+[node name="beer_can737" parent="Level2Layout/deco" index="422" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011237073, 0.4452194, -0.22754878, -0.49999052, 0.000302897, 0.003061736, 0.0028641322, 0.2275514, 0.44521025, 133.00275, 0.6381683, -14.999152)
+
+[node name="beer_can738" parent="Level2Layout/deco" index="423" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.017805308, -0.48891008, -0.10319884, 0.48198792, 0.010432915, -0.13258581, 0.13179833, -0.10420264, 0.4709257, 133.02582, 0.6418739, -14.887578)
+
+[node name="beer_can739" parent="Level2Layout/deco" index="424" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0028596781, 0.22930573, 0.44430938, -0.49999055, 0.0003028976, 0.0030617358, 0.0011349965, -0.44431838, 0.22930318, 133.44229, 0.6381683, -15.231219)
+
+[node name="beer_can740" parent="Level2Layout/deco" index="425" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.074571714, 0.39153066, 0.3018987, 0.4819878, 0.010432927, -0.1325858, -0.11012213, 0.31079733, -0.3758699, 133.57372, 0.6418739, -15.295674)
+
+[node name="beer_can741" parent="Level2Layout/deco" index="426" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0013495025, 0.46874306, 0.1740066, -0.49999046, 0.0003028966, 0.0030617355, 0.0027649272, -0.17401165, 0.468735, 133.27528, 0.6381683, -14.903342)
+
+[node name="beer_can742" parent="Level2Layout/deco" index="427" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.085032225, -0.40744263, 0.27705604, 0.4819879, 0.010432925, -0.1325858, 0.10226117, 0.28962332, 0.39453903, 133.37306, 0.6418739, -14.8448715)
+
+[node name="beer_can743" parent="Level2Layout/deco" index="428" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13229223, -0.013586475, -0.4819898, 0.4819878, 0.010432928, -0.1325858, 0.013659902, -0.49970657, 0.010336718, 128.2889, 0.6418739, -15.1776)
+
+[node name="beer_can744" parent="Level2Layout/deco" index="429" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.017805308, -0.48891008, -0.10319884, 0.48198792, 0.010432915, -0.13258581, 0.13179833, -0.10420264, 0.4709257, 128.52582, 0.6418739, -14.887578)
+
+[node name="beer_can745" parent="Level2Layout/deco" index="430" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029163582, -0.11186705, 0.48731643, -0.49999055, 0.00030289704, 0.0030617362, -0.000980219, -0.4873251, -0.11186318, 136.58305, 0.6381683, -14.930812)
+
+[node name="beer_can746" parent="Level2Layout/deco" index="431" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.112408414, 0.23444149, 0.42708498, 0.48198792, 0.010432922, -0.13258581, -0.0710787, 0.441507, -0.22365037, 136.65369, 0.6418739, -15.020213)
+
+[node name="beer_can747" parent="Level2Layout/deco" index="432" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00096870784, -0.48776248, -0.109940134, -0.49999055, 0.00030289753, 0.0030617358, -0.0029202022, 0.10994398, -0.487754, 136.12274, 0.6381683, -15.118358)
+
+[node name="beer_can748" parent="Level2Layout/deco" index="433" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13229223, -0.013586475, -0.4819898, 0.4819878, 0.010432928, -0.1325858, 0.013659902, -0.49970657, 0.010336718, 135.98889, 0.6418739, -15.1776)
+
+[node name="beer_can749" parent="Level2Layout/deco" index="434" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0012506135, -0.4346029, 0.24722254, -0.4999905, 0.00030289651, 0.0030617355, -0.0028110396, -0.24722545, -0.43459386, 136.48126, 0.6381683, -15.201175)
+
+[node name="beer_can750" parent="Level2Layout/deco" index="435" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.023678953, 0.4837634, 0.12414623, 0.4819879, 0.010432923, -0.1325858, -0.13087068, 0.12595287, -0.46584204, 136.4632, 0.6418739, -15.31367)
+
+[node name="beer_can751" parent="Level2Layout/deco" index="436" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011237073, 0.4452194, -0.22754878, -0.49999052, 0.000302897, 0.003061736, 0.0028641322, 0.2275514, 0.44521025, 136.20274, 0.6381683, -14.999152)
+
+[node name="beer_can752" parent="Level2Layout/deco" index="437" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.017805308, -0.48891008, -0.10319884, 0.48198792, 0.010432915, -0.13258581, 0.13179833, -0.10420264, 0.4709257, 136.22581, 0.6418739, -14.887578)
+
+[node name="beer_can753" parent="Level2Layout/deco" index="438" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0028596781, 0.22930573, 0.44430938, -0.49999055, 0.0003028976, 0.0030617358, 0.0011349965, -0.44431838, 0.22930318, 136.64229, 0.6381683, -15.231219)
+
+[node name="beer_can754" parent="Level2Layout/deco" index="439" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.074571714, 0.39153066, 0.3018987, 0.4819878, 0.010432927, -0.1325858, -0.11012213, 0.31079733, -0.3758699, 136.77371, 0.6418739, -15.295674)
+
+[node name="beer_can755" parent="Level2Layout/deco" index="440" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0013495025, 0.46874306, 0.1740066, -0.49999046, 0.0003028966, 0.0030617355, 0.0027649272, -0.17401165, 0.468735, 136.47528, 0.6381683, -14.903342)
+
+[node name="beer_can756" parent="Level2Layout/deco" index="441" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.085032225, -0.40744263, 0.27705604, 0.4819879, 0.010432925, -0.1325858, 0.10226117, 0.28962332, 0.39453903, 136.57306, 0.6418739, -14.8448715)
+
+[node name="beer_can757" parent="Level2Layout/deco" index="442" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0023070737, 0.3661024, 0.34053454, -0.49999052, 0.000302897, 0.003061736, 0.0020355305, -0.3405422, 0.3660968, 137.18102, 0.6381683, -14.873186)
+
+[node name="beer_can758" parent="Level2Layout/deco" index="443" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.11776017, -0.2651356, 0.40722936, 0.48198792, 0.010432915, -0.13258581, 0.061809193, 0.42378575, 0.25804123, 137.29376, 0.6418739, -14.856717)
+
+[node name="beer_can759" parent="Level2Layout/deco" index="444" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0020446156, -0.3390955, 0.3674373, -0.49999055, 0.0003028976, 0.0030617358, -0.0022990266, -0.36744273, -0.33908793, 137.11328, 0.6381683, -15.365601)
+
+[node name="beer_can760" parent="Level2Layout/deco" index="445" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.07797593, 0.42596537, -0.24994674, 0.4819878, 0.010432927, -0.1325858, -0.10773848, -0.26161948, -0.41224706, 136.89764, 0.6418739, -14.9111395)
+
+[node name="beer_can761" parent="Level2Layout/deco" index="446" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0030597388, -0.0031978935, 0.4999806, -0.49999046, 0.0003028966, 0.0030617355, -0.00032245647, -0.49998987, -0.0031958818, 137.36426, 0.6381683, -15.096521)
+
+[node name="beer_can762" parent="Level2Layout/deco" index="447" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12517682, 0.13280329, 0.46550417, 0.4819879, 0.010432925, -0.1325858, -0.044928774, 0.48192784, -0.1254072, 137.45265, 0.6418739, -15.168415)
+
+[node name="beer_can763" parent="Level2Layout/deco" index="448" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030422653, 0.025544375, -0.4993378, -0.49999058, 0.00030289716, 0.0030617365, 0.000458907, 0.49934703, 0.02554208, 137.05005, 0.6381683, -15.236714)
+
+[node name="beer_can764" parent="Level2Layout/deco" index="449" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.12304336, -0.15421289, -0.4594331, 0.48198798, 0.010432909, -0.13258581, 0.050479308, -0.47550994, 0.14609, 136.96495, 0.6418739, -15.160947)
+
+[node name="beer_can765" parent="Level2Layout/deco" index="450" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.00044690352, 0.49944386, 0.023572266, -0.4999906, 0.00030289782, 0.0030617362, 0.0030440523, -0.023574546, 0.4994348, 137.4708, 0.6381683, -14.972092)
+
+[node name="beer_can766" parent="Level2Layout/deco" index="451" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.1326544, -0.07339308, 0.47646222, 0.4819878, 0.010432918, -0.13258578, 0.009519942, 0.4944741, 0.07351701, 137.59233, 0.6418739, -14.890502)
+
+[node name="beer_can767" parent="Level2Layout/deco" index="452" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0017197463, 0.38507003, -0.31893316, -0.49999046, 0.0003028966, 0.0030617355, 0.002551167, 0.3189376, 0.38506162, 137.10335, 0.6381683, -14.9527855)
+
+[node name="beer_can768" parent="Level2Layout/deco" index="453" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.04604467, -0.4545425, -0.2031528, 0.4819879, 0.01043291, -0.13258581, 0.124770634, -0.2080441, 0.4372071, 137.1016, 0.6418739, -14.838872)
+
+[node name="photo3" parent="Level2Layout/deco" index="454" instance=ExtResource("69_vbvbs")]
+transform = Transform3D(-0.9999054, 0, 0.013752878, 0, 1, 0, -0.013752878, 0, -0.9999054, 127.51312, 0.8023064, -15.066635)
+
+[node name="photo4" parent="Level2Layout/deco" index="455" instance=ExtResource("69_vbvbs")]
+transform = Transform3D(-0.9999054, 0, 0.013752878, 0, 1, 0, -0.013752878, 0, -0.9999054, 132.01312, 0.8023064, -15.066635)
+
+[node name="photo5" parent="Level2Layout/deco" index="456" instance=ExtResource("69_vbvbs")]
+transform = Transform3D(-0.9999054, 0, 0.013752878, 0, 1, 0, -0.013752878, 0, -0.9999054, 135.71312, 0.8023064, -15.066635)
+
+[node name="beer_can769" parent="Level2Layout/deco" index="457" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.12304336, -0.15421289, -0.4594331, 0.48198798, 0.010432909, -0.13258581, 0.050479308, -0.47550994, 0.14609, 136.96495, 0.041873872, -15.860947)
+
+[node name="beer_can770" parent="Level2Layout/deco" index="458" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0017197463, 0.38507003, -0.31893316, -0.49999046, 0.0003028966, 0.0030617355, 0.002551167, 0.3189376, 0.38506162, 137.10335, 0.03816825, -15.652785)
+
+[node name="beer_can771" parent="Level2Layout/deco" index="459" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.050479308, -0.47550994, 0.14609002, 0.48198804, 0.01043291, -0.13258582, 0.12304336, 0.15421289, 0.4594331, 135.63007, 0.041873872, -15.687668)
+
+[node name="beer_can772" parent="Level2Layout/deco" index="460" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0025511673, 0.31893757, 0.38506162, -0.49999052, 0.0003028967, 0.0030617362, 0.0017197462, -0.38507006, 0.31893313, 135.83823, 0.03816825, -15.826065)
+
+[node name="beer_can773" parent="Level2Layout/deco" index="461" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029163582, -0.11186705, 0.48731643, -0.49999055, 0.00030289704, 0.0030617362, -0.000980219, -0.4873251, -0.11186318, 114.68306, 0.7236547, -18.930813)
+
+[node name="beer_can774" parent="Level2Layout/deco" index="462" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.112408414, 0.23444149, 0.42708498, 0.48198792, 0.010432922, -0.13258581, -0.0710787, 0.441507, -0.22365037, 114.75369, 0.7273603, -19.020214)
+
+[node name="beer_can775" parent="Level2Layout/deco" index="463" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00096870784, -0.48776248, -0.109940134, -0.49999055, 0.00030289753, 0.0030617358, -0.0029202022, 0.10994398, -0.487754, 114.22275, 0.7236547, -19.118359)
+
+[node name="beer_can776" parent="Level2Layout/deco" index="464" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13229223, -0.013586475, -0.4819898, 0.4819878, 0.010432928, -0.1325858, 0.013659902, -0.49970657, 0.010336718, 114.3889, 0.7273603, -19.1776)
+
+[node name="beer_can777" parent="Level2Layout/deco" index="465" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0012506135, -0.4346029, 0.24722254, -0.4999905, 0.00030289651, 0.0030617355, -0.0028110396, -0.24722545, -0.43459386, 114.58127, 0.7236547, -19.201176)
+
+[node name="beer_can778" parent="Level2Layout/deco" index="466" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.023678953, 0.4837634, 0.12414623, 0.4819879, 0.010432923, -0.1325858, -0.13087068, 0.12595287, -0.46584204, 114.5632, 0.7273603, -19.313671)
+
+[node name="beer_can779" parent="Level2Layout/deco" index="467" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011237073, 0.4452194, -0.22754878, -0.49999052, 0.000302897, 0.003061736, 0.0028641322, 0.2275514, 0.44521025, 114.30275, 0.7381683, -18.999153)
+
+[node name="beer_can780" parent="Level2Layout/deco" index="468" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.017805308, -0.48891008, -0.10319884, 0.48198792, 0.010432915, -0.13258581, 0.13179833, -0.10420264, 0.4709257, 114.32582, 0.7273603, -18.887577)
+
+[node name="beer_can781" parent="Level2Layout/deco" index="469" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0028596781, 0.22930573, 0.44430938, -0.49999055, 0.0003028976, 0.0030617358, 0.0011349965, -0.44431838, 0.22930318, 114.742294, 0.7236547, -19.23122)
+
+[node name="beer_can782" parent="Level2Layout/deco" index="470" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.074571714, 0.39153066, 0.3018987, 0.4819878, 0.010432927, -0.1325858, -0.11012213, 0.31079733, -0.3758699, 114.87372, 0.7273603, -19.295673)
+
+[node name="beer_can783" parent="Level2Layout/deco" index="471" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0013495025, 0.46874306, 0.1740066, -0.49999046, 0.0003028966, 0.0030617355, 0.0027649272, -0.17401165, 0.468735, 114.57529, 0.7236547, -18.903343)
+
+[node name="beer_can784" parent="Level2Layout/deco" index="472" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.085032225, -0.40744263, 0.27705604, 0.4819879, 0.010432925, -0.1325858, 0.10226117, 0.28962332, 0.39453903, 114.79494, 0.7273603, -18.844872)
+
+[node name="beer_can785" parent="Level2Layout/deco" index="473" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00096870784, -0.48776248, -0.109940134, -0.49999055, 0.00030289753, 0.0030617358, -0.0029202022, 0.10994398, -0.487754, 114.22275, 0.7236547, -20.716867)
+
+[node name="beer_can786" parent="Level2Layout/deco" index="474" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13229223, -0.013586475, -0.4819898, 0.4819878, 0.010432928, -0.1325858, 0.013659902, -0.49970657, 0.010336718, 114.3889, 0.7273603, -20.77611)
+
+[node name="beer_can787" parent="Level2Layout/deco" index="475" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011237073, 0.4452194, -0.22754878, -0.49999052, 0.000302897, 0.003061736, 0.0028641322, 0.2275514, 0.44521025, 114.30275, 0.7381683, -20.597662)
+
+[node name="beer_can788" parent="Level2Layout/deco" index="476" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.017805308, -0.48891008, -0.10319884, 0.48198792, 0.010432915, -0.13258581, 0.13179833, -0.10420264, 0.4709257, 114.32582, 0.7273603, -20.486086)
+
+[node name="beer_can789" parent="Level2Layout/deco" index="477" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0013495025, 0.46874306, 0.1740066, -0.49999046, 0.0003028966, 0.0030617355, 0.0027649272, -0.17401165, 0.468735, 114.57529, 0.7236547, -20.501852)
+
+[node name="paperBox180" parent="Level2Layout/deco" index="478" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.0036390647, 0, 0.7499911, 0, 0.7499999, 0, -0.7499911, 0, -0.0036390647, 106.13313, -0.0074409246, -18.186)
+
+[node name="paperBox181" parent="Level2Layout/deco" index="479" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.65133095, 0, 0.371844, 0, 0.7499999, 0, -0.371844, 0, -0.65133095, 106.13313, -0.0074409246, -17.186)
+
+[node name="paperBox182" parent="Level2Layout/deco" index="480" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499911, 0, 0.003639032, 0, 0.7499999, 0, -0.003639032, 0, 0.7499911, 106.13313, 0.39255908, -17.586002)
+
+[node name="paperBox183" parent="Level2Layout/deco" index="481" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7273593, 0, 0.18288888, 0, 0.7499999, 0, -0.18288888, 0, -0.7273593, 102.735306, -0.0074409246, -16.108255)
+
+[node name="paperBox184" parent="Level2Layout/deco" index="482" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.5208523, 0, -0.5396413, 0, 0.7499999, 0, 0.5396413, 0, -0.5208523, 103.70392, -0.0074409246, -15.859701)
+
+[node name="paperBox185" parent="Level2Layout/deco" index="483" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.18288893, 0, 0.7273593, 0, 0.7499999, 0, -0.7273593, 0, 0.18288893, 103.316475, 0.39255905, -15.959124)
+
+[node name="paperBox186" parent="Level2Layout/deco" index="484" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7273593, 0, 0.18288888, 0, 0.7499999, 0, -0.18288888, 0, -0.7273593, 112.58537, -0.0074409246, -17.634903)
+
+[node name="paperBox187" parent="Level2Layout/deco" index="485" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.522066, 0, -0.5384673, 0, 0.7499999, 0, 0.5384673, 0, -0.522066, 113.553986, -0.0074409246, -17.386349)
+
+[node name="paperBox188" parent="Level2Layout/deco" index="486" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.18288893, 0, 0.7273593, 0, 0.7499999, 0, -0.7273593, 0, 0.18288893, 113.16654, 0.39255905, -17.485771)
+
+[node name="paperBox189" parent="Level2Layout/deco" index="487" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.74938464, 0, -0.030373588, 0, 0.7499998, 0, 0.030373588, 0, -0.74938464, 112.56898, -0.0074409246, -16.26961)
+
+[node name="paperBox190" parent="Level2Layout/deco" index="488" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.3483879, 0, -0.664173, 0, 0.7499999, 0, 0.664173, 0, -0.3483879, 113.56834, -0.0074409246, -16.305258)
+
+[node name="paperBox191" parent="Level2Layout/deco" index="489" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.030373544, 0, 0.74938464, 0, 0.7499998, 0, -0.74938464, 0, -0.030373544, 113.168594, 0.39255905, -16.291)
+
+[node name="paperBox192" parent="Level2Layout/deco" index="490" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7273593, 0, 0.18288888, 0, 0.7499999, 0, -0.18288888, 0, -0.7273593, 119.071365, -0.0074409246, -27.331728)
+
+[node name="paperBox193" parent="Level2Layout/deco" index="491" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.522066, 0, -0.5384673, 0, 0.7499999, 0, 0.5384673, 0, -0.522066, 120.03998, -0.0074409246, -27.083174)
+
+[node name="paperBox194" parent="Level2Layout/deco" index="492" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.18288893, 0, 0.7273593, 0, 0.7499999, 0, -0.7273593, 0, 0.18288893, 119.652534, 0.39255905, -27.182596)
+
+[node name="beer_can790" parent="Level2Layout/deco" index="493" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029163582, -0.11186705, 0.48731643, -0.49999055, 0.00030289704, 0.0030617362, -0.000980219, -0.4873251, -0.11186318, 93.881, 0.7236547, -13.932063)
+
+[node name="beer_can791" parent="Level2Layout/deco" index="494" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.112408414, 0.23444149, 0.42708498, 0.48198792, 0.010432922, -0.13258581, -0.0710787, 0.441507, -0.22365037, 93.05277, 0.7273603, -13.486252)
+
+[node name="beer_can792" parent="Level2Layout/deco" index="495" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00096870784, -0.48776248, -0.109940134, -0.49999055, 0.00030289753, 0.0030617358, -0.0029202022, 0.10994398, -0.487754, 92.52183, 0.7236547, -13.584396)
+
+[node name="beer_can793" parent="Level2Layout/deco" index="496" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13229223, -0.013586475, -0.4819898, 0.4819878, 0.010432928, -0.1325858, 0.013659902, -0.49970657, 0.010336718, 92.68798, 0.7273603, -13.643639)
+
+[node name="beer_can794" parent="Level2Layout/deco" index="497" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0012506135, -0.4346029, 0.24722254, -0.4999905, 0.00030289651, 0.0030617355, -0.0028110396, -0.24722545, -0.43459386, 92.88035, 0.7236547, -13.667213)
+
+[node name="beer_can795" parent="Level2Layout/deco" index="498" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.023678953, 0.4837634, 0.12414623, 0.4819879, 0.010432923, -0.1325858, -0.13087068, 0.12595287, -0.46584204, 92.86228, 0.7273603, -13.779709)
+
+[node name="beer_can796" parent="Level2Layout/deco" index="499" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011237073, 0.4452194, -0.22754878, -0.49999052, 0.000302897, 0.003061736, 0.0028641322, 0.2275514, 0.44521025, 92.60183, 0.7381683, -13.465191)
+
+[node name="beer_can797" parent="Level2Layout/deco" index="500" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.017805308, -0.48891008, -0.10319884, 0.48198792, 0.010432915, -0.13258581, 0.13179833, -0.10420264, 0.4709257, 93.52376, 0.7273603, -13.888827)
+
+[node name="beer_can798" parent="Level2Layout/deco" index="501" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0028596781, 0.22930573, 0.44430938, -0.49999055, 0.0003028976, 0.0030617358, 0.0011349965, -0.44431838, 0.22930318, 93.041374, 0.7236547, -13.697258)
+
+[node name="beer_can799" parent="Level2Layout/deco" index="502" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.074571714, 0.39153066, 0.3018987, 0.4819878, 0.010432927, -0.1325858, -0.11012213, 0.31079733, -0.3758699, 93.1728, 0.7273603, -13.761711)
+
+[node name="beer_can800" parent="Level2Layout/deco" index="503" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0013495025, 0.46874306, 0.1740066, -0.49999046, 0.0003028966, 0.0030617355, 0.0027649272, -0.17401165, 0.468735, 93.773224, 0.7236547, -13.904593)
+
+[node name="beer_can801" parent="Level2Layout/deco" index="504" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.085032225, -0.40744263, 0.27705604, 0.4819879, 0.010432925, -0.1325858, 0.10226117, 0.28962332, 0.39453903, 94.35316, 0.7273603, -13.882518)
+
+[node name="paperBox195" parent="Level2Layout/deco" index="505" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7273593, 0, 0.18288888, 0, 0.7499999, 0, -0.18288888, 0, -0.7273593, 92.99826, -0.0074409246, -14.195815)
+
+[node name="paperBox196" parent="Level2Layout/deco" index="506" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.5167972, 0, -0.543526, 0, 0.7499998, 0, 0.543526, 0, -0.5167972, 93.96687, -0.0074409246, -13.947261)
+
+[node name="paperBox197" parent="Level2Layout/deco" index="507" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7273593, 0, 0.18288888, 0, 0.7499999, 0, -0.18288888, 0, -0.7273593, 119.749504, -0.0074409246, -34.46937)
+
+[node name="paperBox198" parent="Level2Layout/deco" index="508" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.522066, 0, -0.5384673, 0, 0.7499999, 0, 0.5384673, 0, -0.522066, 120.71812, -0.0074409246, -34.220818)
+
+[node name="paperBox199" parent="Level2Layout/deco" index="509" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.18288893, 0, 0.7273593, 0, 0.7499999, 0, -0.7273593, 0, 0.18288893, 120.33067, 0.39255905, -34.32024)
+
+[node name="paperBox200" parent="Level2Layout/deco" index="510" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 126.4095, -0.0074409246, -29.37461)
+
+[node name="paperBox201" parent="Level2Layout/deco" index="511" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.64414626, 0, 0.3841556, 0, 0.7499999, 0, -0.3841556, 0, -0.64414626, 126.39049, -0.0074409246, -28.374796)
+
+[node name="paperBox202" parent="Level2Layout/deco" index="512" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499248, 0, -0.0106155425, 0, 0.7499998, 0, 0.0106155425, 0, 0.7499248, 126.398094, 0.39255905, -28.774714)
+
+[node name="paperBox203" parent="Level2Layout/deco" index="513" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7273593, 0, 0.18288888, 0, 0.7499999, 0, -0.18288888, 0, -0.7273593, 132.97208, -0.0074409246, -34.46937)
+
+[node name="paperBox204" parent="Level2Layout/deco" index="514" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.522066, 0, -0.5384673, 0, 0.7499999, 0, 0.5384673, 0, -0.522066, 133.94069, -0.0074409246, -34.220818)
+
+[node name="landlamp_028" type="MeshInstance3D" parent="Level2Layout/deco" index="515"]
+transform = Transform3D(0.71270525, 0, 0, 0, 1.0082333, 0, 0, 0, 0.71270525, 137.09882, 0.7061411, -34.32208)
+mesh = SubResource("ArrayMesh_m2rqe")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_5tu3e")
+
+[node name="StaticBody3D227" type="Node3D" parent="Level2Layout/deco/landlamp_028" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5258789e-05, 0, 3.8146973e-06)
+
+[node name="CollisionShape3D237" type="Node3D" parent="Level2Layout/deco/landlamp_028/StaticBody3D227" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5258789e-05, 0, 3.8146973e-06)
+
+[node name="beer_can802" parent="Level2Layout/deco" index="516" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0017762168, -0.3778607, 0.3274418, -0.49999052, 0.000302897, 0.003061736, -0.0025121758, -0.3274465, -0.37785244, 41.763935, 0.030017018, 7.2679973)
+
+[node name="beer_can803" parent="Level2Layout/deco" index="517" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.048816014, 0.44978935, 0.21285348, 0.48198792, 0.010432915, -0.13258581, -0.123712674, 0.21813016, -0.43256724, 41.3583, 0.03372264, 8.116621)
+
+[node name="beer_can804" parent="Level2Layout/deco" index="518" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0025051504, -0.32893437, -0.37655807, -0.49999055, 0.0003028976, 0.0030617358, -0.0017861121, 0.37656617, -0.32892978, 40.87172, 0.030017018, 8.350661)
+
+[node name="beer_can805" parent="Level2Layout/deco" index="519" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.09874917, -0.30581728, -0.38304615, 0.4819878, 0.010432927, -0.1325858, 0.08908661, -0.39543268, 0.29273987, 40.970913, 0.03372264, 8.204794)
+
+[node name="beer_can806" parent="Level2Layout/deco" index="520" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0006489211, -0.49675983, -0.056828067, -0.49999046, 0.0003028966, 0.0030617355, -0.0030074704, 0.056831017, -0.4967508, 41.112312, 0.030017018, 8.072255)
+
+[node name="beer_can807" parent="Level2Layout/deco" index="521" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.058101483, 0.4648947, -0.17463422, 0.4819879, 0.010432925, -0.1325858, -0.11963297, -0.18374994, -0.4493595, 41.03135, 0.03372264, 7.9920893)
+
+[node name="beer_can808" parent="Level2Layout/deco" index="522" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0007827084, 0.49372277, 0.078976214, -0.49999058, 0.00030289716, 0.0030617365, 0.002975456, -0.07897952, 0.49371386, 41.00665, 0.04453063, 8.3997)
+
+[node name="beer_can809" parent="Level2Layout/deco" index="523" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.06339106, -0.4562165, 0.19454613, 0.48198798, 0.010432909, -0.13258581, 0.11691623, 0.20434725, 0.4411041, 41.501022, 0.03372264, 7.5136905)
+
+[node name="beer_can810" parent="Level2Layout/deco" index="524" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029785212, -0.07703148, 0.49402168, -0.4999906, 0.00030289782, 0.0030617362, -0.0007709657, -0.49403048, -0.077028185, 41.224594, 0.030017018, 7.952986)
+
+[node name="beer_can811" parent="Level2Layout/deco" index="525" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.004769549, 0.4994946, 0.021965578, 0.4819878, 0.010432918, -0.13258578, -0.13291, 0.01990962, -0.48159987, 41.29267, 0.03372264, 7.8234024)
+
+[node name="beer_can812" parent="Level2Layout/deco" index="526" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0027209746, 0.275776, 0.41706154, -0.49999046, 0.0003028966, 0.0030617355, 0.0014360626, -0.41707036, 0.27577248, 41.69313, 0.030017018, 7.353766)
+
+[node name="beer_can813" parent="Level2Layout/deco" index="527" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12899108, -0.15806793, 0.45648205, 0.4819879, 0.01043291, -0.13258581, 0.03239026, 0.47424227, 0.15506522, 42.17438, 0.03372264, 7.029404)
+
+[node name="beer_can814" parent="Level2Layout/deco" index="528" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.001809212, 0.431396, 0.25277305, -0.4999905, 0.00030289698, 0.0030617358, 0.002488519, -0.25277936, 0.4313889, 43.216736, 0.030017018, 9.929456)
+
+[node name="beer_can815" parent="Level2Layout/deco" index="529" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.101500876, -0.35094777, 0.3413698, 0.48198792, 0.010432915, -0.13258581, 0.085938364, 0.35598725, 0.34042287, 42.54319, 0.03372264, 9.272919)
+
+[node name="beer_can816" parent="Level2Layout/deco" index="530" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0024956348, -0.2510758, 0.4323827, -0.49999055, 0.00030289745, 0.0030617355, -0.0017993823, -0.43238968, -0.25106958, 42.477695, 0.030017018, 8.736965)
+
+[node name="beer_can817" parent="Level2Layout/deco" index="531" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.052680846, 0.4726637, -0.1543172, 0.4819878, 0.010432928, -0.1325858, -0.12211696, -0.16272745, -0.45673534, 42.58401, 0.03372264, 8.877727)
+
+[node name="beer_can818" parent="Level2Layout/deco" index="532" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.003056637, 0.10560733, 0.48871043, -0.49999046, 0.00030289663, 0.0030617355, 0.0003506363, -0.48871994, 0.10560723, 42.664158, 0.030017018, 9.054184)
+
+[node name="beer_can819" parent="Level2Layout/deco" index="533" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13195151, 0.024824277, 0.48163542, 0.4819879, 0.010432922, -0.1325858, -0.016632374, 0.49927437, -0.021176696, 42.766068, 0.03372264, 9.003232)
+
+[node name="beer_can820" parent="Level2Layout/deco" index="534" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030692546, -0.08365579, -0.49294242, -0.49999058, 0.00030289713, 0.0030617367, -0.00021365186, 0.492952, -0.08365607, 42.387947, 0.04453063, 8.849018)
+
+[node name="beer_can821" parent="Level2Layout/deco" index="535" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13107613, -0.047117174, -0.4802073, 0.48198804, 0.01043291, -0.13258582, 0.022514045, -0.49766582, 0.042684764, 43.06842, 0.03372264, 9.601598)
+
+[node name="beer_can822" parent="Level2Layout/deco" index="536" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0002257573, 0.49261817, -0.08559985, -0.49999058, 0.00030289782, 0.0030617362, 0.003068389, 0.085599534, 0.4926088, 42.74108, 0.030017018, 9.198804)
+
+[node name="beer_can823" parent="Level2Layout/deco" index="537" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12740959, -0.17916596, 0.4490727, 0.48198774, 0.010432918, -0.13258578, 0.0381394, 0.4666806, 0.17536995, 42.84196, 0.03372264, 9.304869)
+
+[node name="beer_can824" parent="Level2Layout/deco" index="538" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0022333718, 0.30649808, -0.3950369, -0.49999043, 0.00030289678, 0.0030617355, 0.0021161356, 0.39504302, 0.3064908, 43.15823, 0.030017018, 9.834869)
+
+[node name="beer_can825" parent="Level2Layout/deco" index="539" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.072075635, -0.3984232, -0.29336703, 0.48198795, 0.010432903, -0.13258581, 0.11177179, -0.30191094, 0.38256624, 43.310978, 0.03372264, 10.394763)
+
+[node name="beer_can826" parent="Level2Layout/deco" index="540" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030764493, -0.055348914, -0.49691758, -0.4999905, 0.00030289695, 0.003061736, -3.790867e-05, 0.49692702, -0.05534972, 42.099575, 0.030017018, 10.263222)
+
+[node name="beer_can827" parent="Level2Layout/deco" index="541" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.1295753, -0.07547974, -0.47698334, 0.48198792, 0.010432916, -0.1325858, 0.029967729, -0.49415997, 0.070056975, 43.02856, 0.03372264, 10.115941)
+
+[node name="beer_can828" parent="Level2Layout/deco" index="542" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-5.0041534e-05, 0.4967048, -0.05730933, -0.49999055, 0.0003028972, 0.0030617358, 0.0030762744, 0.057308517, 0.49669546, 43.497303, 0.030017018, 10.383923)
+
+[node name="beer_can829" parent="Level2Layout/deco" index="543" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12938091, -0.15220422, 0.45836052, 0.48198777, 0.010432931, -0.13258578, 0.030796146, 0.4761565, 0.14942071, 43.320908, 0.03372264, 10.384968)
+
+[node name="beer_can830" parent="Level2Layout/deco" index="544" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0021087928, 0.32857233, -0.37687656, -0.49999043, 0.00030289634, 0.003061735, 0.0022403046, 0.37688234, 0.32856476, 43.13155, 0.030017018, 10.343693)
+
+[node name="beer_can831" parent="Level2Layout/deco" index="545" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.06557057, -0.415025, -0.2710255, 0.48198783, 0.010432927, -0.13258575, 0.11570796, -0.27864918, 0.3987058, 43.11145, 0.03372264, 10.455845)
+
+[node name="beer_can832" parent="Level2Layout/deco" index="546" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.002006541, -0.34509057, 0.3618127, -0.4999905, 0.00030289713, 0.0030617358, -0.0023323298, -0.36181822, -0.3450827, 43.46116, 0.04453063, 10.244986)
+
+[node name="beer_can833" parent="Level2Layout/deco" index="547" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.060332846, 0.42706597, 0.25293225, 0.48198804, 0.010432916, -0.13258584, -0.118523344, 0.2598191, -0.41042212, 42.45105, 0.03372264, 10.340388)
+
+[node name="beer_can834" parent="Level2Layout/deco" index="548" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0023243972, -0.36317658, -0.34365305, -0.4999907, 0.00030289774, 0.0030617372, -0.0020157269, 0.34366083, -0.36317125, 42.969635, 0.030017018, 10.318873)
+
+[node name="beer_can835" parent="Level2Layout/deco" index="549" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.10675566, -0.26692206, -0.40909138, 0.48198774, 0.01043293, -0.1325858, 0.07931614, -0.4226628, 0.2550788, 42.8243, 0.03372264, 10.336306)
+
+[node name="beer_can836" parent="Level2Layout/deco" index="550" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00036066736, -0.49991086, -0.0094435215, -0.4999904, 0.00030289663, 0.003061735, -0.0030554696, 0.009445697, -0.49990156, 42.210373, 0.030017018, 10.272886)
+
+[node name="beer_can837" parent="Level2Layout/deco" index="551" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.04648952, 0.4802308, -0.13121457, 0.48198798, 0.010432899, -0.13258581, -0.124605596, -0.1388153, -0.46390074, 41.67027, 0.03372264, 10.060521)
+
+[node name="beer_can838" parent="Level2Layout/deco" index="552" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.101500876, -0.35094777, 0.3413698, 0.48198792, 0.010432915, -0.13258581, 0.085938364, 0.35598725, 0.34042287, 43.409233, 0.03372264, 7.8399477)
+
+[node name="beer_can839" parent="Level2Layout/deco" index="553" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0024956348, -0.2510758, 0.4323827, -0.49999055, 0.00030289745, 0.0030617355, -0.0017993823, -0.43238968, -0.25106958, 43.34374, 0.030017018, 7.303994)
+
+[node name="beer_can840" parent="Level2Layout/deco" index="554" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.052680846, 0.4726637, -0.1543172, 0.4819878, 0.010432928, -0.1325858, -0.12211696, -0.16272745, -0.45673534, 43.450054, 0.03372264, 7.4447556)
+
+[node name="beer_can841" parent="Level2Layout/deco" index="555" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.003056637, 0.10560733, 0.48871043, -0.49999046, 0.00030289663, 0.0030617355, 0.0003506363, -0.48871994, 0.10560723, 43.5302, 0.030017018, 7.621213)
+
+[node name="beer_can842" parent="Level2Layout/deco" index="556" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13195151, 0.024824277, 0.48163542, 0.4819879, 0.010432922, -0.1325858, -0.016632374, 0.49927437, -0.021176696, 43.63211, 0.03372264, 7.570261)
+
+[node name="beer_can843" parent="Level2Layout/deco" index="557" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030692546, -0.08365579, -0.49294242, -0.49999058, 0.00030289713, 0.0030617367, -0.00021365186, 0.492952, -0.08365607, 43.25399, 0.04453063, 7.416047)
+
+[node name="beer_can844" parent="Level2Layout/deco" index="558" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0002257573, 0.49261817, -0.08559985, -0.49999058, 0.00030289782, 0.0030617362, 0.003068389, 0.085599534, 0.4926088, 43.607124, 0.030017018, 7.765833)
+
+[node name="beer_can845" parent="Level2Layout/deco" index="559" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12740959, -0.17916596, 0.4490727, 0.48198774, 0.010432918, -0.13258578, 0.0381394, 0.4666806, 0.17536995, 43.708004, 0.03372264, 7.8718977)
+
+[node name="beer_can846" parent="Level2Layout/deco" index="560" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.101500876, -0.35094777, 0.3413698, 0.48198792, 0.010432915, -0.13258581, 0.085938364, 0.35598725, 0.34042287, 42.54319, 0.03372264, 6.987317)
+
+[node name="beer_can847" parent="Level2Layout/deco" index="561" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0024956348, -0.2510758, 0.4323827, -0.49999055, 0.00030289745, 0.0030617355, -0.0017993823, -0.43238968, -0.25106958, 42.477695, 0.030017018, 6.4513636)
+
+[node name="beer_can848" parent="Level2Layout/deco" index="562" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030692546, -0.08365579, -0.49294242, -0.49999058, 0.00030289713, 0.0030617367, -0.00021365186, 0.492952, -0.08365607, 42.387947, 0.04453063, 6.5634165)
+
+[node name="beer_can849" parent="Level2Layout/deco" index="563" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030764493, -0.055348914, -0.49691758, -0.4999905, 0.00030289695, 0.003061736, -3.790867e-05, 0.49692702, -0.05534972, 42.099575, 0.030017018, 7.97762)
+
+[node name="beer_can850" parent="Level2Layout/deco" index="564" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.060332846, 0.42706597, 0.25293225, 0.48198804, 0.010432916, -0.13258584, -0.118523344, 0.2598191, -0.41042212, 42.45105, 0.03372264, 8.054787)
+
+[node name="beer_can851" parent="Level2Layout/deco" index="565" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00036066736, -0.49991086, -0.0094435215, -0.4999904, 0.00030289663, 0.003061735, -0.0030554696, 0.009445697, -0.49990156, 42.210373, 0.030017018, 7.9872847)
+
+[node name="beer_can852" parent="Level2Layout/deco" index="566" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.04648952, 0.4802308, -0.13121457, 0.48198798, 0.010432899, -0.13258581, -0.124605596, -0.1388153, -0.46390074, 41.67027, 0.03372264, 7.7749195)
+
+[node name="beer_can853" parent="Level2Layout/deco" index="567" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0017762168, -0.3778607, 0.3274418, -0.49999052, 0.000302897, 0.003061736, -0.0025121758, -0.3274465, -0.37785244, 39.724197, 0.030017018, -6.1217504)
+
+[node name="beer_can854" parent="Level2Layout/deco" index="568" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.06339106, -0.4562165, 0.19454613, 0.48198798, 0.010432909, -0.13258581, 0.11691623, 0.20434725, 0.4411041, 39.461285, 0.03372264, -5.876057)
+
+[node name="beer_can855" parent="Level2Layout/deco" index="569" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0027209746, 0.275776, 0.41706154, -0.49999046, 0.0003028966, 0.0030617355, 0.0014360626, -0.41707036, 0.27577248, 39.653393, 0.030017018, -6.0359817)
+
+[node name="beer_can856" parent="Level2Layout/deco" index="570" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12899108, -0.15806793, 0.45648205, 0.4819879, 0.01043291, -0.13258581, 0.03239026, 0.47424227, 0.15506522, 40.134644, 0.03372264, -6.3603435)
+
+[node name="beer_can857" parent="Level2Layout/deco" index="571" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.101500876, -0.35094777, 0.3413698, 0.48198792, 0.010432915, -0.13258581, 0.085938364, 0.35598725, 0.34042287, 40.503452, 0.03372264, -6.4024305)
+
+[node name="beer_can858" parent="Level2Layout/deco" index="572" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0024956348, -0.2510758, 0.4323827, -0.49999055, 0.00030289745, 0.0030617355, -0.0017993823, -0.43238968, -0.25106958, 40.437958, 0.030017018, -6.938384)
+
+[node name="beer_can859" parent="Level2Layout/deco" index="573" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030692546, -0.08365579, -0.49294242, -0.49999058, 0.00030289713, 0.0030617367, -0.00021365186, 0.492952, -0.08365607, 40.34821, 0.04453063, -6.826331)
+
+[node name="beer_can860" parent="Level2Layout/deco" index="574" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030764493, -0.055348914, -0.49691758, -0.4999905, 0.00030289695, 0.003061736, -3.790867e-05, 0.49692702, -0.05534972, 40.059837, 0.030017018, -5.4121275)
+
+[node name="beer_can861" parent="Level2Layout/deco" index="575" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.060332846, 0.42706597, 0.25293225, 0.48198804, 0.010432916, -0.13258584, -0.118523344, 0.2598191, -0.41042212, 40.411312, 0.03372264, -5.334961)
+
+[node name="beer_can862" parent="Level2Layout/deco" index="576" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00036066736, -0.49991086, -0.0094435215, -0.4999904, 0.00030289663, 0.003061735, -0.0030554696, 0.009445697, -0.49990156, 40.170635, 0.030017018, -5.402463)
+
+[node name="beer_can863" parent="Level2Layout/deco" index="577" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.04648952, 0.4802308, -0.13121457, 0.48198798, 0.010432899, -0.13258581, -0.124605596, -0.1388153, -0.46390074, 39.63053, 0.03372264, -5.614828)
+
+[node name="beer_can864" parent="Level2Layout/deco" index="578" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.00294653, 0.19032975, 0.46234825, -0.4999905, 0.00030289698, 0.0030617358, 0.0008854009, -0.46235752, 0.19032794, 45.381557, 0.6403642, -7.2877073)
+
+[node name="beer_can865" parent="Level2Layout/deco" index="579" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.09069736, -0.33878443, -0.35636947, 0.48198804, 0.01043291, -0.13258582, 0.097271904, -0.3675819, 0.3246873, 45.065025, 0.6759977, -7.6225653)
+
+[node name="beer_can866" parent="Level2Layout/deco" index="580" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00049651315, 0.48310602, -0.12887406, -0.49999043, 0.00030289678, 0.0030617355, 0.0030363554, 0.12887457, 0.48309648, 45.27773, 0.67229205, -7.4912667)
+
+[node name="beer_can867" parent="Level2Layout/deco" index="581" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.010298647, -0.49989045, -0.0018968135, 0.48198795, 0.010432903, -0.13258581, 0.13259625, 0.00090253353, 0.48209703, 45.73826, 0.64406985, -7.138104)
+
+[node name="beer_can868" parent="Level2Layout/deco" index="582" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.049210906, -0.44909042, -0.21423396, 0.48198792, 0.010432915, -0.13258581, 0.12355612, -0.21956569, 0.4318853, 45.895412, 0.64406985, -6.80181)
+
+[node name="beer_can869" parent="Level2Layout/deco" index="583" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0024994323, 0.3301354, 0.37550557, -0.49999055, 0.0003028972, 0.003061736, 0.001794104, -0.37551367, 0.3301308, 45.399033, 0.6403642, -7.034295)
+
+[node name="beer_can870" parent="Level2Layout/deco" index="584" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0007732012, -0.49397254, -0.0773989, -0.49999055, 0.0003028971, 0.0030617365, -0.0029779407, 0.07740223, -0.49396354, 46.247967, 0.65487784, -7.0837636)
+
+[node name="beer_can871" parent="Level2Layout/deco" index="585" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00094211375, -0.4887421, -0.10550045, -0.4999905, 0.00030289698, 0.0030617362, -0.0029288908, 0.10550423, -0.4887334, 44.815456, 0.6403642, -6.907575)
+
+[node name="beer_can872" parent="Level2Layout/deco" index="586" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13155502, -0.11056775, 0.4695403, 0.48198804, 0.010432916, -0.13258584, 0.019522097, 0.4875101, 0.10932957, 44.85403, 0.64406985, -7.116727)
+
+[node name="beer_can873" parent="Level2Layout/deco" index="587" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0027822852, -0.16788581, 0.4709637, -0.4999904, 0.00030289663, 0.003061735, -0.0013133414, -0.47097182, -0.16788079, 44.84152, 0.6403642, -6.7994533)
+
+[node name="beer_can874" parent="Level2Layout/deco" index="588" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.10336106, 0.2842869, 0.39811754, 0.48198792, 0.0104329, -0.1325858, -0.083691806, 0.41118395, -0.27188888, 45.083206, 0.64406985, -6.948338)
+
+[node name="beer_can875" parent="Level2Layout/deco" index="589" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.001809212, 0.431396, 0.25277305, -0.4999905, 0.00030289698, 0.0030617358, 0.002488519, -0.25277936, 0.4313889, 8.588329, 0.030017018, 4.8610735)
+
+[node name="beer_can876" parent="Level2Layout/deco" index="590" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.101500876, -0.35094777, 0.3413698, 0.48198792, 0.010432915, -0.13258581, 0.085938364, 0.35598725, 0.34042287, 7.9147835, 0.03372264, 4.2045364)
+
+[node name="beer_can877" parent="Level2Layout/deco" index="591" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0024956348, -0.2510758, 0.4323827, -0.49999055, 0.00030289745, 0.0030617355, -0.0017993823, -0.43238968, -0.25106958, 7.849289, 0.030017018, 3.668583)
+
+[node name="beer_can878" parent="Level2Layout/deco" index="592" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.052680846, 0.4726637, -0.1543172, 0.4819878, 0.010432928, -0.1325858, -0.12211696, -0.16272745, -0.45673534, 7.9556046, 0.03372264, 3.8093443)
+
+[node name="beer_can879" parent="Level2Layout/deco" index="593" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.003056637, 0.10560733, 0.48871043, -0.49999046, 0.00030289663, 0.0030617355, 0.0003506363, -0.48871994, 0.10560723, 8.035751, 0.030017018, 3.9858017)
+
+[node name="beer_can880" parent="Level2Layout/deco" index="594" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13195151, 0.024824277, 0.48163542, 0.4819879, 0.010432922, -0.1325858, -0.016632374, 0.49927437, -0.021176696, 8.137661, 0.03372264, 3.9348497)
+
+[node name="beer_can881" parent="Level2Layout/deco" index="595" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030692546, -0.08365579, -0.49294242, -0.49999058, 0.00030289713, 0.0030617367, -0.00021365186, 0.492952, -0.08365607, 7.7595406, 0.04453063, 3.7806358)
+
+[node name="beer_can882" parent="Level2Layout/deco" index="596" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13107613, -0.047117174, -0.4802073, 0.48198804, 0.01043291, -0.13258582, 0.022514045, -0.49766582, 0.042684764, 8.440014, 0.03372264, 4.5332155)
+
+[node name="beer_can883" parent="Level2Layout/deco" index="597" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0002257573, 0.49261817, -0.08559985, -0.49999058, 0.00030289782, 0.0030617362, 0.003068389, 0.085599534, 0.4926088, 8.112675, 0.030017018, 4.1304216)
+
+[node name="beer_can884" parent="Level2Layout/deco" index="598" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12740959, -0.17916596, 0.4490727, 0.48198774, 0.010432918, -0.13258578, 0.0381394, 0.4666806, 0.17536995, 8.213554, 0.03372264, 4.2364864)
+
+[node name="beer_can885" parent="Level2Layout/deco" index="599" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0022333718, 0.30649808, -0.3950369, -0.49999043, 0.00030289678, 0.0030617355, 0.0021161356, 0.39504302, 0.3064908, 8.529823, 0.030017018, 4.766487)
+
+[node name="beer_can886" parent="Level2Layout/deco" index="600" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.072075635, -0.3984232, -0.29336703, 0.48198795, 0.010432903, -0.13258581, 0.11177179, -0.30191094, 0.38256624, 8.682571, 0.03372264, 5.3263807)
+
+[node name="beer_can887" parent="Level2Layout/deco" index="601" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030764493, -0.055348914, -0.49691758, -0.4999905, 0.00030289695, 0.003061736, -3.790867e-05, 0.49692702, -0.05534972, 7.4711685, 0.030017018, 5.1948395)
+
+[node name="beer_can888" parent="Level2Layout/deco" index="602" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.1295753, -0.07547974, -0.47698334, 0.48198792, 0.010432916, -0.1325858, 0.029967729, -0.49415997, 0.070056975, 8.400154, 0.03372264, 5.047559)
+
+[node name="beer_can889" parent="Level2Layout/deco" index="603" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-5.0041534e-05, 0.4967048, -0.05730933, -0.49999055, 0.0003028972, 0.0030617358, 0.0030762744, 0.057308517, 0.49669546, 8.8688965, 0.030017018, 5.3155403)
+
+[node name="beer_can890" parent="Level2Layout/deco" index="604" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12938091, -0.15220422, 0.45836052, 0.48198777, 0.010432931, -0.13258578, 0.030796146, 0.4761565, 0.14942071, 8.692501, 0.03372264, 5.3165855)
+
+[node name="beer_can891" parent="Level2Layout/deco" index="605" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0021087928, 0.32857233, -0.37687656, -0.49999043, 0.00030289634, 0.003061735, 0.0022403046, 0.37688234, 0.32856476, 8.503143, 0.030017018, 5.2753105)
+
+[node name="beer_can892" parent="Level2Layout/deco" index="606" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.06557057, -0.415025, -0.2710255, 0.48198783, 0.010432927, -0.13258575, 0.11570796, -0.27864918, 0.3987058, 8.483044, 0.03372264, 5.3874626)
+
+[node name="beer_can893" parent="Level2Layout/deco" index="607" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.002006541, -0.34509057, 0.3618127, -0.4999905, 0.00030289713, 0.0030617358, -0.0023323298, -0.36181822, -0.3450827, 8.832752, 0.04453063, 5.1766033)
+
+[node name="beer_can894" parent="Level2Layout/deco" index="608" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.060332846, 0.42706597, 0.25293225, 0.48198804, 0.010432916, -0.13258584, -0.118523344, 0.2598191, -0.41042212, 7.8226433, 0.03372264, 5.272006)
+
+[node name="beer_can895" parent="Level2Layout/deco" index="609" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0023243972, -0.36317658, -0.34365305, -0.4999907, 0.00030289774, 0.0030617372, -0.0020157269, 0.34366083, -0.36317125, 8.3412285, 0.030017018, 5.250491)
+
+[node name="beer_can896" parent="Level2Layout/deco" index="610" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.10675566, -0.26692206, -0.40909138, 0.48198774, 0.01043293, -0.1325858, 0.07931614, -0.4226628, 0.2550788, 8.195892, 0.03372264, 5.2679234)
+
+[node name="beer_can897" parent="Level2Layout/deco" index="611" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00036066736, -0.49991086, -0.0094435215, -0.4999904, 0.00030289663, 0.003061735, -0.0030554696, 0.009445697, -0.49990156, 7.5819664, 0.030017018, 5.204504)
+
+[node name="beer_can898" parent="Level2Layout/deco" index="612" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0015993572, 0.39947236, -0.30069804, -0.4999905, 0.0003028969, 0.0030617358, 0.0026283131, 0.30070215, 0.39946377, 8.256674, 0.030017018, 5.110418)
+
+[node name="beer_can899" parent="Level2Layout/deco" index="613" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.04019792, -0.4637177, -0.18262011, 0.48198792, 0.010432915, -0.13258581, 0.1267752, -0.18670075, 0.44617367, 8.603024, 0.03372264, 4.23592)
+
+[node name="beer_can900" parent="Level2Layout/deco" index="614" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.002621984, 0.30227545, 0.39827472, -0.49999055, 0.0003028972, 0.003061736, 0.0016097111, -0.39828312, 0.30227143, 9.072369, 0.030017018, 3.9689903)
+
+[node name="beer_can901" parent="Level2Layout/deco" index="615" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.09239283, 0.33227187, 0.3620206, 0.4819878, 0.010432935, -0.1325858, -0.0956629, 0.37347904, -0.31837407, 8.983435, 0.03372264, 4.1213307)
+
+[node name="beer_can902" parent="Level2Layout/deco" index="616" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.00085408776, 0.49167922, 0.090835, -0.49999046, 0.00030289657, 0.0030617355, 0.0029557587, -0.09083855, 0.49167037, 8.851479, 0.030017018, 4.2632756)
+
+[node name="beer_can903" parent="Level2Layout/deco" index="617" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.06618637, -0.4511664, 0.20510538, 0.48198786, 0.010432922, -0.13258576, 0.115356825, 0.2152673, 0.4362945, 8.93776, 0.03372264, 4.337687)
+
+[node name="beer_can904" parent="Level2Layout/deco" index="618" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0009853585, -0.4871271, -0.112722, -0.49999055, 0.0003028971, 0.0030617365, -0.0029146252, 0.11272597, -0.4871184, 8.934388, 0.04453063, 3.929342)
+
+[node name="beer_can905" parent="Level2Layout/deco" index="619" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0712767, 0.44109306, -0.22440283, 0.48198804, 0.01043291, -0.13258584, -0.11228297, -0.23521946, -0.42669007, 8.502078, 0.03372264, 4.8472357)
+
+[node name="beer_can906" parent="Level2Layout/deco" index="620" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0029184902, 0.110803664, -0.48755938, -0.49999064, 0.0003028978, 0.0030617367, 0.00097385404, 0.48756793, 0.11079975, 8.747661, 0.030017018, 4.3899794)
+
+[node name="beer_can907" parent="Level2Layout/deco" index="621" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.013893042, -0.4996818, 0.0111863315, 0.48198774, 0.010432923, -0.1325858, 0.13226792, 0.014467314, 0.4819707, 8.68865, 0.03372264, 4.5239353)
+
+[node name="beer_can908" parent="Level2Layout/deco" index="622" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0028132398, -0.24645895, -0.4350289, -0.49999043, 0.0003028967, 0.0030617355, -0.0012456563, 0.43503797, -0.24645612, 8.321417, 0.030017018, 5.019986)
+
+[node name="beer_can909" parent="Level2Layout/deco" index="623" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13091221, 0.12509991, -0.4660602, 0.48198792, 0.010432896, -0.1325858, -0.023448225, -0.4839848, -0.12332487, 7.8635974, 0.03372264, 5.376657)
+
+[node name="beer_can910" parent="Level2Layout/deco" index="624" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011503063, -0.47988924, -0.14037466, -0.4999905, 0.00030289698, 0.0030617362, -0.0028535547, 0.14037904, -0.47988084, 7.5182567, 0.030017018, 4.2080936)
+
+[node name="beer_can911" parent="Level2Layout/deco" index="625" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.07757672, 0.4269304, -0.24841982, 0.48198798, 0.01043291, -0.13258584, -0.10802627, -0.2600417, -0.4131691, 8.012085, 0.03372264, 5.0086184)
+
+[node name="beer_can912" parent="Level2Layout/deco" index="626" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0028580676, 0.1384851, -0.48043087, -0.49999055, 0.0003028972, 0.0030617358, 0.0011390428, 0.48043916, 0.13848075, 7.945388, 0.030017018, 5.544421)
+
+[node name="beer_can913" parent="Level2Layout/deco" index="627" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.021428926, -0.4980384, 0.03871073, 0.48198777, 0.0104329325, -0.13258578, 0.13125785, 0.042998478, 0.4805438, 7.876462, 0.03372264, 5.382046)
+
+[node name="beer_can914" parent="Level2Layout/deco" index="628" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0028798252, -0.22119555, -0.448402, -0.49999043, 0.00030289614, 0.0030617346, -0.0010828546, 0.44841123, -0.2211931, 7.841595, 0.030017018, 5.1914043)
+
+[node name="beer_can915" parent="Level2Layout/deco" index="629" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13203825, 0.09723762, -0.47234604, 0.48198777, 0.010432926, -0.13258573, -0.015928812, -0.4903427, -0.09648989, 7.730357, 0.03372264, 5.2160664)
+
+[node name="beer_can916" parent="Level2Layout/deco" index="630" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029253513, 0.20093025, 0.45784098, -0.4999905, 0.00030289695, 0.0030617355, 0.00095304195, -0.45785037, 0.2009282, 8.059673, 0.04453063, 5.457538)
+
+[node name="beer_can917" parent="Level2Layout/deco" index="631" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13261832, -0.07522206, 0.476187, 0.48198804, 0.010432916, -0.13258584, 0.010010738, 0.4941993, 0.075279385, 7.582463, 0.03372264, 4.5621653)
+
+[node name="beer_can918" parent="Level2Layout/deco" index="632" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.000964575, -0.45705432, 0.20273267, -0.49999067, 0.0003028977, 0.003061737, -0.0029215699, -0.20273456, -0.45704508, 7.8021164, 0.030017018, 5.032427)
+
+[node name="beer_can919" parent="Level2Layout/deco" index="633" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.11432357, 0.2871942, -0.39300072, 0.4819877, 0.010432925, -0.13258578, -0.06795543, -0.40915847, -0.2792335, 7.730035, 0.03372264, 4.905027)
+
+[node name="beer_can920" parent="Level2Layout/deco" index="634" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0026806318, -0.20132115, 0.45767105, -0.4999904, 0.00030289663, 0.003061735, -0.0015100295, -0.4576788, -0.20131557, 7.5520263, 0.030017018, 4.3140616)
+
+[node name="beer_can921" parent="Level2Layout/deco" index="635" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13261832, -0.07522206, 0.476187, 0.48198804, 0.010432916, -0.13258584, 0.010010738, 0.4941993, 0.075279385, 6.4728026, 0.03372264, 3.2409506)
+
+[node name="beer_can922" parent="Level2Layout/deco" index="636" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0026806318, -0.20132115, 0.45767105, -0.4999904, 0.00030289663, 0.003061735, -0.0015100295, -0.4576788, -0.20131557, 6.442366, 0.030017018, 2.992847)
+
+[node name="beer_can923" parent="Level2Layout/deco" index="637" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13261832, -0.07522206, 0.476187, 0.48198804, 0.010432916, -0.13258584, 0.010010738, 0.4941993, 0.075279385, 12.496524, 0.20193686, 13.75761)
+
+[node name="beer_can924" parent="Level2Layout/deco" index="638" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0026806318, -0.20132115, 0.45767105, -0.4999904, 0.00030289663, 0.003061735, -0.0015100295, -0.4576788, -0.20131557, 12.466086, 0.19823124, 14.034787)
+
+[node name="beer_can925" parent="Level2Layout/deco" index="639" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.09798537, -0.30918106, -0.3805338, 0.481988, 0.010432918, -0.13258585, 0.089926146, -0.3928083, 0.29599833, 12.380379, 0.20193686, 14.169128)
+
+[node name="beer_can926" parent="Level2Layout/deco" index="640" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00073107344, 0.4716243, -0.1660427, -0.4999904, 0.00030289663, 0.003061735, 0.002988563, 0.16604394, 0.47161484, 12.5822315, 0.19823124, 14.316565)
+
+[node name="beer_can927" parent="Level2Layout/deco" index="641" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.09798537, -0.30918106, -0.3805338, 0.481988, 0.010432918, -0.13258585, 0.089926146, -0.3928083, 0.29599833, 12.380379, 0.6327893, 14.169128)
+
+[node name="beer_can928" parent="Level2Layout/deco" index="642" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.000539867, -0.49848837, -0.038848072, -0.49999046, 0.00030289663, 0.003061735, -0.0030289465, 0.038850725, -0.49847925, 12.5822315, 0.6290837, 14.316565)
+
+[node name="beer_can929" parent="Level2Layout/deco" index="643" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0017241947, 0.38451284, -0.31960467, -0.4999904, 0.00030289663, 0.003061735, 0.002548162, 0.3196091, 0.38450435, 12.547249, 1.070604, 14.169957)
+
+[node name="beer_can930" parent="Level2Layout/deco" index="644" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.04751577, 0.45205265, 0.20830446, 0.481988, 0.010432912, -0.13258585, -0.12421793, 0.21340029, -0.43477607, 12.563946, 1.0743096, 14.011481)
+
+[node name="beer_can931" parent="Level2Layout/deco" index="645" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0006804317, -0.4961364, -0.062035322, -0.49999046, 0.00030289663, 0.003061735, -0.0030004976, 0.062038466, -0.49612734, 12.317498, 1.070604, 13.969701)
+
+[node name="beer_can932" parent="Level2Layout/deco" index="646" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.101500876, -0.35094777, 0.3413698, 0.48198792, 0.010432915, -0.13258581, 0.085938364, 0.35598725, 0.34042287, 11.558204, 0.8747196, 5.777359)
+
+[node name="beer_can933" parent="Level2Layout/deco" index="647" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.052680846, 0.4726637, -0.1543172, 0.4819878, 0.010432928, -0.1325858, -0.12211696, -0.16272745, -0.45673534, 11.599025, 0.8747196, 5.382167)
+
+[node name="beer_can934" parent="Level2Layout/deco" index="648" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.003056637, 0.10560733, 0.48871043, -0.49999046, 0.00030289663, 0.0030617355, 0.0003506363, -0.48871994, 0.10560723, 11.679172, 0.871014, 5.5586243)
+
+[node name="beer_can935" parent="Level2Layout/deco" index="649" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13195151, 0.024824277, 0.48163542, 0.4819879, 0.010432922, -0.1325858, -0.016632374, 0.49927437, -0.021176696, 11.781081, 0.8747196, 5.5076723)
+
+[node name="beer_can936" parent="Level2Layout/deco" index="650" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030692546, -0.08365579, -0.49294242, -0.49999058, 0.00030289713, 0.0030617367, -0.00021365186, 0.492952, -0.08365607, 11.402961, 0.8855276, 5.3534584)
+
+[node name="beer_can937" parent="Level2Layout/deco" index="651" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0002257573, 0.49261817, -0.08559985, -0.49999058, 0.00030289782, 0.0030617362, 0.003068389, 0.085599534, 0.4926088, 11.756095, 0.871014, 5.703244)
+
+[node name="beer_can938" parent="Level2Layout/deco" index="652" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12740959, -0.17916596, 0.4490727, 0.48198774, 0.010432918, -0.13258578, 0.0381394, 0.4666806, 0.17536995, 11.856975, 0.8747196, 5.809309)
+
+[node name="beer_can939" parent="Level2Layout/deco" index="653" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0011503063, -0.47988924, -0.14037466, -0.4999905, 0.00030289698, 0.0030617362, -0.0028535547, 0.14037904, -0.47988084, 11.161676, 0.871014, 5.780916)
+
+[node name="beer_can940" parent="Level2Layout/deco" index="654" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0026806318, -0.20132115, 0.45767105, -0.4999904, 0.00030289663, 0.003061735, -0.0015100295, -0.4576788, -0.20131557, 11.195446, 0.871014, 5.886884)
+
+[node name="beer_can941" parent="Level2Layout/deco" index="655" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0029546097, -0.18603672, -0.4640924, -0.49999046, 0.0003028966, 0.0030617355, -0.0008580564, 0.46410176, -0.18603508, 107.7065, 0.8058924, -16.226185)
+
+[node name="beer_can942" parent="Level2Layout/deco" index="656" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13287243, 0.059219964, -0.47837013, 0.4819879, 0.010432925, -0.1325858, -0.0057218894, -0.496371, -0.059859097, 107.59749, 0.809598, -16.193037)
+
+[node name="beer_can943" parent="Level2Layout/deco" index="657" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.00073691417, -0.4712987, 0.16696423, -0.4999906, 0.00030289782, 0.0030617362, -0.0029871278, -0.16696554, -0.47128943, 107.6549, 0.8058924, -16.381653)
+
+[node name="beer_can944" parent="Level2Layout/deco" index="658" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0029546097, -0.18603672, -0.4640924, -0.49999046, 0.0003028966, 0.0030617355, -0.0008580564, 0.46410176, -0.18603508, 109.39415, 0.8058924, -16.226185)
+
+[node name="beer_can945" parent="Level2Layout/deco" index="659" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13287243, 0.059219964, -0.47837013, 0.4819879, 0.010432925, -0.1325858, -0.0057218894, -0.496371, -0.059859097, 109.28514, 0.809598, -16.193037)
+
+[node name="beer_can946" parent="Level2Layout/deco" index="660" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.002989149, 0.07002258, -0.49506384, -0.49999052, 0.00030289672, 0.0030617362, 0.0007286775, 0.4950727, 0.070019335, 80.14228, 0.64851344, -9.184877)
+
+[node name="beer_can947" parent="Level2Layout/deco" index="661" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.11804538, -0.1960491, -0.44455606, 0.48198783, 0.010432924, -0.13258576, 0.06126262, -0.45984334, 0.18652342, 80.06429, 0.65221906, -9.10181)
+
+[node name="beer_can948" parent="Level2Layout/deco" index="662" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00084990857, -0.491807, -0.09013975, -0.49999058, 0.000302898, 0.0030617362, -0.002956963, 0.09014322, -0.4917983, 80.020065, 0.64851344, -9.293944)
+
+[node name="beer_can949" parent="Level2Layout/deco" index="663" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.002989149, 0.07002258, -0.49506384, -0.49999052, 0.00030289672, 0.0030617362, 0.0007286775, 0.4950727, 0.070019335, 80.14228, 0.64851344, -7.386228)
+
+[node name="beer_can950" parent="Level2Layout/deco" index="664" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.11804538, -0.1960491, -0.44455606, 0.48198783, 0.010432924, -0.13258576, 0.06126262, -0.45984334, 0.18652342, 80.06429, 0.65221906, -7.303161)
+
+[node name="beer_can951" parent="Level2Layout/deco" index="665" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00084990857, -0.491807, -0.09013975, -0.49999058, 0.000302898, 0.0030617362, -0.002956963, 0.09014322, -0.4917983, 80.020065, 0.64851344, -7.495295)
+
+[node name="beer_can952" parent="Level2Layout/deco" index="666" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0013770834, 0.42291737, -0.2667195, -0.49999052, 0.00030289675, 0.0030617362, 0.002751295, 0.26672277, 0.42290854, 80.162285, 0.64851344, -8.713098)
+
+[node name="beer_can953" parent="Level2Layout/deco" index="667" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0028051364, -0.24926314, -0.4334283, -0.49999052, 0.000302898, 0.0030617355, -0.0012637962, 0.43343717, -0.24926016, 80.00006, 0.64851344, -8.157673)
+
+[node name="beer_can954" parent="Level2Layout/deco" index="668" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.003053216, -0.012490466, 0.4998346, -0.4999905, 0.0003028969, 0.0030617358, -0.00037927192, -0.4998439, -0.01248838, 45.611362, 0.030017018, 10.557375)
+
+[node name="beer_can955" parent="Level2Layout/deco" index="669" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.124320105, 0.14173779, 0.4630928, 0.48198792, 0.010432915, -0.13258581, -0.047247656, 0.47937632, -0.13403773, 44.7109, 0.03372264, 10.829166)
+
+[node name="beer_can956" parent="Level2Layout/deco" index="670" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.00036722654, -0.49988922, -0.010516748, -0.49999055, 0.0003028972, 0.003061736, -0.0030546878, 0.010518804, -0.4998801, 44.21017, 0.030017018, 10.627164)
+
+[node name="beer_can957" parent="Level2Layout/deco" index="671" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13236043, 0.08628596, -0.47437897, 0.4819878, 0.010432935, -0.1325858, -0.012982242, -0.49238798, -0.0859393, 44.384796, 0.03372264, 10.602228)
+
+[node name="beer_can958" parent="Level2Layout/deco" index="672" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0017858068, -0.37660646, 0.3288838, -0.49999046, 0.00030289657, 0.0030617355, -0.002505368, -0.3288885, -0.3765982, 44.578003, 0.030017018, 10.617467)
+
+[node name="beer_can959" parent="Level2Layout/deco" index="673" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.049288563, 0.44895223, 0.21450534, 0.48198786, 0.010432922, -0.13258576, -0.12352518, 0.21984774, -0.43175063, 44.58272, 0.03372264, 10.503627)
+
+[node name="beer_can960" parent="Level2Layout/deco" index="674" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0016720298, 0.39093137, -0.31172085, -0.49999055, 0.0003028971, 0.0030617365, 0.00258269, 0.3117252, 0.39092287, 44.26481, 0.04453063, 10.759924)
+
+[node name="beer_can961" parent="Level2Layout/deco" index="675" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.043717638, -0.45833087, -0.19499153, 0.48198804, 0.01043291, -0.13258584, 0.12560494, -0.19955975, 0.44090742, 45.252674, 0.03372264, 10.528541)
+
+[node name="beer_can962" parent="Level2Layout/deco" index="676" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0025760753, 0.3132648, 0.3896904, -0.49999064, 0.0003028978, 0.0030617367, 0.0016822051, -0.38969874, 0.31326053, 44.741787, 0.030017018, 10.620121)
+
+[node name="beer_can963" parent="Level2Layout/deco" index="677" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0950246, 0.3217275, 0.37075818, 0.48198774, 0.010432923, -0.1325858, -0.09304914, 0.38259983, -0.3081546, 44.88342, 0.03372264, 10.583155)
+
+[node name="beer_can964" parent="Level2Layout/deco" index="678" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0007713288, 0.49402118, 0.077088416, -0.49999043, 0.0003028967, 0.0030617355, 0.0029784278, -0.07709181, 0.4940123, 45.50028, 0.030017018, 10.562811)
+
+[node name="beer_can965" parent="Level2Layout/deco" index="679" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.06294371, -0.45699418, 0.19285873, 0.48198792, 0.010432896, -0.1325858, 0.117157675, 0.20260206, 0.44184458, 46.06418, 0.03372264, 10.700037)
+
+[node name="beer_can966" parent="Level2Layout/deco" index="680" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.03646835, -0.4689859, -0.16947678, 0.48198798, 0.01043291, -0.13258584, 0.12789795, -0.17304188, 0.45132992, 45.683517, 0.03372264, 10.812287)
+
+[node name="beer_can967" parent="Level2Layout/deco" index="681" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0026679959, 0.29048315, 0.40695515, -0.49999055, 0.0003028972, 0.0030617358, 0.0015322424, -0.4069637, 0.29047933, 46.144844, 0.030017018, 10.531729)
+
+[node name="beer_can968" parent="Level2Layout/deco" index="682" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.08955197, 0.34306577, 0.35254255, 0.48198777, 0.0104329325, -0.13258578, -0.09832735, 0.36358905, -0.32883835, 46.06041, 0.03372264, 10.686607)
+
+[node name="beer_can969" parent="Level2Layout/deco" index="683" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0009402726, 0.4888084, 0.10519333, -0.49999043, 0.00030289614, 0.0030617346, 0.0029294807, -0.10519718, 0.48879963, 45.932667, 0.030017018, 10.832354)
+
+[node name="beer_can970" parent="Level2Layout/deco" index="684" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.06953591, -0.44466928, 0.2177932, 0.48198777, 0.010432926, -0.13258573, 0.11336926, 0.2283863, 0.43010145, 46.02109, 0.03372264, 10.904208)
+
+[node name="beer_can971" parent="Level2Layout/deco" index="685" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0010702829, -0.4836173, -0.12693764, -0.4999905, 0.00030289695, 0.0030617355, -0.0028845211, 0.12694186, -0.48360866, 46.005764, 0.04453063, 10.496136)
+
+[node name="beer_can972" parent="Level2Layout/deco" index="686" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0028887219, 0.12503338, -0.48410586, -0.49999067, 0.0003028977, 0.003061737, 0.0010588968, 0.48411423, 0.12502915, 45.832603, 0.030017018, 10.962045)
+
+[node name="beer_can973" parent="Level2Layout/deco" index="687" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.01776021, -0.49904382, 0.025294855, 0.4819877, 0.010432925, -0.13258578, 0.13180436, 0.029093012, 0.48143643, 45.77754, 0.03372264, 11.097671)
+
+[node name="beer_can974" parent="Level2Layout/deco" index="688" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0030765904, 0.053084686, 0.49716473, -0.49999046, 0.0003028966, 0.0030617355, 2.3894245e-05, -0.4971741, 0.05308564, 72.06848, 0.64284134, -9.570997)
+
+[node name="beer_can975" parent="Level2Layout/deco" index="689" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.00010152755, 0.49892455, -0.03277725, -0.4999906, 0.00030289782, 0.0030617362, 0.0030750071, 0.032776013, 0.49891526, 72.16034, 0.64284134, -9.435369)
+
+[node name="beer_can976" parent="Level2Layout/deco" index="690" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.13074063, -0.12856854, 0.46516347, 0.4819878, 0.010432918, -0.13258578, 0.02438666, 0.48307484, 0.12666488, 72.27191, 0.64654696, -9.340623)
+
+[node name="beer_can977" parent="Level2Layout/deco" index="691" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0009447674, 0.45841667, -0.19963293, -0.4999905, 0.00030289698, 0.0030617358, 0.0029280349, 0.19963503, 0.4584074, 72.04725, 0.64284134, -8.798482)
+
+[node name="beer_can978" parent="Level2Layout/deco" index="692" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.009635694, -0.49440995, -0.07393271, 0.48198792, 0.010432919, -0.13258581, 0.13264611, -0.07382457, 0.47639793, 72.07718, 0.64654696, -8.688539)
+
+[node name="beer_can979" parent="Level2Layout/deco" index="693" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0029242858, 0.20144157, 0.45761654, -0.49999055, 0.00030289745, 0.003061736, 0.0009563102, -0.45762563, 0.20143962, 72.471634, 0.64284134, -9.057237)
+
+[node name="beer_can980" parent="Level2Layout/deco" index="694" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0015176019, 0.45710778, 0.20260881, -0.49999046, 0.0003028966, 0.0030617355, 0.0026763526, -0.20261435, 0.4571001, 72.32518, 0.64284134, -8.719681)
+
+[node name="beer_can981" parent="Level2Layout/deco" index="695" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.09118244, -0.3887878, 0.3008818, 0.48198795, 0.010432917, -0.13258582, 0.09681734, 0.31422165, 0.3766846, 72.4264, 0.64654696, -8.667355)
+
+[node name="beer_can982" parent="Level2Layout/deco" index="696" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0016357203, -0.44759384, -0.22283883, -0.49999064, 0.0003028972, 0.003061737, -0.002605839, 0.22284466, -0.44758636, 72.328224, 0.64284134, -9.063733)
+
+[node name="beer_can983" parent="Level2Layout/deco" index="697" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.09541908, 0.37435353, -0.31741893, 0.48198804, 0.01043291, -0.13258582, -0.09264465, -0.33128652, -0.36285853, 72.22478, 0.64654696, -9.111491)
+
+[node name="beer_can984" parent="Level2Layout/deco" index="698" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0026122704, 0.22107737, -0.4484619, -0.4999906, 0.00030289782, 0.003061736, 0.0016254289, 0.4484693, 0.22107166, 72.253654, 0.64284134, -8.572315)
+
+[node name="beer_can985" parent="Level2Layout/deco" index="699" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.044250824, -0.48263937, 0.122886695, 0.48198777, 0.010432917, -0.13258576, 0.12541802, 0.13019377, 0.4661757, 72.227394, 0.64654696, -8.428308)
+
+[node name="beer_can986" parent="Level2Layout/deco" index="700" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030257015, -0.13861164, -0.4803934, -0.49999052, 0.0003028967, 0.0030617362, -0.0005577756, 0.48040292, -0.13861093, 72.0892, 0.64284134, -8.901476)
+
+[node name="beer_can987" parent="Level2Layout/deco" index="701" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.13277729, 0.00920032, -0.4819602, 0.4819879, 0.010432911, -0.13258581, 0.0076168403, -0.4998066, -0.011639327, 71.98407, 0.64654696, -8.857591)
+
+[node name="beer_can988" parent="Level2Layout/deco" index="702" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.09541908, 0.37435353, -0.31741893, 0.48198804, 0.01043291, -0.13258582, -0.09264465, -0.33128652, -0.36285853, 72.86652, 0.046546936, -9.391052)
+
+[node name="beer_can989" parent="Level2Layout/deco" index="703" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030257015, -0.13861164, -0.4803934, -0.49999052, 0.0003028967, 0.0030617362, -0.0005577756, 0.48040292, -0.13861093, 72.73096, 0.042841315, -9.181037)
+
+[node name="paperBox205" parent="Level2Layout/deco" index="704" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 126.07167, -0.0074409246, -16.46907)
+
+[node name="paperBox206" parent="Level2Layout/deco" index="705" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.64414626, 0, 0.3841556, 0, 0.7499999, 0, -0.3841556, 0, -0.64414626, 126.05266, -0.0074409246, -15.469255)
+
+[node name="paperBox207" parent="Level2Layout/deco" index="706" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499248, 0, -0.0106155425, 0, 0.7499998, 0, 0.0106155425, 0, 0.7499248, 126.060265, 0.39255905, -15.869173)
+
+[node name="paperBox208" parent="Level2Layout/deco" index="707" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 131.0139, -0.0074409246, -19.137548)
+
+[node name="paperBox209" parent="Level2Layout/deco" index="708" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.64414626, 0, 0.3841556, 0, 0.7499999, 0, -0.3841556, 0, -0.64414626, 130.99489, -0.0074409246, -18.137733)
+
+[node name="paperBox210" parent="Level2Layout/deco" index="709" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499248, 0, -0.0106155425, 0, 0.7499998, 0, 0.0106155425, 0, 0.7499248, 131.00249, 0.39255905, -18.537651)
+
+[node name="paperBox211" parent="Level2Layout/deco" index="710" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 135.326, -0.0074409246, -18.912306)
+
+[node name="paperBox212" parent="Level2Layout/deco" index="711" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.64414626, 0, 0.3841556, 0, 0.7499999, 0, -0.3841556, 0, -0.64414626, 135.30699, -0.0074409246, -17.91249)
+
+[node name="paperBox213" parent="Level2Layout/deco" index="712" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499248, 0, -0.0106155425, 0, 0.7499998, 0, 0.0106155425, 0, 0.7499248, 135.31459, 0.39255905, -18.312408)
+
+[node name="paperBox214" parent="Level2Layout/deco" index="713" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 138.04037, -0.0074409246, -18.912306)
+
+[node name="paperBox215" parent="Level2Layout/deco" index="714" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.26920354, 0, -0.700021, 0, 0.7499998, 0, 0.700021, 0, -0.26920354, 131.09029, 0.777981, -18.758047)
+
+[node name="paperBox216" parent="Level2Layout/deco" index="715" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 88.36898, -0.0074409246, -15.480923)
+
+[node name="paperBox217" parent="Level2Layout/deco" index="716" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.64414626, 0, 0.3841556, 0, 0.7499999, 0, -0.3841556, 0, -0.64414626, 88.34997, -0.0074409246, -14.481108)
+
+[node name="paperBox218" parent="Level2Layout/deco" index="717" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499248, 0, -0.0106155425, 0, 0.7499998, 0, 0.0106155425, 0, 0.7499248, 88.357574, 0.39255905, -14.881025)
+
+[node name="paperBox219" parent="Level2Layout/deco" index="718" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7161095, 0, 0.22290628, 0, 0.7499998, 0, -0.22290628, 0, 0.7161095, 84.15045, -0.0074409246, -5.820582)
+
+[node name="paperBox220" parent="Level2Layout/deco" index="719" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.16501209, 0, 0.73162216, 0, 0.7499999, 0, -0.73162216, 0, 0.16501209, 83.194214, -0.0074409246, -5.528018)
+
+[node name="paperBox221" parent="Level2Layout/deco" index="720" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.22290626, 0, -0.7161095, 0, 0.7499998, 0, 0.7161095, 0, 0.22290626, 83.576706, 0.39255905, -5.6450396)
+
+[node name="paperBox222" parent="Level2Layout/deco" index="721" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.18466577, 0, 0.7269103, 0, 0.74999976, 0, -0.7269103, 0, -0.18466577, 75.38674, -0.0074409246, -9.063578)
+
+[node name="paperBox223" parent="Level2Layout/deco" index="722" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.7218556, 0, 0.2035297, 0, 0.7499998, 0, -0.2035297, 0, -0.7218556, 75.62825, -0.0074409246, -8.093185)
+
+[node name="paperBox224" parent="Level2Layout/deco" index="723" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.72691023, 0, 0.18466575, 0, 0.74999976, 0, -0.18466575, 0, 0.72691023, 75.531654, 0.39255905, -8.4813385)
+
+[node name="paperBox225" parent="Level2Layout/deco" index="724" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.010615528, 0, 0.7499248, 0, 0.7499998, 0, -0.7499248, 0, 0.010615528, 132.61401, -0.0074409246, 10.43353)
+
+[node name="paperBox226" parent="Level2Layout/deco" index="725" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.64414626, 0, 0.3841556, 0, 0.7499999, 0, -0.3841556, 0, -0.64414626, 132.595, -0.0074409246, 11.433345)
+
+[node name="paperBox227" parent="Level2Layout/deco" index="726" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7499248, 0, -0.0106155425, 0, 0.7499998, 0, 0.0106155425, 0, 0.7499248, 132.6026, 0.39255905, 11.033427)
+
+[node name="paperBox228" parent="Level2Layout/deco" index="727" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.0995555, 0, 0.74336314, 0, 0.7499998, 0, -0.74336314, 0, 0.0995555, 136.44147, -0.0074409246, 25.685848)
+
+[node name="paperBox229" parent="Level2Layout/deco" index="728" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.5939936, 0, 0.457899, 0, 0.7499999, 0, -0.457899, 0, -0.5939936, 136.30392, -0.0074409246, 26.676338)
+
+[node name="paperBox230" parent="Level2Layout/deco" index="729" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.74336314, 0, -0.099555515, 0, 0.7499998, 0, 0.099555515, 0, 0.74336314, 136.35893, 0.39255905, 26.28015)
+
+[node name="paperBox231" parent="Level2Layout/deco" index="730" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.74994075, 0, 0.009424582, 0, 0.74999976, 0, -0.009424582, 0, 0.74994075, 124.98189, -0.0074409246, 33.61096)
+
+[node name="paperBox232" parent="Level2Layout/deco" index="731" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.36680833, 0, 0.65418005, 0, 0.7499998, 0, -0.65418005, 0, 0.36680833, 123.98192, -0.0074409246, 33.618675)
+
+[node name="paperBox233" parent="Level2Layout/deco" index="732" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.009424582, 0, -0.74994075, 0, 0.74999976, 0, 0.74994075, 0, 0.009424582, 124.381905, 0.39255905, 33.61558)
+
+[node name="paperBox234" parent="Level2Layout/deco" index="733" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.74994075, 0, 0.009424582, 0, 0.74999976, 0, -0.009424582, 0, 0.74994075, 107.60909, -0.0074409246, 32.661873)
+
+[node name="paperBox235" parent="Level2Layout/deco" index="734" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7161095, 0, 0.22290628, 0, 0.7499998, 0, -0.22290628, 0, 0.7161095, 77.279495, -0.0074409246, 27.794437)
+
+[node name="paperBox236" parent="Level2Layout/deco" index="735" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.16501209, 0, 0.73162216, 0, 0.7499999, 0, -0.73162216, 0, 0.16501209, 76.32326, -0.0074409246, 28.087002)
+
+[node name="paperBox237" parent="Level2Layout/deco" index="736" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.22290626, 0, -0.7161095, 0, 0.7499998, 0, 0.7161095, 0, 0.22290626, 76.70575, 0.39255905, 27.969978)
+
+[node name="paperBox238" parent="Level2Layout/deco" index="737" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7161095, 0, 0.22290628, 0, 0.7499998, 0, -0.22290628, 0, 0.7161095, 72.69014, -0.0074409246, 27.794437)
+
+[node name="paperBox239" parent="Level2Layout/deco" index="738" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.16501209, 0, 0.73162216, 0, 0.7499999, 0, -0.73162216, 0, 0.16501209, 71.7339, -0.0074409246, 28.087002)
+
+[node name="paperBox240" parent="Level2Layout/deco" index="739" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.22290626, 0, -0.7161095, 0, 0.7499998, 0, 0.7161095, 0, 0.22290626, 72.116394, 0.39255905, 27.969978)
+
+[node name="paperBox241" parent="Level2Layout/deco" index="740" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.74330914, 0, -0.09995788, 0, 0.74999976, 0, 0.09995788, 0, -0.74330914, 76.24059, -0.0074409246, 36.123882)
+
+[node name="paperBox242" parent="Level2Layout/deco" index="741" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.2850883, 0, -0.6937034, 0, 0.7499998, 0, 0.6937034, 0, -0.2850883, 77.2323, -0.0074409246, 35.99542)
+
+[node name="paperBox243" parent="Level2Layout/deco" index="742" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.09995786, 0, 0.7433091, 0, 0.74999976, 0, -0.7433091, 0, -0.09995786, 76.83562, 0.39255905, 36.046806)
+
+[node name="paperBox244" parent="Level2Layout/deco" index="743" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.13144763, 0, -0.73839116, 0, 0.74999976, 0, 0.73839116, 0, -0.13144763, 94.324684, -0.0074409246, -22.928246)
+
+[node name="paperBox245" parent="Level2Layout/deco" index="744" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.5737417, 0, -0.48303238, 0, 0.7499998, 0, 0.48303238, 0, 0.5737417, 94.139496, -0.0074409246, -23.911896)
+
+[node name="paperBox246" parent="Level2Layout/deco" index="745" instance=ExtResource("70_8psxm")]
+transform = Transform3D(-0.13144763, 0, -0.73839116, 0, 0.74999976, 0, 0.73839116, 0, -0.13144763, 108.87222, -0.0074409246, -26.143557)
+
+[node name="paperBox247" parent="Level2Layout/deco" index="746" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.5737417, 0, -0.48303238, 0, 0.7499998, 0, 0.48303238, 0, 0.5737417, 109.05226, -0.0074409246, -27.127207)
+
+[node name="paperBox248" parent="Level2Layout/deco" index="747" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.7161095, 0, 0.22290628, 0, 0.7499998, 0, -0.22290628, 0, 0.7161095, 81.96955, -0.0074409246, 30.647388)
+
+[node name="paperBox249" parent="Level2Layout/deco" index="748" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.16501209, 0, 0.73162216, 0, 0.7499999, 0, -0.73162216, 0, 0.16501209, 81.01331, -0.0074409246, 30.939953)
+
+[node name="paperBox250" parent="Level2Layout/deco" index="749" instance=ExtResource("70_8psxm")]
+transform = Transform3D(0.22290626, 0, -0.7161095, 0, 0.7499998, 0, 0.7161095, 0, 0.22290626, 81.395805, 0.39255905, 30.82293)
+
+[node name="beer_can990" parent="Level2Layout/deco" index="750" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0023070737, 0.3661024, 0.34053454, -0.49999052, 0.000302897, 0.003061736, 0.0020355305, -0.3405422, 0.3660968, 86.691475, 0.8079974, 36.519154)
+
+[node name="beer_can991" parent="Level2Layout/deco" index="751" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.11776017, -0.2651356, 0.40722936, 0.48198792, 0.010432915, -0.13258581, 0.061809193, 0.42378575, 0.25804123, 86.80422, 0.811703, 36.535625)
+
+[node name="beer_can992" parent="Level2Layout/deco" index="752" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0020446156, -0.3390955, 0.3674373, -0.49999055, 0.0003028976, 0.0030617358, -0.0022990266, -0.36744273, -0.33908793, 86.62374, 0.8079974, 36.026737)
+
+[node name="beer_can993" parent="Level2Layout/deco" index="753" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.07797593, 0.42596537, -0.24994674, 0.4819878, 0.010432927, -0.1325858, -0.10773848, -0.26161948, -0.41224706, 86.408104, 0.811703, 36.481197)
+
+[node name="beer_can994" parent="Level2Layout/deco" index="754" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.0030597388, -0.0031978935, 0.4999806, -0.49999046, 0.0003028966, 0.0030617355, -0.00032245647, -0.49998987, -0.0031958818, 86.87472, 0.8079974, 36.29582)
+
+[node name="beer_can995" parent="Level2Layout/deco" index="755" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.12517682, 0.13280329, 0.46550417, 0.4819879, 0.010432925, -0.1325858, -0.044928774, 0.48192784, -0.1254072, 86.96311, 0.811703, 36.223927)
+
+[node name="beer_can996" parent="Level2Layout/deco" index="756" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0030422653, 0.025544375, -0.4993378, -0.49999058, 0.00030289716, 0.0030617365, 0.000458907, 0.49934703, 0.02554208, 86.56051, 0.8079974, 36.15563)
+
+[node name="beer_can997" parent="Level2Layout/deco" index="757" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.12304336, -0.15421289, -0.4594331, 0.48198798, 0.010432909, -0.13258581, 0.050479308, -0.47550994, 0.14609, 86.47541, 0.811703, 36.231396)
+
+[node name="beer_can998" parent="Level2Layout/deco" index="758" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.00044690352, 0.49944386, 0.023572266, -0.4999906, 0.00030289782, 0.0030617362, 0.0030440523, -0.023574546, 0.4994348, 86.981255, 0.8079974, 36.420246)
+
+[node name="beer_can999" parent="Level2Layout/deco" index="759" instance=ExtResource("68_kptkv")]
+transform = Transform3D(0.1326544, -0.07339308, 0.47646222, 0.4819878, 0.010432918, -0.13258578, 0.009519942, 0.4944741, 0.07351701, 87.10279, 0.811703, 36.501835)
+
+[node name="beer_can1000" parent="Level2Layout/deco" index="760" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0017197463, 0.38507003, -0.31893316, -0.49999046, 0.0003028966, 0.0030617355, 0.002551167, 0.3189376, 0.38506162, 86.61381, 0.8079974, 36.439556)
+
+[node name="beer_can1001" parent="Level2Layout/deco" index="761" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.04604467, -0.4545425, -0.2031528, 0.4819879, 0.01043291, -0.13258581, 0.124770634, -0.2080441, 0.4372071, 86.61205, 0.811703, 36.55347)
+
+[node name="beer_can1002" parent="Level2Layout/deco" index="762" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.12304336, -0.15421289, -0.4594331, 0.48198798, 0.010432909, -0.13258581, 0.050479308, -0.47550994, 0.14609, 86.47541, 0.041873872, 35.53139)
+
+[node name="beer_can1003" parent="Level2Layout/deco" index="763" instance=ExtResource("68_kptkv")]
+transform = Transform3D(-0.0017197463, 0.38507003, -0.31893316, -0.49999046, 0.0003028966, 0.0030617355, 0.002551167, 0.3189376, 0.38506162, 86.61381, 0.03816825, 35.73955)
+
 [node name="floor" parent="Level2Layout/Floor" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_mk537")
 surface_material_override/1 = SubResource("StandardMaterial3D_8ugbm")
 
 [node name="wall2*2_1477" parent="." index="2"]
 surface_material_override/1 = SubResource("StandardMaterial3D_46ga4")
+surface_material_override/4 = SubResource("StandardMaterial3D_hi66v")
 surface_material_override/5 = SubResource("StandardMaterial3D_u4uya")
 surface_material_override/6 = SubResource("StandardMaterial3D_63o1u")
 surface_material_override/9 = SubResource("StandardMaterial3D_20xw7")
@@ -841,4 +2658,47 @@ surface_material_override/22 = SubResource("StandardMaterial3D_5nutg")
 surface_material_override/26 = SubResource("StandardMaterial3D_hy2f5")
 surface_material_override/27 = SubResource("StandardMaterial3D_kv7c7")
 surface_material_override/28 = SubResource("StandardMaterial3D_tlcsn")
+surface_material_override/29 = SubResource("ShaderMaterial_rn71f")
 surface_material_override/30 = SubResource("ShaderMaterial_jvou3")
+
+[node name="MIRROR3" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(-0.368099, 0, -3.2180235e-08, 0, 0.368099, 0, 3.2180235e-08, 0, -0.368099, -1.7465359, 2.14716, 4.7095404)
+mesh = SubResource("ArrayMesh_l2kug")
+skeleton = NodePath("")
+
+[node name="Mirror" parent="MIRROR3" index="0" instance=ExtResource("66_h1mdf")]
+
+[node name="Mirror3D" parent="MIRROR3" index="1" instance=ExtResource("67_3i27y")]
+transform = Transform3D(1.42395, 0, -8.09628e-08, 0, 2.1196346, 0, 7.1054274e-15, 0, 2, -6.7271023, -1.4407, -0.5959034)
+pixels_per_unit = 1000
+color = Color(1, 1, 1, 1)
+distortion_texture = null
+cull_near = 0.54
+
+[node name="Omni" type="OmniLight3D" parent="MIRROR3" index="2"]
+transform = Transform3D(0.99977, 4.761205e-10, -0.021447044, 0.021447044, -4.440116e-08, 0.99977, -4.761205e-10, -1, -4.440116e-08, -4.7754354, 1.9708505, -0.8366165)
+light_color = Color(0.7764706, 1, 1, 1)
+omni_range = 4.162
+omni_attenuation = 0.551
+
+[node name="MIRROR4" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(-3.7252903e-08, 0, 0.36809897, 0, 0.36809897, 0, -0.36809897, 0, -3.7252903e-08, 111.15751, 2.14716, 0.00090408325)
+mesh = SubResource("ArrayMesh_l2kug")
+skeleton = NodePath("")
+
+[node name="Mirror" parent="MIRROR4" index="0" instance=ExtResource("66_h1mdf")]
+transform = Transform3D(-1.3, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 0.99999976, 0, 0, 0)
+
+[node name="Mirror3D" parent="MIRROR4" index="1" instance=ExtResource("67_3i27y")]
+transform = Transform3D(18.82058, 0, -8.096272e-08, 0, 12.209097, 0, -2.2737368e-13, 0, 2.0000014, -1.565448, -1.4407, 7.5541077)
+pixels_per_unit = 1000
+color = Color(1, 1, 1, 1)
+distortion_texture = null
+cull_near = 0.54
+
+[node name="Omni" type="OmniLight3D" parent="MIRROR4" index="2"]
+transform = Transform3D(0.99977, 4.761205e-10, -0.021447044, 0.021447044, -4.440116e-08, 0.99977, -4.761205e-10, -1, -4.440116e-08, -4.7754354, 1.9708505, -0.8366165)
+visible = false
+light_color = Color(0.7764706, 1, 1, 1)
+omni_range = 4.162
+omni_attenuation = 0.551
