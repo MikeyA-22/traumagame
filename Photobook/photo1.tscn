@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://lqvn2lpyms4d"]
 
 [ext_resource type="Script" uid="uid://cqeks8wkac7or" path="res://Photobook/photo.gd" id="1_1ma2y"]
-[ext_resource type="Resource" uid="uid://c3mn4fb232fbi" path="res://Resource/PhotoResource/Photo1data.tres" id="2_1ma2y"]
+[ext_resource type="Resource" uid="uid://c3mn4fb232fbi" path="res://Photobook/Photo1data.tres" id="2_1ma2y"]
 [ext_resource type="Material" uid="uid://87yojw2ai7v4" path="res://Photobook/photo1.tres" id="3_5rgku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ds8k"]

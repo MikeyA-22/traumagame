@@ -9,7 +9,7 @@
 size = Vector3(1, 0.50439453, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yv2ln"]
-render_priority = 0
+render_priority = 3
 shader = ExtResource("3_nuiq8")
 shader_parameter/paper_texture = ExtResource("4_yv2ln")
 

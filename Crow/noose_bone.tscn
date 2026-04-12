@@ -18089,7 +18089,7 @@ tracks/6/keys = {
 }
 tracks/7/type = "method"
 tracks/7/imported = false
-tracks/7/enabled = true
+tracks/7/enabled = false
 tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
@@ -18276,7 +18276,7 @@ tracks/6/keys = {
 }
 tracks/7/type = "method"
 tracks/7/imported = false
-tracks/7/enabled = true
+tracks/7/enabled = false
 tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true

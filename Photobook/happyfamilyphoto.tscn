@@ -15,6 +15,7 @@ size = Vector2(0.4, 0.61)
 size = Vector3(1, 0.50390625, 1)
 
 [node name="Photo" type="CharacterBody3D"]
+collision_layer = 2
 script = ExtResource("1_8laqq")
 photodata = ExtResource("2_f0jin")
 time = 5.0

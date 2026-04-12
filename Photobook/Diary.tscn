@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://djq0g01vglnh5"]
+
+[ext_resource type="Script" uid="uid://b41lka67fj1jl" path="res://final_drawing.gd" id="1_68386"]
+[ext_resource type="Resource" uid="uid://cr087ra7jujxa" path="res://Photobook/Diary.tres" id="2_n8x0h"]
+[ext_resource type="Texture2D" uid="uid://ejebqglhkwxs" path="res://Photobook/laastpic.png" id="2_wwwop"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lq8gh"]
+size = Vector3(0.78356934, 0.50390625, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svixx"]
+render_priority = 5
+transparency = 1
+albedo_texture = ExtResource("2_wwwop")
+albedo_texture_force_srgb = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_ukxv7"]
+material = SubResource("StandardMaterial3D_svixx")
+size = Vector2(0.36, 0.59)
+
+[node name="Diary" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_68386")
+photodata = ExtResource("2_n8x0h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0335083, 0.24804688, 0)
+shape = SubResource("BoxShape3D_lq8gh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_ukxv7")
