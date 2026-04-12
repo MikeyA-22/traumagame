@@ -57,14 +57,13 @@
 		{
 			"uuid": "12b14a66-dea7-4278-9664-ef8fc48fe018",
 			"title": "Doing: BY FRIDAY!!",
-			"tasks": [
-				"121d99c8-c491-4397-b4ea-d677e5dc4754"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "a5ba87e7-a7c5-4254-b44c-af2ccd5af26a",
 			"title": "Done",
 			"tasks": [
+				"121d99c8-c491-4397-b4ea-d677e5dc4754",
 				"1f3cb551-2027-4308-b4e1-cb5159bac099",
 				"f9c65ace-fa64-45b9-892f-737d7a0a5e56",
 				"b3d9a05e-18e4-4637-a13a-030058b3c22e",

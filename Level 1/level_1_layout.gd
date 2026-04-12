@@ -1,5 +1,7 @@
 extends Node3D
 
+class_name LevelScript
+
 @export var player: Player
 @export var spawn_point : Node3D
 
@@ -22,6 +24,9 @@ var monster : Enemy
 
 @export var current_level:int = 0
 
+@export var door : Node3D
+
+@export var area3D: Area3D
 
 @export var file_name : String
 
@@ -30,7 +35,8 @@ func _ready() -> void:
 	next_label.visible = false
 	#call_deferred("initial_message")
 	SigBus.connect("PICKING_UP", on_object_picked)
-	photo.connect("picked_up", Callable(self,"reveal_path"))
+	if photo != null:
+		photo.connect("picked_up", Callable(self,"reveal_path"))
 	reset_params()
 	if Game_Global.save_game != null:
 		Game_Global.save_game.level = file_name
@@ -70,4 +76,28 @@ func reset_params():
 
 
 func _on_photo_picked_up(pos: Variant) -> void:
-	path_wall.queue_free()
+	if path_wall != null:
+		path_wall.queue_free()
+
+
+func _on_photo2_picked_up(pos: Variant) -> void:
+	#if key_data != null:
+		#var key : Pickable =  key_data.item_model.instantiate()
+		#add_child(key)
+		#key.position = pos
+	if area3D != null:
+		print("Activating area!!!")
+		area3D.process_mode = Node.PROCESS_MODE_INHERIT
+	
+	
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print("made it here!!")
+	print("name is: ", body.name)
+	if body.name == "Player":
+		print("made it into first wall")
+		if door != null:
+			print("Activating door!!!")
+			door.process_mode = Node.PROCESS_MODE_INHERIT
+			door.visible = true

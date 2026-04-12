@@ -14,4 +14,5 @@ func _ready() -> void:
 	else:
 		env.environment = in_game_env
 		print("huh huh huhhh")
-		sub_view.audio_listener_enable_3d
+		if sub_view != null:
+			sub_view.audio_listener_enable_3d

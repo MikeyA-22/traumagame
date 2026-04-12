@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PhotoData" load_steps=3 format=3 uid="uid://cr087ra7jujxa"]
+
+[ext_resource type="Texture2D" uid="uid://ejebqglhkwxs" path="res://Photobook/laastpic.png" id="1_4g64v"]
+[ext_resource type="Script" uid="uid://clljws8qmx4hp" path="res://Photobook/PhotoData.gd" id="2_e0ubt"]
+
+[resource]
+script = ExtResource("2_e0ubt")
+photo_name = "diary"
+photo_pic = ExtResource("1_4g64v")
+metadata/_custom_type_script = "uid://clljws8qmx4hp"

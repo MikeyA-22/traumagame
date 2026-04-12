@@ -8,7 +8,7 @@ func _ready() -> void:
 	item_data = load("res://Resource/Flashlight.tres")
 	messages = ["[color=black]A [color=red]FLASHLIGHT!!![/color]",
 									"[color=red] I can press [color=purple] LEFT CLICK[/color] to use it. [/color]",
-									"[color=red]THERE SHOULD BE SOME SPARE [color=purple] BATTERIES[/color] in the corner[/color]",
+									"[color=red]THERE SHOULD BE SOME SPARE [color=purple] BATTERIES[/color] on the kitchen counter[/color]",
 									"[color=red] GO FIND THE BIRTHDAY CARD[/color]"]
 	
 	pickable_action = {

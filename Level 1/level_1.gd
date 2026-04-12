@@ -1,5 +1,7 @@
 extends Node3D
 
+
+
 @onready var dialogue_manager = $DialogueManager
 @onready var dialogue_position = $DialoguePosition
 @onready var next_label = $NextLabel

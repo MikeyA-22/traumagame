@@ -4,3 +4,6 @@
 *.blend filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.pck filter=lfs diff=lfs merge=lfs -text
+level_2.tscn filter=lfs diff=lfs merge=lfs -text
+truefinalrequiemfinalfinal.exe filter=lfs diff=lfs merge=lfs -text
+truefinalrequiemfinalfinal.pck filter=lfs diff=lfs merge=lfs -text

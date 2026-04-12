@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PhotoData" load_steps=3 format=3 uid="uid://cav8dajkbwj2e"]
+
+[ext_resource type="Script" uid="uid://clljws8qmx4hp" path="res://Photobook/PhotoData.gd" id="1_n6m0d"]
+[ext_resource type="Texture2D" uid="uid://behe427l4f6np" path="res://Crow/kids_drawing_small.png" id="1_vh5of"]
+
+[resource]
+script = ExtResource("1_n6m0d")
+photo_name = "drawing"
+photo_pic = ExtResource("1_vh5of")
+photo_no = 3
+metadata/_custom_type_script = "uid://clljws8qmx4hp"

@@ -93,7 +93,7 @@ func _on_instruction_area_body_entered(body: Node3D) -> void:
 		dialogue_manager.show_messages(["[color=red]FIND THE [color=red] BIRTHDAY CARD!![/color][/color]"],dialogue_position.position,4.0)
 
 func add_monster():
-	lightswitch.light_color = Color.RED
+	lightswitch.light_color = Color.RED	
 	monster = monster_resource.instantiate()
 	add_child(monster)
 	player.monster = monster
